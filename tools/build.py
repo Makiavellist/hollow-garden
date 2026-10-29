@@ -50,7 +50,14 @@ SOUNDS = [
     ("rating-up", "Ratings Up"), ("rating-down", "Ratings Down"), ("alarm", "Escalation Alarm"), ("countdown", "Countdown"),
     ("glitch", "Glitch (The Gap)"), ("gas", "Mood Gas Hiss"), ("confetti", "Confetti Pop"), ("spin-start", "Wheel Wind-Up"),
     ("tick", "Wheel Tick"), ("whoosh", "Whoosh"), ("on-air", "On Air Sting"), ("kiss", "Blown Kiss"),
+    ("power-down", "Power Down"), ("power-up", "Power Up"), ("static", "TV Static (loop)"), ("tv-tone", "Test Tone"),
+    ("sparks", "Sparks"), ("zap", "Electric Zap"), ("buzz", "Electric Hum (loop)"), ("klaxon", "Klaxon (loop)"),
+    ("error", "System Error"), ("doors", "Blast Doors"), ("warp", "Drift Jump"), ("shockwave", "Shockwave"),
+    ("wind", "Wind (loop)"), ("cicadas", "Cicadas (loop)"), ("chimes", "Spring Chimes"), ("camera", "Camera Shutter"),
+    ("neon", "Neon Sign"), ("spotlight", "Spotlight Clunk"), ("cash", "Cash Register"),
+    ("ad-jingle-a", "Ad Jingle A"), ("ad-jingle-b", "Ad Jingle B"), ("ad-jingle-c", "Ad Jingle C"),
 ]
+LOOPED = {"static", "buzz", "klaxon", "wind", "cicadas"}
 
 MACROS = [
     ("Producer Console", "mic-welcome", "api.openConsole();"),
@@ -63,10 +70,17 @@ MACROS = [
     ("Show Rating −1", "bored", "api.adjustShow(-1, 'Macro');"),
     ("Mood Gas Vent", "smug", "api.moodGas();"),
     ("Award Trinket to Fan Favourite", "trophy", "api.awardTrinket();"),
-    ("Commercial Break", "this-is-fine", "api.titleCard('intermission');"),
+    ("Commercial Break", "this-is-fine", "api.commercialBreak();"),
     ("Previously On…", "shocked", "api.titleCard('previously');"),
     ("The Gap (Glitch)", "confused", "api.glitch();"),
     ("Confetti!", "champion", "api.confetti();"),
+    ("Effects Desk", "presenting", "api.openConsole('effects');"),
+    ("Malfunction: Blackout", "nervous", "api.effect('blackout');"),
+    ("Malfunction: System Crash", "crying", "api.effect('crash');"),
+    ("Red Alert", "angry", "api.effect('redalert');"),
+    ("Spotlight on Selected Tokens", "wink", "api.spotlight();"),
+    ("Countdown 30 s", "countdown", "api.effect('countdown', { seconds: 30 });"),
+    ("Stop All Effects", "access-denied", "api.stopEffects();"),
 ]
 
 
@@ -87,7 +101,7 @@ def build_playlist():
     for i, (key, name) in enumerate(SOUNDS):
         sid = hid(pid, key)
         sounds.append({"_id": sid, "_key": f"!playlists.sounds!{pid}.{sid}", "name": name, "path": asset(f"sounds/{key}.ogg"),
-                       "repeat": False, "volume": 0.8, "fade": None, "sort": (i + 1) * 100, "flags": {}, "_stats": stats(False)})
+                       "repeat": key in LOOPED, "volume": 0.8, "fade": None, "sort": (i + 1) * 100, "flags": {}, "_stats": stats(False)})
     write_doc(pack, {"_id": pid, "_key": f"!playlists!{pid}", "name": "The Hollow Garden: Studio SFX", "description": "Gameshow stings for Celmak's studio.",
                      "mode": -1, "channel": "environment", "sounds": sounds, "folder": None, "sort": 0, "flags": {}, "_stats": stats(False)})
 

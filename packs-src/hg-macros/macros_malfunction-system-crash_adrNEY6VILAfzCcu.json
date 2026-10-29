@@ -1,0 +1,15 @@
+{
+  "_id": "adrNEY6VILAfzCcu",
+  "_key": "!macros!adrNEY6VILAfzCcu",
+  "name": "Malfunction: System Crash",
+  "type": "script",
+  "img": "modules/hollow-garden/assets/host/crying.webp",
+  "command": "// The Hollow Garden: Malfunction: System Crash\nconst api = game.modules.get(\"hollow-garden\")?.api;\nif (!api) return ui.notifications.warn(\"The Hollow Garden module is not active.\");\napi.effect('crash');",
+  "scope": "global",
+  "folder": null,
+  "sort": 1700,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351"
+  }
+}

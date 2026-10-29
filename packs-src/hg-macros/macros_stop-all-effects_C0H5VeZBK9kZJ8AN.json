@@ -1,0 +1,15 @@
+{
+  "_id": "C0H5VeZBK9kZJ8AN",
+  "_key": "!macros!C0H5VeZBK9kZJ8AN",
+  "name": "Stop All Effects",
+  "type": "script",
+  "img": "modules/hollow-garden/assets/host/access-denied.webp",
+  "command": "// The Hollow Garden: Stop All Effects\nconst api = game.modules.get(\"hollow-garden\")?.api;\nif (!api) return ui.notifications.warn(\"The Hollow Garden module is not active.\");\napi.stopEffects();",
+  "scope": "global",
+  "folder": null,
+  "sort": 2100,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351"
+  }
+}

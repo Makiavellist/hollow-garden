@@ -1,0 +1,15 @@
+{
+  "_id": "lsXDkRUWkPykmVEr",
+  "_key": "!macros!lsXDkRUWkPykmVEr",
+  "name": "Red Alert",
+  "type": "script",
+  "img": "modules/hollow-garden/assets/host/angry.webp",
+  "command": "// The Hollow Garden: Red Alert\nconst api = game.modules.get(\"hollow-garden\")?.api;\nif (!api) return ui.notifications.warn(\"The Hollow Garden module is not active.\");\napi.effect('redalert');",
+  "scope": "global",
+  "folder": null,
+  "sort": 1800,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351"
+  }
+}

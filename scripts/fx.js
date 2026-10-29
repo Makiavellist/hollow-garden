@@ -109,6 +109,7 @@ const TITLE_DEFAULTS = {
   peak: { kicker: "РЕЙТИНГИ", title: "ПИК РЕЙТИНГА!", subtitle: "", sound: "cheer", sticker: "ratings", theme: "peak" },
   escalation: { kicker: "РЕЙТИНГИ", title: "ЭСКАЛАЦИЯ!", subtitle: `Зрителям скучно. ${HOST_NAME} — нет.`, sound: "alarm", sticker: "angry", theme: "alarm" },
   announce: { kicker: "РЕЙТИНГИ", title: "ВНИМАНИЕ!", subtitle: "", sound: "on-air", sticker: "ratings", theme: "episode" },
+  back: { kicker: SHOW_UP, title: "МЫ СНОВА В ЭФИРЕ!", subtitle: "Благодарим наших спонсоров. То есть меня!", sound: "on-air", sticker: "mic-welcome", theme: "episode", duration: 3400 },
   lockfalls: { kicker: "СРОЧНЫЕ НОВОСТИ", title: "ЗАМОК ПАЛ", subtitle: "«Вы не можете уйти до финала!»", sound: "suspense", sticker: "nervous", theme: "alarm" }
 };
 

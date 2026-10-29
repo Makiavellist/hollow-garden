@@ -3,6 +3,8 @@ import { broadcast } from "../socket.js";
 import { FX } from "../fx.js";
 import { adjustContestant, adjustShow, getState, resetSeason, setCurrentEpisode, setEpisodesDone, toggleVisible } from "../state.js";
 import { awardTrinket, moodGas } from "../rules.js";
+import { FX_EXTRA } from "../fx-extra.js";
+import { COMMERCIALS, adConfig, adLength, adPool, commercialBreak, previewAds, setAdConfig } from "../commercials.js";
 import { esc } from "../util.js";
 import { HGApplication } from "./base.js";
 
@@ -11,7 +13,49 @@ const TABS = [
   ["sound", "fa-solid fa-volume-high", "Soundboard"],
   ["stickers", "fa-solid fa-note-sticky", "Stickers"],
   ["broadcast", "fa-solid fa-tower-broadcast", "Broadcast"],
+  ["effects", "fa-solid fa-wand-magic-sparkles", "Effects"],
+  ["ads", "fa-solid fa-rectangle-ad", "Ads"],
   ["games", "fa-solid fa-dice", "Games"]
+];
+
+/** Effects tab: [id, icon, label, hint]. Ids map to socket handlers (see #fxPayload). */
+const FX_GROUPS = [
+  ["Malfunctions", "Studio systems failing on cue.", [
+    ["blackout", "fa-solid fa-power-off", "Blackout", "Lights flicker and die; red emergency beacon; power comes back."],
+    ["static", "fa-solid fa-tv", "TV static", "Snow and hiss over the whole screen."],
+    ["nosignal", "fa-solid fa-signal", "No signal", "Colour bars and a test tone."],
+    ["glitch", "fa-solid fa-display", "The Gap (glitch)", "Short, violent signal glitch with shake."],
+    ["desync", "fa-solid fa-wave-square", "Hologram desync", "Tearing bands, a rolling bar and colour fringing on the map."],
+    ["sparks", "fa-solid fa-fire-flame-simple", "Short circuit", "Bursts of sparks from the light rig with flashes."],
+    ["arcs", "fa-solid fa-bolt-lightning", "Electric arcs", "Lightning crackles across the screen (overloads, nanite fields)."],
+    ["buffering", "fa-solid fa-spinner", "Buffering…", "The feed freezes; the spinner stalls at 99%."],
+    ["gravity", "fa-solid fa-arrow-down-up-across-line", "Gravity failure", "The whole view tilts and sways."],
+    ["crash", "fa-solid fa-bug", "System crash", "Error screen, memory dump, reboot. Celmak cries."],
+    ["redalert", "fa-solid fa-bell", "Red alert", "Klaxon, red vignette, rotating beacons, hazard banner."],
+    ["lockdown", "fa-solid fa-door-closed", "Lockdown", "Blast doors slam shut, hold, and open again."]
+  ]],
+  ["Studio", "The show's own lights, signs and cameras.", [
+    ["sign-applause", "fa-solid fa-hands-clapping", "АПЛОДИСМЕНТЫ sign", "Neon applause sign with applause."],
+    ["sign-silence", "fa-solid fa-volume-xmark", "ТИШИНА sign", "Neon «ТИШИНА В СТУДИИ» sign, no sound."],
+    ["sign-custom", "fa-solid fa-sign-hanging", "Custom sign", "Neon sign with your text and colour (below)."],
+    ["countdown", "fa-solid fa-hourglass-half", "Countdown", "Big on-screen timer (seconds below), buzzer at zero."],
+    ["spotlight", "fa-solid fa-crosshairs", "Spotlight", "Darkness with beams on your selected (or targeted) tokens."],
+    ["camera", "fa-solid fa-video", "Camera feed", "Celmak's surveillance camera overlay."],
+    ["ticker", "fa-solid fa-newspaper", "Breaking news", "A crawl along the bottom with your text (below)."],
+    ["confetti", "fa-solid fa-champagne-glasses", "Confetti", "Confetti cannon."],
+    ["shake", "fa-solid fa-house-crack", "Screen shake", "A quick jolt."]
+  ]],
+  ["Garden & scenes", "Episode set pieces.", [
+    ["season-spring", "fa-solid fa-seedling", "Spring", "Petals and pollen (the Garden episode: three Mood Gas bursts)."],
+    ["season-summer", "fa-solid fa-sun", "Summer", "Heat lamps, glare and cicadas."],
+    ["season-autumn", "fa-solid fa-leaf", "Autumn", "Leaf-blades sweep across the screen."],
+    ["season-winter", "fa-solid fa-snowflake", "Winter", "Snow and coolant frost."],
+    ["smoke", "fa-solid fa-cloud", "Stage smoke", "Smoke rolls up from the floor."],
+    ["warp", "fa-solid fa-rocket", "Drift jump", "Star streaks and a white-out."],
+    ["lockpulse", "fa-solid fa-anchor", "Dimensional lock", "Shockwave rings: «ИЗМЕРЕНИЯ ЗАПЕРТЫ»."],
+    ["gas22", "fa-solid fa-smog", "Mood Gas vent (DC 22)", "Rolls the d6 table and posts the saves."],
+    ["gas25", "fa-solid fa-smog", "Mood release (DC 25)", "As above, DC 25."]
+  ]]
 ];
 
 export class ProducerConsole extends HGApplication {
@@ -45,7 +89,13 @@ export class ProducerConsole extends HGApplication {
       randomLine: ProducerConsole.#onRandomLine,
       say: ProducerConsole.#onSay,
       title: ProducerConsole.#onTitle,
-      effect: ProducerConsole.#onEffect,
+      fx: ProducerConsole.#onFx,
+      fxStop: () => broadcast("fx-stop", {}),
+      adToggle: ProducerConsole.#onAdToggle,
+      adAll: ProducerConsole.#onAdAll,
+      adPreview: (_e, t) => previewAds([t.dataset.id]),
+      adAir: (_e, t) => commercialBreak({ ids: [t.dataset.id], intro: false, outro: false }),
+      adBreak: ProducerConsole.#onAdBreak,
       roulette: () => game.modules.get("hollow-garden").api.openRoulette(),
       vote: () => game.modules.get("hollow-garden").api.openVote(),
       honeypot: () => game.modules.get("hollow-garden").api.openHoneypot(),
@@ -58,6 +108,7 @@ export class ProducerConsole extends HGApplication {
 
   tab = "ratings";
   draft = { persona: "Host", sticker: null, text: "" };
+  fxDraft = { duration: "", signText: "ВСЕ ВСТАЮТ!", signColor: "#2de2e6", seconds: 30, countdownLabel: "", ticker: "", seasonRules: true };
 
   setTab(tab) {
     if (tab && TABS.some(([id]) => id === tab)) this.tab = tab;
@@ -159,21 +210,77 @@ export class ProducerConsole extends HGApplication {
         <div class="hg-row hg-wrap">
           <button type="button" data-action="title" data-kind="intermission"><i class="fa-solid fa-mug-hot"></i> Commercial break</button>
           <label class="hg-check"><input type="checkbox" name="hg-intermission" checked> Intermission: −1 rating</label>
+          <label class="hg-check" title="Play adverts after the break card (choose them on the Ads tab)"><input type="checkbox" data-action="adToggle" data-key="enabled" ${adConfig().enabled ? "checked" : ""}> + commercials</label>
           <button type="button" data-action="title" data-kind="previously"><i class="fa-solid fa-backward"></i> Previously on…</button>
           <button type="button" data-action="title" data-kind="lockfalls"><i class="fa-solid fa-lock-open"></i> The lock falls</button>
           <button type="button" data-action="title" data-kind="finale"><i class="fa-solid fa-trophy"></i> Season finale</button>
         </div>
-      </section>
+      </section>`;
+  }
+
+  /* ---------------- Effects ---------------- */
+  _effects() {
+    const d = this.fxDraft;
+    const groups = FX_GROUPS.map(([title, hint, items]) => {
+      const btns = items.map(([id, icon, label, tip]) =>
+        `<button type="button" class="hg-fxbtn" data-action="fx" data-fx="${id}" title="${esc(tip)} (Shift-click: preview only for you)"><i class="${icon}"></i><span>${esc(label)}</span></button>`).join("");
+      return `<section class="hg-card-panel"><h4>${esc(title)} <small>${esc(hint)}</small></h4><div class="hg-fxgrid">${btns}</div></section>`;
+    }).join("");
+    return `
+      <p class="hg-hint">Every effect plays for everyone. <kbd>Shift</kbd>-click to preview it only for yourself. Players with <em>Reduce motion</em> get calmer versions.</p>
+      <div class="hg-row hg-wrap hg-fxopts">
+        <label>Duration <input type="number" name="fx-duration" min="1" max="120" step="1" placeholder="auto" value="${esc(d.duration)}"> s</label>
+        <button type="button" class="hg-danger" data-action="fxStop" title="Stop every running effect, looped sound and advert for everyone"><i class="fa-solid fa-ban"></i> Stop all effects</button>
+      </div>
+      ${groups}
       <section class="hg-card-panel">
-        <h4>Effects</h4>
-        <div class="hg-row hg-wrap">
-          <button type="button" data-action="effect" data-fx="confetti"><i class="fa-solid fa-champagne-glasses"></i> Confetti</button>
-          <button type="button" data-action="effect" data-fx="glitch"><i class="fa-solid fa-tv"></i> The Gap (glitch)</button>
-          <button type="button" data-action="effect" data-fx="shake"><i class="fa-solid fa-house-crack"></i> Screen shake</button>
-          <button type="button" data-action="effect" data-fx="gas22"><i class="fa-solid fa-smog"></i> Mood Gas vent (DC 22)</button>
-          <button type="button" data-action="effect" data-fx="gas25"><i class="fa-solid fa-smog"></i> Mood release (DC 25)</button>
+        <h4>Options <small>for signs, countdowns, the ticker and seasons</small></h4>
+        <div class="hg-row hg-wrap hg-fxopts">
+          <label>Sign text <input type="text" name="fx-signText" value="${esc(d.signText)}" maxlength="40"></label>
+          <label>Colour <input type="color" name="fx-signColor" value="${esc(d.signColor)}"></label>
+          <label>Countdown <input type="number" name="fx-seconds" min="1" max="600" value="${esc(d.seconds)}"> s</label>
+          <label>Countdown caption <input type="text" name="fx-countdownLabel" value="${esc(d.countdownLabel)}" placeholder="ДО ЗАКРЫТИЯ ДВЕРЕЙ" maxlength="40"></label>
+        </div>
+        <div class="hg-row hg-wrap hg-fxopts">
+          <label class="hg-grow">Ticker <input type="text" name="fx-ticker" value="${esc(d.ticker)}" placeholder="Сельмак напоминает: никто не уходит раньше финала!" maxlength="200"></label>
+          <label class="hg-check"><input type="checkbox" name="fx-seasonRules" ${d.seasonRules ? "checked" : ""}> Seasons show their rules line</label>
         </div>
       </section>`;
+  }
+
+  /* ---------------- Ads ---------------- */
+  _ads() {
+    const cfg = adConfig();
+    const pool = new Set(adPool(cfg));
+    const cards = COMMERCIALS.map((ad) => `<li class="hg-adcard ${pool.has(ad.id) ? "" : "hg-dim"}" style="--ad-bg:${esc(ad.theme?.bg ?? "#222")};--ad-accent:${esc(ad.theme?.accent ?? "#fff")}">
+        <div class="hg-adthumb"><i class="${esc(ad.icon)}"></i></div>
+        <div class="hg-adinfo"><strong>${esc(ad.label)}</strong><small>${esc(ad.about)} · ${Math.round(adLength(ad) / 1000)} s</small></div>
+        <label class="hg-check" title="Include in the rotation"><input type="checkbox" data-action="adToggle" data-id="${ad.id}" ${pool.has(ad.id) ? "checked" : ""}> in rotation</label>
+        <button type="button" class="hg-icon" data-action="adPreview" data-id="${ad.id}" title="Preview (only you)"><i class="fa-solid fa-eye"></i></button>
+        <button type="button" class="hg-icon" data-action="adAir" data-id="${ad.id}" title="Air this advert now for everyone"><i class="fa-solid fa-tower-broadcast"></i></button>
+      </li>`).join("");
+    const per = [1, 2, 3, 4, 5].map((n) => `<option value="${n}" ${Number(cfg.perBreak) === n ? "selected" : ""}>${n}</option>`).join("");
+    return `
+      <section class="hg-card-panel">
+        <h4>Commercial break</h4>
+        <div class="hg-row hg-wrap">
+          <button type="button" class="hg-big" data-action="adBreak"><i class="fa-solid fa-mug-hot"></i> Commercial break</button>
+          <label class="hg-check"><input type="checkbox" name="hg-intermission" checked> Intermission: −1 rating</label>
+        </div>
+        <div class="hg-row hg-wrap hg-fxopts">
+          <label class="hg-check"><input type="checkbox" data-action="adToggle" data-key="enabled" ${cfg.enabled ? "checked" : ""}> Play commercials after the break card</label>
+          <label>Per break <select name="ad-perBreak">${per}</select></label>
+          <label>Order <select name="ad-order">
+            <option value="random" ${cfg.order !== "sequence" ? "selected" : ""}>Random (no repeats)</option>
+            <option value="sequence" ${cfg.order === "sequence" ? "selected" : ""}>In turn</option></select></label>
+          <label class="hg-check"><input type="checkbox" data-action="adToggle" data-key="outro" ${cfg.outro ? "checked" : ""}> «Мы снова в эфире!» card</label>
+        </div>
+        <p class="hg-hint">The break card plays first, then ${cfg.enabled ? `<strong>${Math.min(Number(cfg.perBreak) || 0, pool.size)}</strong> advert(s) from the ${pool.size} in rotation` : "<strong>no adverts</strong> (commercials are off)"}. During the break you get <em>Skip</em> and <em>End break</em> buttons in the corner of the screen.</p>
+      </section>
+      <div class="hg-row hg-wrap"><h4 class="hg-grow">Adverts</h4>
+        <button type="button" data-action="adAll" data-on="1"><i class="fa-solid fa-square-check"></i> All</button>
+        <button type="button" data-action="adAll" data-on="0"><i class="fa-regular fa-square"></i> None</button></div>
+      <ul class="hg-adlist">${cards}</ul>`;
   }
 
   /* ---------------- Games ---------------- */
@@ -203,6 +310,13 @@ export class ProducerConsole extends HGApplication {
     super._onRender?.(context, options);
     const ta = this.element.querySelector("textarea[name='hg-say']");
     ta?.addEventListener("input", () => (this.draft.text = ta.value));
+    for (const input of this.element.querySelectorAll("[name^='fx-']")) {
+      const key = input.name.slice(3);
+      input.addEventListener("change", () => (this.fxDraft[key] = input.type === "checkbox" ? input.checked : input.value));
+      if (input.type !== "checkbox") input.addEventListener("input", () => (this.fxDraft[key] = input.value));
+    }
+    this.element.querySelector("select[name='ad-perBreak']")?.addEventListener("change", (ev) => setAdConfig({ perBreak: Number(ev.target.value) }));
+    this.element.querySelector("select[name='ad-order']")?.addEventListener("change", (ev) => setAdConfig({ order: ev.target.value }));
   }
 
   /* ---------------- Handlers ---------------- */
@@ -284,19 +398,62 @@ export class ProducerConsole extends HGApplication {
       const id = this.element.querySelector("select[name='hg-ep']")?.value;
       return game.modules.get("hollow-garden").api.episodeTitle(id);
     }
+    if (kind === "intermission") return ProducerConsole.#onAdBreak.call(this);
     broadcast("title", { kind });
-    if (kind === "intermission" && this.element.querySelector("input[name='hg-intermission']")?.checked) {
-      await adjustShow(-1, "Intermission");
+  }
+
+  /** Commercial break: the break card, then adverts if they are switched on. */
+  static async #onAdBreak() {
+    const cost = this.element.querySelector("input[name='hg-intermission']")?.checked;
+    await commercialBreak({ intro: true });
+    if (cost) await adjustShow(-1, "Intermission");
+  }
+
+  static async #onAdToggle(_e, t) {
+    if (t.dataset.key) return setAdConfig({ [t.dataset.key]: t.checked });
+    const off = new Set(adConfig().off ?? []);
+    if (t.checked) off.delete(t.dataset.id);
+    else off.add(t.dataset.id);
+    return setAdConfig({ off: [...off] });
+  }
+
+  static #onAdAll(_e, t) {
+    return setAdConfig({ off: t.dataset.on === "1" ? [] : COMMERCIALS.map((a) => a.id) });
+  }
+
+  /** Build the socket message for an Effects-tab button. */
+  #fxPayload(id) {
+    const d = this.fxDraft;
+    const duration = Number(d.duration) || undefined;
+    if (id.startsWith("season-")) return ["season", { kind: id.slice(7), duration, showRules: !!d.seasonRules }];
+    switch (id) {
+      case "sign-applause": return ["sign", { text: "АПЛОДИСМЕНТЫ", color: "#ff3cac", sound: "applause", duration }];
+      case "sign-silence": return ["sign", { text: "ТИШИНА В СТУДИИ", color: "#2de2e6", sound: null, duration }];
+      case "sign-custom": return ["sign", { text: (d.signText || "ВНИМАНИЕ").toUpperCase(), color: d.signColor || "#2de2e6", sound: null, duration }];
+      case "countdown": return ["countdown", { seconds: Number(d.seconds) || 30, label: d.countdownLabel || "" }];
+      case "ticker": return ["ticker", { text: d.ticker || "", duration }];
+      case "confetti": return ["confetti", { sound: "confetti" }];
+      case "shake": return ["shake", { sound: "rimshot", strength: 2 }];
+      case "glitch": return ["glitch", { duration: duration ? duration * 1000 : undefined }];
+      case "spotlight": {
+        const toks = canvas?.tokens?.controlled?.length ? canvas.tokens.controlled : [...(game.user.targets ?? [])];
+        const points = toks.map((tk) => ({ x: tk.center.x, y: tk.center.y, r: Math.max(tk.w, tk.h) * 0.75 }));
+        if (!points.length) ui.notifications.info("No tokens selected or targeted: the spotlight finds the middle of the screen.");
+        return ["spotlight", { points, duration }];
+      }
+      default: return [id, { duration }];
     }
   }
 
-  static #onEffect(_e, t) {
-    const fx = t.dataset.fx;
-    if (fx === "confetti") broadcast("confetti", { sound: "confetti" });
-    else if (fx === "glitch") broadcast("glitch", {});
-    else if (fx === "shake") broadcast("shake", { sound: "rimshot" });
-    else if (fx === "gas22") moodGas({ dc: 22 });
-    else if (fx === "gas25") moodGas({ dc: 25 });
+  static #onFx(e, t) {
+    const id = t.dataset.fx;
+    if (id === "gas22" || id === "gas25") return moodGas({ dc: id === "gas22" ? 22 : 25 });
+    const [type, data] = this.#fxPayload(id);
+    if (e.shiftKey) {
+      const fn = FX_EXTRA[type] ?? FX[type];
+      return fn?.(data);
+    }
+    broadcast(type, data);
   }
 
   static #onEpDone(_e, t) {

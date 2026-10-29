@@ -6,6 +6,8 @@ import { EPISODES, MODULE_ID, defaultState, starring } from "./constants.js";
 import { playSfx, preloadSounds } from "./audio.js";
 import { RatingsBoard } from "./board.js";
 import { FX } from "./fx.js";
+import { FX_EXTRA } from "./fx-extra.js";
+import { AD_DEFAULTS, AD_FX, COMMERCIAL_IDS, commercialBreak, previewAds } from "./commercials.js";
 import { broadcast, initSocket, registerHandler } from "./socket.js";
 import {
   adjustContestant, adjustShow, getState, handleStateChange, markSeen, onStateChange, setCurrentEpisode, setVisible, toggleVisible
@@ -19,7 +21,7 @@ import { VoteDesk } from "./apps/vote.js";
 import { HoneypotDesk } from "./apps/honeypot.js";
 import { isGM } from "./util.js";
 
-for (const [type, fn] of Object.entries(FX)) registerHandler(type, fn);
+for (const [type, fn] of Object.entries({ ...FX, ...FX_EXTRA, ...AD_FX })) registerHandler(type, fn);
 
 function requireGM() {
   if (isGM()) return true;
@@ -87,6 +89,24 @@ const api = {
   cue: (id) => requireGM() && broadcast("cue", { id }),
   sticker: (name, caption = "") => requireGM() && broadcast("sticker", { sticker: name, caption }),
   say: (text, persona = "Host") => requireGM() && broadcast("caption", { text, persona }),
+  /** Run any broadcast effect for everyone, e.g. effect("blackout", { duration: 8 }) or effect("sign", { text: "ТИШИНА" }). */
+  effect: (type, data = {}) => requireGM() && broadcast(type, data),
+  /** Every effect name accepted by effect(). */
+  effects: () => [...Object.keys(FX), ...Object.keys(FX_EXTRA)].filter((k) => k !== "fx-stop"),
+  stopEffects: () => requireGM() && broadcast("fx-stop", {}),
+  /** Spotlight the GM's selected tokens (or the screen centre) for everyone. */
+  spotlight(duration = 6) {
+    if (!requireGM()) return;
+    const toks = canvas?.tokens?.controlled?.length ? canvas.tokens.controlled : [...(game.user.targets ?? [])];
+    const points = toks.map((t) => ({ x: t.center.x, y: t.center.y, r: Math.max(t.w, t.h) * 0.75 }));
+    broadcast("spotlight", { points, duration });
+  },
+  /** Commercial break: title card, then adverts (if enabled in the console), then "we're back". */
+  commercialBreak: (opts = {}) => requireGM() && commercialBreak(opts),
+  /** Air specific adverts right now, e.g. playCommercials(["drift"]). */
+  playCommercials: (ids, opts = {}) => requireGM() && commercialBreak({ ids: [].concat(ids), intro: false, outro: false, ...opts }),
+  previewCommercials: (ids) => requireGM() && previewAds([].concat(ids)),
+  commercials: () => [...COMMERCIAL_IDS],
   resetBoardPosition: () => RatingsBoard.instance.resetPosition(),
   broadcast
 };
@@ -124,6 +144,10 @@ Hooks.once("init", () => {
     name: "Меньше анимации / Reduce motion",
     hint: "Без тряски экрана, меньше конфетти, быстрое колесо.",
     scope: "client", config: true, type: Boolean, default: false
+  });
+  game.settings.register(MODULE_ID, "commercials", {
+    scope: "world", config: false, type: Object, default: { ...AD_DEFAULTS },
+    onChange: () => ProducerConsole.instance.rendered && ProducerConsole.instance.render()
   });
   game.settings.register(MODULE_ID, "boardPos", { scope: "client", config: false, type: Object, default: {} });
   game.settings.register(MODULE_ID, "boardCompact", { scope: "client", config: false, type: Boolean, default: true });

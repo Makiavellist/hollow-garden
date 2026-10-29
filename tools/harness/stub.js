@@ -76,7 +76,13 @@ window.foundry = {
   },
   audio: {
     AudioHelper: {
-      play({ src, volume }) { window.__log.push(["sound", src, volume]); const a = new Audio(src); a.volume = volume; a.play().catch(() => {}); return a; },
+      play({ src, volume, loop = false }) {
+        window.__log.push(["sound", src, volume, loop]);
+        const a = new Audio(src); a.volume = volume; a.loop = loop;
+        a.addEventListener("pause", () => window.__log.push(["stop", src]));
+        a.play().catch(() => {});
+        return a;
+      },
       preloadSound: async (src) => { window.__log.push(["preload", src]); }
     }
   }

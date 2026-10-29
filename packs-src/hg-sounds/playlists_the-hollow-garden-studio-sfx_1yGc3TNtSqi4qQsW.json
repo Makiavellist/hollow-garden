@@ -369,6 +369,314 @@
       "_stats": {
         "coreVersion": "13.351"
       }
+    },
+    {
+      "_id": "7jdA9gdmWVhyXojo",
+      "_key": "!playlists.sounds!1yGc3TNtSqi4qQsW.7jdA9gdmWVhyXojo",
+      "name": "Power Down",
+      "path": "modules/hollow-garden/sounds/power-down.ogg",
+      "repeat": false,
+      "volume": 0.8,
+      "fade": null,
+      "sort": 2700,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "GuiemyQkpvRAfOQ6",
+      "_key": "!playlists.sounds!1yGc3TNtSqi4qQsW.GuiemyQkpvRAfOQ6",
+      "name": "Power Up",
+      "path": "modules/hollow-garden/sounds/power-up.ogg",
+      "repeat": false,
+      "volume": 0.8,
+      "fade": null,
+      "sort": 2800,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "VEy4y8Kla54noFt9",
+      "_key": "!playlists.sounds!1yGc3TNtSqi4qQsW.VEy4y8Kla54noFt9",
+      "name": "TV Static (loop)",
+      "path": "modules/hollow-garden/sounds/static.ogg",
+      "repeat": true,
+      "volume": 0.8,
+      "fade": null,
+      "sort": 2900,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "AlAaQp5UB4eUvJNe",
+      "_key": "!playlists.sounds!1yGc3TNtSqi4qQsW.AlAaQp5UB4eUvJNe",
+      "name": "Test Tone",
+      "path": "modules/hollow-garden/sounds/tv-tone.ogg",
+      "repeat": false,
+      "volume": 0.8,
+      "fade": null,
+      "sort": 3000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "6XhBikG9j75a9lwA",
+      "_key": "!playlists.sounds!1yGc3TNtSqi4qQsW.6XhBikG9j75a9lwA",
+      "name": "Sparks",
+      "path": "modules/hollow-garden/sounds/sparks.ogg",
+      "repeat": false,
+      "volume": 0.8,
+      "fade": null,
+      "sort": 3100,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "o0OJD63YpK3FcDCF",
+      "_key": "!playlists.sounds!1yGc3TNtSqi4qQsW.o0OJD63YpK3FcDCF",
+      "name": "Electric Zap",
+      "path": "modules/hollow-garden/sounds/zap.ogg",
+      "repeat": false,
+      "volume": 0.8,
+      "fade": null,
+      "sort": 3200,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "9ZGKGg8OebgrSVAE",
+      "_key": "!playlists.sounds!1yGc3TNtSqi4qQsW.9ZGKGg8OebgrSVAE",
+      "name": "Electric Hum (loop)",
+      "path": "modules/hollow-garden/sounds/buzz.ogg",
+      "repeat": true,
+      "volume": 0.8,
+      "fade": null,
+      "sort": 3300,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "bsAG8aOgT20EdmG7",
+      "_key": "!playlists.sounds!1yGc3TNtSqi4qQsW.bsAG8aOgT20EdmG7",
+      "name": "Klaxon (loop)",
+      "path": "modules/hollow-garden/sounds/klaxon.ogg",
+      "repeat": true,
+      "volume": 0.8,
+      "fade": null,
+      "sort": 3400,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "PsFFaF8LXhuS94yR",
+      "_key": "!playlists.sounds!1yGc3TNtSqi4qQsW.PsFFaF8LXhuS94yR",
+      "name": "System Error",
+      "path": "modules/hollow-garden/sounds/error.ogg",
+      "repeat": false,
+      "volume": 0.8,
+      "fade": null,
+      "sort": 3500,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "vjClkH0MnlGETBD8",
+      "_key": "!playlists.sounds!1yGc3TNtSqi4qQsW.vjClkH0MnlGETBD8",
+      "name": "Blast Doors",
+      "path": "modules/hollow-garden/sounds/doors.ogg",
+      "repeat": false,
+      "volume": 0.8,
+      "fade": null,
+      "sort": 3600,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "7Fxv6MLadlSrfUsr",
+      "_key": "!playlists.sounds!1yGc3TNtSqi4qQsW.7Fxv6MLadlSrfUsr",
+      "name": "Drift Jump",
+      "path": "modules/hollow-garden/sounds/warp.ogg",
+      "repeat": false,
+      "volume": 0.8,
+      "fade": null,
+      "sort": 3700,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "KeB7XRd2b9m28y9E",
+      "_key": "!playlists.sounds!1yGc3TNtSqi4qQsW.KeB7XRd2b9m28y9E",
+      "name": "Shockwave",
+      "path": "modules/hollow-garden/sounds/shockwave.ogg",
+      "repeat": false,
+      "volume": 0.8,
+      "fade": null,
+      "sort": 3800,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "xdyjm9wZA502UpWo",
+      "_key": "!playlists.sounds!1yGc3TNtSqi4qQsW.xdyjm9wZA502UpWo",
+      "name": "Wind (loop)",
+      "path": "modules/hollow-garden/sounds/wind.ogg",
+      "repeat": true,
+      "volume": 0.8,
+      "fade": null,
+      "sort": 3900,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "FE8jJkDddiwT7uQw",
+      "_key": "!playlists.sounds!1yGc3TNtSqi4qQsW.FE8jJkDddiwT7uQw",
+      "name": "Cicadas (loop)",
+      "path": "modules/hollow-garden/sounds/cicadas.ogg",
+      "repeat": true,
+      "volume": 0.8,
+      "fade": null,
+      "sort": 4000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "UuH42TOTEIJSN7Zu",
+      "_key": "!playlists.sounds!1yGc3TNtSqi4qQsW.UuH42TOTEIJSN7Zu",
+      "name": "Spring Chimes",
+      "path": "modules/hollow-garden/sounds/chimes.ogg",
+      "repeat": false,
+      "volume": 0.8,
+      "fade": null,
+      "sort": 4100,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "ZqcLEawY8uqpZ1TD",
+      "_key": "!playlists.sounds!1yGc3TNtSqi4qQsW.ZqcLEawY8uqpZ1TD",
+      "name": "Camera Shutter",
+      "path": "modules/hollow-garden/sounds/camera.ogg",
+      "repeat": false,
+      "volume": 0.8,
+      "fade": null,
+      "sort": 4200,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "FSbOogtz64I1fANN",
+      "_key": "!playlists.sounds!1yGc3TNtSqi4qQsW.FSbOogtz64I1fANN",
+      "name": "Neon Sign",
+      "path": "modules/hollow-garden/sounds/neon.ogg",
+      "repeat": false,
+      "volume": 0.8,
+      "fade": null,
+      "sort": 4300,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "Km5KZ5GmEDhdBiqJ",
+      "_key": "!playlists.sounds!1yGc3TNtSqi4qQsW.Km5KZ5GmEDhdBiqJ",
+      "name": "Spotlight Clunk",
+      "path": "modules/hollow-garden/sounds/spotlight.ogg",
+      "repeat": false,
+      "volume": 0.8,
+      "fade": null,
+      "sort": 4400,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "qgZUZUZXvO2dNljB",
+      "_key": "!playlists.sounds!1yGc3TNtSqi4qQsW.qgZUZUZXvO2dNljB",
+      "name": "Cash Register",
+      "path": "modules/hollow-garden/sounds/cash.ogg",
+      "repeat": false,
+      "volume": 0.8,
+      "fade": null,
+      "sort": 4500,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "XN2A6nfR08mkHjVi",
+      "_key": "!playlists.sounds!1yGc3TNtSqi4qQsW.XN2A6nfR08mkHjVi",
+      "name": "Ad Jingle A",
+      "path": "modules/hollow-garden/sounds/ad-jingle-a.ogg",
+      "repeat": false,
+      "volume": 0.8,
+      "fade": null,
+      "sort": 4600,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "aszcm0ejEg3coZTC",
+      "_key": "!playlists.sounds!1yGc3TNtSqi4qQsW.aszcm0ejEg3coZTC",
+      "name": "Ad Jingle B",
+      "path": "modules/hollow-garden/sounds/ad-jingle-b.ogg",
+      "repeat": false,
+      "volume": 0.8,
+      "fade": null,
+      "sort": 4700,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "nEmnXNrgmeeTGQ86",
+      "_key": "!playlists.sounds!1yGc3TNtSqi4qQsW.nEmnXNrgmeeTGQ86",
+      "name": "Ad Jingle C",
+      "path": "modules/hollow-garden/sounds/ad-jingle-c.ogg",
+      "repeat": false,
+      "volume": 0.8,
+      "fade": null,
+      "sort": 4800,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
     }
   ],
   "folder": null,

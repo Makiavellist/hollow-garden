@@ -2,7 +2,7 @@
   "id": "hollow-garden",
   "title": "The Hollow Garden: Звёздные Искатели",
   "description": "<p>A Pathfinder 1e adventure for seven 13th-level characters, packaged for Foundry VTT v13: the full adventure journal, Celmak's robots and cast as PF1 actors, prizes and trinkets, roll tables, and a futuristic gameshow studio: a GM-toggled ratings board for every contestant, a rigged episode wheel, live audience votes, a soundboard with pop-up host stickers, title cards, Mood Gas and more.</p>",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "authors": [
     {
       "name": "Makiavellist"
@@ -27,7 +27,9 @@
     "scripts/main.js"
   ],
   "styles": [
-    "styles/hollow-garden.css"
+    "styles/hollow-garden.css",
+    "styles/effects.css",
+    "styles/commercials.css"
   ],
   "languages": [
     {
@@ -136,7 +138,7 @@
   ],
   "url": "https://github.com/Makiavellist/hollow-garden",
   "manifest": "https://github.com/Makiavellist/hollow-garden/releases/latest/download/module.json",
-  "download": "https://github.com/Makiavellist/hollow-garden/releases/download/v1.1.0/module.zip",
+  "download": "https://github.com/Makiavellist/hollow-garden/releases/download/v1.2.0/module.zip",
   "readme": "https://github.com/Makiavellist/hollow-garden/blob/main/README.md",
   "license": "LICENSE.md"
 }

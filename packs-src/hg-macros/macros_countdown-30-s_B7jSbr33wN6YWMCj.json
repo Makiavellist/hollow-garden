@@ -1,0 +1,15 @@
+{
+  "_id": "B7jSbr33wN6YWMCj",
+  "_key": "!macros!B7jSbr33wN6YWMCj",
+  "name": "Countdown 30 s",
+  "type": "script",
+  "img": "modules/hollow-garden/assets/host/countdown.webp",
+  "command": "// The Hollow Garden: Countdown 30 s\nconst api = game.modules.get(\"hollow-garden\")?.api;\nif (!api) return ui.notifications.warn(\"The Hollow Garden module is not active.\");\napi.effect('countdown', { seconds: 30 });",
+  "scope": "global",
+  "folder": null,
+  "sort": 2000,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351"
+  }
+}

@@ -4,7 +4,7 @@
   "name": "Commercial Break",
   "type": "script",
   "img": "modules/hollow-garden/assets/host/this-is-fine.webp",
-  "command": "// The Hollow Garden: Commercial Break\nconst api = game.modules.get(\"hollow-garden\")?.api;\nif (!api) return ui.notifications.warn(\"The Hollow Garden module is not active.\");\napi.titleCard('intermission');",
+  "command": "// The Hollow Garden: Commercial Break\nconst api = game.modules.get(\"hollow-garden\")?.api;\nif (!api) return ui.notifications.warn(\"The Hollow Garden module is not active.\");\napi.commercialBreak();",
   "scope": "global",
   "folder": null,
   "sort": 1100,

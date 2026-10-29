@@ -1,0 +1,15 @@
+{
+  "_id": "V5VXlwM16uKAAkfN",
+  "_key": "!macros!V5VXlwM16uKAAkfN",
+  "name": "Malfunction: Blackout",
+  "type": "script",
+  "img": "modules/hollow-garden/assets/host/nervous.webp",
+  "command": "// The Hollow Garden: Malfunction: Blackout\nconst api = game.modules.get(\"hollow-garden\")?.api;\nif (!api) return ui.notifications.warn(\"The Hollow Garden module is not active.\");\napi.effect('blackout');",
+  "scope": "global",
+  "folder": null,
+  "sort": 1600,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351"
+  }
+}

@@ -263,10 +263,25 @@ GUIDE = [
 <li><strong>Soundboard</strong>: each cue plays a sound for everyone and pops up a sticker of the host. <em>Shift-click</em> previews it only for you.</li>
 <li><strong>Stickers</strong>: pop any of the host's 28 stickers silently.</li>
 <li><strong>Celmak says</strong>: pick a persona (Host, Critic, Lover, Child), type a line or draw a random one, and it appears as a broadcast caption with the matching sticker.</li>
-<li><strong>Title cards</strong>: episode openers, <em>Commercial Break</em> (intermission; optionally −1 rating), <em>Previously On…</em>, and the <em>Season Finale</em>.</li>
-<li><strong>Effects</strong>: confetti, The Gap glitch, screen shake, and <em>Mood Gas</em>, which rolls the d6 table, fogs everyone's screen in the effect's colour and posts the DCs.</li>
+<li><strong>Title cards</strong>: episode openers, <em>Commercial Break</em> (intermission; optionally −1 rating; plays adverts if they are switched on), <em>Previously On…</em>, and the <em>Season Finale</em>.</li>
 </ul>
 <p>Each player can lower the module's sound volume, turn off stickers, or reduce motion in their own module settings.</p>"""),
+    ("Effects", """
+<p>The console's <em>Effects</em> tab plays full-screen effects for everyone. <em>Shift-click</em> any button to preview it only for you. Set <em>Duration</em> to override how long an effect lasts; <strong>Stop all effects</strong> ends every running effect, looped sound and advert for everyone.</p>
+<ul>
+<li><strong>Malfunctions</strong>: <em>Blackout</em> (lights die, red emergency beacon, power returns), <em>TV static</em>, <em>No signal</em> (colour bars and test tone), <em>The Gap</em> glitch, <em>Hologram desync</em> (tearing bands and colour fringing on the map), <em>Short circuit</em> (spark showers), <em>Electric arcs</em> (good for the Prize Sentinel's nanite field), <em>Buffering…</em>, <em>Gravity failure</em> (the whole view tilts and sways), <em>System crash</em> (error screen, memory dump, reboot), <em>Red alert</em> (klaxon and beacons) and <em>Lockdown</em> (blast doors).</li>
+<li><strong>Studio</strong>: neon signs (<em>АПЛОДИСМЕНТЫ</em> with applause, <em>ТИШИНА В СТУДИИ</em>, or your own text and colour), an on-screen <em>Countdown</em> with a buzzer, a <em>Spotlight</em> that finds your selected (or targeted) tokens, Celmak's <em>Camera feed</em>, a <em>Breaking news</em> crawl with your text, confetti and screen shake.</li>
+<li><strong>Garden &amp; scenes</strong>: the four seasons of the Garden episode (each with its particles, sound and, optionally, its rules line), <em>Stage smoke</em>, a <em>Drift jump</em>, the <em>Dimensional lock</em> pulse, and the two Mood Gas vents (which roll the d6 table and post the DCs).</li>
+</ul>
+<p>Macros can call any effect: <code>game.modules.get("hollow-garden").api.effect("blackout", { duration: 8 })</code>. <code>api.effects()</code> lists the names.</p>"""),
+    ("Commercial Breaks", """
+<p>Celmak's channel has sponsors. The <em>Ads</em> tab holds eleven in-world adverts (Аплодин, Чистый нос, Газ настроения «Домашний набор», Стенд-ин™, Гарден-Кредит, Садовые услуги «Колосс», Отель «Зелёная комната», Манекен-компаньон «Идеал», Карточки «Спойлер!», Парфюм «Ничто» and Энергетик «ДРИФТ»), each about 15–25 seconds with its own jingle, pack shot, price sticker and fine print. Testimonials star a random contestant who is on stage.</p>
+<ul>
+<li><strong>Play commercials after the break card</strong> switches them on or off. The same toggle sits next to the <em>Commercial break</em> button on the Broadcast tab.</li>
+<li>Choose how many adverts run <em>per break</em>, whether they play in random order (no repeats until the pool runs out) or in turn, and whether the <em>«Мы снова в эфире!»</em> card follows.</li>
+<li>Tick the adverts that are <em>in rotation</em>. The eye button previews one only for you; the tower button airs it immediately for everyone.</li>
+</ul>
+<p>During a break you get <em>Skip</em> and <em>End break</em> buttons in the corner of your screen; players don't.</p>"""),
     ("Audience Votes & Honeypots", """
 <p><strong>Audience vote</strong>: enter a question and up to four options, then set the rigged percentages (or pick a winner and let the console invent believable numbers). Players watch a live vote with a countdown before the result is revealed.</p>
 <p>Everything the players see (board, title cards, captions, wheel, votes, public chat cards) is in Russian; this guide and the console stay in English.</p><p><strong>Honeypot check</strong>: when someone reads one of the Garden's machines with Knowledge (engineering), open <em>Games → Honeypot check</em>. Roll from the linked actor's sheet or type in the total and the natural d20. The console sorts the result into the bands (61+ real answer; 60 or less with a natural 1–10 is an amusing fake (the whisper has a <em>Celmak laughs, +1</em> button if you want it public); 11–20 is a detrimental fake) and whispers you the table result. Players only see what you tell them.</p>"""),

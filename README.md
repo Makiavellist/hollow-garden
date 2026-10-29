@@ -16,7 +16,7 @@ All compendiums live in one folder in the Compendium sidebar: **The Hollow Garde
 | Prizes, Trinkets & Hoard | Celmak's 8 Trinkets, all prize and story items (lattice, Muse visor, seed, bracer, cradle, cartridge, fans, crystal, schematic, ledger, archive, Garden Credits), the auction lots and the hoard of the fallen. |
 | Roll Tables | Mood Gas, Amusing and Detrimental Fakes, Celmak's Mistakes, the Mystery Box, Trinkets (drawable straight onto a sheet), Meyanda's Catalogue, Isuma's Confessional, and four tables of Celmak catchphrases (Host, Critic, Lover, Child). |
 | Producer Macros | One-click macros for everything below. |
-| Studio Sound Effects | A playlist of all 26 stings. |
+| Studio Sound Effects | A playlist of all 48 stings, loops and ad jingles. |
 
 ## The studio (GM tools)
 
@@ -31,7 +31,9 @@ Open the **Producer Console** from the broadcast-tower button in the Token contr
 - **Audience Vote.** A live poll with your rigged numbers. The presets are in Russian and use the cast's names.
 - **Soundboard and stickers.** 28 cues and 28 host stickers; Shift-click previews one only for yourself.
 - **Celmak says…** A broadcast caption in one of her four personas. *Random line* draws from Russian catchphrases.
-- **Title cards and effects.** Episode openers, commercial break, *Previously on…*, *The lock falls*, season finale, confetti, the Gap glitch, screen shake and Mood Gas.
+- **Title cards.** Episode openers, commercial break, *Previously on…*, *The lock falls*, season finale.
+- **Effects tab.** Thirty full-screen effects in three groups. *Malfunctions*: blackout with emergency beacon, TV static, no signal (colour bars), the Gap glitch, hologram desync, short circuit sparks, electric arcs, buffering, gravity failure, system crash with reboot, red alert, lockdown blast doors. *Studio*: neon signs (applause, silence, or your own text and colour), countdown, a spotlight on selected tokens, Celmak's camera feed, a breaking-news crawl, confetti and shake. *Garden & scenes*: the four seasons, stage smoke, Drift jump, dimensional lock pulse and Mood Gas. Optional duration; *Stop all effects* ends everything for everyone.
+- **Commercial breaks.** Eleven in-world adverts in Russian (Аплодин, Чистый нос, Газ настроения «Домашний набор», Стенд-ин™, Гарден-Кредит, «Колосс», «Зелёная комната», «Идеал», «Спойлер!», «Ничто», «ДРИФТ») play after the *Commercial break* card when switched on. Choose how many per break, random or in turn, and which are in rotation; preview one privately or air it now. The GM gets *Skip* and *End break* buttons during the break.
 - **Honeypot check.** Results are whispered to you; the "Celmak laughs, +1 rating" moment is a button you choose to press.
 
 ## Casting
@@ -58,6 +60,12 @@ hg.cue("airhorn");                   // sound + sticker for everyone
 hg.say("Nobody leaves early!", "Child");
 hg.episodeTitle("auction");
 hg.openRoulette(); hg.openVote(); hg.openHoneypot(); hg.moodGas();
+hg.effect("blackout", { duration: 8 }); // any effect for everyone; hg.effects() lists them
+hg.effect("sign", { text: "ВСЕ ВСТАЮТ!", color: "#2de2e6" });
+hg.spotlight();                      // spotlight on the GM's selected tokens
+hg.stopEffects();
+hg.commercialBreak();                // break card + adverts (if switched on) + "we're back"
+hg.playCommercials(["drift", "spoiler"]); // air specific adverts now; hg.commercials() lists them
 ```
 
 ## Development
