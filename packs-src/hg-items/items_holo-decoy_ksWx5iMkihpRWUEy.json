@@ -1,0 +1,50 @@
+{
+  "_id": "ksWx5iMkihpRWUEy",
+  "_key": "!items!ksWx5iMkihpRWUEy",
+  "name": "Holo-Decoy",
+  "type": "loot",
+  "img": "icons/magic/control/silhouette-grow-shrink-blue.webp",
+  "folder": "2aeIMGZ9wK8d3uo4",
+  "sort": 500,
+  "system": {
+    "description": {
+      "value": "<p><strong>Price</strong> 2,000 gp; <strong>Capacity</strong> 3; <strong>Usage</strong> 1 charge per use</p><p>A disc that projects 1d4 duplicates of the user, as <em>@UUID[Compendium.pf1.spells.Item.4jsss37x0pplib8f]{mirror image}</em>.</p><p><em>Trinket (d8: 5).</em></p>"
+    },
+    "subType": "gear",
+    "price": 2000,
+    "uses": {
+      "per": "charges",
+      "maxFormula": "3",
+      "value": 3
+    },
+    "actions": [
+      {
+        "_id": "k6VHUAtYgo6MQNyC",
+        "name": "Project",
+        "activation": {
+          "type": "standard",
+          "unchained": {
+            "type": "action",
+            "cost": 2
+          }
+        },
+        "actionType": "other",
+        "uses": {
+          "autoDeductChargesCost": "1"
+        },
+        "notes": {
+          "effect": [
+            "1d4 mirror images"
+          ],
+          "footer": []
+        }
+      }
+    ]
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.9"
+  }
+}

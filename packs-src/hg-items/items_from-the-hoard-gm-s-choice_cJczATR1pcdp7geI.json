@@ -1,0 +1,22 @@
+{
+  "_id": "cJczATR1pcdp7geI",
+  "_key": "!items!cJczATR1pcdp7geI",
+  "name": "From the Hoard (GM's choice)",
+  "type": "loot",
+  "img": "icons/containers/chest/chest-simple-box-gold-brown.webp",
+  "folder": "2aeIMGZ9wK8d3uo4",
+  "sort": 800,
+  "system": {
+    "description": {
+      "value": "<p><strong>Price</strong> up to 5,000 gp</p><p>A magic item from a dead adventurer, chosen to help just enough. Replace this card with an item worth up to 5,000 gp, ideally one whose owner is named in the Ledger of the Fallen.</p><p><em>Trinket (d8: 8).</em></p>"
+    },
+    "subType": "misc",
+    "price": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.9"
+  }
+}

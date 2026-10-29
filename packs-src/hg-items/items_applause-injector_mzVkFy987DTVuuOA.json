@@ -1,0 +1,59 @@
+{
+  "_id": "mzVkFy987DTVuuOA",
+  "_key": "!items!mzVkFy987DTVuuOA",
+  "name": "Applause Injector",
+  "type": "consumable",
+  "img": "icons/consumables/potions/potion-tube-corked-bubbling-green.webp",
+  "folder": "2aeIMGZ9wK8d3uo4",
+  "sort": 100,
+  "system": {
+    "description": {
+      "value": "<p><strong>Price</strong> 1,500 gp; <strong>Usage</strong> single use</p><p>An Androffan auto-injector that plays a short burst of recorded applause as it fires. It heals <strong>4d8+10</strong> hit points and grants <em>@UUID[Compendium.pf1.spells.Item.rgd5v3llwoptwcdb]{good hope}</em> for 1 minute. Injecting takes a standard action.</p><p><em>Trinket (d8: 1). Celmak hands these out when the ratings reach 5.</em></p>"
+    },
+    "subType": "misc",
+    "price": 1500,
+    "uses": {
+      "per": "single"
+    },
+    "actions": [
+      {
+        "_id": "IjPHcDWlBzzzHMAc",
+        "name": "Inject",
+        "activation": {
+          "type": "standard",
+          "unchained": {
+            "type": "action",
+            "cost": 2
+          }
+        },
+        "actionType": "heal",
+        "damage": {
+          "parts": [
+            {
+              "formula": "4d8+10",
+              "types": [
+                "untyped"
+              ]
+            }
+          ]
+        },
+        "notes": {
+          "effect": [
+            "Good hope for 1 minute"
+          ],
+          "footer": []
+        },
+        "duration": {
+          "value": "1",
+          "units": "minute"
+        }
+      }
+    ]
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.9"
+  }
+}

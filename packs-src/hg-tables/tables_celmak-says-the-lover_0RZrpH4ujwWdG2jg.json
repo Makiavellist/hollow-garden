@@ -1,0 +1,174 @@
+{
+  "_id": "0RZrpH4ujwWdG2jg",
+  "_key": "!tables!0RZrpH4ujwWdG2jg",
+  "name": "Celmak Says: The Lover",
+  "img": "icons/magic/life/heart-hand-gold-green-light.webp",
+  "description": "<p>Lines for Celmak's Lover persona. The Producer Console draws from these for “Random line.”</p>",
+  "formula": "1d8",
+  "replacement": true,
+  "displayRoll": true,
+  "results": [
+    {
+      "_id": "8MV73fV0U6psYIP5",
+      "_key": "!tables.results!0RZrpH4ujwWdG2jg.8MV73fV0U6psYIP5",
+      "type": "text",
+      "name": "",
+      "description": "Oh, darling, you look positively radiant when you're terrified.",
+      "text": "Oh, darling, you look positively radiant when you're terrified.",
+      "img": "icons/magic/life/heart-hand-gold-green-light.webp",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "c1mZh820yrDaLBqF",
+      "_key": "!tables.results!0RZrpH4ujwWdG2jg.c1mZh820yrDaLBqF",
+      "type": "text",
+      "name": "",
+      "description": "Stay with me a little longer. The finale's lonely without you.",
+      "text": "Stay with me a little longer. The finale's lonely without you.",
+      "img": "icons/magic/life/heart-hand-gold-green-light.webp",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "H4dzOCQOXR94XsxN",
+      "_key": "!tables.results!0RZrpH4ujwWdG2jg.H4dzOCQOXR94XsxN",
+      "type": "text",
+      "name": "",
+      "description": "I wrote this one just for you. Every. Single. Word.",
+      "text": "I wrote this one just for you. Every. Single. Word.",
+      "img": "icons/magic/life/heart-hand-gold-green-light.webp",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "TRPBa9vmTWmmWST1",
+      "_key": "!tables.results!0RZrpH4ujwWdG2jg.TRPBa9vmTWmmWST1",
+      "type": "text",
+      "name": "",
+      "description": "You're my favourite. Don't tell the others. They'd be devastated. On camera.",
+      "text": "You're my favourite. Don't tell the others. They'd be devastated. On camera.",
+      "img": "icons/magic/life/heart-hand-gold-green-light.webp",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "IqmDvyJvq9vD7U9l",
+      "_key": "!tables.results!0RZrpH4ujwWdG2jg.IqmDvyJvq9vD7U9l",
+      "type": "text",
+      "name": "",
+      "description": "Your heart rate is simply divine right now.",
+      "text": "Your heart rate is simply divine right now.",
+      "img": "icons/magic/life/heart-hand-gold-green-light.webp",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "2o7DlKT6YHZ7U5C8",
+      "_key": "!tables.results!0RZrpH4ujwWdG2jg.2o7DlKT6YHZ7U5C8",
+      "type": "text",
+      "name": "",
+      "description": "Leave? But we were just getting to know each other's deepest fears.",
+      "text": "Leave? But we were just getting to know each other's deepest fears.",
+      "img": "icons/magic/life/heart-hand-gold-green-light.webp",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "Ww8FWe7N57HVnqFk",
+      "_key": "!tables.results!0RZrpH4ujwWdG2jg.Ww8FWe7N57HVnqFk",
+      "type": "text",
+      "name": "",
+      "description": "Come closer to the speaker, sweetheart. Closer. There.",
+      "text": "Come closer to the speaker, sweetheart. Closer. There.",
+      "img": "icons/magic/life/heart-hand-gold-green-light.webp",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "gWzaGL8D4l2QBCB0",
+      "_key": "!tables.results!0RZrpH4ujwWdG2jg.gWzaGL8D4l2QBCB0",
+      "type": "text",
+      "name": "",
+      "description": "I'd give you the Booth, you know. If you asked nicely.",
+      "text": "I'd give you the Booth, you know. If you asked nicely.",
+      "img": "icons/magic/life/heart-hand-gold-green-light.webp",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    }
+  ],
+  "folder": "xenpLnJRecZ0n1LH",
+  "sort": 300,
+  "flags": {
+    "hollow-garden": {
+      "key": "quips-lover"
+    }
+  },
+  "_stats": {
+    "coreVersion": "13.351"
+  }
+}

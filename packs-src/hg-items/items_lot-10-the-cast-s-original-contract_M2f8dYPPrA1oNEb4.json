@@ -1,0 +1,22 @@
+{
+  "_id": "M2f8dYPPrA1oNEb4",
+  "_key": "!items!M2f8dYPPrA1oNEb4",
+  "name": "Lot 10: The Cast's Original Contract",
+  "type": "loot",
+  "img": "icons/sundries/scrolls/scroll-bound-sealed-red-green.webp",
+  "folder": "YvibWalgscAk7V3q",
+  "sort": 100,
+  "system": {
+    "description": {
+      "value": "<blockquote class=\"hg-readaloud\"><p><em>“Paperwork! The cast's original contract.” (Open 2, rival max 5)</em></p></blockquote><p>The deal Vlathherex's demons signed with Celmak. The fine print promises them roles “for the full run of the show,” which has no end date. The winner gains a +4 bonus on Diplomacy and Intimidate checks with the cast.</p>"
+    },
+    "subType": "gear",
+    "price": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.9"
+  }
+}

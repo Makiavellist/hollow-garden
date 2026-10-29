@@ -1,0 +1,70 @@
+{
+  "_id": "CQBKpuCYaNrx1PjX",
+  "_key": "!items!CQBKpuCYaNrx1PjX",
+  "name": "Nanite Resonance Lattice",
+  "type": "equipment",
+  "img": "icons/equipment/neck/collar-rough-stone-cubes.webp",
+  "folder": "iZyWbMInuudM5zh6",
+  "sort": 100,
+  "system": {
+    "description": {
+      "value": "<p><strong>Price</strong> 28,000 gp; <strong>Slot</strong> neck; <strong>Weight</strong> —; <strong>Capacity</strong> 10; <strong>Usage</strong> 2 charges per pulse</p><p>A mesh of silver filaments that settles into the skin of the throat. The wearer gains a +5 competence bonus on Knowledge (engineering) checks and a +2 bonus on caster level checks against constructs. When the wearer casts a spell or uses a nanite-based ability, they can spend a swift action to emit an override pulse: every robot within 30 feet must succeed at a DC 20 Will save or be staggered for 1 round. A wearer with the nanite bloodline treats the lattice's save DC as 22.</p><p><strong>Construction Requirements</strong> Craft Technological Item, military lab; <strong>Cost</strong> 14,000 gp; <strong>Craft</strong> DC 28.</p><p><em>Found in: Episode 1 (the Prize Sentinel's chest case).</em></p>"
+    },
+    "subType": "wondrous",
+    "slot": "neck",
+    "price": 28000,
+    "equipped": false,
+    "uses": {
+      "per": "charges",
+      "maxFormula": "10",
+      "value": 10
+    },
+    "changes": [
+      {
+        "_id": "NBSscJmG",
+        "formula": "5",
+        "target": "skill.ken",
+        "type": "competence",
+        "operator": "add"
+      }
+    ],
+    "actions": [
+      {
+        "_id": "uGGG18HFoBBxrzxd",
+        "name": "Override pulse",
+        "activation": {
+          "type": "swift",
+          "unchained": {
+            "type": "action",
+            "cost": 2
+          }
+        },
+        "actionType": "other",
+        "save": {
+          "type": "will",
+          "dc": "20",
+          "description": "Will negates (robots; DC 22 for nanite bloodline)"
+        },
+        "measureTemplate": {
+          "type": "circle",
+          "size": "30"
+        },
+        "uses": {
+          "autoDeductChargesCost": "2"
+        },
+        "notes": {
+          "effect": [
+            "Robots staggered 1 round"
+          ],
+          "footer": []
+        }
+      }
+    ]
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.9"
+  }
+}

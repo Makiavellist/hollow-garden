@@ -1,0 +1,962 @@
+{
+  "_id": "F3S8yNCNteyeJ2tx",
+  "_key": "!actors!F3S8yNCNteyeJ2tx",
+  "name": "Gardener Colossus",
+  "type": "npc",
+  "img": "icons/creatures/magical/construct-stone-earth-gray.webp",
+  "system": {
+    "abilities": {
+      "str": {
+        "value": 30
+      },
+      "dex": {
+        "value": 14
+      },
+      "con": {
+        "value": null
+      },
+      "int": {
+        "value": 10
+      },
+      "wis": {
+        "value": 14
+      },
+      "cha": {
+        "value": 1
+      }
+    },
+    "attributes": {
+      "naturalAC": 21,
+      "hp": {
+        "temp": 80
+      },
+      "speed": {
+        "land": {
+          "base": 30
+        }
+      },
+      "cmdNotes": "CMB +38 to grapple",
+      "saveNotes": "",
+      "acNotes": "",
+      "quadruped": false,
+      "sr": {
+        "formula": ""
+      }
+    },
+    "details": {
+      "cr": {
+        "base": 16
+      },
+      "alignment": "tn",
+      "biography": {
+        "value": "<p>An 18-foot groundskeeper on six jointed legs, with shear-claws, a pesticide tank on its back, and a gentle humming voice that never stops apologising.</p>"
+      },
+      "notes": {
+        "value": "<div class=\"hg-journal\"><h3>Printed stat block</h3><section class=\"hg-statblock\"><h4 class=\"hg-sb-title\">GARDENER COLOSSUS — CR 16</h4><p><strong>XP</strong> 76,800 · N Huge construct (robot)</p><p><strong>Init</strong> +2; <strong>Senses</strong> darkvision 60 ft., low-light vision; Perception +30</p><h5 class=\"hg-sb-section\">DEFENSE</h5><p><strong>AC</strong> 31, touch 10, flat-footed 29 (+2 Dex, +21 natural, −2 size)</p><p><strong>hp</strong> 161 (22d10+40); force field (80 hp, fast healing 16)</p><p><strong>Fort</strong> +7, <strong>Ref</strong> +9, <strong>Will</strong> +9</p><p><strong>Immune</strong> construct traits, the seasons (see Episode 4); <strong>Weaknesses</strong> vulnerable to critical hits, vulnerable to electricity</p><h5 class=\"hg-sb-section\">OFFENSE</h5><p><strong>Speed</strong> 30 ft.</p><p><strong>Melee</strong> 2 shear-claws +30 (3d6+10/19–20 plus grab)</p><p><strong>Space</strong> 15 ft.; <strong>Reach</strong> 15 ft.</p><p><strong>Special Attacks</strong> pesticide sprayer, pruning, transplant</p><h5 class=\"hg-sb-section\">STATISTICS</h5><p><strong>Str</strong> 30, <strong>Dex</strong> 14, <strong>Con</strong> —, <strong>Int</strong> 10, <strong>Wis</strong> 14, <strong>Cha</strong> 1</p><p><strong>Base Atk</strong> +22; <strong>CMB</strong> +34 (+38 grapple); <strong>CMD</strong> 46</p><p><strong>Feats</strong> Awesome Blow, Cleave, Endurance, Great Cleave, Greater Vital Strike, Improved Bull Rush, Improved Critical (shear-claw), Improved Vital Strike, Power Attack, Skill Focus (Perception), Vital Strike</p><p><strong>Skills</strong> Knowledge (nature) +25, Perception +30</p><h5 class=\"hg-sb-section\">SPECIAL ABILITIES</h5><p><strong>Pesticide Sprayer (Ex)</strong> Once every 1d4 rounds as a standard action, the colossus sprays a 60-foot cone of pesticide (12d6 acid damage, Reflex DC 24 half). Plants and fey take 50% more damage and must succeed at a DC 24 Fortitude save or be staggered for 1 round.</p><p><strong>Pruning (Ex)</strong> Each round the colossus maintains a grapple, the grappled creature takes 3d6+10 slashing damage and 2d6 bleed damage.</p><p><strong>Transplant (Ex)</strong> As a standard action, the colossus can throw a creature it is grappling up to 30 feet (a combat maneuver check against the creature’s CMD). The creature takes 4d6 bludgeoning damage and lands prone. Celmak loves it when the colossus throws someone into the lake.</p></section></div>"
+      }
+    },
+    "skills": {
+      "kna": {
+        "rank": 22
+      },
+      "per": {
+        "rank": 22
+      }
+    },
+    "traits": {
+      "size": "huge",
+      "senses": {
+        "dv": {
+          "value": 60
+        },
+        "ll": {
+          "enabled": true
+        }
+      },
+      "ci": [
+        "bleed",
+        "deathEffects",
+        "disease",
+        "energyDrain",
+        "exhausted",
+        "fatigue",
+        "mindAffecting",
+        "paralyze",
+        "poison",
+        "sleep",
+        "stun"
+      ],
+      "di": [],
+      "dv": [
+        "electric"
+      ],
+      "dr": {
+        "value": [],
+        "custom": ""
+      },
+      "eres": {
+        "value": [],
+        "custom": ""
+      },
+      "fastHealing": "16 (force field only)",
+      "languages": []
+    }
+  },
+  "items": [
+    {
+      "_id": "BwYTalxCb6RPrX1P",
+      "name": "Robot",
+      "type": "race",
+      "img": "systems/pf1/icons/races/creature-types/construct.png",
+      "system": {
+        "creatureTypes": [
+          "construct"
+        ],
+        "creatureSubtypes": [
+          "robot"
+        ],
+        "size": "huge",
+        "speeds": {
+          "land": 30
+        },
+        "description": {
+          "value": ""
+        }
+      },
+      "_key": "!actors.items!F3S8yNCNteyeJ2tx.BwYTalxCb6RPrX1P",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "24jvMQV489RI0JgQ",
+      "name": "Construct (Robot)",
+      "type": "class",
+      "img": "systems/pf1/icons/skills/mech_7.jpg",
+      "system": {
+        "subType": "racial",
+        "level": 22,
+        "hd": 10,
+        "hp": 121,
+        "bab": "high",
+        "skillsPerLevel": 2,
+        "tag": "construct",
+        "savingThrows": {
+          "fort": {
+            "value": "low"
+          },
+          "ref": {
+            "value": "low"
+          },
+          "will": {
+            "value": "low"
+          }
+        },
+        "description": {
+          "value": "<p>Racial Hit Dice: d10, full BAB, poor saves, no Constitution. Constructs gain bonus hit points by size.</p>"
+        },
+        "changes": [
+          {
+            "_id": "PmzflH0C",
+            "formula": "max(0, @size - 2) * 10 + max(0, @size - 6) * 10",
+            "target": "mhp",
+            "type": "untypedPerm",
+            "operator": "add"
+          }
+        ]
+      },
+      "_key": "!actors.items!F3S8yNCNteyeJ2tx.24jvMQV489RI0JgQ",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "91byLoQVI3ZnbgZu",
+      "name": "Stat Block Adjustments",
+      "type": "feat",
+      "img": "icons/commodities/tech/dial-meter-gauge-blue.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "na",
+        "changes": [
+          {
+            "_id": "ts5jHjHe",
+            "formula": "3",
+            "target": "skill.kna",
+            "type": "untyped",
+            "operator": "add"
+          },
+          {
+            "_id": "08WiGK9e",
+            "formula": "6",
+            "target": "skill.per",
+            "type": "untyped",
+            "operator": "add"
+          }
+        ],
+        "description": {
+          "value": "<p>Bonuses from feats, gear, racial traits and special qualities that are already folded into the printed stat block. Keeping them here lets the PF1 sheet show the same totals as the adventure. Delete a change if you add the matching item with its own mechanics.</p>"
+        }
+      },
+      "_key": "!actors.items!F3S8yNCNteyeJ2tx.91byLoQVI3ZnbgZu",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "ZfbFUn9QwudX53Lu",
+      "_key": "!actors.items!F3S8yNCNteyeJ2tx.ZfbFUn9QwudX53Lu",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.KPaC3H6EQGG4sXLT"
+      },
+      "img": "systems/pf1/icons/skills/blue_27.jpg",
+      "name": "Awesome Blow",
+      "system": {
+        "actions": [
+          {
+            "_id": "1XoNs8HGxM3vlAEk",
+            "ability": {
+              "attack": "str",
+              "damage": "str"
+            },
+            "actionType": "mcman",
+            "activation": {
+              "type": "standard",
+              "unchained": {
+                "cost": 2,
+                "type": "action"
+              }
+            },
+            "damage": {
+              "parts": [
+                {
+                  "formula": "sizeRoll(1, 4, @size)",
+                  "types": [
+                    "bludgeoning"
+                  ]
+                }
+              ]
+            },
+            "duration": {
+              "units": "inst"
+            },
+            "measureTemplate": {
+              "color": "#ffffff",
+              "size": "10",
+              "type": "ray"
+            },
+            "name": "Use",
+            "range": {
+              "units": "melee"
+            },
+            "target": {
+              "value": "corporeal smaller opponent"
+            }
+          },
+          {
+            "_id": "3alfhVQ4pXCD6J4s",
+            "activation": {
+              "type": "nonaction",
+              "unchained": {
+                "type": "nonaction"
+              }
+            },
+            "damage": {
+              "parts": [
+                {
+                  "formula": "1d6",
+                  "types": [
+                    "bludgeoning"
+                  ]
+                }
+              ]
+            },
+            "name": "Obstacle Damage"
+          }
+        ],
+        "description": {
+          "instructions": "<p>Adjust the damage dice of the blow accordingly to the creature using it.</p>",
+          "value": "<p><em>This creature can send opponents flying.</em></p><p><strong>Prerequisites</strong>: Str 25, @UUID[Compendium.pf1.feats.Item.FUW5mIXHNBBIQ1Sq]{Power Attack}, @UUID[Compendium.pf1.feats.Item.dn2KgHFQRbuoNRx0]{Improved Bull Rush}, size Large or larger.</p><p><strong>Benefits</strong>: As a standard action, the creature may perform an awesome blow combat maneuver. If the creature's maneuver succeeds against a corporeal opponent smaller than itself, its opponent takes damage (typically slam damage plus Strength bonus) and is knocked flying 10 feet in a direction of the attacking creature's choice and falls prone. The attacking creature can only push the opponent in a straight line, and the opponent can't move closer to the attacking creature than the square it started in. If an obstacle prevents the completion of the opponent's move, the opponent and the obstacle each take 1d6 points of damage, and the opponent is knocked prone in the space adjacent to the obstacle.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1112",
+            "pages": "314"
+          }
+        ],
+        "tags": [
+          "Combat",
+          "Monster"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "MMS808fyP6TOXQtu",
+      "_key": "!actors.items!F3S8yNCNteyeJ2tx.MMS808fyP6TOXQtu",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.Zeq6RWYv5otvg8q7"
+      },
+      "img": "systems/pf1/icons/feats/cleave.jpg",
+      "name": "Cleave",
+      "system": {
+        "actions": [
+          {
+            "_id": "YKPDCAoDrghiYAzi",
+            "activation": {
+              "type": "standard",
+              "unchained": {
+                "cost": 2,
+                "type": "action"
+              }
+            },
+            "name": "Use",
+            "notes": {
+              "effect": [
+                "[[-2]] penalty to your Armor Class until your next turn."
+              ]
+            }
+          }
+        ],
+        "description": {
+          "value": "<p><em>You can strike two adjacent foes with a single swing.</em></p><p><strong>Prerequisites</strong>: Str 13, @UUID[Compendium.pf1.feats.Item.FUW5mIXHNBBIQ1Sq]{Power Attack}, base attack bonus +1.</p><p><strong>Benefits</strong>: As a standard action, you can make a single attack at your full base attack bonus against a foe within reach. If you hit, you deal damage normally and can make an additional attack (using your full base attack bonus) against a foe that is adjacent to the first and also within reach. You can only make one additional attack per round with this feat. When you use this feat, you take a -2 penalty to your Armor Class until your next turn.</p><h3>Combat Trick</h3><p>When using the Cleave or Great Cleave feat, you can spend 4 stamina points to negate the -2 penalty to Armor Class until your next turn.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "116, 119"
+          }
+        ],
+        "tags": [
+          "Combat",
+          "Combat Trick"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "JS5aUK7j0ZBPAzYg",
+      "_key": "!actors.items!F3S8yNCNteyeJ2tx.JS5aUK7j0ZBPAzYg",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.ehqx8txNRGMaNOPt"
+      },
+      "img": "systems/pf1/icons/feats/endurance.png",
+      "name": "Endurance",
+      "system": {
+        "description": {
+          "value": "<i>Harsh conditions or long exertions do not easily tire you.</i><p><strong>Benefits</strong>: You gain a +4 bonus on the following checks and saves: Swim checks made to resist nonlethal damage from exhaustion; Constitution checks made to continue running; Constitution checks made to avoid nonlethal damage from a forced march; Constitution checks made to hold your breath; Constitution checks made to avoid nonlethal damage from starvation or thirst; Fortitude saves made to avoid nonlethal damage from hot or cold environments; and Fortitude saves made to resist damage from suffocation.</p><p>You may sleep in light or medium armor without becoming fatigued.</p><p><strong>Normal</strong>: A character without this feat who sleeps in medium or heavier armor is fatigued the next day.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "115, 122"
+          }
+        ],
+        "tags": [
+          "General"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "YaAyhckfMXI3xRqW",
+      "_key": "!actors.items!F3S8yNCNteyeJ2tx.YaAyhckfMXI3xRqW",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.6HSMdwX1VS6nZ6Zf"
+      },
+      "img": "systems/pf1/icons/feats/great-cleave.jpg",
+      "name": "Great Cleave",
+      "system": {
+        "actions": [
+          {
+            "_id": "9qJAoXcYkvy8E6Mf",
+            "activation": {
+              "type": "standard",
+              "unchained": {
+                "cost": 2,
+                "type": "action"
+              }
+            },
+            "name": "Use",
+            "notes": {
+              "effect": [
+                "[[-2]] penalty to your Armor Class until your next turn."
+              ]
+            }
+          }
+        ],
+        "description": {
+          "value": "<p><em>You can strike many adjacent foes with a single blow.</em></p><p><strong>Prerequisites</strong>: Str 13, @UUID[Compendium.pf1.feats.Item.Zeq6RWYv5otvg8q7]{Cleave}, @UUID[Compendium.pf1.feats.Item.FUW5mIXHNBBIQ1Sq]{Power Attack}, base attack bonus +4.</p><p><strong>Benefits</strong>: As a standard action, you can make a single attack at your full base attack bonus against a foe within reach. If you hit, you deal damage normally and can make an additional attack (using your full base attack bonus) against a foe that is adjacent to the previous foe and also within reach. If you hit, you can continue to make attacks against foes adjacent to the previous foe, so long as they are within your reach. You cannot attack an individual foe more than once during this attack action. When you use this feat, you take a -2 penalty to your Armor Class until your next turn.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "116, 124"
+          }
+        ],
+        "tags": [
+          "Combat",
+          "Offensive"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "1eKYrWqoQ5TzBOEP",
+      "_key": "!actors.items!F3S8yNCNteyeJ2tx.1eKYrWqoQ5TzBOEP",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.zKNk7a4XxXsygJ67"
+      },
+      "img": "systems/pf1/icons/feats/greater-vital-strike.jpg",
+      "name": "Greater Vital Strike",
+      "system": {
+        "description": {
+          "instructions": "<p>Add conditional modifier with <code>@base.dice</code> as damage formula where desired.</p>",
+          "value": "<i>You can make a single attack that deals incredible damage.</i><p><strong>Prerequisites</strong>: @UUID[Compendium.pf1.feats.DorPGQ2mifJbMKH8]{Improved Vital Strike}, @UUID[Compendium.pf1.feats.26k1Gi7t5BoqxhIj]{Vital Strike}, base attack bonus +16.</p><p><strong>Benefits</strong>: When you use the attack action, you can make one attack at your highest base attack bonus that deals additional damage. Roll the weapon's damage dice for the attack four times and add the results together before adding bonuses from Strength, weapon abilities (such as <i>flaming</i>), precision based damage, and other damage bonuses. These extra weapon damage dice are not multiplied on a critical hit, but are added to the total.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "117, 126"
+          }
+        ],
+        "tags": [
+          "Combat",
+          "Offensive"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "ecZOJGJxqoGn2OFL",
+      "_key": "!actors.items!F3S8yNCNteyeJ2tx.ecZOJGJxqoGn2OFL",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.dn2KgHFQRbuoNRx0"
+      },
+      "img": "systems/pf1/icons/feats/improved-bull-rush.jpg",
+      "name": "Improved Bull Rush",
+      "system": {
+        "contextNotes": [
+          {
+            "target": "cmb",
+            "text": "+[[2]] and no AoO on Bull Rush."
+          },
+          {
+            "target": "cmd",
+            "text": "+[[2]] vs Bull Rush"
+          }
+        ],
+        "description": {
+          "value": "<p><em>You are skilled at pushing your foes around.</em></p><p><strong>Prerequisites</strong>: Str 13, @UUID[Compendium.pf1.feats.Item.FUW5mIXHNBBIQ1Sq]{Power Attack}, base attack bonus +1.</p><p><strong>Benefits</strong>: You do not provoke an attack of opportunity when performing a bull rush combat maneuver. In addition, you receive a +2 bonus on checks made to bull rush a foe. You also receive a +2 bonus to your Combat Maneuver Defense whenever an opponent tries to bull rush you.</p><p><strong>Normal</strong>: You provoke an attack of opportunity when performing a bull rush combat maneuver.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "126"
+          },
+          {
+            "id": "PZO1131",
+            "pages": "122"
+          }
+        ],
+        "tags": [
+          "Combat",
+          "Offensive",
+          "Combat Maneuver",
+          "Combat Trick"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "h6lD27QvffBJ7KLy",
+      "_key": "!actors.items!F3S8yNCNteyeJ2tx.h6lD27QvffBJ7KLy",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.TbOPtIL8Fv8obXtP"
+      },
+      "img": "systems/pf1/icons/feats/improved-critical.jpg",
+      "name": "Improved Critical (Shear-Claw)",
+      "system": {
+        "description": {
+          "value": "<i>Attacks made with your chosen weapon are quite deadly.</i><p><strong>Prerequisites</strong>: Proficient with weapon, base attack bonus +8.</p><p><strong>Benefits</strong>: When using the weapon you selected, your threat range is doubled.</p><p><strong>Special</strong>: You can gain Improved Critical multiple times. The effects do not stack. Each time you take the feat, it applies to a new type of weapon.</p><p>This effect doesn't stack with any other effect that expands the threat range of a weapon.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "115, 127"
+          }
+        ],
+        "tags": [
+          "Combat",
+          "Critical",
+          "Offensive"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "bLiaLN7buh6kIGyY",
+      "_key": "!actors.items!F3S8yNCNteyeJ2tx.bLiaLN7buh6kIGyY",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.DorPGQ2mifJbMKH8"
+      },
+      "img": "systems/pf1/icons/feats/improved-vital-strike.jpg",
+      "name": "Improved Vital Strike",
+      "system": {
+        "description": {
+          "instructions": "<p>Add conditional modifier with <code>@base.dice</code> as damage formula where desired.</p>",
+          "value": "<i>You can make a single attack that deals a large amount of damage.</i><p><strong>Prerequisites</strong>: @UUID[Compendium.pf1.feats.26k1Gi7t5BoqxhIj]{Vital Strike}, base attack bonus +11.</p><p><strong>Benefits</strong>: When you use the attack action, you can make one attack at your highest base attack bonus that deals additional damage. Roll the weapon's damage dice for the attack three times and add the results together before adding bonuses from Strength, weapon special abilities (such as <i>flaming</i>), precision based damage, and other damage bonuses. These extra weapon damage dice are not multiplied on a critical hit, but are added to the total.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "117, 128"
+          }
+        ],
+        "tags": [
+          "Combat",
+          "Offensive"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "nhXcQDSO80DFdeHD",
+      "_key": "!actors.items!F3S8yNCNteyeJ2tx.nhXcQDSO80DFdeHD",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.FUW5mIXHNBBIQ1Sq"
+      },
+      "img": "systems/pf1/icons/feats/power-attack.jpg",
+      "name": "Power Attack",
+      "system": {
+        "description": {
+          "value": "<i>You can make exceptionally deadly melee attacks by sacrificing accuracy for strength.</i><p><strong>Prerequisites</strong>: Str 13, base attack bonus +1.</p><p><strong>Benefits</strong>: You can choose to take a -1 penalty on all melee attack rolls and combat maneuver checks to gain a +2 bonus on all melee damage rolls. This bonus to damage is increased by half (+50%) if you are making an attack with a two-handed weapon, a one handed weapon using two hands, or a primary natural weapon that adds 1-1/2 times your Strength modifier on damage rolls. This bonus to damage is halved (-50%) if you are making an attack with an off-hand weapon or secondary natural weapon. When your base attack bonus reaches +4, and every 4 points thereafter, the penalty increases by -1 and the bonus to damage increases by +2. You must choose to use this feat before making an attack roll, and its effects last until your next turn. The bonus damage does not apply to touch attacks or effects that do not deal hit point damage.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "116, 131"
+          }
+        ],
+        "tags": [
+          "Combat",
+          "Offensive"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "wRoGGgrolEP2Ek3Y",
+      "_key": "!actors.items!F3S8yNCNteyeJ2tx.wRoGGgrolEP2Ek3Y",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.7zJTztNW7hdaqjKc"
+      },
+      "img": "systems/pf1/icons/feats/skill-focus.jpg",
+      "name": "Skill Focus (Perception)",
+      "system": {
+        "description": {
+          "value": "<i>Choose a skill. You are particularly adept at that skill.</i><p><strong>Benefits</strong>: You get a +3 bonus on all checks involving the chosen skill. If you have 10 or more ranks in that skill, this bonus increases to +6.</p><p><strong>Special</strong>: You can gain this feat multiple times. Its effects do not stack. Each time you take the feat, it applies to a new skill.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "116, 134"
+          }
+        ],
+        "tags": [
+          "General",
+          "Skill"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "rTrqGY8FhNQmDDXG",
+      "_key": "!actors.items!F3S8yNCNteyeJ2tx.rTrqGY8FhNQmDDXG",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.26k1Gi7t5BoqxhIj"
+      },
+      "img": "systems/pf1/icons/feats/vital-strike.jpg",
+      "name": "Vital Strike",
+      "system": {
+        "description": {
+          "instructions": "<p>Add conditional modifier with <code>@base.dice</code> as damage formula where desired.</p>",
+          "value": "<i>You make a single attack that deals significantly more damage than normal.</i><p><strong>Prerequisites</strong>: Base attack bonus +6.</p><p><strong>Benefits</strong>: When you use the attack action, you can make one attack at your highest base attack bonus that deals additional damage. Roll the weapon's damage dice for the attack twice and add the results together before adding bonuses from Strength, weapon abilities (such as <i>flaming</i>), precision based damage, and other damage bonuses. These extra weapon damage dice are not multiplied on a critical hit, but are added to the total.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "117, 136"
+          }
+        ],
+        "tags": [
+          "Combat",
+          "Offensive"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "0u5hdmu1LKzv0ndo",
+      "name": "Shear-Claw",
+      "type": "attack",
+      "img": "icons/commodities/tech/metal-claws.webp",
+      "system": {
+        "subType": "natural",
+        "proficient": true,
+        "actions": [
+          {
+            "_id": "mfCf8Ko53FGNZn8d",
+            "name": "Attack",
+            "activation": {
+              "type": "attack",
+              "unchained": {
+                "type": "attack"
+              }
+            },
+            "actionType": "mwak",
+            "ability": {
+              "attack": "str",
+              "damage": "",
+              "critRange": 19,
+              "critMult": 2
+            },
+            "attackBonus": "",
+            "damage": {
+              "parts": [
+                {
+                  "formula": "3d6+10",
+                  "types": [
+                    "slashing"
+                  ]
+                }
+              ]
+            },
+            "range": {
+              "units": "melee"
+            },
+            "touch": false,
+            "naturalAttack": {
+              "primary": true
+            },
+            "extraAttacks": {
+              "type": "custom",
+              "formula": {
+                "count": "1",
+                "label": "Claw #{0}"
+              }
+            },
+            "notes": {
+              "effect": [],
+              "footer": [
+                "Grab"
+              ]
+            }
+          }
+        ],
+        "description": {
+          "value": ""
+        },
+        "showInQuickbar": true
+      },
+      "_key": "!actors.items!F3S8yNCNteyeJ2tx.0u5hdmu1LKzv0ndo",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "E8T8F7TFPse4y4fQ",
+      "name": "Force Field",
+      "type": "feat",
+      "img": "icons/magic/control/debuff-energy-hold-levitate-teal-blue.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p>The robot is sheathed in a force field with <strong>80 hit points</strong> and <strong>fast healing 16</strong>. Damage is applied to the force field before the robot's own hit points, and the fast healing applies only to the field. A field reduced to 0 hp goes down and regenerates at its fast healing rate.</p><p><em>Track the force field as this actor's temporary hit points.</em></p>"
+        }
+      },
+      "_key": "!actors.items!F3S8yNCNteyeJ2tx.E8T8F7TFPse4y4fQ",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "5Na9L7xVa3i2J6Ru",
+      "name": "Robot Traits",
+      "type": "feat",
+      "img": "icons/commodities/tech/metal-panel.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p><strong>Robot traits.</strong> Robots are constructs (Bestiary 5). They are vulnerable to critical hits (critical hits deal an extra ×1 multiplier, for example ×3 instead of ×2) and to electricity (+50% damage). Many carry a force field and integrated weapons.</p>"
+        }
+      },
+      "_key": "!actors.items!F3S8yNCNteyeJ2tx.5Na9L7xVa3i2J6Ru",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "UODsFD34FsXacJrb",
+      "name": "Pesticide Sprayer",
+      "type": "feat",
+      "img": "icons/magic/air/fog-gas-smoke-dense-green.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p>Once every 1d4 rounds as a standard action, the colossus sprays a 60-foot cone of pesticide (12d6 acid damage, Reflex DC 24 half). Plants and fey take 50% more damage and must succeed at a DC 24 Fortitude save or be staggered for 1 round.</p>"
+        },
+        "actions": [
+          {
+            "_id": "VZBIZjROmzmMiNfZ",
+            "name": "Spray",
+            "activation": {
+              "type": "standard",
+              "unchained": {
+                "type": "action",
+                "cost": 2
+              }
+            },
+            "actionType": "other",
+            "save": {
+              "type": "ref",
+              "dc": "24",
+              "description": "Reflex half"
+            },
+            "damage": {
+              "parts": [
+                {
+                  "formula": "12d6",
+                  "types": [
+                    "acid"
+                  ]
+                }
+              ]
+            },
+            "ability": {
+              "damage": "",
+              "attack": ""
+            },
+            "measureTemplate": {
+              "type": "cone",
+              "size": "60"
+            },
+            "notes": {
+              "effect": [
+                "Plants and fey: +50% damage, Fort DC 24 or staggered 1 round",
+                "Recharge 1d4 rounds"
+              ],
+              "footer": []
+            }
+          }
+        ]
+      },
+      "_key": "!actors.items!F3S8yNCNteyeJ2tx.UODsFD34FsXacJrb",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "FhpCLKsQU1eWWpCC",
+      "name": "Pruning",
+      "type": "feat",
+      "img": "icons/commodities/tech/metal-jaws.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p>Each round the colossus maintains a grapple, the grappled creature takes 3d6+10 slashing damage and 2d6 bleed damage.</p>"
+        },
+        "actions": [
+          {
+            "_id": "zdj3cPXRJoXCWYmZ",
+            "name": "Prune",
+            "activation": {
+              "type": "special",
+              "unchained": {
+                "type": "action",
+                "cost": 2
+              }
+            },
+            "actionType": "other",
+            "damage": {
+              "parts": [
+                {
+                  "formula": "3d6+10",
+                  "types": [
+                    "slashing"
+                  ]
+                }
+              ]
+            },
+            "ability": {
+              "damage": "",
+              "attack": ""
+            },
+            "notes": {
+              "effect": [
+                "Plus 2d6 bleed"
+              ],
+              "footer": []
+            }
+          }
+        ]
+      },
+      "_key": "!actors.items!F3S8yNCNteyeJ2tx.FhpCLKsQU1eWWpCC",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "oCEoiyMiFpUl6RVG",
+      "name": "Transplant",
+      "type": "feat",
+      "img": "icons/magic/air/wind-tornado-funnel-gray.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p>As a standard action, the colossus can throw a creature it is grappling up to 30 feet (a combat maneuver check against the creature's CMD). The creature takes 4d6 bludgeoning damage and lands prone. Celmak loves it when the colossus throws someone into the lake.</p>"
+        },
+        "actions": [
+          {
+            "_id": "JkaLjFEfYPERaKmc",
+            "name": "Throw",
+            "activation": {
+              "type": "standard",
+              "unchained": {
+                "type": "action",
+                "cost": 2
+              }
+            },
+            "actionType": "other",
+            "damage": {
+              "parts": [
+                {
+                  "formula": "4d6",
+                  "types": [
+                    "bludgeoning"
+                  ]
+                }
+              ]
+            },
+            "ability": {
+              "damage": "",
+              "attack": ""
+            }
+          }
+        ]
+      },
+      "_key": "!actors.items!F3S8yNCNteyeJ2tx.oCEoiyMiFpUl6RVG",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "XAjk89HZCaHwqoL6",
+      "name": "Immune to the Seasons",
+      "type": "feat",
+      "img": "icons/magic/air/wind-weather-snow-gusts.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p>The Gardener Colossus is immune to the seasonal effects of Episode 4.</p>"
+        }
+      },
+      "_key": "!actors.items!F3S8yNCNteyeJ2tx.XAjk89HZCaHwqoL6",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    }
+  ],
+  "folder": "HIrz0Dh4Fb4MXNNY",
+  "sort": 600,
+  "prototypeToken": {
+    "name": "Gardener Colossus",
+    "width": 3,
+    "height": 3,
+    "texture": {
+      "src": "icons/creatures/magical/construct-stone-earth-gray.webp",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": -1,
+    "actorLink": false,
+    "displayName": 20,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "sight": {
+      "enabled": true,
+      "range": 60
+    }
+  },
+  "flags": {
+    "hollow-garden": {
+      "statblock": true
+    }
+  },
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.9"
+  }
+}

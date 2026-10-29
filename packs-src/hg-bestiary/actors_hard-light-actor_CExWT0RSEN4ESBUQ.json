@@ -1,0 +1,763 @@
+{
+  "_id": "CExWT0RSEN4ESBUQ",
+  "_key": "!actors!CExWT0RSEN4ESBUQ",
+  "name": "Hard-Light Actor",
+  "type": "npc",
+  "img": "icons/magic/control/silhouette-aura-energy.webp",
+  "system": {
+    "abilities": {
+      "str": {
+        "value": 18
+      },
+      "dex": {
+        "value": 16
+      },
+      "con": {
+        "value": null
+      },
+      "int": {
+        "value": 10
+      },
+      "wis": {
+        "value": 12
+      },
+      "cha": {
+        "value": 14
+      }
+    },
+    "attributes": {
+      "naturalAC": 6,
+      "hp": {
+        "temp": 0
+      },
+      "speed": {
+        "land": {
+          "base": 40
+        },
+        "fly": {
+          "base": 40,
+          "maneuverability": "perfect"
+        }
+      },
+      "cmdNotes": "",
+      "saveNotes": "",
+      "acNotes": "",
+      "quadruped": false,
+      "sr": {
+        "formula": ""
+      }
+    },
+    "details": {
+      "cr": {
+        "base": 12
+      },
+      "alignment": "tn",
+      "biography": {
+        "value": "<p>A hologram given mass and edge by a projected force field: the Garden's stock villain, henchman and ghost. Celmak dresses each actor in a costume for the scene.</p>"
+      },
+      "notes": {
+        "value": "<div class=\"hg-journal\"><h3>Printed stat block</h3><section class=\"hg-statblock\"><h4 class=\"hg-sb-title\">HARD-LIGHT ACTOR — CR 12</h4><p><strong>XP</strong> 19,200 · N Medium construct (hologram)</p><p><strong>Init</strong> +7; <strong>Senses</strong> darkvision 60 ft., low-light vision; Perception +20</p><h5 class=\"hg-sb-section\">DEFENSE</h5><p><strong>AC</strong> 27, touch 21, flat-footed 24 (+8 deflection, +3 Dex, +6 natural)</p><p><strong>hp</strong> 108 (16d10+20); fast healing 10</p><p><strong>Fort</strong> +5, <strong>Ref</strong> +8, <strong>Will</strong> +6</p><p><strong>Defensive Abilities</strong> hard-light body; <strong>Immune</strong> construct traits, critical hits, precision damage</p><p><strong>Weaknesses</strong> emitter-bound, shadow disruption</p><h5 class=\"hg-sb-section\">OFFENSE</h5><p><strong>Speed</strong> 40 ft., fly 40 ft. (perfect)</p><p><strong>Melee</strong> 2 hard-light blades +21 (2d8+4 force)</p><p><strong>Ranged</strong> light lance +19 touch (6d6 fire)</p><h5 class=\"hg-sb-section\">STATISTICS</h5><p><strong>Str</strong> 18, <strong>Dex</strong> 16, <strong>Con</strong> —, <strong>Int</strong> 10, <strong>Wis</strong> 12, <strong>Cha</strong> 14</p><p><strong>Base Atk</strong> +16; <strong>CMB</strong> +20; <strong>CMD</strong> 41</p><p><strong>Feats</strong> Combat Reflexes, Improved Initiative, Lunge, Point-Blank Shot, Power Attack, Precise Shot, Vital Strike, Weapon Focus (hard-light blade)</p><p><strong>Skills</strong> Acrobatics +19, Perception +20</p><p><strong>Languages</strong> none; it speaks scripted lines in any language Celmak knows</p><p><strong>SQ</strong> costume</p><h5 class=\"hg-sb-section\">SPECIAL ABILITIES</h5><p><strong>Costume (Ex)</strong> The actor’s appearance is set for each scene. Suggested costumes: Swarm warriors (Episode 3), Casandalee’s past selves (The 113th Take), Lords of Rust thugs, or the party’s own enemies from earlier adventures. A costume is solid light, so disbelieving it does nothing.</p><p><strong>Emitter-Bound (Ex)</strong> The actor exists only within 120 feet of a working holographic emitter. Each scene has 1d4+2 hidden emitters (Perception DC 25 to spot; hardness 10, 30 hp). With no emitter in range, the actor winks out until one is restored. Its fast healing works only while an emitter is in range.</p><p><strong>Hard-Light Body (Ex)</strong> The actor’s blades and lance affect incorporeal creatures normally, and its blades deal force damage.</p><p><strong>Light Lance (Ex)</strong> This integrated laser has a range increment of 60 feet. It resolves as a touch attack, passes through force effects without harming them, and cannot harm invisible creatures.</p><p><strong>Shadow Disruption (Ex)</strong> In dim light, the actor’s attacks have a 20% miss chance and it loses fast healing. In darkness, including magical darkness or a fetchling’s shadow ability, it winks out until light returns: it cannot act or be targeted. A <em>darkness</em> effect centred on an emitter shuts that emitter down for the duration.</p></section></div>"
+      }
+    },
+    "skills": {
+      "acr": {
+        "rank": 16
+      },
+      "per": {
+        "rank": 16
+      }
+    },
+    "traits": {
+      "size": "med",
+      "senses": {
+        "dv": {
+          "value": 60
+        },
+        "ll": {
+          "enabled": true
+        }
+      },
+      "ci": [
+        "bleed",
+        "deathEffects",
+        "disease",
+        "energyDrain",
+        "exhausted",
+        "fatigue",
+        "mindAffecting",
+        "paralyze",
+        "poison",
+        "sleep",
+        "stun"
+      ],
+      "di": [
+        "Critical Hits",
+        "precision"
+      ],
+      "dv": [],
+      "dr": {
+        "value": [],
+        "custom": ""
+      },
+      "eres": {
+        "value": [],
+        "custom": ""
+      },
+      "fastHealing": "10 (only near an emitter)",
+      "languages": [
+        "none; speaks scripted lines in any language Celmak knows"
+      ]
+    }
+  },
+  "items": [
+    {
+      "_id": "gnMGTEanXBVCsTAM",
+      "name": "Hologram",
+      "type": "race",
+      "img": "systems/pf1/icons/races/creature-types/construct.png",
+      "system": {
+        "creatureTypes": [
+          "construct"
+        ],
+        "creatureSubtypes": [],
+        "size": "med",
+        "speeds": {
+          "land": 40
+        },
+        "description": {
+          "value": "<p><strong>Hologram subtype.</strong> A hologram is a construct of solid light. It is immune to critical hits and precision damage. It is emitter-bound and subject to shadow disruption.</p>"
+        }
+      },
+      "_key": "!actors.items!CExWT0RSEN4ESBUQ.gnMGTEanXBVCsTAM",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "b6Tr3PttR2R4zzBO",
+      "name": "Construct (Hologram)",
+      "type": "class",
+      "img": "systems/pf1/icons/skills/mech_7.jpg",
+      "system": {
+        "subType": "racial",
+        "level": 16,
+        "hd": 10,
+        "hp": 88,
+        "bab": "high",
+        "skillsPerLevel": 2,
+        "tag": "construct",
+        "savingThrows": {
+          "fort": {
+            "value": "low"
+          },
+          "ref": {
+            "value": "low"
+          },
+          "will": {
+            "value": "low"
+          }
+        },
+        "description": {
+          "value": "<p>Racial Hit Dice: d10, full BAB, poor saves, no Constitution. Constructs gain bonus hit points by size.</p>"
+        },
+        "changes": [
+          {
+            "_id": "4lVysTVC",
+            "formula": "max(0, @size - 2) * 10 + max(0, @size - 6) * 10",
+            "target": "mhp",
+            "type": "untypedPerm",
+            "operator": "add"
+          }
+        ]
+      },
+      "_key": "!actors.items!CExWT0RSEN4ESBUQ.b6Tr3PttR2R4zzBO",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "41HDAZXMOVQ3AhEL",
+      "name": "Stat Block Adjustments",
+      "type": "feat",
+      "img": "icons/commodities/tech/dial-meter-gauge-blue.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "na",
+        "changes": [
+          {
+            "_id": "QjgGZeY9",
+            "formula": "4",
+            "target": "init",
+            "type": "untyped",
+            "operator": "add"
+          },
+          {
+            "_id": "3cOEABzg",
+            "formula": "8",
+            "target": "ac",
+            "type": "deflection",
+            "operator": "add"
+          },
+          {
+            "_id": "WPon51HF",
+            "formula": "3",
+            "target": "skill.per",
+            "type": "untyped",
+            "operator": "add"
+          }
+        ],
+        "description": {
+          "value": "<p>Bonuses from feats, gear, racial traits and special qualities that are already folded into the printed stat block. Keeping them here lets the PF1 sheet show the same totals as the adventure. Delete a change if you add the matching item with its own mechanics.</p>"
+        }
+      },
+      "_key": "!actors.items!CExWT0RSEN4ESBUQ.41HDAZXMOVQ3AhEL",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "LmVAe84aEUvNRGfl",
+      "_key": "!actors.items!CExWT0RSEN4ESBUQ.LmVAe84aEUvNRGfl",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.h9nHYLxXvIXBTmup"
+      },
+      "img": "systems/pf1/icons/feats/combat-reflexes.jpg",
+      "name": "Combat Reflexes",
+      "system": {
+        "actions": [
+          {
+            "_id": "kzof1vn44xdata40",
+            "activation": {
+              "type": "passive",
+              "unchained": {
+                "type": "passive"
+              }
+            },
+            "img": "systems/pf1/icons/feats/combat-reflexes.jpg",
+            "name": "Use"
+          }
+        ],
+        "contextNotes": [
+          {
+            "target": "attack",
+            "text": "[[@resources.feat_combatReflexes.value]] AoO available."
+          }
+        ],
+        "description": {
+          "instructions": "<p>Spend 1 charge after use. Charges tracks total AoOs.</p>",
+          "value": "<p><em>You can make additional attacks of opportunity.</em></p><p><strong>Benefits</strong>: You may make a number of additional attacks of opportunity per round equal to your Dexterity bonus. With this feat, you may also make attacks of opportunity while flat-footed.</p><p><strong>Normal</strong>: A character without this feat can make only one attack of opportunity per round and can't make attacks of opportunity while flat-footed.</p><p><strong>Special</strong>: The Combat Reflexes feat does not allow a rogue to use her opportunist ability more than once per round.</p><h3>Combat Trick</h3><p>When you miss with an attack of opportunity, you can spend 5 stamina points to make a second attack for the same provoking action. That second attack of opportunity takes a -5 penalty on the attack roll and costs one of your attacks of opportunity for the round.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "114, 119-120"
+          }
+        ],
+        "tag": "feat_combatReflexes",
+        "tags": [
+          "Combat",
+          "Combat Trick"
+        ],
+        "uses": {
+          "maxFormula": "1 + max(0, @abilities.dex.mod)",
+          "per": "round",
+          "value": 0
+        }
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "aclonKpDwrXRFgNt",
+      "_key": "!actors.items!CExWT0RSEN4ESBUQ.aclonKpDwrXRFgNt",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.Uuiu3p982omhMEPj"
+      },
+      "img": "systems/pf1/icons/feats/improved-initiative.jpg",
+      "name": "Improved Initiative",
+      "system": {
+        "description": {
+          "value": "<p><em>Your quick reflexes allow you to react rapidly to danger.</em></p><p><strong>Benefits</strong>: You get a +4 bonus on initiative checks.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "115, 127"
+          }
+        ],
+        "tags": [
+          "Combat"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "ISliswgGwSkKDgtx",
+      "_key": "!actors.items!CExWT0RSEN4ESBUQ.ISliswgGwSkKDgtx",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.xq2TFr7bsYBBHOi5"
+      },
+      "img": "systems/pf1/icons/feats/lunge.jpg",
+      "name": "Lunge",
+      "system": {
+        "description": {
+          "value": "<i>You can strike foes that would normally be out of reach.</i><p><strong>Prerequisites</strong>: Base attack bonus +6.</p><p><strong>Benefits</strong>: You can increase the reach of your melee attacks by 5 feet until the end of your turn by taking a -2 penalty to your AC until your next turn. You must decide to use this ability before any attacks are made.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "115, 130"
+          }
+        ],
+        "tags": [
+          "Combat",
+          "Offensive"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "yHrpRAauPtmvRr1k",
+      "_key": "!actors.items!CExWT0RSEN4ESBUQ.yHrpRAauPtmvRr1k",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.8rsFtye3PwM6CKli"
+      },
+      "img": "systems/pf1/icons/feats/point-blank-shot.jpg",
+      "name": "Point-Blank Shot",
+      "system": {
+        "contextNotes": [
+          {
+            "target": "attack",
+            "text": "+1 bonus on attack and damage rolls with ranged weapons at ranges of up to 30 feet."
+          }
+        ],
+        "description": {
+          "value": "<p><em>You are especially accurate when making ranged attacks against close targets.</em><p><strong>Benefits</strong>: You get a +1 bonus on attack and damage rolls with ranged weapons at ranges of up to 30 feet.<p><b>Combat Trick</b><br>You can spend up to 6 stamina points to increase this feat's range by 5 feet for each stamina point you spent.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "116, 131"
+          }
+        ],
+        "tags": [
+          "Combat"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "KzBFAhZKJxeWJ5HB",
+      "_key": "!actors.items!CExWT0RSEN4ESBUQ.KzBFAhZKJxeWJ5HB",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.FUW5mIXHNBBIQ1Sq"
+      },
+      "img": "systems/pf1/icons/feats/power-attack.jpg",
+      "name": "Power Attack",
+      "system": {
+        "description": {
+          "value": "<i>You can make exceptionally deadly melee attacks by sacrificing accuracy for strength.</i><p><strong>Prerequisites</strong>: Str 13, base attack bonus +1.</p><p><strong>Benefits</strong>: You can choose to take a -1 penalty on all melee attack rolls and combat maneuver checks to gain a +2 bonus on all melee damage rolls. This bonus to damage is increased by half (+50%) if you are making an attack with a two-handed weapon, a one handed weapon using two hands, or a primary natural weapon that adds 1-1/2 times your Strength modifier on damage rolls. This bonus to damage is halved (-50%) if you are making an attack with an off-hand weapon or secondary natural weapon. When your base attack bonus reaches +4, and every 4 points thereafter, the penalty increases by -1 and the bonus to damage increases by +2. You must choose to use this feat before making an attack roll, and its effects last until your next turn. The bonus damage does not apply to touch attacks or effects that do not deal hit point damage.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "116, 131"
+          }
+        ],
+        "tags": [
+          "Combat",
+          "Offensive"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "RK5nXG0zWOfImI2J",
+      "_key": "!actors.items!CExWT0RSEN4ESBUQ.RK5nXG0zWOfImI2J",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.53urYIbYYpQuoSLd"
+      },
+      "img": "systems/pf1/icons/feats/precise-shot.jpg",
+      "name": "Precise Shot",
+      "system": {
+        "contextNotes": [
+          {
+            "target": "attack",
+            "text": "Shoot or throw ranged weapons at an opponent engaged in melee w/o taking the standard -4 penalty on your attack roll."
+          }
+        ],
+        "description": {
+          "value": "<p><em>You are adept at firing ranged attacks into melee.</em></p><p><strong>Prerequisites</strong>: @UUID[Compendium.pf1.feats.Item.8rsFtye3PwM6CKli]{Point-Blank Shot}.</p><p><strong>Benefits</strong>: You can shoot or throw ranged weapons at an opponent engaged in melee without taking the standard -4 penalty on your attack roll.</p><h3>Combat Trick</h3><p>As a standard action, you can spend 2 stamina points and make a ranged attack against a foe engaged in melee with an ally. If the attack hits, it deals no damage, but your ally gains your choice of either a +2 bonus on her next attack roll against that opponent or a +2 bonus to AC against that opponent's next attack. This bonus lasts until the start of your next turn.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "116, 131"
+          }
+        ],
+        "tags": [
+          "Combat",
+          "Combat Trick"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "VtldYLkbEBFlTlWo",
+      "_key": "!actors.items!CExWT0RSEN4ESBUQ.VtldYLkbEBFlTlWo",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.26k1Gi7t5BoqxhIj"
+      },
+      "img": "systems/pf1/icons/feats/vital-strike.jpg",
+      "name": "Vital Strike",
+      "system": {
+        "description": {
+          "instructions": "<p>Add conditional modifier with <code>@base.dice</code> as damage formula where desired.</p>",
+          "value": "<i>You make a single attack that deals significantly more damage than normal.</i><p><strong>Prerequisites</strong>: Base attack bonus +6.</p><p><strong>Benefits</strong>: When you use the attack action, you can make one attack at your highest base attack bonus that deals additional damage. Roll the weapon's damage dice for the attack twice and add the results together before adding bonuses from Strength, weapon abilities (such as <i>flaming</i>), precision based damage, and other damage bonuses. These extra weapon damage dice are not multiplied on a critical hit, but are added to the total.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "117, 136"
+          }
+        ],
+        "tags": [
+          "Combat",
+          "Offensive"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "mFtln5LCQOeFHi8a",
+      "_key": "!actors.items!CExWT0RSEN4ESBUQ.mFtln5LCQOeFHi8a",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.n250dFlbykAIAg5Z"
+      },
+      "img": "systems/pf1/icons/feats/weapon-focus.jpg",
+      "name": "Weapon Focus (Hard-Light Blade)",
+      "system": {
+        "description": {
+          "value": "<i>Choose one type of weapon. You can also choose unarmed strike or grapple (or ray, if you are a spellcaster) as your weapon for the purposes of this feat.</i><p><strong>Prerequisites</strong>: Proficiency with selected weapon, base attack bonus +1.</p><p><strong>Benefits</strong>: You gain a +1 bonus on all attack rolls you make using the selected weapon.</p><p><strong>Special</strong>: You can gain this feat multiple times. Its effects do not stack. Each time you take the feat, it applies to a new type of weapon.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "117, 136"
+          }
+        ],
+        "tags": [
+          "Combat",
+          "Weapon",
+          "Offensive"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "3HARtt2am1Q3li8u",
+      "name": "Hard-Light Blade",
+      "type": "attack",
+      "img": "icons/magic/control/energy-stream-link-white.webp",
+      "system": {
+        "subType": "weapon",
+        "proficient": true,
+        "actions": [
+          {
+            "_id": "WQ6otvQbR5tRC3Sd",
+            "name": "Attack",
+            "activation": {
+              "type": "attack",
+              "unchained": {
+                "type": "attack"
+              }
+            },
+            "actionType": "mwak",
+            "ability": {
+              "attack": "str",
+              "damage": "",
+              "critRange": 20,
+              "critMult": 2
+            },
+            "attackBonus": "1",
+            "damage": {
+              "parts": [
+                {
+                  "formula": "2d8+4",
+                  "types": [
+                    "force"
+                  ]
+                }
+              ]
+            },
+            "range": {
+              "units": "melee"
+            },
+            "touch": false,
+            "naturalAttack": {
+              "primary": true
+            },
+            "extraAttacks": {
+              "type": "custom",
+              "formula": {
+                "count": "1",
+                "label": "Blade #{0}"
+              }
+            }
+          }
+        ],
+        "description": {
+          "value": ""
+        },
+        "showInQuickbar": true
+      },
+      "_key": "!actors.items!CExWT0RSEN4ESBUQ.3HARtt2am1Q3li8u",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "O0E0mAF1ABWkPDCJ",
+      "name": "Light Lance",
+      "type": "attack",
+      "img": "icons/magic/control/energy-stream-link-large-teal.webp",
+      "system": {
+        "subType": "weapon",
+        "proficient": true,
+        "actions": [
+          {
+            "_id": "eKtnggT9LG3D3Rct",
+            "name": "Attack",
+            "activation": {
+              "type": "attack",
+              "unchained": {
+                "type": "attack"
+              }
+            },
+            "actionType": "rwak",
+            "ability": {
+              "attack": "dex",
+              "damage": "",
+              "critRange": 20,
+              "critMult": 2
+            },
+            "attackBonus": "",
+            "damage": {
+              "parts": [
+                {
+                  "formula": "6d6",
+                  "types": [
+                    "fire"
+                  ]
+                }
+              ]
+            },
+            "range": {
+              "units": "ft",
+              "value": "60",
+              "maxIncrements": 10
+            },
+            "touch": true,
+            "naturalAttack": {
+              "primary": true
+            },
+            "notes": {
+              "effect": [],
+              "footer": [
+                "Passes through force effects without harming them; cannot harm invisible creatures"
+              ]
+            }
+          }
+        ],
+        "description": {
+          "value": ""
+        },
+        "showInQuickbar": true
+      },
+      "_key": "!actors.items!CExWT0RSEN4ESBUQ.O0E0mAF1ABWkPDCJ",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "KDmlT4bOgQDyTCTO",
+      "name": "Hologram Subtype",
+      "type": "feat",
+      "img": "icons/magic/control/silhouette-aura-energy.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p><strong>Hologram subtype.</strong> A hologram is a construct of solid light. It is immune to critical hits and precision damage. It is emitter-bound and subject to shadow disruption.</p>"
+        }
+      },
+      "_key": "!actors.items!CExWT0RSEN4ESBUQ.KDmlT4bOgQDyTCTO",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "9MLeMdvjACiL7yXu",
+      "name": "Costume",
+      "type": "feat",
+      "img": "icons/equipment/head/mask-wooden-feathered-blue.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p>The actor's appearance is set for each scene. Suggested costumes: Swarm warriors (Episode 3), Casandalee's past selves (The 113th Take), Lords of Rust thugs, or the party's own enemies from earlier adventures. A costume is solid light, so disbelieving it does nothing.</p>"
+        }
+      },
+      "_key": "!actors.items!CExWT0RSEN4ESBUQ.9MLeMdvjACiL7yXu",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "W0kNQHx3dWkbLeQD",
+      "name": "Emitter-Bound",
+      "type": "feat",
+      "img": "icons/commodities/tech/antenna-powered-purple.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p>The actor exists only within 120 feet of a working holographic emitter. Each scene has 1d4+2 hidden emitters (Perception DC 25 to spot; hardness 10, 30 hp). With no emitter in range, the actor winks out until one is restored. Its fast healing works only while an emitter is in range.</p>"
+        }
+      },
+      "_key": "!actors.items!CExWT0RSEN4ESBUQ.W0kNQHx3dWkbLeQD",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "MBa5mS3rYB5FFZ88",
+      "name": "Hard-Light Body",
+      "type": "feat",
+      "img": "icons/magic/control/energy-stream-link-white.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p>The actor's blades and lance affect incorporeal creatures normally, and its blades deal force damage.</p>"
+        }
+      },
+      "_key": "!actors.items!CExWT0RSEN4ESBUQ.MBa5mS3rYB5FFZ88",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "zBFGBs3XLtFcAj1B",
+      "name": "Light Lance",
+      "type": "feat",
+      "img": "icons/magic/control/energy-stream-link-large-teal.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p>This integrated laser has a range increment of 60 feet. It resolves as a touch attack, passes through force effects without harming them, and cannot harm invisible creatures.</p>"
+        }
+      },
+      "_key": "!actors.items!CExWT0RSEN4ESBUQ.zBFGBs3XLtFcAj1B",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "DqQos9Y0ZDp1Wg8c",
+      "name": "Shadow Disruption",
+      "type": "feat",
+      "img": "icons/magic/control/debuff-energy-hold-pink.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p>In dim light, the actor's attacks have a 20% miss chance and it loses fast healing. In darkness, including magical darkness or a fetchling's shadow ability, it winks out until light returns: it cannot act or be targeted. A darkness effect centred on an emitter shuts that emitter down for the duration.</p>"
+        }
+      },
+      "_key": "!actors.items!CExWT0RSEN4ESBUQ.DqQos9Y0ZDp1Wg8c",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    }
+  ],
+  "folder": "HIrz0Dh4Fb4MXNNY",
+  "sort": 400,
+  "prototypeToken": {
+    "name": "Hard-Light Actor",
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "icons/magic/control/silhouette-aura-energy.webp",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": -1,
+    "actorLink": false,
+    "displayName": 20,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "sight": {
+      "enabled": true,
+      "range": 60
+    }
+  },
+  "flags": {
+    "hollow-garden": {
+      "statblock": true
+    }
+  },
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.9"
+  }
+}

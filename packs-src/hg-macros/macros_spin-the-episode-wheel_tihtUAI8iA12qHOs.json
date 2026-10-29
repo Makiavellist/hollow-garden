@@ -1,0 +1,15 @@
+{
+  "_id": "tihtUAI8iA12qHOs",
+  "_key": "!macros!tihtUAI8iA12qHOs",
+  "name": "Spin the Episode Wheel",
+  "type": "script",
+  "img": "modules/hollow-garden/assets/host/presenting.webp",
+  "command": "// The Hollow Garden: Spin the Episode Wheel\nconst api = game.modules.get(\"hollow-garden\")?.api;\nif (!api) return ui.notifications.warn(\"The Hollow Garden module is not active.\");\napi.openRoulette();",
+  "scope": "global",
+  "folder": null,
+  "sort": 300,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351"
+  }
+}

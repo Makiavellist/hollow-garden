@@ -1,0 +1,15 @@
+{
+  "_id": "Ezm1lIGae25GlcSd",
+  "_key": "!macros!Ezm1lIGae25GlcSd",
+  "name": "Mood Gas Vent",
+  "type": "script",
+  "img": "modules/hollow-garden/assets/host/smug.webp",
+  "command": "// The Hollow Garden: Mood Gas Vent\nconst api = game.modules.get(\"hollow-garden\")?.api;\nif (!api) return ui.notifications.warn(\"The Hollow Garden module is not active.\");\napi.moodGas();",
+  "scope": "global",
+  "folder": null,
+  "sort": 900,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "_id": "8devhPvVVBfAjjzn",
+  "_key": "!items!8devhPvVVBfAjjzn",
+  "name": "Muse Visor",
+  "type": "equipment",
+  "img": "icons/equipment/head/goggles-leather-blue.webp",
+  "folder": "iZyWbMInuudM5zh6",
+  "sort": 200,
+  "system": {
+    "description": {
+      "value": "<p><strong>Price</strong> 26,000 gp; <strong>Slot</strong> head; <strong>Weight</strong> 1 lb.; <strong>Capacity</strong> 10; <strong>Usage</strong> 1 charge per scan</p><p>Celmak's own mind-scanning optics, salvaged from her body. The party gets it only if Celmak is destroyed, surrenders, or hands it over as part of a deal. The wearer gains a +5 competence bonus on Sense Motive checks. As a standard action, the wearer can scan one creature within 60 feet, as <em>@UUID[Compendium.pf1.spells.Item.xllxylvvqr82o2d5]{detect thoughts}</em> with all three rounds of information gained at once (Will DC 20 negates).</p><p><strong>Construction Requirements</strong> Craft Technological Item, military lab; <strong>Cost</strong> 13,000 gp; <strong>Craft</strong> DC 28.</p><p><em>Found in: Celmak (the Cutting Room).</em></p>"
+    },
+    "subType": "wondrous",
+    "slot": "head",
+    "price": 26000,
+    "equipped": false,
+    "weight": {
+      "value": 1
+    },
+    "uses": {
+      "per": "charges",
+      "maxFormula": "10",
+      "value": 10
+    },
+    "changes": [
+      {
+        "_id": "cxF82G3R",
+        "formula": "5",
+        "target": "skill.sen",
+        "type": "competence",
+        "operator": "add"
+      }
+    ],
+    "actions": [
+      {
+        "_id": "iIH26B9zQC0eOQEv",
+        "name": "Scan",
+        "activation": {
+          "type": "standard",
+          "unchained": {
+            "type": "action",
+            "cost": 2
+          }
+        },
+        "actionType": "other",
+        "save": {
+          "type": "will",
+          "dc": "20",
+          "description": "Will negates"
+        },
+        "range": {
+          "value": "60",
+          "units": "ft"
+        },
+        "uses": {
+          "autoDeductChargesCost": "1"
+        }
+      }
+    ]
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.9"
+  }
+}

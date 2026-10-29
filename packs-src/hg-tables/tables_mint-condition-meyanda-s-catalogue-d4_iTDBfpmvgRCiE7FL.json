@@ -1,0 +1,98 @@
+{
+  "_id": "iTDBfpmvgRCiE7FL",
+  "_key": "!tables!iTDBfpmvgRCiE7FL",
+  "name": "Mint Condition: Meyanda's Catalogue (d4)",
+  "img": "icons/sundries/books/book-embossed-blue.webp",
+  "description": "<p>What the model line was built for. Celmak hopes for result 4, and if you roll anything else she quietly suggests it might be wrong.</p>",
+  "formula": "1d4",
+  "replacement": true,
+  "displayRoll": true,
+  "results": [
+    {
+      "_id": "QHFAZbItMXqFV6BP",
+      "_key": "!tables.results!iTDBfpmvgRCiE7FL.QHFAZbItMXqFV6BP",
+      "type": "text",
+      "name": "",
+      "description": "<em>Steward series</em>: caretaker and tutor for colonists' children during the long voyage.",
+      "text": "<em>Steward series</em>: caretaker and tutor for colonists' children during the long voyage.",
+      "img": "icons/sundries/books/book-embossed-blue.webp",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "StWJcbkdETvqQw8C",
+      "_key": "!tables.results!iTDBfpmvgRCiE7FL.StWJcbkdETvqQw8C",
+      "type": "text",
+      "name": "",
+      "description": "<em>Field series</em>: combat medic, designed to keep soldiers alive long enough to keep fighting.",
+      "text": "<em>Field series</em>: combat medic, designed to keep soldiers alive long enough to keep fighting.",
+      "img": "icons/sundries/books/book-embossed-blue.webp",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "GPFwNSLOFcalBLCU",
+      "_key": "!tables.results!iTDBfpmvgRCiE7FL.GPFwNSLOFcalBLCU",
+      "type": "text",
+      "name": "",
+      "description": "<em>Envoy series</em>: interpreter and negotiator for first contact with alien peoples.",
+      "text": "<em>Envoy series</em>: interpreter and negotiator for first contact with alien peoples.",
+      "img": "icons/sundries/books/book-embossed-blue.webp",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "NDKUWSqH45uk5bTE",
+      "_key": "!tables.results!iTDBfpmvgRCiE7FL.NDKUWSqH45uk5bTE",
+      "type": "text",
+      "name": "",
+      "description": "<em>Display series</em>: a showroom model, built to stand in a window and be admired. Celmak's own line.",
+      "text": "<em>Display series</em>: a showroom model, built to stand in a window and be admired. Celmak's own line.",
+      "img": "icons/sundries/books/book-embossed-blue.webp",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    }
+  ],
+  "folder": "ioKH1pEXANkFqbcK",
+  "sort": 700,
+  "flags": {
+    "hollow-garden": {
+      "key": "catalogue"
+    }
+  },
+  "_stats": {
+    "coreVersion": "13.351"
+  }
+}

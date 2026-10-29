@@ -1,0 +1,15 @@
+{
+  "_id": "Yy9meCDCDOV8zb6i",
+  "_key": "!macros!Yy9meCDCDOV8zb6i",
+  "name": "Award Trinket to Fan Favourite",
+  "type": "script",
+  "img": "modules/hollow-garden/assets/host/trophy.webp",
+  "command": "// The Hollow Garden: Award Trinket to Fan Favourite\nconst api = game.modules.get(\"hollow-garden\")?.api;\nif (!api) return ui.notifications.warn(\"The Hollow Garden module is not active.\");\napi.awardTrinket();",
+  "scope": "global",
+  "folder": null,
+  "sort": 1000,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351"
+  }
+}

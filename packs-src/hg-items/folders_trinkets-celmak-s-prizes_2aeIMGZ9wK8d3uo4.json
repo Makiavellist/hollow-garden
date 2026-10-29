@@ -1,0 +1,15 @@
+{
+  "_id": "2aeIMGZ9wK8d3uo4",
+  "_key": "!folders!2aeIMGZ9wK8d3uo4",
+  "name": "Trinkets (Celmak's prizes)",
+  "type": "Item",
+  "color": "#c0398f",
+  "sorting": "m",
+  "sort": 100,
+  "folder": null,
+  "description": "",
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "_id": "REGX8uXNJLG4GjwB",
+  "_key": "!macros!REGX8uXNJLG4GjwB",
+  "name": "Celmak Says…",
+  "type": "script",
+  "img": "modules/hollow-garden/assets/host/blow-kiss.webp",
+  "command": "// The Hollow Garden: Celmak Says…\nconst api = game.modules.get(\"hollow-garden\")?.api;\nif (!api) return ui.notifications.warn(\"The Hollow Garden module is not active.\");\napi.openConsole('broadcast');",
+  "scope": "global",
+  "folder": null,
+  "sort": 600,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351"
+  }
+}

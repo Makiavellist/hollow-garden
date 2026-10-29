@@ -1,0 +1,174 @@
+{
+  "_id": "F9cYvcberqjpl9Jk",
+  "_key": "!tables!F9cYvcberqjpl9Jk",
+  "name": "Celmak Says: The Critic",
+  "img": "icons/magic/control/fear-fright-white.webp",
+  "description": "<p>Lines for Celmak's Critic persona. The Producer Console draws from these for “Random line.”</p>",
+  "formula": "1d8",
+  "replacement": true,
+  "displayRoll": true,
+  "results": [
+    {
+      "_id": "TcRtoxHAge4yqRDc",
+      "_key": "!tables.results!F9cYvcberqjpl9Jk.TcRtoxHAge4yqRDc",
+      "type": "text",
+      "name": "",
+      "description": "Is this a heist or a nap? I genuinely can't tell.",
+      "text": "Is this a heist or a nap? I genuinely can't tell.",
+      "img": "icons/magic/control/fear-fright-white.webp",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "iQioGlMhDl1UnrKo",
+      "_key": "!tables.results!F9cYvcberqjpl9Jk.iQioGlMhDl1UnrKo",
+      "type": "text",
+      "name": "",
+      "description": "Oh, a plan. How derivative.",
+      "text": "Oh, a plan. How derivative.",
+      "img": "icons/magic/control/fear-fright-white.webp",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "oo7Ooino6kVHgges",
+      "_key": "!tables.results!F9cYvcberqjpl9Jk.oo7Ooino6kVHgges",
+      "type": "text",
+      "name": "",
+      "description": "I've seen better tension in a wet paper bag.",
+      "text": "I've seen better tension in a wet paper bag.",
+      "img": "icons/magic/control/fear-fright-white.webp",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "OnqgGADZWJJAf5M8",
+      "_key": "!tables.results!F9cYvcberqjpl9Jk.OnqgGADZWJJAf5M8",
+      "type": "text",
+      "name": "",
+      "description": "That was so dull I edited it while it was happening.",
+      "text": "That was so dull I edited it while it was happening.",
+      "img": "icons/magic/control/fear-fright-white.webp",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "co0A2GT4nhmGH1Oh",
+      "_key": "!tables.results!F9cYvcberqjpl9Jk.co0A2GT4nhmGH1Oh",
+      "type": "text",
+      "name": "",
+      "description": "Wonderful. Another speech. Someone get me a Mood Gas vent.",
+      "text": "Wonderful. Another speech. Someone get me a Mood Gas vent.",
+      "img": "icons/magic/control/fear-fright-white.webp",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "MB8MWn2HfkfPzZeO",
+      "_key": "!tables.results!F9cYvcberqjpl9Jk.MB8MWn2HfkfPzZeO",
+      "type": "text",
+      "name": "",
+      "description": "You call that a near-death experience? I've had longer commercial breaks.",
+      "text": "You call that a near-death experience? I've had longer commercial breaks.",
+      "img": "icons/magic/control/fear-fright-white.webp",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "nurUCazvGpQGukYp",
+      "_key": "!tables.results!F9cYvcberqjpl9Jk.nurUCazvGpQGukYp",
+      "type": "text",
+      "name": "",
+      "description": "The audience is leaving. The audience is holograms. Think about that.",
+      "text": "The audience is leaving. The audience is holograms. Think about that.",
+      "img": "icons/magic/control/fear-fright-white.webp",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "fdXsvzvBs2vhzbZp",
+      "_key": "!tables.results!F9cYvcberqjpl9Jk.fdXsvzvBs2vhzbZp",
+      "type": "text",
+      "name": "",
+      "description": "Three stars. Generous. I'm feeling generous.",
+      "text": "Three stars. Generous. I'm feeling generous.",
+      "img": "icons/magic/control/fear-fright-white.webp",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    }
+  ],
+  "folder": "xenpLnJRecZ0n1LH",
+  "sort": 200,
+  "flags": {
+    "hollow-garden": {
+      "key": "quips-critic"
+    }
+  },
+  "_stats": {
+    "coreVersion": "13.351"
+  }
+}

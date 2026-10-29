@@ -1,0 +1,198 @@
+{
+  "_id": "CouLUngMIOQn5gWI",
+  "_key": "!tables!CouLUngMIOQn5gWI",
+  "name": "Celmak's Trinkets (d8)",
+  "img": "icons/containers/chest/chest-simple-box-gold-brown.webp",
+  "description": "<p>Celmak hands the highest-rated contestant a Trinket when the ratings reach 5, then resets them to 3.</p>",
+  "formula": "1d8",
+  "replacement": true,
+  "displayRoll": true,
+  "results": [
+    {
+      "_id": "uP1ZzrDWt5NnQEF1",
+      "_key": "!tables.results!CouLUngMIOQn5gWI.uP1ZzrDWt5NnQEF1",
+      "type": "document",
+      "name": "Applause Injector",
+      "description": "",
+      "text": "Applause Injector",
+      "img": "icons/consumables/potions/potion-tube-corked-bubbling-green.webp",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      },
+      "documentCollection": "hollow-garden.hg-items",
+      "documentId": "mzVkFy987DTVuuOA",
+      "documentUuid": "Compendium.hollow-garden.hg-items.Item.mzVkFy987DTVuuOA"
+    },
+    {
+      "_id": "ZVdySiuWiME6axvL",
+      "_key": "!tables.results!CouLUngMIOQn5gWI.ZVdySiuWiME6axvL",
+      "type": "document",
+      "name": "Encore Stim",
+      "description": "",
+      "text": "Encore Stim",
+      "img": "icons/consumables/potions/potion-flask-corked-labeled-pink.webp",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      },
+      "documentCollection": "hollow-garden.hg-items",
+      "documentId": "gAlXru4sMPUWTOfq",
+      "documentUuid": "Compendium.hollow-garden.hg-items.Item.gAlXru4sMPUWTOfq"
+    },
+    {
+      "_id": "b26yPEWWRF0wsxox",
+      "_key": "!tables.results!CouLUngMIOQn5gWI.b26yPEWWRF0wsxox",
+      "type": "document",
+      "name": "Filter Plugs",
+      "description": "",
+      "text": "Filter Plugs",
+      "img": "icons/commodities/tech/bearing-steel-green.webp",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      },
+      "documentCollection": "hollow-garden.hg-items",
+      "documentId": "PWW0dszHix0mPaFz",
+      "documentUuid": "Compendium.hollow-garden.hg-items.Item.PWW0dszHix0mPaFz"
+    },
+    {
+      "_id": "coRqXgzRSmpZ61hb",
+      "_key": "!tables.results!CouLUngMIOQn5gWI.coRqXgzRSmpZ61hb",
+      "type": "document",
+      "name": "Spotlight Flare",
+      "description": "",
+      "text": "Spotlight Flare",
+      "img": "icons/commodities/tech/smoke-bomb-red-yellow.webp",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      },
+      "documentCollection": "hollow-garden.hg-items",
+      "documentId": "qi1Y2xzIy5hs2VCh",
+      "documentUuid": "Compendium.hollow-garden.hg-items.Item.qi1Y2xzIy5hs2VCh"
+    },
+    {
+      "_id": "piH7dIAFtV95FqRI",
+      "_key": "!tables.results!CouLUngMIOQn5gWI.piH7dIAFtV95FqRI",
+      "type": "document",
+      "name": "Holo-Decoy",
+      "description": "",
+      "text": "Holo-Decoy",
+      "img": "icons/magic/control/silhouette-grow-shrink-blue.webp",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      },
+      "documentCollection": "hollow-garden.hg-items",
+      "documentId": "ksWx5iMkihpRWUEy",
+      "documentUuid": "Compendium.hollow-garden.hg-items.Item.ksWx5iMkihpRWUEy"
+    },
+    {
+      "_id": "QAvGG0WcShWpG4sd",
+      "_key": "!tables.results!CouLUngMIOQn5gWI.QAvGG0WcShWpG4sd",
+      "type": "document",
+      "name": "Static Grenade",
+      "description": "",
+      "text": "Static Grenade",
+      "img": "icons/commodities/tech/detonator-radio.webp",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      },
+      "documentCollection": "hollow-garden.hg-items",
+      "documentId": "hcGLyKLJf8t5OxnF",
+      "documentUuid": "Compendium.hollow-garden.hg-items.Item.hcGLyKLJf8t5OxnF"
+    },
+    {
+      "_id": "IEYgGdZeEQUOCnvf",
+      "_key": "!tables.results!CouLUngMIOQn5gWI.IEYgGdZeEQUOCnvf",
+      "type": "document",
+      "name": "Cue Card",
+      "description": "",
+      "text": "Cue Card",
+      "img": "icons/sundries/documents/document-symbol-triangle-pink.webp",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      },
+      "documentCollection": "hollow-garden.hg-items",
+      "documentId": "4LIadpo76OE0iIXL",
+      "documentUuid": "Compendium.hollow-garden.hg-items.Item.4LIadpo76OE0iIXL"
+    },
+    {
+      "_id": "BuL6ft0pKBtujuDx",
+      "_key": "!tables.results!CouLUngMIOQn5gWI.BuL6ft0pKBtujuDx",
+      "type": "document",
+      "name": "From the Hoard (GM's choice)",
+      "description": "",
+      "text": "From the Hoard (GM's choice)",
+      "img": "icons/containers/chest/chest-simple-box-gold-brown.webp",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      },
+      "documentCollection": "hollow-garden.hg-items",
+      "documentId": "cJczATR1pcdp7geI",
+      "documentUuid": "Compendium.hollow-garden.hg-items.Item.cJczATR1pcdp7geI"
+    }
+  ],
+  "folder": "ioKH1pEXANkFqbcK",
+  "sort": 600,
+  "flags": {
+    "hollow-garden": {
+      "key": "trinkets"
+    }
+  },
+  "_stats": {
+    "coreVersion": "13.351"
+  }
+}

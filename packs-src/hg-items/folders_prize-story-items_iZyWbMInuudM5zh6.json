@@ -1,0 +1,15 @@
+{
+  "_id": "iZyWbMInuudM5zh6",
+  "_key": "!folders!iZyWbMInuudM5zh6",
+  "name": "Prize & Story Items",
+  "type": "Item",
+  "color": "#1f6f8b",
+  "sorting": "m",
+  "sort": 200,
+  "folder": null,
+  "description": "",
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351"
+  }
+}

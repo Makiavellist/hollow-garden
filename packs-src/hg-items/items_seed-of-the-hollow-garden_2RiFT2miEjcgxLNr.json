@@ -1,0 +1,26 @@
+{
+  "_id": "2RiFT2miEjcgxLNr",
+  "_key": "!items!2RiFT2miEjcgxLNr",
+  "name": "Seed of the Hollow Garden",
+  "type": "loot",
+  "img": "icons/magic/nature/plant-seed-hands-glow-yellow.webp",
+  "folder": "iZyWbMInuudM5zh6",
+  "sort": 300,
+  "system": {
+    "description": {
+      "value": "<p><strong>Aura</strong> moderate conjuration; <strong>Cl</strong> 13th; <strong>Slot</strong> none; <strong>Price</strong> 25,000 gp; <strong>Weight</strong> —</p><p>A living acorn grown from the awakened Lock Tree. While carried, it grants a +2 insight bonus on saves against illusions: its bearer can feel what is real. Planted in the Hollow Garden's dome after the Core is shut down, it turns the synthetic garden into a living fey glade over a month. Planted anywhere else, it grows overnight into a 200-foot-wide grove where the bearer and their allies can always rest undisturbed, as <em>@UUID[Compendium.pf1.spells.Item.9v2s3xjlakjm1eq1]{private sanctum}</em>. Once planted, it is used up.</p><p><strong>Construction Requirements</strong> none; it grows only from the Lock Tree.</p><p><em>Found in: Episode 4, if the Tree was awakened rather than disabled or smashed.</em></p>"
+    },
+    "subType": "misc",
+    "price": 25000,
+    "cl": 13,
+    "aura": {
+      "school": "con"
+    }
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.9"
+  }
+}

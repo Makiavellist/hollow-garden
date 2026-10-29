@@ -1,0 +1,136 @@
+{
+  "_id": "b6J03aeO0rCoj6Jl",
+  "_key": "!tables!b6J03aeO0rCoj6Jl",
+  "name": "Mood Gas (d6)",
+  "img": "icons/magic/air/fog-gas-smoke-swirling-pink.webp",
+  "description": "<p>Fortitude DC 22 to avoid inhaling a dose (DC 25 for Celmak's mood release); a creature that inhales attempts a Will save at the same DC against the effect, lasting 1d4+1 rounds. Creatures that do not breathe are immune, which irritates Celmak.</p>",
+  "formula": "1d6",
+  "replacement": true,
+  "displayRoll": true,
+  "results": [
+    {
+      "_id": "DzNgL34eAatXSGg2",
+      "_key": "!tables.results!b6J03aeO0rCoj6Jl.DzNgL34eAatXSGg2",
+      "type": "text",
+      "name": "",
+      "description": "<strong>Rage</strong> (as the spell, involuntary).",
+      "text": "<strong>Rage</strong> (as the spell, involuntary).",
+      "img": "icons/magic/air/fog-gas-smoke-swirling-pink.webp",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "1pP3p8IMlUo9Gh1y",
+      "_key": "!tables.results!b6J03aeO0rCoj6Jl.1pP3p8IMlUo9Gh1y",
+      "type": "text",
+      "name": "",
+      "description": "<strong>Confusion</strong>.",
+      "text": "<strong>Confusion</strong>.",
+      "img": "icons/magic/air/fog-gas-smoke-swirling-pink.webp",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "qJASffiHubfLwZPH",
+      "_key": "!tables.results!b6J03aeO0rCoj6Jl.qJASffiHubfLwZPH",
+      "type": "text",
+      "name": "",
+      "description": "<strong>Crushing despair</strong>.",
+      "text": "<strong>Crushing despair</strong>.",
+      "img": "icons/magic/air/fog-gas-smoke-swirling-pink.webp",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "ia6nenuoFlBHNyeb",
+      "_key": "!tables.results!b6J03aeO0rCoj6Jl.ia6nenuoFlBHNyeb",
+      "type": "text",
+      "name": "",
+      "description": "<strong>Unnatural lust</strong> toward the nearest creature Celmak chooses.",
+      "text": "<strong>Unnatural lust</strong> toward the nearest creature Celmak chooses.",
+      "img": "icons/magic/air/fog-gas-smoke-swirling-pink.webp",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "hohNjod978PTDixe",
+      "_key": "!tables.results!b6J03aeO0rCoj6Jl.hohNjod978PTDixe",
+      "type": "text",
+      "name": "",
+      "description": "<strong>Fear</strong>: frightened, or shaken on a successful save.",
+      "text": "<strong>Fear</strong>: frightened, or shaken on a successful save.",
+      "img": "icons/magic/air/fog-gas-smoke-swirling-pink.webp",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "4AzhEkqTcrGIP9Pm",
+      "_key": "!tables.results!b6J03aeO0rCoj6Jl.4AzhEkqTcrGIP9Pm",
+      "type": "text",
+      "name": "",
+      "description": "<strong>Euphoria</strong>: staggered, but +2 morale bonus on attack rolls.",
+      "text": "<strong>Euphoria</strong>: staggered, but +2 morale bonus on attack rolls.",
+      "img": "icons/magic/air/fog-gas-smoke-swirling-pink.webp",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    }
+  ],
+  "folder": "ioKH1pEXANkFqbcK",
+  "sort": 100,
+  "flags": {
+    "hollow-garden": {
+      "key": "mood-gas"
+    }
+  },
+  "_stats": {
+    "coreVersion": "13.351"
+  }
+}

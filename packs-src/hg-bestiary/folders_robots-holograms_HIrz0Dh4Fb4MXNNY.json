@@ -1,0 +1,15 @@
+{
+  "_id": "HIrz0Dh4Fb4MXNNY",
+  "_key": "!folders!HIrz0Dh4Fb4MXNNY",
+  "name": "Robots & Holograms",
+  "type": "Actor",
+  "color": "#1f6f8b",
+  "sorting": "m",
+  "sort": 300,
+  "folder": null,
+  "description": "",
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351"
+  }
+}

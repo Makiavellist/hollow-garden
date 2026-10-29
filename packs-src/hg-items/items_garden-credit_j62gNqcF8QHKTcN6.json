@@ -1,0 +1,23 @@
+{
+  "_id": "j62gNqcF8QHKTcN6",
+  "_key": "!items!j62gNqcF8QHKTcN6",
+  "name": "Garden Credit",
+  "type": "loot",
+  "img": "icons/commodities/currency/coin-inset-lightning-silver.webp",
+  "folder": "iZyWbMInuudM5zh6",
+  "sort": 1200,
+  "system": {
+    "description": {
+      "value": "<p>Auction scrip for The Last Market (Episode 2). Each contestant receives 2 on entry (14 for the party).</p><p><strong>Raising more:</strong> sell a true secret (2 each), sell blood (1 per 10 hp, unhealable until the episode ends), lend a companion to the Box (3 each), or sell an item (1 per 5,000 gp of value).</p><p><em>Worthless outside the Garden. Celmak honours every sale.</em></p>"
+    },
+    "subType": "tradeGoods",
+    "price": 0,
+    "quantity": 2
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.9"
+  }
+}

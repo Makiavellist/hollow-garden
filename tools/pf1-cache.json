@@ -1,0 +1,1473 @@
+{
+ "feats": {
+  "Skill Focus": {
+   "_id": "7zJTztNW7hdaqjKc",
+   "_key": "!items!7zJTztNW7hdaqjKc",
+   "_stats": {
+    "coreVersion": "12.343"
+   },
+   "img": "systems/pf1/icons/feats/skill-focus.jpg",
+   "name": "Skill Focus",
+   "system": {
+    "description": {
+     "value": "<i>Choose a skill. You are particularly adept at that skill.</i><p><strong>Benefits</strong>: You get a +3 bonus on all checks involving the chosen skill. If you have 10 or more ranks in that skill, this bonus increases to +6.</p><p><strong>Special</strong>: You can gain this feat multiple times. Its effects do not stack. Each time you take the feat, it applies to a new skill.</p>"
+    },
+    "sources": [
+     {
+      "id": "PZO1110",
+      "pages": "116, 134"
+     }
+    ],
+    "tags": [
+     "General",
+     "Skill"
+    ]
+   },
+   "type": "feat"
+  },
+  "Deceitful": {
+   "_id": "SUACufUXl12sUvnQ",
+   "_key": "!items!SUACufUXl12sUvnQ",
+   "_stats": {
+    "coreVersion": "12.343"
+   },
+   "img": "systems/pf1/icons/feats/deceitful.jpg",
+   "name": "Deceitful",
+   "system": {
+    "changes": [
+     {
+      "_id": "d6rirc2a",
+      "formula": "2 + if(gte(@skills.blf.rank, 10), 2)",
+      "target": "skill.blf",
+      "type": "untyped"
+     },
+     {
+      "_id": "u9gcikyo",
+      "formula": "2 + if(gte(@skills.dis.rank, 10), 2)",
+      "target": "skill.dis",
+      "type": "untyped"
+     }
+    ],
+    "description": {
+     "value": "<p><em>You are skilled at deceiving others, both with the spoken word and with physical disguises.</em></p><p><strong>Benefits</strong>: You get a +2 bonus on all Bluff and Disguise skill checks. If you have 10 or more ranks in one of these skills, the bonus increases to +4 for that skill.</p>"
+    },
+    "sources": [
+     {
+      "id": "PZO1110",
+      "pages": "114, 121"
+     }
+    ],
+    "tags": [
+     "General"
+    ]
+   },
+   "type": "feat"
+  },
+  "Persuasive": {
+   "_id": "L10V7jTzmMYz62zz",
+   "_key": "!items!L10V7jTzmMYz62zz",
+   "_stats": {
+    "coreVersion": "12.343"
+   },
+   "img": "systems/pf1/icons/feats/persuasive.jpg",
+   "name": "Persuasive",
+   "system": {
+    "changes": [
+     {
+      "_id": "dxpiteim",
+      "formula": "2 + if(gte(@skills.dip.rank, 10), 2)",
+      "target": "skill.dip",
+      "type": "untyped"
+     },
+     {
+      "_id": "phdvf0la",
+      "formula": "2 + if(gte(@skills.int.rank, 10), 2)",
+      "target": "skill.int",
+      "type": "untyped"
+     }
+    ],
+    "description": {
+     "value": "<i>You are skilled at swaying attitudes and intimidating others into your way of thinking.</i><p><strong>Benefits</strong>: You get a +2 bonus on Diplomacy and Intimidate skill checks. If you have 10 or more ranks in one of these skills, the bonus increases to +4 for that skill.</p>"
+    },
+    "sources": [
+     {
+      "id": "PZO1110",
+      "pages": "115, 131"
+     }
+    ],
+    "tags": [
+     "General",
+     "Skill"
+    ]
+   },
+   "type": "feat"
+  },
+  "Alertness": {
+   "_id": "Q1cY8r0Pvb66pMG0",
+   "_key": "!items!Q1cY8r0Pvb66pMG0",
+   "_stats": {
+    "coreVersion": "12.343"
+   },
+   "img": "systems/pf1/icons/feats/alertness.jpg",
+   "name": "Alertness",
+   "system": {
+    "changes": [
+     {
+      "_id": "4lwdra12",
+      "formula": "2 + if(gte(@skills.sen.rank, 10), 2)",
+      "target": "skill.sen",
+      "type": "untyped"
+     },
+     {
+      "_id": "3f1srila",
+      "formula": "2 + if(gte(@skills.per.rank, 10), 2)",
+      "target": "skill.per",
+      "type": "untyped"
+     }
+    ],
+    "description": {
+     "value": "<i>You often notice things that others might miss.</i><p><strong>Benefits</strong>: You get a +2 bonus on Perception and Sense Motive skill checks. If you have 10 or more ranks in one of these skills, the bonus increases to +4 for that skill.</p>"
+    },
+    "sources": [
+     {
+      "id": "PZO1110",
+      "pages": "114, 117"
+     }
+    ],
+    "tags": [
+     "General",
+     "Skill"
+    ]
+   },
+   "type": "feat"
+  },
+  "Mobility": {
+   "_id": "R7L4SlGRlnThqFrP",
+   "_key": "!items!R7L4SlGRlnThqFrP",
+   "_stats": {
+    "coreVersion": "12.343"
+   },
+   "img": "systems/pf1/icons/feats/mobility.jpg",
+   "name": "Mobility",
+   "system": {
+    "description": {
+     "value": "<p><em>You can easily move through a dangerous melee.</em></p><p><strong>Prerequisites</strong>: Dex 13, @UUID[Compendium.pf1.feats.Item.JreaiTHdyWFNj3Tb]{Dodge}.</p><p><strong>Benefits</strong>: You get a +4 dodge bonus to Armor Class against attacks of opportunity caused when you move out of or within a threatened area. A condition that makes you lose your Dexterity bonus to Armor Class (if any) also makes you lose dodge bonuses.</p><p>Dodge bonuses stack with each other, unlike most types of bonuses.</p>"
+    },
+    "sources": [
+     {
+      "id": "PZO1110",
+      "pages": "114, 130"
+     }
+    ],
+    "tags": [
+     "Combat",
+     "Movement",
+     "Defensive"
+    ]
+   },
+   "type": "feat"
+  },
+  "Iron Will": {
+   "_id": "iAbIGhm7T2OK9Brt",
+   "_key": "!items!iAbIGhm7T2OK9Brt",
+   "_stats": {
+    "coreVersion": "12.343"
+   },
+   "img": "systems/pf1/icons/feats/iron-will.jpg",
+   "name": "Iron Will",
+   "system": {
+    "changes": [
+     {
+      "_id": "vafl2kz4",
+      "formula": "2",
+      "target": "will",
+      "type": "untyped"
+     }
+    ],
+    "description": {
+     "value": "<p><em>You are more resistant to mental effects.</em></p><p><strong>Benefits</strong>: You get a +2 bonus on all Will saving throws.</p>"
+    },
+    "sources": [
+     {
+      "id": "PZO1110",
+      "pages": "115, 129"
+     }
+    ],
+    "tags": [
+     "General",
+     "Saving Throw"
+    ]
+   },
+   "type": "feat"
+  },
+  "Dodge": {
+   "_id": "JreaiTHdyWFNj3Tb",
+   "_key": "!items!JreaiTHdyWFNj3Tb",
+   "_stats": {
+    "coreVersion": "12.343"
+   },
+   "img": "systems/pf1/icons/feats/dodge.jpg",
+   "name": "Dodge",
+   "system": {
+    "changes": [
+     {
+      "_id": "9onhsept",
+      "formula": "1",
+      "target": "ac",
+      "type": "dodge"
+     }
+    ],
+    "description": {
+     "value": "<i>Your training and reflexes allow you to react swiftly to avoid an opponents' attacks.</i><p><strong>Prerequisites</strong>: Dex 13.</p><p><strong>Benefits</strong>: You gain a +1 dodge bonus to your AC. A condition that makes you lose your Dex bonus to AC also makes you lose the benefits of this feat.</p>"
+    },
+    "sources": [
+     {
+      "id": "PZO1110",
+      "pages": "114, 122"
+     }
+    ],
+    "tags": [
+     "Combat",
+     "Defensive"
+    ]
+   },
+   "type": "feat"
+  },
+  "Improved Initiative": {
+   "_id": "Uuiu3p982omhMEPj",
+   "_key": "!items!Uuiu3p982omhMEPj",
+   "_stats": {
+    "coreVersion": "12.343"
+   },
+   "img": "systems/pf1/icons/feats/improved-initiative.jpg",
+   "name": "Improved Initiative",
+   "system": {
+    "changes": [
+     {
+      "_id": "ign7okhi",
+      "formula": "4",
+      "target": "init",
+      "type": "untyped"
+     }
+    ],
+    "description": {
+     "value": "<p><em>Your quick reflexes allow you to react rapidly to danger.</em></p><p><strong>Benefits</strong>: You get a +4 bonus on initiative checks.</p>"
+    },
+    "sources": [
+     {
+      "id": "PZO1110",
+      "pages": "115, 127"
+     }
+    ],
+    "tags": [
+     "Combat"
+    ]
+   },
+   "type": "feat"
+  },
+  "Flyby Attack": {
+   "_id": "PlCHtwe6e3f7pZYR",
+   "_key": "!items!PlCHtwe6e3f7pZYR",
+   "_stats": {
+    "coreVersion": "12.343"
+   },
+   "img": "icons/creatures/abilities/wing-batlike-purple-blue.webp",
+   "name": "Flyby Attack",
+   "system": {
+    "actions": [
+     {
+      "_id": "CVK9o4MhaI5XEA0o",
+      "activation": {
+       "type": "special",
+       "unchained": {
+        "type": "special"
+       }
+      },
+      "duration": {
+       "units": "inst"
+      },
+      "name": "Use",
+      "range": {
+       "units": "seeText"
+      }
+     }
+    ],
+    "description": {
+     "value": "<p><em>This creature can make an attack before and after it moves while flying.</em> </p><p><strong>Prerequisites</strong>: Fly speed.</p><p><strong>Benefit</strong>: When flying, the creature can take a move action and another standard action at any point during the move. The creature cannot take a second move action during a round when it makes a flyby attack.</p><p><strong>Normal</strong>: Without this feat, the creature takes a standard action either before or after its move.</p>"
+    },
+    "sources": [
+     {
+      "id": "PZO1112",
+      "pages": "315"
+     }
+    ]
+   },
+   "type": "feat"
+  },
+  "Point-Blank Shot": {
+   "_id": "8rsFtye3PwM6CKli",
+   "_key": "!items!8rsFtye3PwM6CKli",
+   "_stats": {
+    "coreVersion": "12.343"
+   },
+   "img": "systems/pf1/icons/feats/point-blank-shot.jpg",
+   "name": "Point-Blank Shot",
+   "system": {
+    "contextNotes": [
+     {
+      "target": "attack",
+      "text": "+1 bonus on attack and damage rolls with ranged weapons at ranges of up to 30 feet."
+     }
+    ],
+    "description": {
+     "value": "<p><em>You are especially accurate when making ranged attacks against close targets.</em><p><strong>Benefits</strong>: You get a +1 bonus on attack and damage rolls with ranged weapons at ranges of up to 30 feet.<p><b>Combat Trick</b><br>You can spend up to 6 stamina points to increase this feat's range by 5 feet for each stamina point you spent.</p>"
+    },
+    "sources": [
+     {
+      "id": "PZO1110",
+      "pages": "116, 131"
+     }
+    ],
+    "tags": [
+     "Combat"
+    ]
+   },
+   "type": "feat"
+  },
+  "Precise Shot": {
+   "_id": "53urYIbYYpQuoSLd",
+   "_key": "!items!53urYIbYYpQuoSLd",
+   "_stats": {
+    "coreVersion": "12.343"
+   },
+   "img": "systems/pf1/icons/feats/precise-shot.jpg",
+   "name": "Precise Shot",
+   "system": {
+    "contextNotes": [
+     {
+      "target": "attack",
+      "text": "Shoot or throw ranged weapons at an opponent engaged in melee w/o taking the standard -4 penalty on your attack roll."
+     }
+    ],
+    "description": {
+     "value": "<p><em>You are adept at firing ranged attacks into melee.</em></p><p><strong>Prerequisites</strong>: @UUID[Compendium.pf1.feats.Item.8rsFtye3PwM6CKli]{Point-Blank Shot}.</p><p><strong>Benefits</strong>: You can shoot or throw ranged weapons at an opponent engaged in melee without taking the standard -4 penalty on your attack roll.</p><h3>Combat Trick</h3><p>As a standard action, you can spend 2 stamina points and make a ranged attack against a foe engaged in melee with an ally. If the attack hits, it deals no damage, but your ally gains your choice of either a +2 bonus on her next attack roll against that opponent or a +2 bonus to AC against that opponent's next attack. This bonus lasts until the start of your next turn.</p>"
+    },
+    "sources": [
+     {
+      "id": "PZO1110",
+      "pages": "116, 131"
+     }
+    ],
+    "tags": [
+     "Combat",
+     "Combat Trick"
+    ]
+   },
+   "type": "feat"
+  },
+  "Lunge": {
+   "_id": "xq2TFr7bsYBBHOi5",
+   "_key": "!items!xq2TFr7bsYBBHOi5",
+   "_stats": {
+    "coreVersion": "12.343"
+   },
+   "img": "systems/pf1/icons/feats/lunge.jpg",
+   "name": "Lunge",
+   "system": {
+    "description": {
+     "value": "<i>You can strike foes that would normally be out of reach.</i><p><strong>Prerequisites</strong>: Base attack bonus +6.</p><p><strong>Benefits</strong>: You can increase the reach of your melee attacks by 5 feet until the end of your turn by taking a -2 penalty to your AC until your next turn. You must decide to use this ability before any attacks are made.</p>"
+    },
+    "sources": [
+     {
+      "id": "PZO1110",
+      "pages": "115, 130"
+     }
+    ],
+    "tags": [
+     "Combat",
+     "Offensive"
+    ]
+   },
+   "type": "feat"
+  },
+  "Power Attack": {
+   "_id": "FUW5mIXHNBBIQ1Sq",
+   "_key": "!items!FUW5mIXHNBBIQ1Sq",
+   "_stats": {
+    "coreVersion": "12.343"
+   },
+   "img": "systems/pf1/icons/feats/power-attack.jpg",
+   "name": "Power Attack",
+   "system": {
+    "description": {
+     "value": "<i>You can make exceptionally deadly melee attacks by sacrificing accuracy for strength.</i><p><strong>Prerequisites</strong>: Str 13, base attack bonus +1.</p><p><strong>Benefits</strong>: You can choose to take a -1 penalty on all melee attack rolls and combat maneuver checks to gain a +2 bonus on all melee damage rolls. This bonus to damage is increased by half (+50%) if you are making an attack with a two-handed weapon, a one handed weapon using two hands, or a primary natural weapon that adds 1-1/2 times your Strength modifier on damage rolls. This bonus to damage is halved (-50%) if you are making an attack with an off-hand weapon or secondary natural weapon. When your base attack bonus reaches +4, and every 4 points thereafter, the penalty increases by -1 and the bonus to damage increases by +2. You must choose to use this feat before making an attack roll, and its effects last until your next turn. The bonus damage does not apply to touch attacks or effects that do not deal hit point damage.</p>"
+    },
+    "sources": [
+     {
+      "id": "PZO1110",
+      "pages": "116, 131"
+     }
+    ],
+    "tags": [
+     "Combat",
+     "Offensive"
+    ]
+   },
+   "type": "feat"
+  },
+  "Run": {
+   "_id": "bXeW4kLCErPBFpNB",
+   "_key": "!items!bXeW4kLCErPBFpNB",
+   "_stats": {
+    "coreVersion": "12.343"
+   },
+   "img": "systems/pf1/icons/feats/run.jpg",
+   "name": "Run",
+   "system": {
+    "contextNotes": [
+     {
+      "target": "skill.acr",
+      "text": "+[[4]] to jump after a running start"
+     }
+    ],
+    "description": {
+     "value": "<p><em>You are swift of foot.</em><p><strong>Benefits</strong>: When running, you move five times your normal speed (if wearing medium, light, or no armor and carrying no more than a medium load) or four times your speed (if wearing heavy armor or carrying a heavy load). If you make a jump after a running start (see the Acrobatics skill description), you gain a +4 bonus on your Acrobatics check. While running, you retain your Dexterity bonus to your Armor Class.<p><strong>Normal</strong>: You move four times your speed while running (if wearing medium, light, or no armor and carrying no more than a medium load) or three times your speed (if wearing heavy armor or carrying a heavy load), and you lose your Dexterity bonus to AC.</p>"
+    },
+    "sources": [
+     {
+      "id": "PZO1110",
+      "pages": "116, 132"
+     }
+    ],
+    "tags": [
+     "General"
+    ]
+   },
+   "type": "feat"
+  },
+  "Stealthy": {
+   "_id": "f5FPqAYWlKj3zCIY",
+   "_key": "!items!f5FPqAYWlKj3zCIY",
+   "_stats": {
+    "coreVersion": "12.343"
+   },
+   "img": "systems/pf1/icons/feats/stealthy.jpg",
+   "name": "Stealthy",
+   "system": {
+    "changes": [
+     {
+      "_id": "sij49210",
+      "formula": "2 + if(gte(@skills.ste.rank, 10), 2)",
+      "target": "skill.ste",
+      "type": "untyped"
+     },
+     {
+      "_id": "r8iwxuq0",
+      "formula": "2 + if(gte(@skills.esc.rank, 10), 2)",
+      "target": "skill.esc",
+      "type": "untyped"
+     }
+    ],
+    "description": {
+     "value": "<i>You are good at avoiding unwanted attention and slipping out of bonds.</i><p><strong>Benefits</strong>: You get a +2 bonus on all Escape Artist and Stealth skill checks. If you have 10 or more ranks in one of these skills, the bonus increases to +4 for that skill.</p>"
+    },
+    "sources": [
+     {
+      "id": "PZO1110",
+      "pages": "116, 135"
+     }
+    ],
+    "tags": [
+     "General",
+     "Skill"
+    ]
+   },
+   "type": "feat"
+  },
+  "Combat Reflexes": {
+   "_id": "h9nHYLxXvIXBTmup",
+   "_key": "!items!h9nHYLxXvIXBTmup",
+   "_stats": {
+    "coreVersion": "12.343"
+   },
+   "img": "systems/pf1/icons/feats/combat-reflexes.jpg",
+   "name": "Combat Reflexes",
+   "system": {
+    "actions": [
+     {
+      "_id": "kzof1vn44xdata40",
+      "activation": {
+       "type": "passive",
+       "unchained": {
+        "type": "passive"
+       }
+      },
+      "img": "systems/pf1/icons/feats/combat-reflexes.jpg",
+      "name": "Use"
+     }
+    ],
+    "contextNotes": [
+     {
+      "target": "attack",
+      "text": "[[@resources.feat_combatReflexes.value]] AoO available."
+     }
+    ],
+    "description": {
+     "instructions": "<p>Spend 1 charge after use. Charges tracks total AoOs.</p>",
+     "value": "<p><em>You can make additional attacks of opportunity.</em></p><p><strong>Benefits</strong>: You may make a number of additional attacks of opportunity per round equal to your Dexterity bonus. With this feat, you may also make attacks of opportunity while flat-footed.</p><p><strong>Normal</strong>: A character without this feat can make only one attack of opportunity per round and can't make attacks of opportunity while flat-footed.</p><p><strong>Special</strong>: The Combat Reflexes feat does not allow a rogue to use her opportunist ability more than once per round.</p><h3>Combat Trick</h3><p>When you miss with an attack of opportunity, you can spend 5 stamina points to make a second attack for the same provoking action. That second attack of opportunity takes a -5 penalty on the attack roll and costs one of your attacks of opportunity for the round.</p>"
+    },
+    "sources": [
+     {
+      "id": "PZO1110",
+      "pages": "114, 119-120"
+     }
+    ],
+    "tag": "feat_combatReflexes",
+    "tags": [
+     "Combat",
+     "Combat Trick"
+    ],
+    "uses": {
+     "maxFormula": "1 + max(0, @abilities.dex.mod)",
+     "per": "round",
+     "value": 0
+    }
+   },
+   "type": "feat"
+  },
+  "Spring Attack": {
+   "_id": "ugQyUpqPBDsqLyra",
+   "_key": "!items!ugQyUpqPBDsqLyra",
+   "_stats": {
+    "coreVersion": "12.343"
+   },
+   "img": "systems/pf1/icons/feats/spring-attack.jpg",
+   "name": "Spring Attack",
+   "system": {
+    "actions": [
+     {
+      "_id": "9ilekjpdPWfwe7eo",
+      "activation": {
+       "type": "full",
+       "unchained": {
+        "cost": 3,
+        "type": "action"
+       }
+      },
+      "duration": {
+       "units": "inst"
+      },
+      "name": "Use",
+      "range": {
+       "units": "seeText"
+      },
+      "target": {
+       "value": "One Target"
+      }
+     }
+    ],
+    "description": {
+     "value": "<p><em>You can deftly move up to a foe, strike, and withdraw before he can react.</em></p><p><strong>Prerequisites</strong>: Dex 13, @UUID[Compendium.pf1.feats.Item.JreaiTHdyWFNj3Tb]{Dodge}, @UUID[Compendium.pf1.feats.Item.R7L4SlGRlnThqFrP]{Mobility}, base attack bonus +4.</p><p><strong>Benefits</strong>: As a full-round action, you can move up to your speed and make a single melee attack without provoking any attacks of opportunity from the target of your attack. You can move both before and after the attack, but you must move at least 10 feet before the attack and the total distance that you move cannot be greater than your speed. You cannot use this ability to attack a foe that is adjacent to you at the start of your turn.</p><p><strong>Normal</strong>: You cannot move before and after an attack.</p>"
+    },
+    "sources": [
+     {
+      "id": "PZO1110",
+      "pages": "114, 134"
+     }
+    ],
+    "tags": [
+     "Combat",
+     "Offensive",
+     "Movement"
+    ]
+   },
+   "type": "feat"
+  },
+  "Weapon Finesse": {
+   "_id": "vWiTqHC4Y3Xn1Pme",
+   "_key": "!items!vWiTqHC4Y3Xn1Pme",
+   "_stats": {
+    "coreVersion": "12.343"
+   },
+   "img": "systems/pf1/icons/feats/weapon-finesse.jpg",
+   "name": "Weapon Finesse",
+   "system": {
+    "description": {
+     "value": "<i>You are trained in using your agility in melee combat, as opposed to brute strength.</i><p><strong>Benefits</strong>: With a light weapon, rapier, whip, or spiked chain made for a creature of your size category, you may use your Dexterity modifier instead of your Strength modifier on attack rolls. If you carry a shield, its armor check penalty applies to your attack rolls.</p><p><strong>Special</strong>: Natural weapons are considered light weapons.</p>"
+    },
+    "sources": [
+     {
+      "id": "PZO1110",
+      "pages": "117, 136"
+     }
+    ],
+    "tags": [
+     "Combat",
+     "Weapon"
+    ]
+   },
+   "type": "feat"
+  },
+  "Weapon Focus": {
+   "_id": "n250dFlbykAIAg5Z",
+   "_key": "!items!n250dFlbykAIAg5Z",
+   "_stats": {
+    "coreVersion": "12.343"
+   },
+   "img": "systems/pf1/icons/feats/weapon-focus.jpg",
+   "name": "Weapon Focus",
+   "system": {
+    "description": {
+     "value": "<i>Choose one type of weapon. You can also choose unarmed strike or grapple (or ray, if you are a spellcaster) as your weapon for the purposes of this feat.</i><p><strong>Prerequisites</strong>: Proficiency with selected weapon, base attack bonus +1.</p><p><strong>Benefits</strong>: You gain a +1 bonus on all attack rolls you make using the selected weapon.</p><p><strong>Special</strong>: You can gain this feat multiple times. Its effects do not stack. Each time you take the feat, it applies to a new type of weapon.</p>"
+    },
+    "sources": [
+     {
+      "id": "PZO1110",
+      "pages": "117, 136"
+     }
+    ],
+    "tags": [
+     "Combat",
+     "Weapon",
+     "Offensive"
+    ]
+   },
+   "type": "feat"
+  },
+  "Vital Strike": {
+   "_id": "26k1Gi7t5BoqxhIj",
+   "_key": "!items!26k1Gi7t5BoqxhIj",
+   "_stats": {
+    "coreVersion": "12.343"
+   },
+   "img": "systems/pf1/icons/feats/vital-strike.jpg",
+   "name": "Vital Strike",
+   "system": {
+    "description": {
+     "instructions": "<p>Add conditional modifier with <code>@base.dice</code> as damage formula where desired.</p>",
+     "value": "<i>You make a single attack that deals significantly more damage than normal.</i><p><strong>Prerequisites</strong>: Base attack bonus +6.</p><p><strong>Benefits</strong>: When you use the attack action, you can make one attack at your highest base attack bonus that deals additional damage. Roll the weapon's damage dice for the attack twice and add the results together before adding bonuses from Strength, weapon abilities (such as <i>flaming</i>), precision based damage, and other damage bonuses. These extra weapon damage dice are not multiplied on a critical hit, but are added to the total.</p>"
+    },
+    "sources": [
+     {
+      "id": "PZO1110",
+      "pages": "117, 136"
+     }
+    ],
+    "tags": [
+     "Combat",
+     "Offensive"
+    ]
+   },
+   "type": "feat"
+  },
+  "Awesome Blow": {
+   "_id": "KPaC3H6EQGG4sXLT",
+   "_key": "!items!KPaC3H6EQGG4sXLT",
+   "_stats": {
+    "coreVersion": "12.343"
+   },
+   "img": "systems/pf1/icons/skills/blue_27.jpg",
+   "name": "Awesome Blow",
+   "system": {
+    "actions": [
+     {
+      "_id": "1XoNs8HGxM3vlAEk",
+      "ability": {
+       "attack": "str",
+       "damage": "str"
+      },
+      "actionType": "mcman",
+      "activation": {
+       "type": "standard",
+       "unchained": {
+        "cost": 2,
+        "type": "action"
+       }
+      },
+      "damage": {
+       "parts": [
+        {
+         "formula": "sizeRoll(1, 4, @size)",
+         "types": [
+          "bludgeoning"
+         ]
+        }
+       ]
+      },
+      "duration": {
+       "units": "inst"
+      },
+      "measureTemplate": {
+       "color": "#ffffff",
+       "size": "10",
+       "type": "ray"
+      },
+      "name": "Use",
+      "range": {
+       "units": "melee"
+      },
+      "target": {
+       "value": "corporeal smaller opponent"
+      }
+     },
+     {
+      "_id": "3alfhVQ4pXCD6J4s",
+      "activation": {
+       "type": "nonaction",
+       "unchained": {
+        "type": "nonaction"
+       }
+      },
+      "damage": {
+       "parts": [
+        {
+         "formula": "1d6",
+         "types": [
+          "bludgeoning"
+         ]
+        }
+       ]
+      },
+      "name": "Obstacle Damage"
+     }
+    ],
+    "description": {
+     "instructions": "<p>Adjust the damage dice of the blow accordingly to the creature using it.</p>",
+     "value": "<p><em>This creature can send opponents flying.</em></p><p><strong>Prerequisites</strong>: Str 25, @UUID[Compendium.pf1.feats.Item.FUW5mIXHNBBIQ1Sq]{Power Attack}, @UUID[Compendium.pf1.feats.Item.dn2KgHFQRbuoNRx0]{Improved Bull Rush}, size Large or larger.</p><p><strong>Benefits</strong>: As a standard action, the creature may perform an awesome blow combat maneuver. If the creature's maneuver succeeds against a corporeal opponent smaller than itself, its opponent takes damage (typically slam damage plus Strength bonus) and is knocked flying 10 feet in a direction of the attacking creature's choice and falls prone. The attacking creature can only push the opponent in a straight line, and the opponent can't move closer to the attacking creature than the square it started in. If an obstacle prevents the completion of the opponent's move, the opponent and the obstacle each take 1d6 points of damage, and the opponent is knocked prone in the space adjacent to the obstacle.</p>"
+    },
+    "sources": [
+     {
+      "id": "PZO1112",
+      "pages": "314"
+     }
+    ],
+    "tags": [
+     "Combat",
+     "Monster"
+    ]
+   },
+   "type": "feat"
+  },
+  "Cleave": {
+   "_id": "Zeq6RWYv5otvg8q7",
+   "_key": "!items!Zeq6RWYv5otvg8q7",
+   "_stats": {
+    "coreVersion": "12.343"
+   },
+   "img": "systems/pf1/icons/feats/cleave.jpg",
+   "name": "Cleave",
+   "system": {
+    "actions": [
+     {
+      "_id": "YKPDCAoDrghiYAzi",
+      "activation": {
+       "type": "standard",
+       "unchained": {
+        "cost": 2,
+        "type": "action"
+       }
+      },
+      "name": "Use",
+      "notes": {
+       "effect": [
+        "[[-2]] penalty to your Armor Class until your next turn."
+       ]
+      }
+     }
+    ],
+    "description": {
+     "value": "<p><em>You can strike two adjacent foes with a single swing.</em></p><p><strong>Prerequisites</strong>: Str 13, @UUID[Compendium.pf1.feats.Item.FUW5mIXHNBBIQ1Sq]{Power Attack}, base attack bonus +1.</p><p><strong>Benefits</strong>: As a standard action, you can make a single attack at your full base attack bonus against a foe within reach. If you hit, you deal damage normally and can make an additional attack (using your full base attack bonus) against a foe that is adjacent to the first and also within reach. You can only make one additional attack per round with this feat. When you use this feat, you take a -2 penalty to your Armor Class until your next turn.</p><h3>Combat Trick</h3><p>When using the Cleave or Great Cleave feat, you can spend 4 stamina points to negate the -2 penalty to Armor Class until your next turn.</p>"
+    },
+    "sources": [
+     {
+      "id": "PZO1110",
+      "pages": "116, 119"
+     }
+    ],
+    "tags": [
+     "Combat",
+     "Combat Trick"
+    ]
+   },
+   "type": "feat"
+  },
+  "Great Cleave": {
+   "_id": "6HSMdwX1VS6nZ6Zf",
+   "_key": "!items!6HSMdwX1VS6nZ6Zf",
+   "_stats": {
+    "coreVersion": "12.343"
+   },
+   "img": "systems/pf1/icons/feats/great-cleave.jpg",
+   "name": "Great Cleave",
+   "system": {
+    "actions": [
+     {
+      "_id": "9qJAoXcYkvy8E6Mf",
+      "activation": {
+       "type": "standard",
+       "unchained": {
+        "cost": 2,
+        "type": "action"
+       }
+      },
+      "name": "Use",
+      "notes": {
+       "effect": [
+        "[[-2]] penalty to your Armor Class until your next turn."
+       ]
+      }
+     }
+    ],
+    "description": {
+     "value": "<p><em>You can strike many adjacent foes with a single blow.</em></p><p><strong>Prerequisites</strong>: Str 13, @UUID[Compendium.pf1.feats.Item.Zeq6RWYv5otvg8q7]{Cleave}, @UUID[Compendium.pf1.feats.Item.FUW5mIXHNBBIQ1Sq]{Power Attack}, base attack bonus +4.</p><p><strong>Benefits</strong>: As a standard action, you can make a single attack at your full base attack bonus against a foe within reach. If you hit, you deal damage normally and can make an additional attack (using your full base attack bonus) against a foe that is adjacent to the previous foe and also within reach. If you hit, you can continue to make attacks against foes adjacent to the previous foe, so long as they are within your reach. You cannot attack an individual foe more than once during this attack action. When you use this feat, you take a -2 penalty to your Armor Class until your next turn.</p>"
+    },
+    "sources": [
+     {
+      "id": "PZO1110",
+      "pages": "116, 124"
+     }
+    ],
+    "tags": [
+     "Combat",
+     "Offensive"
+    ]
+   },
+   "type": "feat"
+  },
+  "Improved Bull Rush": {
+   "_id": "dn2KgHFQRbuoNRx0",
+   "_key": "!items!dn2KgHFQRbuoNRx0",
+   "_stats": {
+    "coreVersion": "12.343"
+   },
+   "img": "systems/pf1/icons/feats/improved-bull-rush.jpg",
+   "name": "Improved Bull Rush",
+   "system": {
+    "contextNotes": [
+     {
+      "target": "cmb",
+      "text": "+[[2]] and no AoO on Bull Rush."
+     },
+     {
+      "target": "cmd",
+      "text": "+[[2]] vs Bull Rush"
+     }
+    ],
+    "description": {
+     "value": "<p><em>You are skilled at pushing your foes around.</em></p><p><strong>Prerequisites</strong>: Str 13, @UUID[Compendium.pf1.feats.Item.FUW5mIXHNBBIQ1Sq]{Power Attack}, base attack bonus +1.</p><p><strong>Benefits</strong>: You do not provoke an attack of opportunity when performing a bull rush combat maneuver. In addition, you receive a +2 bonus on checks made to bull rush a foe. You also receive a +2 bonus to your Combat Maneuver Defense whenever an opponent tries to bull rush you.</p><p><strong>Normal</strong>: You provoke an attack of opportunity when performing a bull rush combat maneuver.</p>"
+    },
+    "sources": [
+     {
+      "id": "PZO1110",
+      "pages": "126"
+     },
+     {
+      "id": "PZO1131",
+      "pages": "122"
+     }
+    ],
+    "tags": [
+     "Combat",
+     "Offensive",
+     "Combat Maneuver",
+     "Combat Trick"
+    ]
+   },
+   "type": "feat"
+  },
+  "Improved Vital Strike": {
+   "_id": "DorPGQ2mifJbMKH8",
+   "_key": "!items!DorPGQ2mifJbMKH8",
+   "_stats": {
+    "coreVersion": "12.343"
+   },
+   "img": "systems/pf1/icons/feats/improved-vital-strike.jpg",
+   "name": "Improved Vital Strike",
+   "system": {
+    "description": {
+     "instructions": "<p>Add conditional modifier with <code>@base.dice</code> as damage formula where desired.</p>",
+     "value": "<i>You can make a single attack that deals a large amount of damage.</i><p><strong>Prerequisites</strong>: @UUID[Compendium.pf1.feats.26k1Gi7t5BoqxhIj]{Vital Strike}, base attack bonus +11.</p><p><strong>Benefits</strong>: When you use the attack action, you can make one attack at your highest base attack bonus that deals additional damage. Roll the weapon's damage dice for the attack three times and add the results together before adding bonuses from Strength, weapon special abilities (such as <i>flaming</i>), precision based damage, and other damage bonuses. These extra weapon damage dice are not multiplied on a critical hit, but are added to the total.</p>"
+    },
+    "sources": [
+     {
+      "id": "PZO1110",
+      "pages": "117, 128"
+     }
+    ],
+    "tags": [
+     "Combat",
+     "Offensive"
+    ]
+   },
+   "type": "feat"
+  },
+  "Greater Vital Strike": {
+   "_id": "zKNk7a4XxXsygJ67",
+   "_key": "!items!zKNk7a4XxXsygJ67",
+   "_stats": {
+    "coreVersion": "12.343"
+   },
+   "img": "systems/pf1/icons/feats/greater-vital-strike.jpg",
+   "name": "Greater Vital Strike",
+   "system": {
+    "description": {
+     "instructions": "<p>Add conditional modifier with <code>@base.dice</code> as damage formula where desired.</p>",
+     "value": "<i>You can make a single attack that deals incredible damage.</i><p><strong>Prerequisites</strong>: @UUID[Compendium.pf1.feats.DorPGQ2mifJbMKH8]{Improved Vital Strike}, @UUID[Compendium.pf1.feats.26k1Gi7t5BoqxhIj]{Vital Strike}, base attack bonus +16.</p><p><strong>Benefits</strong>: When you use the attack action, you can make one attack at your highest base attack bonus that deals additional damage. Roll the weapon's damage dice for the attack four times and add the results together before adding bonuses from Strength, weapon abilities (such as <i>flaming</i>), precision based damage, and other damage bonuses. These extra weapon damage dice are not multiplied on a critical hit, but are added to the total.</p>"
+    },
+    "sources": [
+     {
+      "id": "PZO1110",
+      "pages": "117, 126"
+     }
+    ],
+    "tags": [
+     "Combat",
+     "Offensive"
+    ]
+   },
+   "type": "feat"
+  },
+  "Endurance": {
+   "_id": "ehqx8txNRGMaNOPt",
+   "_key": "!items!ehqx8txNRGMaNOPt",
+   "_stats": {
+    "coreVersion": "12.343"
+   },
+   "img": "systems/pf1/icons/feats/endurance.png",
+   "name": "Endurance",
+   "system": {
+    "description": {
+     "value": "<i>Harsh conditions or long exertions do not easily tire you.</i><p><strong>Benefits</strong>: You gain a +4 bonus on the following checks and saves: Swim checks made to resist nonlethal damage from exhaustion; Constitution checks made to continue running; Constitution checks made to avoid nonlethal damage from a forced march; Constitution checks made to hold your breath; Constitution checks made to avoid nonlethal damage from starvation or thirst; Fortitude saves made to avoid nonlethal damage from hot or cold environments; and Fortitude saves made to resist damage from suffocation.</p><p>You may sleep in light or medium armor without becoming fatigued.</p><p><strong>Normal</strong>: A character without this feat who sleeps in medium or heavier armor is fatigued the next day.</p>"
+    },
+    "sources": [
+     {
+      "id": "PZO1110",
+      "pages": "115, 122"
+     }
+    ],
+    "tags": [
+     "General"
+    ]
+   },
+   "type": "feat"
+  },
+  "Improved Critical": {
+   "_id": "TbOPtIL8Fv8obXtP",
+   "_key": "!items!TbOPtIL8Fv8obXtP",
+   "_stats": {
+    "coreVersion": "12.343"
+   },
+   "img": "systems/pf1/icons/feats/improved-critical.jpg",
+   "name": "Improved Critical",
+   "system": {
+    "description": {
+     "value": "<i>Attacks made with your chosen weapon are quite deadly.</i><p><strong>Prerequisites</strong>: Proficient with weapon, base attack bonus +8.</p><p><strong>Benefits</strong>: When using the weapon you selected, your threat range is doubled.</p><p><strong>Special</strong>: You can gain Improved Critical multiple times. The effects do not stack. Each time you take the feat, it applies to a new type of weapon.</p><p>This effect doesn't stack with any other effect that expands the threat range of a weapon.</p>"
+    },
+    "sources": [
+     {
+      "id": "PZO1110",
+      "pages": "115, 127"
+     }
+    ],
+    "tags": [
+     "Combat",
+     "Critical",
+     "Offensive"
+    ]
+   },
+   "type": "feat"
+  },
+  "Dazzling Display": {
+   "_id": "3cq9YbgcMrAXC76j",
+   "_key": "!items!3cq9YbgcMrAXC76j",
+   "_stats": {
+    "coreVersion": "12.343"
+   },
+   "img": "systems/pf1/icons/feats/dazzling-display.jpg",
+   "name": "Dazzling Display",
+   "system": {
+    "actions": [
+     {
+      "_id": "ihr743dvwocso29l",
+      "activation": {
+       "type": "full",
+       "unchained": {
+        "cost": 3,
+        "type": "action"
+       }
+      },
+      "measureTemplate": {
+       "size": "30",
+       "type": "circle"
+      },
+      "name": "Use"
+     }
+    ],
+    "description": {
+     "value": "<p><em>Your skill with your favored weapon can frighten enemies.</em></p><p><strong>Prerequisites</strong>: Weapon Focus, proficiency with the selected weapon.</p><p><strong>Benefits</strong>: While wielding the weapon in which you have Weapon Focus, you can perform a bewildering show of prowess as a full-round action. Make an Intimidate check to demoralize all foes within 30 feet who can see your display.<h3>Combat Trick</h3><p>When wielding a melee weapon with which you have Weapon Focus, you can make a single melee attack as a standard action against a foe. If the attack hits, you can select any number of foes within 30 feet who saw the attack, including that foe. Spend 2 stamina points per foe you have selected, then attempt an Intimidate check to demoralize those foes.</p>"
+    },
+    "sources": [
+     {
+      "id": "PZO1110",
+      "pages": "117, 120"
+     }
+    ],
+    "tags": [
+     "Combat",
+     "Combat Trick"
+    ]
+   },
+   "type": "feat"
+  },
+  "Lightning Reflexes": {
+   "_id": "0bZf3SDkvVOe2ujH",
+   "_key": "!items!0bZf3SDkvVOe2ujH",
+   "_stats": {
+    "coreVersion": "12.343"
+   },
+   "img": "systems/pf1/icons/feats/lighting-reflexes.jpg",
+   "name": "Lightning Reflexes",
+   "system": {
+    "changes": [
+     {
+      "_id": "ni86uxwa",
+      "formula": "2",
+      "target": "ref",
+      "type": "untyped"
+     }
+    ],
+    "description": {
+     "value": "<p><em>You have faster reflexes than normal.</em></p><p><strong>Benefits</strong>: You get a +2 bonus on all Reflex saving throws.</p>"
+    },
+    "sources": [
+     {
+      "id": "PZO1110",
+      "pages": "115, 130"
+     }
+    ],
+    "tags": [
+     "General",
+     "Saving Throw"
+    ]
+   },
+   "type": "feat"
+  },
+  "Shatter Defenses": {
+   "_id": "kn854Ovz0BDA2Dgz",
+   "_key": "!items!kn854Ovz0BDA2Dgz",
+   "_stats": {
+    "coreVersion": "12.343"
+   },
+   "img": "systems/pf1/icons/feats/shatter-defenses.jpg",
+   "name": "Shatter Defenses",
+   "system": {
+    "description": {
+     "value": "<p><em>Your skill with your chosen weapon leaves opponents unable to defend themselves if you strike them when their defenses are already compromised.</em></p><p><strong>Prerequisites</strong>: @UUID[Compendium.pf1.feats.Item.n250dFlbykAIAg5Z]{Weapon Focus}, @UUID[Compendium.pf1.feats.Item.3cq9YbgcMrAXC76j]{Dazzling Display}, base attack bonus +6, proficiency with weapon.</p><p><strong>Benefits</strong>: Any shaken, frightened, or panicked opponent hit by you this round is flat-footed to your attacks until the end of your next turn. This includes any additional attacks you make this round.</p>"
+    },
+    "sources": [
+     {
+      "id": "PZO1110",
+      "pages": "117, 133"
+     }
+    ],
+    "tags": [
+     "Combat",
+     "Offensive"
+    ]
+   },
+   "type": "feat"
+  },
+  "Toughness": {
+   "_id": "8snLqsJN4LLL00Nq",
+   "_key": "!items!8snLqsJN4LLL00Nq",
+   "_stats": {
+    "coreVersion": "12.343"
+   },
+   "img": "systems/pf1/icons/feats/toughness.jpg",
+   "name": "Toughness",
+   "system": {
+    "changes": [
+     {
+      "_id": "bl5pemy2",
+      "formula": "max(3, @attributes.hd.total)",
+      "target": "mhp",
+      "type": "untyped"
+     }
+    ],
+    "description": {
+     "value": "<i>You have enhanced physical stamina.</i><p><strong>Benefits</strong>: You gain +3 hit points. For every Hit Die you possess beyond 3, you gain an additional +1 hit point. If you have more than 3 Hit Dice, you gain +1 hit points whenever you gain a Hit Die (such as when you gain a level).</p>"
+    },
+    "sources": [
+     {
+      "id": "PZO1110",
+      "pages": "116, 135"
+     }
+    ],
+    "tags": [
+     "General",
+     "Defensive"
+    ]
+   },
+   "type": "feat"
+  },
+  "Weapon Specialization": {
+   "_id": "YLCvMNeAF9V31m1h",
+   "_key": "!items!YLCvMNeAF9V31m1h",
+   "_stats": {
+    "coreVersion": "12.343"
+   },
+   "img": "systems/pf1/icons/feats/weapon-specialization.jpg",
+   "name": "Weapon Specialization",
+   "system": {
+    "description": {
+     "value": "<p><em>You are skilled at dealing damage with one weapon. Choose one type of weapon (including unarmed strike or grapple) for which you have already selected the Weapon Focus feat. You deal extra damage when using this weapon.</em></p><p><strong>Prerequisites</strong>: Proficiency with selected weapon, @UUID[Compendium.pf1.feats.Item.n250dFlbykAIAg5Z]{Weapon Focus} with selected weapon, fighter level 4th.</p><p><strong>Benefits</strong>: You gain a +2 bonus on all damage rolls you make using the selected weapon.</p><p><strong>Special</strong>: You can gain this feat multiple times. Its effects do not stack. Each time you take the feat, it applies to a new type of weapon.</p>"
+    },
+    "sources": [
+     {
+      "id": "PZO1110",
+      "pages": "117, 137"
+     }
+    ],
+    "tags": [
+     "Combat",
+     "Weapon",
+     "Offensive"
+    ]
+   },
+   "type": "feat"
+  }
+ },
+ "gear": {
+  "Chain Shirt": {
+   "_id": "iGu21zy6QtroUZ4O",
+   "_key": "!items!iGu21zy6QtroUZ4O",
+   "_stats": {
+    "coreVersion": "12.343"
+   },
+   "folder": "LQyo9lDGQU29eyig",
+   "img": "systems/pf1/icons/items/armor/chain-shirt.png",
+   "name": "Chain Shirt",
+   "system": {
+    "armor": {
+     "acp": 2,
+     "dex": 4,
+     "material": {
+      "base": {
+       "value": "steel"
+      }
+     },
+     "value": 4
+    },
+    "baseTypes": [
+     "Chain Shirt"
+    ],
+    "description": {
+     "unidentified": "<p>Covering the torso, this shirt is made up of thousands of interlocking metal rings.</p>"
+    },
+    "hardness": 10,
+    "hp": {
+     "base": 20
+    },
+    "price": 100,
+    "slot": "armor",
+    "sources": [
+     {
+      "id": "PZO1110",
+      "pages": "150, 151"
+     }
+    ],
+    "spellFailure": 20,
+    "weight": {
+     "value": 25
+    }
+   },
+   "type": "equipment",
+   "_pack": "armors-and-shields"
+  },
+  "Longsword": {
+   "_id": "zWRlna42PMJVX6un",
+   "_key": "!items!zWRlna42PMJVX6un",
+   "_stats": {
+    "coreVersion": "12.343"
+   },
+   "folder": "ojvASzhaCGmnx8xQ",
+   "img": "systems/pf1/icons/items/weapons/longsword.png",
+   "name": "Longsword",
+   "system": {
+    "actions": [
+     {
+      "_id": "jelb63mz9vrxa43c",
+      "ability": {
+       "attack": "_default",
+       "critRange": 19,
+       "damage": "str"
+      },
+      "actionType": "mwak",
+      "activation": {
+       "type": "attack",
+       "unchained": {
+        "type": "attack"
+       }
+      },
+      "damage": {
+       "parts": [
+        {
+         "formula": "sizeRoll(1, 8, @size)",
+         "types": [
+          "slashing"
+         ]
+        }
+       ]
+      },
+      "duration": {
+       "units": "inst"
+      },
+      "extraAttacks": {
+       "type": "standard"
+      },
+      "name": "Attack",
+      "range": {
+       "units": "melee",
+       "value": "0"
+      }
+     }
+    ],
+    "baseTypes": [
+     "Longsword"
+    ],
+    "description": {
+     "unidentified": "<p>This sword is about 3-1/2 feet in length.</p>"
+    },
+    "hardness": 10,
+    "hp": {
+     "base": 5
+    },
+    "material": {
+     "base": {
+      "value": "steel"
+     }
+    },
+    "price": 15,
+    "sources": [
+     {
+      "id": "PZO1110",
+      "pages": "142, 147"
+     },
+     {
+      "id": "PZO1123",
+      "pages": "18"
+     }
+    ],
+    "subType": "martial",
+    "weaponGroups": [
+     "bladesHeavy"
+    ],
+    "weaponSubtype": "1h",
+    "weight": {
+     "value": 4
+    }
+   },
+   "type": "weapon",
+   "_pack": "weapons-and-ammo"
+  },
+  "Scimitar": {
+   "_id": "SjYkpvZqfgvh0EAd",
+   "_key": "!items!SjYkpvZqfgvh0EAd",
+   "_stats": {
+    "coreVersion": "12.343"
+   },
+   "folder": "ojvASzhaCGmnx8xQ",
+   "img": "systems/pf1/icons/items/weapons/scimitar.PNG",
+   "name": "Scimitar",
+   "system": {
+    "actions": [
+     {
+      "_id": "b8tvl2f6459mbgeg",
+      "ability": {
+       "attack": "_default",
+       "critRange": 18,
+       "damage": "str"
+      },
+      "actionType": "mwak",
+      "activation": {
+       "type": "attack",
+       "unchained": {
+        "type": "attack"
+       }
+      },
+      "damage": {
+       "parts": [
+        {
+         "formula": "sizeRoll(1, 6, @size)",
+         "types": [
+          "slashing"
+         ]
+        }
+       ]
+      },
+      "duration": {
+       "units": "inst"
+      },
+      "extraAttacks": {
+       "type": "standard"
+      },
+      "name": "Attack",
+      "range": {
+       "units": "melee",
+       "value": "0"
+      }
+     }
+    ],
+    "baseTypes": [
+     "Scimitar"
+    ],
+    "description": {
+     "unidentified": "<p>This curved sword is shorter than a longsword and longer than a shortsword. Only the outer edge is sharp, and the back is flat, giving the blade a triangular cross-section.</p>"
+    },
+    "hardness": 10,
+    "hp": {
+     "base": 5
+    },
+    "material": {
+     "base": {
+      "value": "steel"
+     }
+    },
+    "price": 15,
+    "sources": [
+     {
+      "id": "PZO1110",
+      "pages": "142"
+     },
+     {
+      "id": "PZO1123",
+      "pages": "18"
+     }
+    ],
+    "subType": "martial",
+    "weaponGroups": [
+     "bladesHeavy"
+    ],
+    "weaponSubtype": "1h",
+    "weight": {
+     "value": 4
+    }
+   },
+   "type": "weapon",
+   "_pack": "weapons-and-ammo"
+  },
+  "Lantern of Revealing": {
+   "_id": "khmR334BidfHHSA3",
+   "_key": "!items!khmR334BidfHHSA3",
+   "_stats": {
+    "coreVersion": "12.343"
+   },
+   "folder": "Xsrr4hrzufdySmSQ",
+   "img": "icons/sundries/lights/lantern-iron-lit-yellow.webp",
+   "name": "Lantern of Revealing",
+   "system": {
+    "actions": [
+     {
+      "_id": "duSBHR0cCUYXhd2M",
+      "activation": {
+       "type": "special",
+       "unchained": {
+        "type": "nonaction"
+       }
+      },
+      "duration": {
+       "units": "hour",
+       "value": "6"
+      },
+      "name": "Ignite",
+      "tag": "ignite"
+     },
+     {
+      "_id": "askmHMomLt5Jfy3Z",
+      "activation": {
+       "type": "nonaction",
+       "unchained": {
+        "type": "nonaction"
+       }
+      },
+      "name": "Extinguish",
+      "tag": "extinguish"
+     }
+    ],
+    "aura": {
+     "school": "evo"
+    },
+    "cl": 5,
+    "description": {
+     "value": "<p>This lantern operates as a normal @UUID[Compendium.pf1.items.Item.zylvLcc5P4EPkxzu]{hooded lantern}. While it is lit, it also reveals all invisible creatures and objects within 25 feet of it, just like the spell invisibility purge.</p><h3>Construction</h3><p><strong>Requirements</strong> @UUID[Compendium.pf1.feats.Item.tD76K8QGco9scT0r]{Craft Wondrous Item}, @UUID[Compendium.pf1.spells.Item.xsecnbuvc3rbrefu]{invisibility purge}; <strong>Cost</strong> 15,000 gp</p>"
+    },
+    "hp": {
+     "base": 10
+    },
+    "price": 30000,
+    "scriptCalls": [
+     {
+      "_id": "OdBwULcXLKhoIN1q",
+      "category": "use",
+      "hidden": false,
+      "img": "icons/svg/dice-target.svg",
+      "name": "Turn on light",
+      "type": "script",
+      "value": "if (!token) return;\nif (action.tag !== \"ignite\") return;\n\nfromUuid(\"Compendium.pf1.macros.Macro.Pa1s9GAbnGhj4z2A\")\n  .then(lm => lm.execute({ token, range: 60 }));"
+     },
+     {
+      "_id": "kSy8RBgNWvtE79hq",
+      "category": "use",
+      "hidden": false,
+      "img": "icons/svg/dice-target.svg",
+      "name": "Turn off light",
+      "type": "script",
+      "value": "if (!token) return;\nif (action.tag !== \"extinguish\") return;\n\nconst light = new foundry.data.LightData().toObject();\ntoken.document.update({ light });\n"
+     }
+    ],
+    "sources": [
+     {
+      "id": "PZO1123",
+      "pages": "307"
+     },
+     {
+      "id": "PZO1110",
+      "pages": "522"
+     }
+    ],
+    "subType": "wondrous",
+    "weight": {
+     "value": 2
+    }
+   },
+   "type": "equipment",
+   "_pack": "items"
+  }
+ },
+ "spells": {
+  "Charm Person": "tjog6bufg5b08lvq",
+  "Detect Thoughts": "xllxylvvqr82o2d5",
+  "Teleport, Greater": "5cdmojmydhwowzy1",
+  "Suggestion": "zqj5qzyl46af27v0",
+  "Crushing Despair": "zt7cje76dck9hwp9",
+  "Tongues": "m1rmcpcaixcpz9ib",
+  "Summon Monster III": "1zmn8vqy3s5l9kiv",
+  "Good Hope": "rgd5v3llwoptwcdb",
+  "Haste": "s9amdo5398alb5p0",
+  "Mirror Image": "4jsss37x0pplib8f",
+  "Faerie Fire": "bl71og1gklwncmt7",
+  "Obscuring Mist": "tuh5vc2bojaws3ig",
+  "Persistent Image": "enp0cwf0itsgjxv7",
+  "Dominate Person": "q070n0zoq3zojpas",
+  "Dimensional Lock": "ef75tkrzjuotgra2",
+  "Wall of Stone": "l83djt5019ujasjh",
+  "Rage": "8u1xa5javcxc6szk",
+  "Confusion": "n0bsyxchnigkkuqo",
+  "Breath of Life": "qiiis9ekgy3syu7j",
+  "Dispel Magic, Greater": "e5kw4dwf9qwty6tl",
+  "Dispel Magic": "gmgwyjfpeuuc4t4o",
+  "Geas, Lesser": "ofw6gnp6r7t2wcba",
+  "Mage's Private Sanctum": "9v2s3xjlakjm1eq1",
+  "Alter Self": "kouqz0pm1xl8xilm"
+ }
+}

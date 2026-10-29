@@ -1,0 +1,22 @@
+{
+  "_id": "j9mbr45uawRmxYlR",
+  "_key": "!items!j9mbr45uawRmxYlR",
+  "name": "Lyre of Building (Brannoc Deepsong's)",
+  "type": "loot",
+  "img": "icons/skills/trades/music-notes-sound-blue.webp",
+  "folder": "D9XHPYDC8UGn7sRq",
+  "sort": 400,
+  "system": {
+    "description": {
+      "value": "<p><strong>Whose it was.</strong> Brannoc Deepsong, a dwarven bard who built a perfect tunnel out of the Garden. Celmak reconfigured it into a cupboard.</p><p>Use the standard rules for a <em>lyre of building</em> (Core Rulebook).</p><p><em>From the hoard of the fallen, sorted by owner and labelled in Celmak's neat handwriting.</em></p>"
+    },
+    "price": 13000,
+    "subType": "misc"
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.9"
+  }
+}

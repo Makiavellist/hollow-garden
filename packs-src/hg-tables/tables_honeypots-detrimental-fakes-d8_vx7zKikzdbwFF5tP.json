@@ -1,0 +1,174 @@
+{
+  "_id": "vx7zKikzdbwFF5tP",
+  "_key": "!tables!vx7zKikzdbwFF5tP",
+  "name": "Honeypots: Detrimental Fakes (d8)",
+  "img": "icons/magic/perception/eye-ringed-glow-angry-red.webp",
+  "description": "<p>Knowledge (engineering) result of 60 or lower with a natural 11–20. The character believes it until the consequences arrive.</p>",
+  "formula": "1d8",
+  "replacement": true,
+  "displayRoll": true,
+  "results": [
+    {
+      "_id": "iay6nia0yIGSU4st",
+      "_key": "!tables.results!vx7zKikzdbwFF5tP.iay6nia0yIGSU4st",
+      "type": "text",
+      "name": "",
+      "description": "A “safe” route through the next scene leads straight into a Mood Gas vent (DC 22, no warning).",
+      "text": "A “safe” route through the next scene leads straight into a Mood Gas vent (DC 22, no warning).",
+      "img": "icons/magic/perception/eye-ringed-glow-angry-red.webp",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "MJxC6kL2NlVkblDp",
+      "_key": "!tables.results!vx7zKikzdbwFF5tP.MJxC6kL2NlVkblDp",
+      "type": "text",
+      "name": "",
+      "description": "The character “disables” a defence and actually arms it: the next encounter gains a Stagehand Drone with a full force field.",
+      "text": "The character “disables” a defence and actually arms it: the next encounter gains a Stagehand Drone with a full force field.",
+      "img": "icons/magic/perception/eye-ringed-glow-angry-red.webp",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "hfNLwqr3VNLKQIhN",
+      "_key": "!tables.results!vx7zKikzdbwFF5tP.hfNLwqr3VNLKQIhN",
+      "type": "text",
+      "name": "",
+      "description": "The interface plugs into the character's mind: Celmak gets a free Muse scan on them, with a −4 penalty on the save.",
+      "text": "The interface plugs into the character's mind: Celmak gets a free Muse scan on them, with a −4 penalty on the save.",
+      "img": "icons/magic/perception/eye-ringed-glow-angry-red.webp",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "52h4i0CfBBPoZGV7",
+      "_key": "!tables.results!vx7zKikzdbwFF5tP.52h4i0CfBBPoZGV7",
+      "type": "text",
+      "name": "",
+      "description": "Feedback: 6d6 electricity damage, and the character is confused for 1d4 rounds (Will DC 25 negates the confusion).",
+      "text": "Feedback: 6d6 electricity damage, and the character is confused for 1d4 rounds (Will DC 25 negates the confusion).",
+      "img": "icons/magic/perception/eye-ringed-glow-angry-red.webp",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "LNRnWs0rvCofNLKu",
+      "_key": "!tables.results!vx7zKikzdbwFF5tP.LNRnWs0rvCofNLKu",
+      "type": "text",
+      "name": "",
+      "description": "A map of the Garden, accurate except that it puts the Core Vault behind the wrong wall; the party loses 10 minutes and 1 rating finding out.",
+      "text": "A map of the Garden, accurate except that it puts the Core Vault behind the wrong wall; the party loses 10 minutes and 1 rating finding out.",
+      "img": "icons/magic/perception/eye-ringed-glow-angry-red.webp",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "CfQ5illHTx8OVgGJ",
+      "_key": "!tables.results!vx7zKikzdbwFF5tP.CfQ5illHTx8OVgGJ",
+      "type": "text",
+      "name": "",
+      "description": "“Celmak's” weak point, correctly located on a robot, is a decoy plate: attacks against it in the next fight take a −4 penalty.",
+      "text": "“Celmak's” weak point, correctly located on a robot, is a decoy plate: attacks against it in the next fight take a −4 penalty.",
+      "img": "icons/magic/perception/eye-ringed-glow-angry-red.webp",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "waUsXR2QuwBfgFRK",
+      "_key": "!tables.results!vx7zKikzdbwFF5tP.waUsXR2QuwBfgFRK",
+      "type": "text",
+      "name": "",
+      "description": "The character “learns” the override word for the robots in the next scene; shouting it gives every robot there a free round of surprise.",
+      "text": "The character “learns” the override word for the robots in the next scene; shouting it gives every robot there a free round of surprise.",
+      "img": "icons/magic/perception/eye-ringed-glow-angry-red.webp",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "Ofb8GY2CpQ0HVhbc",
+      "_key": "!tables.results!vx7zKikzdbwFF5tP.Ofb8GY2CpQ0HVhbc",
+      "type": "text",
+      "name": "",
+      "description": "A broadcast that seems to reach outside the Garden actually reaches the Cast Quarters: a demon cast member is sent into the next scene, angry.",
+      "text": "A broadcast that seems to reach outside the Garden actually reaches the Cast Quarters: a demon cast member is sent into the next scene, angry.",
+      "img": "icons/magic/perception/eye-ringed-glow-angry-red.webp",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    }
+  ],
+  "folder": "ioKH1pEXANkFqbcK",
+  "sort": 300,
+  "flags": {
+    "hollow-garden": {
+      "key": "detrimental-fakes"
+    }
+  },
+  "_stats": {
+    "coreVersion": "13.351"
+  }
+}

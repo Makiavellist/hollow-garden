@@ -1,0 +1,24 @@
+{
+  "_id": "A5Z7yhIT2rsDHgCK",
+  "_key": "!items!A5Z7yhIT2rsDHgCK",
+  "name": "Robe of Scintillating Colors (Orsolya Fiorn's)",
+  "type": "equipment",
+  "img": "icons/equipment/chest/robe-layered-blue.webp",
+  "folder": "D9XHPYDC8UGn7sRq",
+  "sort": 200,
+  "system": {
+    "description": {
+      "value": "<p><strong>Whose it was.</strong> Madame Orsolya Fiorn, a Taldan performer who thought she could out-dazzle Celmak. Celmak has been wearing it on her stand-ins. She is very upset to see it go.</p><p>Use the standard rules for a <em>robe of scintillating colors</em> (Core Rulebook).</p><p><em>From the hoard of the fallen, sorted by owner and labelled in Celmak's neat handwriting.</em></p>"
+    },
+    "price": 27000,
+    "subType": "wondrous",
+    "slot": "body",
+    "equipped": false
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.9"
+  }
+}

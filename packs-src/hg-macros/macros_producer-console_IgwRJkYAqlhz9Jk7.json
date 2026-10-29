@@ -1,0 +1,15 @@
+{
+  "_id": "IgwRJkYAqlhz9Jk7",
+  "_key": "!macros!IgwRJkYAqlhz9Jk7",
+  "name": "Producer Console",
+  "type": "script",
+  "img": "modules/hollow-garden/assets/host/mic-welcome.webp",
+  "command": "// The Hollow Garden: Producer Console\nconst api = game.modules.get(\"hollow-garden\")?.api;\nif (!api) return ui.notifications.warn(\"The Hollow Garden module is not active.\");\napi.openConsole();",
+  "scope": "global",
+  "folder": null,
+  "sort": 100,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351"
+  }
+}

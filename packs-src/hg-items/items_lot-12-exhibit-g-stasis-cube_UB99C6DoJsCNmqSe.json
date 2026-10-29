@@ -1,0 +1,22 @@
+{
+  "_id": "UB99C6DoJsCNmqSe",
+  "_key": "!items!UB99C6DoJsCNmqSe",
+  "name": "Lot 12: Exhibit G (Stasis Cube)",
+  "type": "loot",
+  "img": "icons/commodities/stone/masonry-block-cube-grey-teal.webp",
+  "folder": "YvibWalgscAk7V3q",
+  "sort": 120,
+  "system": {
+    "description": {
+      "value": "<blockquote class=\"hg-readaloud\"><p><em>“Exhibit G. Feeds itself. Mostly harmless.” (Open 2, rival max 6)</em></p></blockquote><p>A stasis cube holding <strong>Ivo Marrant</strong> (NE male human wizard 9), a Technic League initiate who came looking for the Garden two years ago. Released, he is starving, terrified and still arrogant. He knows the League has a file on the Garden and has lost three agents here; he will trade everything he knows about the League's presence in Starfall for his life, and will betray the party the moment it suits him.</p>"
+    },
+    "subType": "gear",
+    "price": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.9"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "_id": "hcGLyKLJf8t5OxnF",
+  "_key": "!items!hcGLyKLJf8t5OxnF",
+  "name": "Static Grenade",
+  "type": "consumable",
+  "img": "icons/commodities/tech/detonator-radio.webp",
+  "folder": "2aeIMGZ9wK8d3uo4",
+  "sort": 600,
+  "system": {
+    "description": {
+      "value": "<p><strong>Price</strong> 900 gp; <strong>Usage</strong> single use</p><p>20-ft burst; robots take <strong>6d6 electricity</strong> damage (Reflex DC 18 half) and their force fields lose fast healing for 1 round.</p><p><em>Trinket (d8: 6). Celmak considers this one a little unsporting.</em></p>"
+    },
+    "subType": "misc",
+    "price": 900,
+    "uses": {
+      "per": "single"
+    },
+    "actions": [
+      {
+        "_id": "1Y2074eEkWZESJWv",
+        "name": "Throw",
+        "activation": {
+          "type": "standard",
+          "unchained": {
+            "type": "action",
+            "cost": 2
+          }
+        },
+        "actionType": "other",
+        "damage": {
+          "parts": [
+            {
+              "formula": "6d6",
+              "types": [
+                "electric"
+              ]
+            }
+          ]
+        },
+        "save": {
+          "type": "ref",
+          "dc": "18",
+          "description": "Reflex half (robots only)"
+        },
+        "measureTemplate": {
+          "type": "circle",
+          "size": "20"
+        },
+        "range": {
+          "value": "20",
+          "units": "ft"
+        },
+        "notes": {
+          "effect": [
+            "Robots only; force fields lose fast healing 1 round"
+          ],
+          "footer": []
+        }
+      }
+    ]
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.9"
+  }
+}

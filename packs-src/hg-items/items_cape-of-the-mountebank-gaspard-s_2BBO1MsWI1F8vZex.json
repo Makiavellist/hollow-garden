@@ -1,0 +1,24 @@
+{
+  "_id": "2BBO1MsWI1F8vZex",
+  "_key": "!items!2BBO1MsWI1F8vZex",
+  "name": "Cape of the Mountebank (Gaspard's)",
+  "type": "equipment",
+  "img": "icons/equipment/back/cape-layered-simple-brown.webp",
+  "folder": "D9XHPYDC8UGn7sRq",
+  "sort": 500,
+  "system": {
+    "description": {
+      "value": "<p><strong>Whose it was.</strong> Gaspard the Uncanny, a Kyonin illusionist who tried to <em>dimension door</em> out. Scorch marks show where the dimensional lock caught him.</p><p>Use the standard rules for a <em>cape of the mountebank</em> (Core Rulebook). Its <em>dimension door</em> fails while the lock holds.</p><p><em>From the hoard of the fallen, sorted by owner and labelled in Celmak's neat handwriting.</em></p>"
+    },
+    "price": 10800,
+    "subType": "wondrous",
+    "slot": "shoulders",
+    "equipped": false
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.9"
+  }
+}

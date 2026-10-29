@@ -1,0 +1,15 @@
+{
+  "_id": "ioKH1pEXANkFqbcK",
+  "_key": "!folders!ioKH1pEXANkFqbcK",
+  "name": "Adventure Tables",
+  "type": "RollTable",
+  "color": "#7a1f2b",
+  "sorting": "m",
+  "sort": 100,
+  "folder": null,
+  "description": "",
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351"
+  }
+}

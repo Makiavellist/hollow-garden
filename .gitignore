@@ -1,0 +1,8 @@
+tools/node_modules/
+packs/**/LOG
+packs/**/LOG.old
+packs/**/LOCK
+dist/
+*.pyc
+__pycache__/
+.DS_Store

@@ -1,0 +1,22 @@
+{
+  "_id": "Gm1ilRG4GV4DP9uB",
+  "_key": "!items!Gm1ilRG4GV4DP9uB",
+  "name": "Lot 9: Thirty Seconds of Silence",
+  "type": "loot",
+  "img": "icons/magic/time/hourglass-tilted-glowing-gold.webp",
+  "folder": "YvibWalgscAk7V3q",
+  "sort": 90,
+  "system": {
+    "description": {
+      "value": "<blockquote class=\"hg-readaloud\"><p><em>“Thirty Seconds of Silence. Well. One episode of it.” (Open 3, rival max 9)</em></p></blockquote><p>A voucher. For one episode of the winner's choice, Celmak gives no commentary and opens no Mood Gas vents. She bids high on this herself; she hates silence.</p>"
+    },
+    "subType": "gear",
+    "price": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.9"
+  }
+}

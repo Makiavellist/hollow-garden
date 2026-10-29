@@ -1,0 +1,174 @@
+{
+  "_id": "SGK8gNGB3GTIp4EK",
+  "_key": "!tables!SGK8gNGB3GTIp4EK",
+  "name": "Reruns of Tomorrow: Celmak's Mistakes (d8)",
+  "img": "icons/magic/time/arrows-circling-pink.webp",
+  "description": "<p>Roll each time someone looks closely at Absalom Station. Calling out a mistake (free action, once per round) makes one Hard-Light Actor glitch: staggered 1 round, no fast healing until the end of its next turn.</p>",
+  "formula": "1d8",
+  "replacement": true,
+  "displayRoll": true,
+  "results": [
+    {
+      "_id": "e0irDjpbOeGfgMqf",
+      "_key": "!tables.results!SGK8gNGB3GTIp4EK.e0irDjpbOeGfgMqf",
+      "type": "text",
+      "name": "",
+      "description": "<p><strong>Celmak shows:</strong> The Drift is a glowing river running through the Ring, with ships sailing on it.</p><p><strong>The truth:</strong> The Drift is a separate plane, reached only by a ship's Drift engine.</p>",
+      "text": "<p><strong>Celmak shows:</strong> The Drift is a glowing river running through the Ring, with ships sailing on it.</p><p><strong>The truth:</strong> The Drift is a separate plane, reached only by a ship's Drift engine.</p>",
+      "img": "icons/magic/time/arrows-circling-pink.webp",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "mLIRszqWds0JSoCe",
+      "_key": "!tables.results!SGK8gNGB3GTIp4EK.mLIRszqWds0JSoCe",
+      "type": "text",
+      "name": "",
+      "description": "<p><strong>Celmak shows:</strong> Starships have sails and oars.</p><p><strong>The truth:</strong> Starships use thrusters and Drift engines.</p>",
+      "text": "<p><strong>Celmak shows:</strong> Starships have sails and oars.</p><p><strong>The truth:</strong> Starships use thrusters and Drift engines.</p>",
+      "img": "icons/magic/time/arrows-circling-pink.webp",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "muZDN37hkVT5xlpc",
+      "_key": "!tables.results!SGK8gNGB3GTIp4EK.muZDN37hkVT5xlpc",
+      "type": "text",
+      "name": "",
+      "description": "<p><strong>Celmak shows:</strong> Every kasatha has two arms.</p><p><strong>The truth:</strong> Kasatha have four arms.</p>",
+      "text": "<p><strong>Celmak shows:</strong> Every kasatha has two arms.</p><p><strong>The truth:</strong> Kasatha have four arms.</p>",
+      "img": "icons/magic/time/arrows-circling-pink.webp",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "jGk632tlQpoaIlpp",
+      "_key": "!tables.results!SGK8gNGB3GTIp4EK.jGk632tlQpoaIlpp",
+      "type": "text",
+      "name": "",
+      "description": "<p><strong>Celmak shows:</strong> Triune is a statue of a three-headed dragon.</p><p><strong>The truth:</strong> Triune is a merged god of three machine deities, not a creature.</p>",
+      "text": "<p><strong>Celmak shows:</strong> Triune is a statue of a three-headed dragon.</p><p><strong>The truth:</strong> Triune is a merged god of three machine deities, not a creature.</p>",
+      "img": "icons/magic/time/arrows-circling-pink.webp",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "nv6esrPVhHMtG7hH",
+      "_key": "!tables.results!SGK8gNGB3GTIp4EK.nv6esrPVhHMtG7hH",
+      "type": "text",
+      "name": "",
+      "description": "<p><strong>Celmak shows:</strong> Golarion hangs in the sky above the station, blue and whole.</p><p><strong>The truth:</strong> Golarion is gone; the station sits in its empty orbit.</p>",
+      "text": "<p><strong>Celmak shows:</strong> Golarion hangs in the sky above the station, blue and whole.</p><p><strong>The truth:</strong> Golarion is gone; the station sits in its empty orbit.</p>",
+      "img": "icons/magic/time/arrows-circling-pink.webp",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "WDg9wCFGogZdC4BF",
+      "_key": "!tables.results!SGK8gNGB3GTIp4EK.WDg9wCFGogZdC4BF",
+      "type": "text",
+      "name": "",
+      "description": "<p><strong>Celmak shows:</strong> Every sign is in Androffan.</p><p><strong>The truth:</strong> Signs are in Common and dozens of other languages.</p>",
+      "text": "<p><strong>Celmak shows:</strong> Every sign is in Androffan.</p><p><strong>The truth:</strong> Signs are in Common and dozens of other languages.</p>",
+      "img": "icons/magic/time/arrows-circling-pink.webp",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "vNK0yXBDPmoohzTi",
+      "_key": "!tables.results!SGK8gNGB3GTIp4EK.vNK0yXBDPmoohzTi",
+      "type": "text",
+      "name": "",
+      "description": "<p><strong>Celmak shows:</strong> Every billboard shows Celmak as “the station's beloved host.”</p><p><strong>The truth:</strong> Nobody in the future has ever heard of Celmak.</p>",
+      "text": "<p><strong>Celmak shows:</strong> Every billboard shows Celmak as “the station's beloved host.”</p><p><strong>The truth:</strong> Nobody in the future has ever heard of Celmak.</p>",
+      "img": "icons/magic/time/arrows-circling-pink.webp",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "GSwOpoHl1yM7tDC3",
+      "_key": "!tables.results!SGK8gNGB3GTIp4EK.GSwOpoHl1yM7tDC3",
+      "type": "text",
+      "name": "",
+      "description": "<p><strong>Celmak shows:</strong> The Swarm are fluffy, round and adorable.</p><p><strong>The truth:</strong> See Scene 3.</p>",
+      "text": "<p><strong>Celmak shows:</strong> The Swarm are fluffy, round and adorable.</p><p><strong>The truth:</strong> See Scene 3.</p>",
+      "img": "icons/magic/time/arrows-circling-pink.webp",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    }
+  ],
+  "folder": "ioKH1pEXANkFqbcK",
+  "sort": 400,
+  "flags": {
+    "hollow-garden": {
+      "key": "celmaks-mistakes"
+    }
+  },
+  "_stats": {
+    "coreVersion": "13.351"
+  }
+}

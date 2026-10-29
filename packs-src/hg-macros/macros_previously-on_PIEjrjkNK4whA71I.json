@@ -1,0 +1,15 @@
+{
+  "_id": "PIEjrjkNK4whA71I",
+  "_key": "!macros!PIEjrjkNK4whA71I",
+  "name": "Previously On…",
+  "type": "script",
+  "img": "modules/hollow-garden/assets/host/shocked.webp",
+  "command": "// The Hollow Garden: Previously On…\nconst api = game.modules.get(\"hollow-garden\")?.api;\nif (!api) return ui.notifications.warn(\"The Hollow Garden module is not active.\");\napi.titleCard('previously');",
+  "scope": "global",
+  "folder": null,
+  "sort": 1200,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351"
+  }
+}

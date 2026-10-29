@@ -1,0 +1,55 @@
+{
+  "_id": "ZRhGueoCrn5iXvzb",
+  "_key": "!items!ZRhGueoCrn5iXvzb",
+  "name": "Lot 14: A Second Act (Resuscitation Injector)",
+  "type": "consumable",
+  "img": "icons/consumables/potions/flask-corked-blue-glow.webp",
+  "folder": "YvibWalgscAk7V3q",
+  "sort": 140,
+  "system": {
+    "description": {
+      "value": "<blockquote class=\"hg-readaloud\"><p><em>“A Second Act. Everyone deserves one.” (Open 3, rival max 7)</em></p></blockquote><p>An Androffan resuscitation injector that functions once as <em>@UUID[Compendium.pf1.spells.Item.qiiis9ekgy3syu7j]{breath of life}</em> (CL 13th).</p>"
+    },
+    "subType": "misc",
+    "price": 0,
+    "uses": {
+      "per": "single"
+    },
+    "actions": [
+      {
+        "_id": "j52l9V7dUBfq8N5q",
+        "name": "Inject",
+        "activation": {
+          "type": "standard",
+          "unchained": {
+            "type": "action",
+            "cost": 2
+          }
+        },
+        "actionType": "heal",
+        "damage": {
+          "parts": [
+            {
+              "formula": "5d8+13",
+              "types": [
+                "untyped"
+              ]
+            }
+          ]
+        },
+        "notes": {
+          "effect": [
+            "Breath of life (CL 13th)"
+          ],
+          "footer": []
+        }
+      }
+    ]
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.9"
+  }
+}

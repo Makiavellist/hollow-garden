@@ -1,0 +1,915 @@
+{
+  "_id": "CFN1q5kVAqiZ34L5",
+  "_key": "!actors!CFN1q5kVAqiZ34L5",
+  "name": "Prize Sentinel",
+  "type": "npc",
+  "img": "icons/creatures/magical/construct-iron-stomping-yellow.webp",
+  "system": {
+    "abilities": {
+      "str": {
+        "value": 28
+      },
+      "dex": {
+        "value": 14
+      },
+      "con": {
+        "value": null
+      },
+      "int": {
+        "value": 10
+      },
+      "wis": {
+        "value": 14
+      },
+      "cha": {
+        "value": 1
+      }
+    },
+    "attributes": {
+      "naturalAC": 19,
+      "hp": {
+        "temp": 75
+      },
+      "speed": {
+        "land": {
+          "base": 30
+        },
+        "climb": {
+          "base": 20
+        }
+      },
+      "cmdNotes": "",
+      "saveNotes": "",
+      "acNotes": "",
+      "quadruped": false,
+      "sr": {
+        "formula": ""
+      }
+    },
+    "details": {
+      "cr": {
+        "base": 15
+      },
+      "alignment": "tn",
+      "biography": {
+        "value": "<p>A hulking robot assembled from the devices the Technologist most covets, with a glass chest cavity where three working prizes hang in cradles.</p>"
+      },
+      "notes": {
+        "value": "<div class=\"hg-journal\"><h3>Printed stat block</h3><section class=\"hg-statblock\"><h4 class=\"hg-sb-title\">PRIZE SENTINEL — CR 15</h4><p><strong>XP</strong> 51,200 · N Large construct (robot)</p><p><strong>Init</strong> +2; <strong>Senses</strong> darkvision 60 ft., low-light vision; Perception +28</p><h5 class=\"hg-sb-section\">DEFENSE</h5><p><strong>AC</strong> 30, touch 11, flat-footed 28 (+2 Dex, +19 natural, −1 size)</p><p><strong>hp</strong> 140 (20d10+30); force field (75 hp, fast healing 15)</p><p><strong>Fort</strong> +6, <strong>Ref</strong> +8, <strong>Will</strong> +8</p><p><strong>Immune</strong> construct traits; <strong>Weaknesses</strong> vulnerable to critical hits, vulnerable to electricity</p><h5 class=\"hg-sb-section\">OFFENSE</h5><p><strong>Speed</strong> 30 ft., climb 20 ft.</p><p><strong>Melee</strong> 2 arc-knuckle slams +28 (2d8+9 plus 2d6 electricity)</p><p><strong>Ranged</strong> plasma repeater +21 touch (6d6 plasma)</p><p><strong>Space</strong> 10 ft.; <strong>Reach</strong> 10 ft.</p><p><strong>Special Attacks</strong> combined arms, nanite resonance field</p><h5 class=\"hg-sb-section\">STATISTICS</h5><p><strong>Str</strong> 28, <strong>Dex</strong> 14, <strong>Con</strong> —, <strong>Int</strong> 10, <strong>Wis</strong> 14, <strong>Cha</strong> 1</p><p><strong>Base Atk</strong> +20; <strong>CMB</strong> +30; <strong>CMD</strong> 42</p><p><strong>Feats</strong> Awesome Blow, Cleave, Great Cleave, Improved Bull Rush, Improved Vital Strike, Point-Blank Shot, Power Attack, Precise Shot, Skill Focus (Perception), Vital Strike</p><p><strong>Skills</strong> Climb +17, Knowledge (engineering) +23, Perception +28</p><h5 class=\"hg-sb-section\">SPECIAL ABILITIES</h5><p><strong>Combined Arms (Ex)</strong> When making a full attack, the sentinel can make both slams and fire its plasma repeater.</p><p><strong>Nanite Resonance Field (Ex)</strong> As described in Episode 1.</p><p><strong>Plasma Repeater (Ex)</strong> This integrated weapon has a range increment of 100 feet. Plasma damage is half fire and half electricity.</p><p><strong>Showcase Core (Ex)</strong> The sentinel’s chest holds three Prize items, as described in Episode 1.</p></section></div>"
+      }
+    },
+    "skills": {
+      "clm": {
+        "rank": 8
+      },
+      "ken": {
+        "rank": 20
+      },
+      "per": {
+        "rank": 20
+      }
+    },
+    "traits": {
+      "size": "lg",
+      "senses": {
+        "dv": {
+          "value": 60
+        },
+        "ll": {
+          "enabled": true
+        }
+      },
+      "ci": [
+        "bleed",
+        "deathEffects",
+        "disease",
+        "energyDrain",
+        "exhausted",
+        "fatigue",
+        "mindAffecting",
+        "paralyze",
+        "poison",
+        "sleep",
+        "stun"
+      ],
+      "di": [],
+      "dv": [
+        "electric"
+      ],
+      "dr": {
+        "value": [],
+        "custom": ""
+      },
+      "eres": {
+        "value": [],
+        "custom": ""
+      },
+      "fastHealing": "15 (force field only)",
+      "languages": []
+    }
+  },
+  "items": [
+    {
+      "_id": "SQPvLuIaKL6hEXpe",
+      "name": "Robot",
+      "type": "race",
+      "img": "systems/pf1/icons/races/creature-types/construct.png",
+      "system": {
+        "creatureTypes": [
+          "construct"
+        ],
+        "creatureSubtypes": [
+          "robot"
+        ],
+        "size": "lg",
+        "speeds": {
+          "land": 30
+        },
+        "description": {
+          "value": ""
+        }
+      },
+      "_key": "!actors.items!CFN1q5kVAqiZ34L5.SQPvLuIaKL6hEXpe",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "JToWOC0LdGlDgtkQ",
+      "name": "Construct (Robot)",
+      "type": "class",
+      "img": "systems/pf1/icons/skills/mech_7.jpg",
+      "system": {
+        "subType": "racial",
+        "level": 20,
+        "hd": 10,
+        "hp": 110,
+        "bab": "high",
+        "skillsPerLevel": 2,
+        "tag": "construct",
+        "savingThrows": {
+          "fort": {
+            "value": "low"
+          },
+          "ref": {
+            "value": "low"
+          },
+          "will": {
+            "value": "low"
+          }
+        },
+        "description": {
+          "value": "<p>Racial Hit Dice: d10, full BAB, poor saves, no Constitution. Constructs gain bonus hit points by size.</p>"
+        },
+        "changes": [
+          {
+            "_id": "WfkUefQ9",
+            "formula": "max(0, @size - 2) * 10 + max(0, @size - 6) * 10",
+            "target": "mhp",
+            "type": "untypedPerm",
+            "operator": "add"
+          }
+        ]
+      },
+      "_key": "!actors.items!CFN1q5kVAqiZ34L5.JToWOC0LdGlDgtkQ",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "Z2zV9KW00UTopi4j",
+      "name": "Stat Block Adjustments",
+      "type": "feat",
+      "img": "icons/commodities/tech/dial-meter-gauge-blue.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "na",
+        "changes": [
+          {
+            "_id": "qwtXDwiI",
+            "formula": "3",
+            "target": "skill.ken",
+            "type": "untyped",
+            "operator": "add"
+          },
+          {
+            "_id": "s2T9trGZ",
+            "formula": "6",
+            "target": "skill.per",
+            "type": "untyped",
+            "operator": "add"
+          }
+        ],
+        "description": {
+          "value": "<p>Bonuses from feats, gear, racial traits and special qualities that are already folded into the printed stat block. Keeping them here lets the PF1 sheet show the same totals as the adventure. Delete a change if you add the matching item with its own mechanics.</p>"
+        }
+      },
+      "_key": "!actors.items!CFN1q5kVAqiZ34L5.Z2zV9KW00UTopi4j",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "v0l15D4XCEGAqN4u",
+      "_key": "!actors.items!CFN1q5kVAqiZ34L5.v0l15D4XCEGAqN4u",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.KPaC3H6EQGG4sXLT"
+      },
+      "img": "systems/pf1/icons/skills/blue_27.jpg",
+      "name": "Awesome Blow",
+      "system": {
+        "actions": [
+          {
+            "_id": "1XoNs8HGxM3vlAEk",
+            "ability": {
+              "attack": "str",
+              "damage": "str"
+            },
+            "actionType": "mcman",
+            "activation": {
+              "type": "standard",
+              "unchained": {
+                "cost": 2,
+                "type": "action"
+              }
+            },
+            "damage": {
+              "parts": [
+                {
+                  "formula": "sizeRoll(1, 4, @size)",
+                  "types": [
+                    "bludgeoning"
+                  ]
+                }
+              ]
+            },
+            "duration": {
+              "units": "inst"
+            },
+            "measureTemplate": {
+              "color": "#ffffff",
+              "size": "10",
+              "type": "ray"
+            },
+            "name": "Use",
+            "range": {
+              "units": "melee"
+            },
+            "target": {
+              "value": "corporeal smaller opponent"
+            }
+          },
+          {
+            "_id": "3alfhVQ4pXCD6J4s",
+            "activation": {
+              "type": "nonaction",
+              "unchained": {
+                "type": "nonaction"
+              }
+            },
+            "damage": {
+              "parts": [
+                {
+                  "formula": "1d6",
+                  "types": [
+                    "bludgeoning"
+                  ]
+                }
+              ]
+            },
+            "name": "Obstacle Damage"
+          }
+        ],
+        "description": {
+          "instructions": "<p>Adjust the damage dice of the blow accordingly to the creature using it.</p>",
+          "value": "<p><em>This creature can send opponents flying.</em></p><p><strong>Prerequisites</strong>: Str 25, @UUID[Compendium.pf1.feats.Item.FUW5mIXHNBBIQ1Sq]{Power Attack}, @UUID[Compendium.pf1.feats.Item.dn2KgHFQRbuoNRx0]{Improved Bull Rush}, size Large or larger.</p><p><strong>Benefits</strong>: As a standard action, the creature may perform an awesome blow combat maneuver. If the creature's maneuver succeeds against a corporeal opponent smaller than itself, its opponent takes damage (typically slam damage plus Strength bonus) and is knocked flying 10 feet in a direction of the attacking creature's choice and falls prone. The attacking creature can only push the opponent in a straight line, and the opponent can't move closer to the attacking creature than the square it started in. If an obstacle prevents the completion of the opponent's move, the opponent and the obstacle each take 1d6 points of damage, and the opponent is knocked prone in the space adjacent to the obstacle.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1112",
+            "pages": "314"
+          }
+        ],
+        "tags": [
+          "Combat",
+          "Monster"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "rzxbVksmGmSgFy9G",
+      "_key": "!actors.items!CFN1q5kVAqiZ34L5.rzxbVksmGmSgFy9G",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.Zeq6RWYv5otvg8q7"
+      },
+      "img": "systems/pf1/icons/feats/cleave.jpg",
+      "name": "Cleave",
+      "system": {
+        "actions": [
+          {
+            "_id": "YKPDCAoDrghiYAzi",
+            "activation": {
+              "type": "standard",
+              "unchained": {
+                "cost": 2,
+                "type": "action"
+              }
+            },
+            "name": "Use",
+            "notes": {
+              "effect": [
+                "[[-2]] penalty to your Armor Class until your next turn."
+              ]
+            }
+          }
+        ],
+        "description": {
+          "value": "<p><em>You can strike two adjacent foes with a single swing.</em></p><p><strong>Prerequisites</strong>: Str 13, @UUID[Compendium.pf1.feats.Item.FUW5mIXHNBBIQ1Sq]{Power Attack}, base attack bonus +1.</p><p><strong>Benefits</strong>: As a standard action, you can make a single attack at your full base attack bonus against a foe within reach. If you hit, you deal damage normally and can make an additional attack (using your full base attack bonus) against a foe that is adjacent to the first and also within reach. You can only make one additional attack per round with this feat. When you use this feat, you take a -2 penalty to your Armor Class until your next turn.</p><h3>Combat Trick</h3><p>When using the Cleave or Great Cleave feat, you can spend 4 stamina points to negate the -2 penalty to Armor Class until your next turn.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "116, 119"
+          }
+        ],
+        "tags": [
+          "Combat",
+          "Combat Trick"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "IB06WT0NpA6diCI6",
+      "_key": "!actors.items!CFN1q5kVAqiZ34L5.IB06WT0NpA6diCI6",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.6HSMdwX1VS6nZ6Zf"
+      },
+      "img": "systems/pf1/icons/feats/great-cleave.jpg",
+      "name": "Great Cleave",
+      "system": {
+        "actions": [
+          {
+            "_id": "9qJAoXcYkvy8E6Mf",
+            "activation": {
+              "type": "standard",
+              "unchained": {
+                "cost": 2,
+                "type": "action"
+              }
+            },
+            "name": "Use",
+            "notes": {
+              "effect": [
+                "[[-2]] penalty to your Armor Class until your next turn."
+              ]
+            }
+          }
+        ],
+        "description": {
+          "value": "<p><em>You can strike many adjacent foes with a single blow.</em></p><p><strong>Prerequisites</strong>: Str 13, @UUID[Compendium.pf1.feats.Item.Zeq6RWYv5otvg8q7]{Cleave}, @UUID[Compendium.pf1.feats.Item.FUW5mIXHNBBIQ1Sq]{Power Attack}, base attack bonus +4.</p><p><strong>Benefits</strong>: As a standard action, you can make a single attack at your full base attack bonus against a foe within reach. If you hit, you deal damage normally and can make an additional attack (using your full base attack bonus) against a foe that is adjacent to the previous foe and also within reach. If you hit, you can continue to make attacks against foes adjacent to the previous foe, so long as they are within your reach. You cannot attack an individual foe more than once during this attack action. When you use this feat, you take a -2 penalty to your Armor Class until your next turn.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "116, 124"
+          }
+        ],
+        "tags": [
+          "Combat",
+          "Offensive"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "8ss9poz6jmOJ32Gu",
+      "_key": "!actors.items!CFN1q5kVAqiZ34L5.8ss9poz6jmOJ32Gu",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.dn2KgHFQRbuoNRx0"
+      },
+      "img": "systems/pf1/icons/feats/improved-bull-rush.jpg",
+      "name": "Improved Bull Rush",
+      "system": {
+        "contextNotes": [
+          {
+            "target": "cmb",
+            "text": "+[[2]] and no AoO on Bull Rush."
+          },
+          {
+            "target": "cmd",
+            "text": "+[[2]] vs Bull Rush"
+          }
+        ],
+        "description": {
+          "value": "<p><em>You are skilled at pushing your foes around.</em></p><p><strong>Prerequisites</strong>: Str 13, @UUID[Compendium.pf1.feats.Item.FUW5mIXHNBBIQ1Sq]{Power Attack}, base attack bonus +1.</p><p><strong>Benefits</strong>: You do not provoke an attack of opportunity when performing a bull rush combat maneuver. In addition, you receive a +2 bonus on checks made to bull rush a foe. You also receive a +2 bonus to your Combat Maneuver Defense whenever an opponent tries to bull rush you.</p><p><strong>Normal</strong>: You provoke an attack of opportunity when performing a bull rush combat maneuver.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "126"
+          },
+          {
+            "id": "PZO1131",
+            "pages": "122"
+          }
+        ],
+        "tags": [
+          "Combat",
+          "Offensive",
+          "Combat Maneuver",
+          "Combat Trick"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "KKIOisXtBQfxyjMb",
+      "_key": "!actors.items!CFN1q5kVAqiZ34L5.KKIOisXtBQfxyjMb",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.DorPGQ2mifJbMKH8"
+      },
+      "img": "systems/pf1/icons/feats/improved-vital-strike.jpg",
+      "name": "Improved Vital Strike",
+      "system": {
+        "description": {
+          "instructions": "<p>Add conditional modifier with <code>@base.dice</code> as damage formula where desired.</p>",
+          "value": "<i>You can make a single attack that deals a large amount of damage.</i><p><strong>Prerequisites</strong>: @UUID[Compendium.pf1.feats.26k1Gi7t5BoqxhIj]{Vital Strike}, base attack bonus +11.</p><p><strong>Benefits</strong>: When you use the attack action, you can make one attack at your highest base attack bonus that deals additional damage. Roll the weapon's damage dice for the attack three times and add the results together before adding bonuses from Strength, weapon special abilities (such as <i>flaming</i>), precision based damage, and other damage bonuses. These extra weapon damage dice are not multiplied on a critical hit, but are added to the total.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "117, 128"
+          }
+        ],
+        "tags": [
+          "Combat",
+          "Offensive"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "AMDJsdBf3KxJwUJj",
+      "_key": "!actors.items!CFN1q5kVAqiZ34L5.AMDJsdBf3KxJwUJj",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.8rsFtye3PwM6CKli"
+      },
+      "img": "systems/pf1/icons/feats/point-blank-shot.jpg",
+      "name": "Point-Blank Shot",
+      "system": {
+        "contextNotes": [
+          {
+            "target": "attack",
+            "text": "+1 bonus on attack and damage rolls with ranged weapons at ranges of up to 30 feet."
+          }
+        ],
+        "description": {
+          "value": "<p><em>You are especially accurate when making ranged attacks against close targets.</em><p><strong>Benefits</strong>: You get a +1 bonus on attack and damage rolls with ranged weapons at ranges of up to 30 feet.<p><b>Combat Trick</b><br>You can spend up to 6 stamina points to increase this feat's range by 5 feet for each stamina point you spent.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "116, 131"
+          }
+        ],
+        "tags": [
+          "Combat"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "sbNSzJxVEOHIFEhu",
+      "_key": "!actors.items!CFN1q5kVAqiZ34L5.sbNSzJxVEOHIFEhu",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.FUW5mIXHNBBIQ1Sq"
+      },
+      "img": "systems/pf1/icons/feats/power-attack.jpg",
+      "name": "Power Attack",
+      "system": {
+        "description": {
+          "value": "<i>You can make exceptionally deadly melee attacks by sacrificing accuracy for strength.</i><p><strong>Prerequisites</strong>: Str 13, base attack bonus +1.</p><p><strong>Benefits</strong>: You can choose to take a -1 penalty on all melee attack rolls and combat maneuver checks to gain a +2 bonus on all melee damage rolls. This bonus to damage is increased by half (+50%) if you are making an attack with a two-handed weapon, a one handed weapon using two hands, or a primary natural weapon that adds 1-1/2 times your Strength modifier on damage rolls. This bonus to damage is halved (-50%) if you are making an attack with an off-hand weapon or secondary natural weapon. When your base attack bonus reaches +4, and every 4 points thereafter, the penalty increases by -1 and the bonus to damage increases by +2. You must choose to use this feat before making an attack roll, and its effects last until your next turn. The bonus damage does not apply to touch attacks or effects that do not deal hit point damage.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "116, 131"
+          }
+        ],
+        "tags": [
+          "Combat",
+          "Offensive"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "k87uqIJruJ5IOkoE",
+      "_key": "!actors.items!CFN1q5kVAqiZ34L5.k87uqIJruJ5IOkoE",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.53urYIbYYpQuoSLd"
+      },
+      "img": "systems/pf1/icons/feats/precise-shot.jpg",
+      "name": "Precise Shot",
+      "system": {
+        "contextNotes": [
+          {
+            "target": "attack",
+            "text": "Shoot or throw ranged weapons at an opponent engaged in melee w/o taking the standard -4 penalty on your attack roll."
+          }
+        ],
+        "description": {
+          "value": "<p><em>You are adept at firing ranged attacks into melee.</em></p><p><strong>Prerequisites</strong>: @UUID[Compendium.pf1.feats.Item.8rsFtye3PwM6CKli]{Point-Blank Shot}.</p><p><strong>Benefits</strong>: You can shoot or throw ranged weapons at an opponent engaged in melee without taking the standard -4 penalty on your attack roll.</p><h3>Combat Trick</h3><p>As a standard action, you can spend 2 stamina points and make a ranged attack against a foe engaged in melee with an ally. If the attack hits, it deals no damage, but your ally gains your choice of either a +2 bonus on her next attack roll against that opponent or a +2 bonus to AC against that opponent's next attack. This bonus lasts until the start of your next turn.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "116, 131"
+          }
+        ],
+        "tags": [
+          "Combat",
+          "Combat Trick"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "vHwZmhKUh7jP7WLM",
+      "_key": "!actors.items!CFN1q5kVAqiZ34L5.vHwZmhKUh7jP7WLM",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.7zJTztNW7hdaqjKc"
+      },
+      "img": "systems/pf1/icons/feats/skill-focus.jpg",
+      "name": "Skill Focus (Perception)",
+      "system": {
+        "description": {
+          "value": "<i>Choose a skill. You are particularly adept at that skill.</i><p><strong>Benefits</strong>: You get a +3 bonus on all checks involving the chosen skill. If you have 10 or more ranks in that skill, this bonus increases to +6.</p><p><strong>Special</strong>: You can gain this feat multiple times. Its effects do not stack. Each time you take the feat, it applies to a new skill.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "116, 134"
+          }
+        ],
+        "tags": [
+          "General",
+          "Skill"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "TCZvqvyd1fY9gg7H",
+      "_key": "!actors.items!CFN1q5kVAqiZ34L5.TCZvqvyd1fY9gg7H",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.26k1Gi7t5BoqxhIj"
+      },
+      "img": "systems/pf1/icons/feats/vital-strike.jpg",
+      "name": "Vital Strike",
+      "system": {
+        "description": {
+          "instructions": "<p>Add conditional modifier with <code>@base.dice</code> as damage formula where desired.</p>",
+          "value": "<i>You make a single attack that deals significantly more damage than normal.</i><p><strong>Prerequisites</strong>: Base attack bonus +6.</p><p><strong>Benefits</strong>: When you use the attack action, you can make one attack at your highest base attack bonus that deals additional damage. Roll the weapon's damage dice for the attack twice and add the results together before adding bonuses from Strength, weapon abilities (such as <i>flaming</i>), precision based damage, and other damage bonuses. These extra weapon damage dice are not multiplied on a critical hit, but are added to the total.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "117, 136"
+          }
+        ],
+        "tags": [
+          "Combat",
+          "Offensive"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "eIKze2lgcVBGSAbG",
+      "name": "Arc-Knuckle Slam",
+      "type": "attack",
+      "img": "icons/equipment/hand/gauntlet-cuffed-steel-blue.webp",
+      "system": {
+        "subType": "natural",
+        "proficient": true,
+        "actions": [
+          {
+            "_id": "lpGoDWWDp4iC7Le3",
+            "name": "Attack",
+            "activation": {
+              "type": "attack",
+              "unchained": {
+                "type": "attack"
+              }
+            },
+            "actionType": "mwak",
+            "ability": {
+              "attack": "str",
+              "damage": "",
+              "critRange": 20,
+              "critMult": 2
+            },
+            "attackBonus": "",
+            "damage": {
+              "parts": [
+                {
+                  "formula": "2d8+9",
+                  "types": [
+                    "bludgeoning"
+                  ]
+                },
+                {
+                  "formula": "2d6",
+                  "types": [
+                    "electric"
+                  ]
+                }
+              ]
+            },
+            "range": {
+              "units": "melee"
+            },
+            "touch": false,
+            "naturalAttack": {
+              "primary": true
+            },
+            "extraAttacks": {
+              "type": "custom",
+              "formula": {
+                "count": "1",
+                "label": "Slam #{0}"
+              }
+            }
+          }
+        ],
+        "description": {
+          "value": ""
+        },
+        "showInQuickbar": true
+      },
+      "_key": "!actors.items!CFN1q5kVAqiZ34L5.eIKze2lgcVBGSAbG",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "FbqA77bC2vgE4ce7",
+      "name": "Plasma Repeater",
+      "type": "attack",
+      "img": "icons/commodities/tech/tube-chamber-lightning.webp",
+      "system": {
+        "subType": "weapon",
+        "proficient": true,
+        "actions": [
+          {
+            "_id": "rJCGqLmvvvOamorM",
+            "name": "Attack",
+            "activation": {
+              "type": "attack",
+              "unchained": {
+                "type": "attack"
+              }
+            },
+            "actionType": "rwak",
+            "ability": {
+              "attack": "dex",
+              "damage": "",
+              "critRange": 20,
+              "critMult": 2
+            },
+            "attackBonus": "",
+            "damage": {
+              "parts": [
+                {
+                  "formula": "3d6",
+                  "types": [
+                    "fire"
+                  ]
+                },
+                {
+                  "formula": "3d6",
+                  "types": [
+                    "electric"
+                  ]
+                }
+              ]
+            },
+            "range": {
+              "units": "ft",
+              "value": "100",
+              "maxIncrements": 10
+            },
+            "touch": true,
+            "naturalAttack": {
+              "primary": true
+            },
+            "notes": {
+              "effect": [],
+              "footer": [
+                "Plasma: half fire, half electricity (6d6 total)"
+              ]
+            }
+          }
+        ],
+        "description": {
+          "value": ""
+        },
+        "showInQuickbar": true
+      },
+      "_key": "!actors.items!CFN1q5kVAqiZ34L5.FbqA77bC2vgE4ce7",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "7HHD8PPofHAyAkHD",
+      "name": "Force Field",
+      "type": "feat",
+      "img": "icons/magic/control/debuff-energy-hold-levitate-teal-blue.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p>The robot is sheathed in a force field with <strong>75 hit points</strong> and <strong>fast healing 15</strong>. Damage is applied to the force field before the robot's own hit points, and the fast healing applies only to the field. A field reduced to 0 hp goes down and regenerates at its fast healing rate.</p><p><em>Track the force field as this actor's temporary hit points.</em></p>"
+        }
+      },
+      "_key": "!actors.items!CFN1q5kVAqiZ34L5.7HHD8PPofHAyAkHD",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "l8i8THSCNQqTzldr",
+      "name": "Robot Traits",
+      "type": "feat",
+      "img": "icons/commodities/tech/metal-panel.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p><strong>Robot traits.</strong> Robots are constructs (Bestiary 5). They are vulnerable to critical hits (critical hits deal an extra ×1 multiplier, for example ×3 instead of ×2) and to electricity (+50% damage). Many carry a force field and integrated weapons.</p>"
+        }
+      },
+      "_key": "!actors.items!CFN1q5kVAqiZ34L5.l8i8THSCNQqTzldr",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "Jbp4z6yWGOW9jPP7",
+      "name": "Combined Arms",
+      "type": "feat",
+      "img": "icons/commodities/tech/coil-tesla.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p>When making a full attack, the sentinel can make both slams and fire its plasma repeater.</p>"
+        }
+      },
+      "_key": "!actors.items!CFN1q5kVAqiZ34L5.Jbp4z6yWGOW9jPP7",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "fMMO3AcEeOiB0zQr",
+      "name": "Nanite Resonance Field",
+      "type": "feat",
+      "img": "icons/magic/control/energy-stream-link-spiral-blue.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p>While the sentinel is active, its chassis broadcasts override code through the room. At initiative count 0 each round, every creature with nanite-based abilities (a nanite bloodline, cybernetics, an android's nanite surge) attempts a DC 22 Will save. A creature that fails loses one use of a bloodline power or one phrenic pool point (its choice) and is staggered for 1 round. Each technological item a creature is holding must attempt a DC 22 Fortitude save (using the wielder's bonus) or shut down for 1 round.</p><p><strong>Seizing the field.</strong> A creature that succeeds at the Will save by 5 or more can spend a standard action to hijack the broadcast: a DC 28 caster level check, or Knowledge (engineering) using the honeypot bands. On a success the sentinel's force field drops to 0 hp, the drones are stunned for 1 round, and the field ends. Celmak raises the ratings by 1.</p>"
+        },
+        "actions": [
+          {
+            "_id": "gTbQ7xuEjtqK1zM3",
+            "name": "Resonance (init 0)",
+            "activation": {
+              "type": "special",
+              "unchained": {
+                "type": "action",
+                "cost": 2
+              }
+            },
+            "actionType": "other",
+            "save": {
+              "type": "will",
+              "dc": "22",
+              "description": "Will negates"
+            }
+          }
+        ]
+      },
+      "_key": "!actors.items!CFN1q5kVAqiZ34L5.fMMO3AcEeOiB0zQr",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "SxAqKvekibFI1vTS",
+      "name": "Showcase Core",
+      "type": "feat",
+      "img": "icons/commodities/treasure/crystal-ball-blue-purple.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p>The sentinel's glass chest holds three Prize items. Each time it takes a critical hit, or 30 or more damage from a single attack, roll d%: on 01–25, one Prize item is destroyed. A creature adjacent to the sentinel can spend a full-round action and attempt a DC 32 Disable Device check to pull a Prize item out intact; this deals 20 damage to the sentinel, bypassing its force field.</p>"
+        }
+      },
+      "_key": "!actors.items!CFN1q5kVAqiZ34L5.SxAqKvekibFI1vTS",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    }
+  ],
+  "folder": "HIrz0Dh4Fb4MXNNY",
+  "sort": 500,
+  "prototypeToken": {
+    "name": "Prize Sentinel",
+    "width": 2,
+    "height": 2,
+    "texture": {
+      "src": "icons/creatures/magical/construct-iron-stomping-yellow.webp",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": -1,
+    "actorLink": false,
+    "displayName": 20,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "sight": {
+      "enabled": true,
+      "range": 60
+    }
+  },
+  "flags": {
+    "hollow-garden": {
+      "statblock": true
+    }
+  },
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.9"
+  }
+}

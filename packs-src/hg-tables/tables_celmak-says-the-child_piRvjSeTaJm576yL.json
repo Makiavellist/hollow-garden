@@ -1,0 +1,174 @@
+{
+  "_id": "piRvjSeTaJm576yL",
+  "_key": "!tables!piRvjSeTaJm576yL",
+  "name": "Celmak Says: The Child",
+  "img": "icons/magic/control/fear-fright-monster-grin-purple-blue.webp",
+  "description": "<p>Lines for Celmak's Child persona. The Producer Console draws from these for “Random line.”</p>",
+  "formula": "1d8",
+  "replacement": true,
+  "displayRoll": true,
+  "results": [
+    {
+      "_id": "0tVHfVSYm8lDFwwG",
+      "_key": "!tables.results!piRvjSeTaJm576yL.0tVHfVSYm8lDFwwG",
+      "type": "text",
+      "name": "",
+      "description": "That's not fair! You broke my favourite toy!",
+      "text": "That's not fair! You broke my favourite toy!",
+      "img": "icons/magic/control/fear-fright-monster-grin-purple-blue.webp",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "UoRJbIYruK2AgEMC",
+      "_key": "!tables.results!piRvjSeTaJm576yL.UoRJbIYruK2AgEMC",
+      "type": "text",
+      "name": "",
+      "description": "You're not supposed to do that! It's not in the script!",
+      "text": "You're not supposed to do that! It's not in the script!",
+      "img": "icons/magic/control/fear-fright-monster-grin-purple-blue.webp",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "GESqHjRS8PZRFXpy",
+      "_key": "!tables.results!piRvjSeTaJm576yL.GESqHjRS8PZRFXpy",
+      "type": "text",
+      "name": "",
+      "description": "I'm not crying. The speakers are crying.",
+      "text": "I'm not crying. The speakers are crying.",
+      "img": "icons/magic/control/fear-fright-monster-grin-purple-blue.webp",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "RIMbReiVv4GFXD00",
+      "_key": "!tables.results!piRvjSeTaJm576yL.RIMbReiVv4GFXD00",
+      "type": "text",
+      "name": "",
+      "description": "Fine. FINE. No snacks for anybody.",
+      "text": "Fine. FINE. No snacks for anybody.",
+      "img": "icons/magic/control/fear-fright-monster-grin-purple-blue.webp",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "iG0VJmM189scA3lN",
+      "_key": "!tables.results!piRvjSeTaJm576yL.iG0VJmM189scA3lN",
+      "type": "text",
+      "name": "",
+      "description": "Nobody ever plays the game properly with me.",
+      "text": "Nobody ever plays the game properly with me.",
+      "img": "icons/magic/control/fear-fright-monster-grin-purple-blue.webp",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "6KcopSm1IzYBjJJU",
+      "_key": "!tables.results!piRvjSeTaJm576yL.6KcopSm1IzYBjJJU",
+      "type": "text",
+      "name": "",
+      "description": "You'll be sorry when the ratings drop. You'll ALL be sorry.",
+      "text": "You'll be sorry when the ratings drop. You'll ALL be sorry.",
+      "img": "icons/magic/control/fear-fright-monster-grin-purple-blue.webp",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "ucHlferAjbGNOarQ",
+      "_key": "!tables.results!piRvjSeTaJm576yL.ucHlferAjbGNOarQ",
+      "type": "text",
+      "name": "",
+      "description": "I made all of this for you and you don't even like it.",
+      "text": "I made all of this for you and you don't even like it.",
+      "img": "icons/magic/control/fear-fright-monster-grin-purple-blue.webp",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "FJKqXsw9XKbkGdnw",
+      "_key": "!tables.results!piRvjSeTaJm576yL.FJKqXsw9XKbkGdnw",
+      "type": "text",
+      "name": "",
+      "description": "That's cheating! Director's cut! Do it again!",
+      "text": "That's cheating! Director's cut! Do it again!",
+      "img": "icons/magic/control/fear-fright-monster-grin-purple-blue.webp",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    }
+  ],
+  "folder": "xenpLnJRecZ0n1LH",
+  "sort": 400,
+  "flags": {
+    "hollow-garden": {
+      "key": "quips-child"
+    }
+  },
+  "_stats": {
+    "coreVersion": "13.351"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "_id": "5HmeaKvchI0d64TD",
+  "_key": "!items!5HmeaKvchI0d64TD",
+  "name": "Monofilament Fan",
+  "type": "weapon",
+  "img": "icons/magic/air/wind-swirl-gray-blue.webp",
+  "folder": "iZyWbMInuudM5zh6",
+  "sort": 700,
+  "system": {
+    "description": {
+      "value": "<p><strong>Price</strong> 4,000 gp; <strong>Type</strong> exotic light melee weapon; <strong>Damage</strong> 1d6 (Small), 1d8 (Medium); <strong>Critical</strong> 18–20/×2; <strong>Damage Type</strong> slashing; <strong>Weight</strong> 1 lb.</p><p>A folding fan whose ribs carry monofilament edges. It can be used with Weapon Finesse and ignores the first 10 points of an object's hardness. A creature wielding one in each hand counts as wielding a light weapon in its off hand.</p><p><em>Found in: Episode 2. Each Courtier Mannequin carries a pair.</em></p>"
+    },
+    "subType": "exotic",
+    "weaponSubtype": "light",
+    "hands": 1,
+    "price": 4000,
+    "weight": {
+      "value": 1
+    },
+    "properties": {
+      "fin": true
+    },
+    "baseTypes": [
+      "Monofilament Fan"
+    ],
+    "actions": [
+      {
+        "_id": "mgvlvQljxpIpFjHX",
+        "name": "Attack",
+        "actionType": "mwak",
+        "activation": {
+          "type": "attack",
+          "unchained": {
+            "type": "attack"
+          }
+        },
+        "ability": {
+          "attack": "str",
+          "damage": "str",
+          "critRange": 18,
+          "critMult": 2
+        },
+        "damage": {
+          "parts": [
+            {
+              "formula": "sizeRoll(1, 8, @size)",
+              "types": [
+                "slashing"
+              ]
+            }
+          ]
+        },
+        "extraAttacks": {
+          "type": "standard"
+        },
+        "range": {
+          "units": "melee"
+        }
+      }
+    ]
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.9"
+  }
+}

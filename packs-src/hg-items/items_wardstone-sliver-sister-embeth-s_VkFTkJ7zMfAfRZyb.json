@@ -1,0 +1,54 @@
+{
+  "_id": "VkFTkJ7zMfAfRZyb",
+  "_key": "!items!VkFTkJ7zMfAfRZyb",
+  "name": "Wardstone Sliver (Sister Embeth's)",
+  "type": "loot",
+  "img": "icons/commodities/treasure/stone-cracked-lightning-blue.webp",
+  "folder": "D9XHPYDC8UGn7sRq",
+  "sort": 1000,
+  "system": {
+    "description": {
+      "value": "<p><strong>Whose it was.</strong> Sister Embeth of the Mendevian Crusade, who carried it through the Worldwound.</p><p>Once, as a standard action, its bearer can touch a demon, which must succeed at a DC 20 Will save or be staggered for 1d4 rounds. Vlathherex's cast give it a wide berth.</p><p><em>From the hoard of the fallen, sorted by owner and labelled in Celmak's neat handwriting.</em></p>"
+    },
+    "price": 5000,
+    "subType": "misc",
+    "uses": {
+      "per": "single"
+    },
+    "actions": [
+      {
+        "_id": "insd8nyeJ9BJ5CWE",
+        "name": "Touch a demon",
+        "activation": {
+          "type": "standard",
+          "unchained": {
+            "type": "action",
+            "cost": 2
+          }
+        },
+        "actionType": "save",
+        "save": {
+          "type": "will",
+          "dc": "20",
+          "description": "Will negates"
+        },
+        "notes": {
+          "effect": [
+            "Demon staggered 1d4 rounds"
+          ],
+          "footer": []
+        },
+        "duration": {
+          "value": "1d4",
+          "units": "round"
+        }
+      }
+    ]
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.9"
+  }
+}

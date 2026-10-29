@@ -1,0 +1,79 @@
+{
+  "_id": "fX5KhnHE6AQyX8VL",
+  "_key": "!tables!fX5KhnHE6AQyX8VL",
+  "name": "The Ambassadors: Isuma's Confessional (d3)",
+  "img": "icons/skills/trades/music-singing-voice-blue.webp",
+  "description": "<p>The secret Celmak's scan pulled from Isuma, played aloud to everyone. Pick one that fits your table.</p>",
+  "formula": "1d3",
+  "replacement": true,
+  "displayRoll": true,
+  "results": [
+    {
+      "_id": "8FHNP1wtxiR18wbu",
+      "_key": "!tables.results!fX5KhnHE6AQyX8VL.8FHNP1wtxiR18wbu",
+      "type": "text",
+      "name": "",
+      "description": "She wishes she had been woken first instead of last.",
+      "text": "She wishes she had been woken first instead of last.",
+      "img": "icons/skills/trades/music-singing-voice-blue.webp",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "MYU6ARGH64fMv7B2",
+      "_key": "!tables.results!fX5KhnHE6AQyX8VL.MYU6ARGH64fMv7B2",
+      "type": "text",
+      "name": "",
+      "description": "She sometimes thinks the xoarians' hosts are luckier than she is.",
+      "text": "She sometimes thinks the xoarians' hosts are luckier than she is.",
+      "img": "icons/skills/trades/music-singing-voice-blue.webp",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "mh6zfUN1cWNKzRZa",
+      "_key": "!tables.results!fX5KhnHE6AQyX8VL.mh6zfUN1cWNKzRZa",
+      "type": "text",
+      "name": "",
+      "description": "She has stopped believing she will ever see Kasath again.",
+      "text": "She has stopped believing she will ever see Kasath again.",
+      "img": "icons/skills/trades/music-singing-voice-blue.webp",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    }
+  ],
+  "folder": "ioKH1pEXANkFqbcK",
+  "sort": 800,
+  "flags": {
+    "hollow-garden": {
+      "key": "confessional"
+    }
+  },
+  "_stats": {
+    "coreVersion": "13.351"
+  }
+}

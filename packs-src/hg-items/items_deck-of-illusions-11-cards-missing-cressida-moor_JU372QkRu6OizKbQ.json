@@ -1,0 +1,22 @@
+{
+  "_id": "JU372QkRu6OizKbQ",
+  "_key": "!items!JU372QkRu6OizKbQ",
+  "name": "Deck of Illusions, 11 Cards Missing (Cressida Moor's)",
+  "type": "loot",
+  "img": "icons/sundries/gaming/playing-cards.webp",
+  "folder": "D9XHPYDC8UGn7sRq",
+  "sort": 900,
+  "system": {
+    "description": {
+      "value": "<p><strong>Whose it was.</strong> Lady Cressida Moor, a Galtan card sharp. Celmak borrowed the missing cards to study; she has them in the Booth.</p><p>Use the standard rules for a <em>deck of illusions</em> (Core Rulebook), minus eleven cards.</p><p><em>From the hoard of the fallen, sorted by owner and labelled in Celmak's neat handwriting.</em></p>"
+    },
+    "price": 5600,
+    "subType": "misc"
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.9"
+  }
+}

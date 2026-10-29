@@ -1,0 +1,22 @@
+{
+  "_id": "05ZqujnFG3KXuLkc",
+  "_key": "!items!05ZqujnFG3KXuLkc",
+  "name": "Lot 8: A Genuine Celmak Original",
+  "type": "loot",
+  "img": "icons/commodities/treasure/bust-carved-stone.webp",
+  "folder": "YvibWalgscAk7V3q",
+  "sort": 80,
+  "system": {
+    "description": {
+      "value": "<blockquote class=\"hg-readaloud\"><p><em>“A Genuine Celmak Original! Your portrait, by the artist herself.” (Open 1, rival max 3)</em></p></blockquote><p>A flattering hologram portrait of the winner. It is also a camera drone that follows the winner everywhere: Celmak gains a +2 bonus on Muse scans against them. Destroying it costs 1 rating; Celmak sulks for an hour.</p>"
+    },
+    "subType": "gear",
+    "price": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.9"
+  }
+}

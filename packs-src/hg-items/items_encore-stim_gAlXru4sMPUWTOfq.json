@@ -1,0 +1,49 @@
+{
+  "_id": "gAlXru4sMPUWTOfq",
+  "_key": "!items!gAlXru4sMPUWTOfq",
+  "name": "Encore Stim",
+  "type": "consumable",
+  "img": "icons/consumables/potions/potion-flask-corked-labeled-pink.webp",
+  "folder": "2aeIMGZ9wK8d3uo4",
+  "sort": 200,
+  "system": {
+    "description": {
+      "value": "<p><strong>Price</strong> 1,200 gp; <strong>Usage</strong> single use</p><p>The user is <em>@UUID[Compendium.pf1.spells.Item.s9amdo5398alb5p0]{hasted}</em> for 5 rounds, then fatigued for 1 minute.</p><p><em>Trinket (d8: 2).</em></p>"
+    },
+    "subType": "misc",
+    "price": 1200,
+    "uses": {
+      "per": "single"
+    },
+    "actions": [
+      {
+        "_id": "l5ppma0gRDsy4baF",
+        "name": "Inject",
+        "activation": {
+          "type": "standard",
+          "unchained": {
+            "type": "action",
+            "cost": 2
+          }
+        },
+        "actionType": "other",
+        "notes": {
+          "effect": [
+            "Hasted 5 rounds, then fatigued 1 minute"
+          ],
+          "footer": []
+        },
+        "duration": {
+          "value": "5",
+          "units": "round"
+        }
+      }
+    ]
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.9"
+  }
+}

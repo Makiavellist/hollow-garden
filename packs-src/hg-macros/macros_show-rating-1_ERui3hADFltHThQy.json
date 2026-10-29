@@ -1,0 +1,15 @@
+{
+  "_id": "ERui3hADFltHThQy",
+  "_key": "!macros!ERui3hADFltHThQy",
+  "name": "Show Rating −1",
+  "type": "script",
+  "img": "modules/hollow-garden/assets/host/bored.webp",
+  "command": "// The Hollow Garden: Show Rating −1\nconst api = game.modules.get(\"hollow-garden\")?.api;\nif (!api) return ui.notifications.warn(\"The Hollow Garden module is not active.\");\napi.adjustShow(-1, 'Macro');",
+  "scope": "global",
+  "folder": null,
+  "sort": 800,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351"
+  }
+}

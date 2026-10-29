@@ -1,0 +1,22 @@
+{
+  "_id": "7hCEkckHb7zeJWQM",
+  "_key": "!items!7hCEkckHb7zeJWQM",
+  "name": "Lot 3: A Producer's Share",
+  "type": "loot",
+  "img": "icons/sundries/documents/document-sealed-red-yellow.webp",
+  "folder": "YvibWalgscAk7V3q",
+  "sort": 30,
+  "system": {
+    "description": {
+      "value": "<blockquote class=\"hg-readaloud\"><p><em>“A Producer's Share: a cut of the house, for one lucky contestant.” (Open 1, rival max 1)</em></p></blockquote><p>A trap. Whoever signs must make a DC 25 Will save or be bound as <em>@UUID[Compendium.pf1.spells.Item.ofw6gnp6r7t2wcba]{lesser geas}</em> not to leave the Garden before the finale. Sense Motive DC 25 reveals the catch.</p>"
+    },
+    "subType": "gear",
+    "price": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.9"
+  }
+}

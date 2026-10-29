@@ -1,0 +1,46 @@
+{
+  "_id": "3ZdWefSPAUlc1WCV",
+  "_key": "!items!3ZdWefSPAUlc1WCV",
+  "name": "Ambassador's Recording Crystal",
+  "type": "loot",
+  "img": "icons/commodities/gems/gem-faceted-radiant-teal.webp",
+  "folder": "iZyWbMInuudM5zh6",
+  "sort": 800,
+  "system": {
+    "description": {
+      "value": "<p><strong>Price</strong> 4,000 gp; <strong>Slot</strong> none; <strong>Weight</strong> —</p><p>A palm-sized Androffan memory crystal that plays back, in light and sound, the evening the kasatha ambassadors spent on the entertainment deck. Once per day, a kasatha who spends a minute watching it gains a +2 morale bonus on attack rolls and Will saves for 1 hour.</p><p><em>Found in: Episode 2 (Lot 5) or The Ambassadors.</em></p>"
+    },
+    "subType": "misc",
+    "price": 4000,
+    "actions": [
+      {
+        "_id": "KRG9IvndhJJkWAiB",
+        "name": "Watch (1 minute)",
+        "activation": {
+          "type": "minute",
+          "unchained": {
+            "type": "action",
+            "cost": 2
+          }
+        },
+        "actionType": "other",
+        "notes": {
+          "effect": [
+            "Kasatha: +2 morale on attacks and Will saves"
+          ],
+          "footer": []
+        },
+        "duration": {
+          "value": "1",
+          "units": "hour"
+        }
+      }
+    ]
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.9"
+  }
+}

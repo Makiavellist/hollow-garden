@@ -1,0 +1,22 @@
+{
+  "_id": "2Q1xayqDGtn3YkrF",
+  "_key": "!items!2Q1xayqDGtn3YkrF",
+  "name": "Lot 13: A Front-Row Seat",
+  "type": "loot",
+  "img": "icons/sundries/gaming/chess-knight-white.webp",
+  "folder": "YvibWalgscAk7V3q",
+  "sort": 130,
+  "system": {
+    "description": {
+      "value": "<blockquote class=\"hg-readaloud\"><p><em>“A Front-Row Seat for the next episode. The best view in the house.” (Open 4, rival max 8)</em></p></blockquote><p>The winner sits out the next episode in the Booth's guest box, completely safe. The Booth is lit, full of monitors, and empty except for a single mannequin slumped in the director's chair with its eyes dark. Whenever Celmak speaks, its eyes glow and its head turns. A DC 20 Perception check shows a thick data cable running from its spine into the floor.</p>"
+    },
+    "subType": "gear",
+    "price": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.9"
+  }
+}

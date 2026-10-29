@@ -1,0 +1,22 @@
+{
+  "_id": "8GCB9EweDlp6htFU",
+  "_key": "!items!8GCB9EweDlp6htFU",
+  "name": "Lot 11: The Mystery Box",
+  "type": "loot",
+  "img": "icons/containers/boxes/crate-wooden-brown.webp",
+  "folder": "YvibWalgscAk7V3q",
+  "sort": 110,
+  "system": {
+    "description": {
+      "value": "<blockquote class=\"hg-readaloud\"><p><em>“The Mystery Box. Nobody knows. Not even me.” (Open 1, rival max 2)</em></p></blockquote><p>Roll 1d6 on the <strong>Mystery Box</strong> roll table.</p>"
+    },
+    "subType": "gear",
+    "price": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.9"
+  }
+}

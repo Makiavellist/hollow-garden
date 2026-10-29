@@ -1,0 +1,174 @@
+{
+  "_id": "UA37EYqjIA4fMFEh",
+  "_key": "!tables!UA37EYqjIA4fMFEh",
+  "name": "Celmak Says: The Host",
+  "img": "icons/skills/trades/music-singing-voice-blue.webp",
+  "description": "<p>Lines for Celmak's Host persona. The Producer Console draws from these for “Random line.”</p>",
+  "formula": "1d8",
+  "replacement": true,
+  "displayRoll": true,
+  "results": [
+    {
+      "_id": "vKF7KFEIdOjg7jIP",
+      "_key": "!tables.results!UA37EYqjIA4fMFEh.vKF7KFEIdOjg7jIP",
+      "type": "text",
+      "name": "",
+      "description": "Contestants, the doors are open and the stakes are personal!",
+      "text": "Contestants, the doors are open and the stakes are personal!",
+      "img": "icons/skills/trades/music-singing-voice-blue.webp",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "zfr1DnPrEV90pQKP",
+      "_key": "!tables.results!UA37EYqjIA4fMFEh.zfr1DnPrEV90pQKP",
+      "type": "text",
+      "name": "",
+      "description": "Welcome back to The Hollow Garden, where every exit is an entrance!",
+      "text": "Welcome back to The Hollow Garden, where every exit is an entrance!",
+      "img": "icons/skills/trades/music-singing-voice-blue.webp",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "gxgtGXE7RY4i7pRS",
+      "_key": "!tables.results!UA37EYqjIA4fMFEh.gxgtGXE7RY4i7pRS",
+      "type": "text",
+      "name": "",
+      "description": "Give it up for our brave, brave, slightly bleeding contestants!",
+      "text": "Give it up for our brave, brave, slightly bleeding contestants!",
+      "img": "icons/skills/trades/music-singing-voice-blue.webp",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "BFKtRNATzCQAjrsK",
+      "_key": "!tables.results!UA37EYqjIA4fMFEh.BFKtRNATzCQAjrsK",
+      "type": "text",
+      "name": "",
+      "description": "Stay tuned, darlings. The best part is always after the break.",
+      "text": "Stay tuned, darlings. The best part is always after the break.",
+      "img": "icons/skills/trades/music-singing-voice-blue.webp",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "RLnCmvw4Gfe73Z9q",
+      "_key": "!tables.results!UA37EYqjIA4fMFEh.RLnCmvw4Gfe73Z9q",
+      "type": "text",
+      "name": "",
+      "description": "Ratings are UP! Somebody tell the lawyers. Oh wait. I ate the lawyers.",
+      "text": "Ratings are UP! Somebody tell the lawyers. Oh wait. I ate the lawyers.",
+      "img": "icons/skills/trades/music-singing-voice-blue.webp",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "1p7DyEiVGj7e1QPw",
+      "_key": "!tables.results!UA37EYqjIA4fMFEh.1p7DyEiVGj7e1QPw",
+      "type": "text",
+      "name": "",
+      "description": "Remember the rules: rest in the Green Room, vote with your hearts, and nobody leaves early!",
+      "text": "Remember the rules: rest in the Green Room, vote with your hearts, and nobody leaves early!",
+      "img": "icons/skills/trades/music-singing-voice-blue.webp",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "PXBjucrxbAXBgLSj",
+      "_key": "!tables.results!UA37EYqjIA4fMFEh.PXBjucrxbAXBgLSj",
+      "type": "text",
+      "name": "",
+      "description": "And now, a word from our sponsor: me!",
+      "text": "And now, a word from our sponsor: me!",
+      "img": "icons/skills/trades/music-singing-voice-blue.webp",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "D5rro0Tup46AhHRv",
+      "_key": "!tables.results!UA37EYqjIA4fMFEh.D5rro0Tup46AhHRv",
+      "type": "text",
+      "name": "",
+      "description": "Let's spin that wheel and see whose nightmare is next!",
+      "text": "Let's spin that wheel and see whose nightmare is next!",
+      "img": "icons/skills/trades/music-singing-voice-blue.webp",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    }
+  ],
+  "folder": "xenpLnJRecZ0n1LH",
+  "sort": 100,
+  "flags": {
+    "hollow-garden": {
+      "key": "quips-host"
+    }
+  },
+  "_stats": {
+    "coreVersion": "13.351"
+  }
+}

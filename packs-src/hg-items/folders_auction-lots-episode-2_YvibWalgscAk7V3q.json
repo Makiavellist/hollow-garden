@@ -1,0 +1,15 @@
+{
+  "_id": "YvibWalgscAk7V3q",
+  "_key": "!folders!YvibWalgscAk7V3q",
+  "name": "Auction Lots (Episode 2)",
+  "type": "Item",
+  "color": "#b8860b",
+  "sorting": "m",
+  "sort": 300,
+  "folder": null,
+  "description": "",
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351"
+  }
+}

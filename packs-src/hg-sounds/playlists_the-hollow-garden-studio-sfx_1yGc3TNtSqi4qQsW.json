@@ -1,0 +1,380 @@
+{
+  "_id": "1yGc3TNtSqi4qQsW",
+  "_key": "!playlists!1yGc3TNtSqi4qQsW",
+  "name": "The Hollow Garden: Studio SFX",
+  "description": "Gameshow stings for Celmak's studio.",
+  "mode": -1,
+  "channel": "environment",
+  "sounds": [
+    {
+      "_id": "rlotKuFK3Hk3ZJQX",
+      "_key": "!playlists.sounds!1yGc3TNtSqi4qQsW.rlotKuFK3Hk3ZJQX",
+      "name": "Applause",
+      "path": "modules/hollow-garden/sounds/applause.ogg",
+      "repeat": false,
+      "volume": 0.8,
+      "fade": null,
+      "sort": 100,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "N2fuKTcm8BSTGMhl",
+      "_key": "!playlists.sounds!1yGc3TNtSqi4qQsW.N2fuKTcm8BSTGMhl",
+      "name": "Big Cheer",
+      "path": "modules/hollow-garden/sounds/cheer.ogg",
+      "repeat": false,
+      "volume": 0.8,
+      "fade": null,
+      "sort": 200,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "fpTlXK4ID4OysWpH",
+      "_key": "!playlists.sounds!1yGc3TNtSqi4qQsW.fpTlXK4ID4OysWpH",
+      "name": "Boo",
+      "path": "modules/hollow-garden/sounds/boo.ogg",
+      "repeat": false,
+      "volume": 0.8,
+      "fade": null,
+      "sort": 300,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "dhyD1iebhBwqsYGe",
+      "_key": "!playlists.sounds!1yGc3TNtSqi4qQsW.dhyD1iebhBwqsYGe",
+      "name": "Crowd: Ooh!",
+      "path": "modules/hollow-garden/sounds/crowd-ooh.ogg",
+      "repeat": false,
+      "volume": 0.8,
+      "fade": null,
+      "sort": 400,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "2mJCYulUf0Q3voMM",
+      "_key": "!playlists.sounds!1yGc3TNtSqi4qQsW.2mJCYulUf0Q3voMM",
+      "name": "Crowd: Aww",
+      "path": "modules/hollow-garden/sounds/crowd-aww.ogg",
+      "repeat": false,
+      "volume": 0.8,
+      "fade": null,
+      "sort": 500,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "W9BzBHqJLWFMfBEt",
+      "_key": "!playlists.sounds!1yGc3TNtSqi4qQsW.W9BzBHqJLWFMfBEt",
+      "name": "Correct Ding",
+      "path": "modules/hollow-garden/sounds/correct.ogg",
+      "repeat": false,
+      "volume": 0.8,
+      "fade": null,
+      "sort": 600,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "zWj3RRQXtOeG2QwV",
+      "_key": "!playlists.sounds!1yGc3TNtSqi4qQsW.zWj3RRQXtOeG2QwV",
+      "name": "Wrong Buzzer",
+      "path": "modules/hollow-garden/sounds/buzzer.ogg",
+      "repeat": false,
+      "volume": 0.8,
+      "fade": null,
+      "sort": 700,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "MtLzhWQGHIIYb0SW",
+      "_key": "!playlists.sounds!1yGc3TNtSqi4qQsW.MtLzhWQGHIIYb0SW",
+      "name": "Drumroll",
+      "path": "modules/hollow-garden/sounds/drumroll.ogg",
+      "repeat": false,
+      "volume": 0.8,
+      "fade": null,
+      "sort": 800,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "vNrqqouj1BDOdgeH",
+      "_key": "!playlists.sounds!1yGc3TNtSqi4qQsW.vNrqqouj1BDOdgeH",
+      "name": "Fanfare",
+      "path": "modules/hollow-garden/sounds/fanfare.ogg",
+      "repeat": false,
+      "volume": 0.8,
+      "fade": null,
+      "sort": 900,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "ozBDaWLtOJqHTmHy",
+      "_key": "!playlists.sounds!1yGc3TNtSqi4qQsW.ozBDaWLtOJqHTmHy",
+      "name": "Sad Trombone",
+      "path": "modules/hollow-garden/sounds/sad-trombone.ogg",
+      "repeat": false,
+      "volume": 0.8,
+      "fade": null,
+      "sort": 1000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "B9vVS0d5yhLH0j5K",
+      "_key": "!playlists.sounds!1yGc3TNtSqi4qQsW.B9vVS0d5yhLH0j5K",
+      "name": "Rimshot",
+      "path": "modules/hollow-garden/sounds/rimshot.ogg",
+      "repeat": false,
+      "volume": 0.8,
+      "fade": null,
+      "sort": 1100,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "AFaBRtOmQhYCME2D",
+      "_key": "!playlists.sounds!1yGc3TNtSqi4qQsW.AFaBRtOmQhYCME2D",
+      "name": "Airhorn",
+      "path": "modules/hollow-garden/sounds/airhorn.ogg",
+      "repeat": false,
+      "volume": 0.8,
+      "fade": null,
+      "sort": 1200,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "JWcfMwMjpxQx4ZeW",
+      "_key": "!playlists.sounds!1yGc3TNtSqi4qQsW.JWcfMwMjpxQx4ZeW",
+      "name": "Suspense Sting",
+      "path": "modules/hollow-garden/sounds/suspense.ogg",
+      "repeat": false,
+      "volume": 0.8,
+      "fade": null,
+      "sort": 1300,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "nG7f7WaYn0zf9DNO",
+      "_key": "!playlists.sounds!1yGc3TNtSqi4qQsW.nG7f7WaYn0zf9DNO",
+      "name": "Commercial Break Jingle",
+      "path": "modules/hollow-garden/sounds/jingle.ogg",
+      "repeat": false,
+      "volume": 0.8,
+      "fade": null,
+      "sort": 1400,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "xZJN4KGEPTwTssw4",
+      "_key": "!playlists.sounds!1yGc3TNtSqi4qQsW.xZJN4KGEPTwTssw4",
+      "name": "Ratings Up",
+      "path": "modules/hollow-garden/sounds/rating-up.ogg",
+      "repeat": false,
+      "volume": 0.8,
+      "fade": null,
+      "sort": 1500,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "sd7tHljrVAiszFYh",
+      "_key": "!playlists.sounds!1yGc3TNtSqi4qQsW.sd7tHljrVAiszFYh",
+      "name": "Ratings Down",
+      "path": "modules/hollow-garden/sounds/rating-down.ogg",
+      "repeat": false,
+      "volume": 0.8,
+      "fade": null,
+      "sort": 1600,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "lBJERamWCXGl15wn",
+      "_key": "!playlists.sounds!1yGc3TNtSqi4qQsW.lBJERamWCXGl15wn",
+      "name": "Escalation Alarm",
+      "path": "modules/hollow-garden/sounds/alarm.ogg",
+      "repeat": false,
+      "volume": 0.8,
+      "fade": null,
+      "sort": 1700,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "R7X2adHWfdTfFGj2",
+      "_key": "!playlists.sounds!1yGc3TNtSqi4qQsW.R7X2adHWfdTfFGj2",
+      "name": "Countdown",
+      "path": "modules/hollow-garden/sounds/countdown.ogg",
+      "repeat": false,
+      "volume": 0.8,
+      "fade": null,
+      "sort": 1800,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "u12QWbxPIcfheYGd",
+      "_key": "!playlists.sounds!1yGc3TNtSqi4qQsW.u12QWbxPIcfheYGd",
+      "name": "Glitch (The Gap)",
+      "path": "modules/hollow-garden/sounds/glitch.ogg",
+      "repeat": false,
+      "volume": 0.8,
+      "fade": null,
+      "sort": 1900,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "SDPrBY6HAipGNIdT",
+      "_key": "!playlists.sounds!1yGc3TNtSqi4qQsW.SDPrBY6HAipGNIdT",
+      "name": "Mood Gas Hiss",
+      "path": "modules/hollow-garden/sounds/gas.ogg",
+      "repeat": false,
+      "volume": 0.8,
+      "fade": null,
+      "sort": 2000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "EAc4KFe4ROVQ2sFT",
+      "_key": "!playlists.sounds!1yGc3TNtSqi4qQsW.EAc4KFe4ROVQ2sFT",
+      "name": "Confetti Pop",
+      "path": "modules/hollow-garden/sounds/confetti.ogg",
+      "repeat": false,
+      "volume": 0.8,
+      "fade": null,
+      "sort": 2100,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "42R3BUyAezPKzwKN",
+      "_key": "!playlists.sounds!1yGc3TNtSqi4qQsW.42R3BUyAezPKzwKN",
+      "name": "Wheel Wind-Up",
+      "path": "modules/hollow-garden/sounds/spin-start.ogg",
+      "repeat": false,
+      "volume": 0.8,
+      "fade": null,
+      "sort": 2200,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "BYCb5tfpbvZTgRd2",
+      "_key": "!playlists.sounds!1yGc3TNtSqi4qQsW.BYCb5tfpbvZTgRd2",
+      "name": "Wheel Tick",
+      "path": "modules/hollow-garden/sounds/tick.ogg",
+      "repeat": false,
+      "volume": 0.8,
+      "fade": null,
+      "sort": 2300,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "scElPloMxFfSKBWa",
+      "_key": "!playlists.sounds!1yGc3TNtSqi4qQsW.scElPloMxFfSKBWa",
+      "name": "Whoosh",
+      "path": "modules/hollow-garden/sounds/whoosh.ogg",
+      "repeat": false,
+      "volume": 0.8,
+      "fade": null,
+      "sort": 2400,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "zLu1QMYZ3mYZQxKl",
+      "_key": "!playlists.sounds!1yGc3TNtSqi4qQsW.zLu1QMYZ3mYZQxKl",
+      "name": "On Air Sting",
+      "path": "modules/hollow-garden/sounds/on-air.ogg",
+      "repeat": false,
+      "volume": 0.8,
+      "fade": null,
+      "sort": 2500,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "NTBqjNz9EeOyChZo",
+      "_key": "!playlists.sounds!1yGc3TNtSqi4qQsW.NTBqjNz9EeOyChZo",
+      "name": "Blown Kiss",
+      "path": "modules/hollow-garden/sounds/kiss.ogg",
+      "repeat": false,
+      "volume": 0.8,
+      "fade": null,
+      "sort": 2600,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351"
+  }
+}

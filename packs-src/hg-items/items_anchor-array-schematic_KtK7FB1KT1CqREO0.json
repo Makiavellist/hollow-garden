@@ -1,0 +1,22 @@
+{
+  "_id": "KtK7FB1KT1CqREO0",
+  "_key": "!items!KtK7FB1KT1CqREO0",
+  "name": "Anchor Array Schematic",
+  "type": "loot",
+  "img": "icons/commodities/tech/blueprint.webp",
+  "folder": "iZyWbMInuudM5zh6",
+  "sort": 900,
+  "system": {
+    "description": {
+      "value": "<p><strong>Price</strong> 3,000 gp; <strong>Slot</strong> none; <strong>Weight</strong> —</p><p>A data spike holding the Lock Tree's engineering drawings, hand-drawn by a dead Technic League engineer. Celmak did not write it, so it is immune to the honeypots. Plugged into any reader, it grants a +5 bonus on checks to find, disable or understand the Dimensional Anchor Array. Afterward, it grants a +2 bonus on checks against any Androffan dimensional anchor, which may matter at Silver Mount.</p><p><em>Found in: Episode 2 (Lot 4). Vlathherex bids on this and nothing else.</em></p>"
+    },
+    "subType": "misc",
+    "price": 3000
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.9"
+  }
+}

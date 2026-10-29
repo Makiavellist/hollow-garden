@@ -1,0 +1,15 @@
+{
+  "_id": "OU3Sevah7BE3AOor",
+  "_key": "!macros!OU3Sevah7BE3AOor",
+  "name": "Audience Vote",
+  "type": "script",
+  "img": "modules/hollow-garden/assets/host/countdown.webp",
+  "command": "// The Hollow Garden: Audience Vote\nconst api = game.modules.get(\"hollow-garden\")?.api;\nif (!api) return ui.notifications.warn(\"The Hollow Garden module is not active.\");\napi.openVote();",
+  "scope": "global",
+  "folder": null,
+  "sort": 400,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351"
+  }
+}

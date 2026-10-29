@@ -1,0 +1,22 @@
+{
+  "_id": "gu8Ei5rjHEsNUq42",
+  "_key": "!items!gu8Ei5rjHEsNUq42",
+  "name": "Coins and Gems of the Fallen",
+  "type": "loot",
+  "img": "icons/commodities/currency/coins-assorted-mix-copper-silver-gold.webp",
+  "folder": "D9XHPYDC8UGn7sRq",
+  "sort": 600,
+  "system": {
+    "description": {
+      "value": "<p><strong>Whose it was.</strong> Dozens of victims: Numerian sovereigns, Taldan crowns, Androffan credit chips, a Chelish wedding ring.</p><p>Worth 9,000 gp in total.</p><p><em>From the hoard of the fallen, sorted by owner and labelled in Celmak's neat handwriting.</em></p>"
+    },
+    "price": 9000,
+    "subType": "tradeGoods"
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.9"
+  }
+}

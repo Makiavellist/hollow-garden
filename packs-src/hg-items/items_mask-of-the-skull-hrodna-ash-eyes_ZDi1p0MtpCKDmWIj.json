@@ -1,0 +1,24 @@
+{
+  "_id": "ZDi1p0MtpCKDmWIj",
+  "_key": "!items!ZDi1p0MtpCKDmWIj",
+  "name": "Mask of the Skull (Hrodna Ash-Eyes')",
+  "type": "equipment",
+  "img": "icons/equipment/head/mask-carved-wood-brown.webp",
+  "folder": "D9XHPYDC8UGn7sRq",
+  "sort": 300,
+  "system": {
+    "description": {
+      "value": "<p><strong>Whose it was.</strong> Hrodna Ash-Eyes, a Kellid witch-hunter of the Sky Citadel, who came to burn “the machine witch.”</p><p>Use the standard rules for a <em>mask of the skull</em> (Core Rulebook).</p><p><em>From the hoard of the fallen, sorted by owner and labelled in Celmak's neat handwriting.</em></p>"
+    },
+    "price": 22000,
+    "subType": "wondrous",
+    "slot": "head",
+    "equipped": false
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.9"
+  }
+}

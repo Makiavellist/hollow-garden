@@ -1,0 +1,57 @@
+{
+  "_id": "qi1Y2xzIy5hs2VCh",
+  "_key": "!items!qi1Y2xzIy5hs2VCh",
+  "name": "Spotlight Flare",
+  "type": "consumable",
+  "img": "icons/commodities/tech/smoke-bomb-red-yellow.webp",
+  "folder": "2aeIMGZ9wK8d3uo4",
+  "sort": 400,
+  "system": {
+    "description": {
+      "value": "<p><strong>Price</strong> 600 gp; <strong>Usage</strong> single use</p><p>Thrown 30 ft.; bright light in a 60-ft radius for 1 minute, and outlines invisible creatures as <em>@UUID[Compendium.pf1.spells.Item.bl71og1gklwncmt7]{faerie fire}</em>.</p><p><em>Trinket (d8: 4). Light is the enemy of shadows, and the friend of holograms.</em></p>"
+    },
+    "subType": "misc",
+    "price": 600,
+    "uses": {
+      "per": "single"
+    },
+    "actions": [
+      {
+        "_id": "kdbK8bdJ5QGJz7C0",
+        "name": "Throw",
+        "activation": {
+          "type": "standard",
+          "unchained": {
+            "type": "action",
+            "cost": 2
+          }
+        },
+        "actionType": "other",
+        "measureTemplate": {
+          "type": "circle",
+          "size": "60"
+        },
+        "range": {
+          "value": "30",
+          "units": "ft"
+        },
+        "notes": {
+          "effect": [
+            "Bright light 60 ft.; outlines invisible creatures"
+          ],
+          "footer": []
+        },
+        "duration": {
+          "value": "1",
+          "units": "minute"
+        }
+      }
+    ]
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.9"
+  }
+}

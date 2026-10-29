@@ -1,0 +1,22 @@
+{
+  "_id": "RmKjsHalrF5AkG40",
+  "_key": "!items!RmKjsHalrF5AkG40",
+  "name": "Bag of Tricks, Tan (Pip Thornwhistle's)",
+  "type": "loot",
+  "img": "icons/containers/bags/sack-leather-tan.webp",
+  "folder": "D9XHPYDC8UGn7sRq",
+  "sort": 800,
+  "system": {
+    "description": {
+      "value": "<p><strong>Whose it was.</strong> Pip Thornwhistle, a gnome animal trainer. Celmak “fixed” it: it now produces only small robotic animals with the same statistics.</p><p>Use the standard rules for a tan <em>bag of tricks</em> (Core Rulebook).</p><p><em>From the hoard of the fallen, sorted by owner and labelled in Celmak's neat handwriting.</em></p>"
+    },
+    "price": 6300,
+    "subType": "misc"
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.9"
+  }
+}

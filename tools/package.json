@@ -1,0 +1,11 @@
+{
+  "name": "hollow-garden-tools",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "python3 build.py && node compile.mjs"
+  },
+  "devDependencies": {
+    "@foundryvtt/foundryvtt-cli": "3.0.5"
+  }
+}

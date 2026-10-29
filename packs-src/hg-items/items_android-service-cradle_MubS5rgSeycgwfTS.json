@@ -1,0 +1,63 @@
+{
+  "_id": "MubS5rgSeycgwfTS",
+  "_key": "!items!MubS5rgSeycgwfTS",
+  "name": "Android Service Cradle",
+  "type": "loot",
+  "img": "icons/commodities/tech/frame-copper.webp",
+  "folder": "iZyWbMInuudM5zh6",
+  "sort": 500,
+  "system": {
+    "description": {
+      "value": "<p><strong>Price</strong> 12,000 gp; <strong>Slot</strong> none; <strong>Weight</strong> 8 lb.; <strong>Capacity</strong> 10; <strong>Usage</strong> 5 charges per use</p><p>A folding maintenance cradle from the <em>Divinity</em>'s android workshops, “complimentary with purchase.” An android or other construct that rests in it for 10 minutes regains 10d6 hit points and is cured of one of the following conditions: fatigued, sickened, staggered or confused. It also lets its user find and purge factory override phrases, like the one Celmak holds over Meyanda, without a check.</p><p><strong>Construction Requirements</strong> Craft Technological Item, military lab; <strong>Cost</strong> 6,000 gp; <strong>Craft</strong> DC 26.</p><p><em>Found in: Mint Condition (Meyanda's episode).</em></p>"
+    },
+    "subType": "gear",
+    "price": 12000,
+    "weight": {
+      "value": 8
+    },
+    "uses": {
+      "per": "charges",
+      "maxFormula": "10",
+      "value": 10
+    },
+    "actions": [
+      {
+        "_id": "B0734R7v79pDSNY4",
+        "name": "Service (10 minutes)",
+        "activation": {
+          "type": "minute",
+          "unchained": {
+            "type": "action",
+            "cost": 2
+          }
+        },
+        "actionType": "heal",
+        "damage": {
+          "parts": [
+            {
+              "formula": "10d6",
+              "types": [
+                "untyped"
+              ]
+            }
+          ]
+        },
+        "uses": {
+          "autoDeductChargesCost": "5"
+        },
+        "notes": {
+          "effect": [
+            "Androids/constructs only; also cures fatigued, sickened, staggered or confused"
+          ],
+          "footer": []
+        }
+      }
+    ]
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.9"
+  }
+}

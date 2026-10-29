@@ -1,0 +1,679 @@
+{
+  "_id": "QI3Ph0l0gGyZB733",
+  "_key": "!actors!QI3Ph0l0gGyZB733",
+  "name": "Stagehand Drone",
+  "type": "npc",
+  "img": "icons/commodities/tech/sensor-yellow.webp",
+  "system": {
+    "abilities": {
+      "str": {
+        "value": 8
+      },
+      "dex": {
+        "value": 18
+      },
+      "con": {
+        "value": null
+      },
+      "int": {
+        "value": 10
+      },
+      "wis": {
+        "value": 12
+      },
+      "cha": {
+        "value": 8
+      }
+    },
+    "attributes": {
+      "naturalAC": 6,
+      "hp": {
+        "temp": 40
+      },
+      "speed": {
+        "land": {
+          "base": 20
+        },
+        "fly": {
+          "base": 50,
+          "maneuverability": "perfect"
+        }
+      },
+      "cmdNotes": "",
+      "saveNotes": "",
+      "acNotes": "",
+      "quadruped": false,
+      "sr": {
+        "formula": ""
+      }
+    },
+    "details": {
+      "cr": {
+        "base": 8
+      },
+      "alignment": "tn",
+      "biography": {
+        "value": "<p>A disc-shaped robot the size of a shield, bristling with lenses, tools and a dart launcher. Drones build the sets, fix the cast, and sedate contestants who try to leave the stage. When the ratings hit 2, the next encounter gains one.</p>"
+      },
+      "notes": {
+        "value": "<div class=\"hg-journal\"><h3>Printed stat block</h3><section class=\"hg-statblock\"><h4 class=\"hg-sb-title\">STAGEHAND DRONE — CR 8</h4><p><strong>XP</strong> 4,800 · N Small construct (robot)</p><p><strong>Init</strong> +8; <strong>Senses</strong> darkvision 60 ft., low-light vision; Perception +13</p><h5 class=\"hg-sb-section\">DEFENSE</h5><p><strong>AC</strong> 22, touch 16, flat-footed 17 (+4 Dex, +1 dodge, +6 natural, +1 size)</p><p><strong>hp</strong> 60 (9d10+10); force field (40 hp, fast healing 8)</p><p><strong>Fort</strong> +3, <strong>Ref</strong> +7, <strong>Will</strong> +4</p><p><strong>Immune</strong> construct traits; <strong>Weaknesses</strong> vulnerable to critical hits, vulnerable to electricity</p><h5 class=\"hg-sb-section\">OFFENSE</h5><p><strong>Speed</strong> 20 ft., fly 50 ft. (perfect)</p><p><strong>Ranged</strong> tranquilizer dart +14 (1d4 plus tranquilizer)</p><p><strong>Special Attacks</strong> repair beam, stage smoke</p><h5 class=\"hg-sb-section\">STATISTICS</h5><p><strong>Str</strong> 8, <strong>Dex</strong> 18, <strong>Con</strong> —, <strong>Int</strong> 10, <strong>Wis</strong> 12, <strong>Cha</strong> 8</p><p><strong>Base Atk</strong> +9; <strong>CMB</strong> +7; <strong>CMD</strong> 22</p><p><strong>Feats</strong> Dodge, Flyby Attack, Improved Initiative, Point-Blank Shot, Precise Shot</p><p><strong>Skills</strong> Disable Device +16, Fly +14, Perception +13</p><p><strong>Languages</strong> Androffan (understands only)</p><h5 class=\"hg-sb-section\">SPECIAL ABILITIES</h5><p><strong>Repair Beam (Ex)</strong> Five times per day as a standard action, the drone can restore 3d6+9 hit points to a construct within 30 feet. This does not restore force field hit points.</p><p><strong>Stage Smoke (Ex)</strong> Three times per day as a standard action, the drone can fill a 20-foot radius with smoke, as <em>obscuring mist</em>.</p><p><strong>Tranquilizer (Ex)</strong> Dart—injury; <em>save</em> Fort DC 16; <em>frequency</em> 1/round for 4 rounds; <em>effect</em> 1d2 Dex damage and staggered for 1 round; <em>cure</em> 1 save.</p></section></div>"
+      }
+    },
+    "skills": {
+      "dev": {
+        "rank": 9
+      },
+      "fly": {
+        "rank": 9
+      },
+      "per": {
+        "rank": 9
+      }
+    },
+    "traits": {
+      "size": "sm",
+      "senses": {
+        "dv": {
+          "value": 60
+        },
+        "ll": {
+          "enabled": true
+        }
+      },
+      "ci": [
+        "bleed",
+        "deathEffects",
+        "disease",
+        "energyDrain",
+        "exhausted",
+        "fatigue",
+        "mindAffecting",
+        "paralyze",
+        "poison",
+        "sleep",
+        "stun"
+      ],
+      "di": [],
+      "dv": [
+        "electric"
+      ],
+      "dr": {
+        "value": [],
+        "custom": ""
+      },
+      "eres": {
+        "value": [],
+        "custom": ""
+      },
+      "fastHealing": "8 (force field only)",
+      "languages": [
+        "androffan",
+        "understands only"
+      ]
+    }
+  },
+  "items": [
+    {
+      "_id": "zwT1D1ImIunDeOd5",
+      "name": "Robot",
+      "type": "race",
+      "img": "systems/pf1/icons/races/creature-types/construct.png",
+      "system": {
+        "creatureTypes": [
+          "construct"
+        ],
+        "creatureSubtypes": [
+          "robot"
+        ],
+        "size": "sm",
+        "speeds": {
+          "land": 20
+        },
+        "description": {
+          "value": ""
+        }
+      },
+      "_key": "!actors.items!QI3Ph0l0gGyZB733.zwT1D1ImIunDeOd5",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "RTuBC0SoZPMxchQc",
+      "name": "Construct (Robot)",
+      "type": "class",
+      "img": "systems/pf1/icons/skills/mech_7.jpg",
+      "system": {
+        "subType": "racial",
+        "level": 9,
+        "hd": 10,
+        "hp": 50,
+        "bab": "high",
+        "skillsPerLevel": 2,
+        "tag": "construct",
+        "savingThrows": {
+          "fort": {
+            "value": "low"
+          },
+          "ref": {
+            "value": "low"
+          },
+          "will": {
+            "value": "low"
+          }
+        },
+        "description": {
+          "value": "<p>Racial Hit Dice: d10, full BAB, poor saves, no Constitution. Constructs gain bonus hit points by size.</p>"
+        },
+        "changes": [
+          {
+            "_id": "fh66Di10",
+            "formula": "max(0, @size - 2) * 10 + max(0, @size - 6) * 10",
+            "target": "mhp",
+            "type": "untypedPerm",
+            "operator": "add"
+          }
+        ]
+      },
+      "_key": "!actors.items!QI3Ph0l0gGyZB733.RTuBC0SoZPMxchQc",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "qRHLxmvzJFYtXbVC",
+      "name": "Stat Block Adjustments",
+      "type": "feat",
+      "img": "icons/commodities/tech/dial-meter-gauge-blue.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "na",
+        "changes": [
+          {
+            "_id": "Y2PjXrVA",
+            "formula": "4",
+            "target": "init",
+            "type": "untyped",
+            "operator": "add"
+          },
+          {
+            "_id": "VjmJlEgC",
+            "formula": "1",
+            "target": "ac",
+            "type": "dodge",
+            "operator": "add"
+          },
+          {
+            "_id": "AMnSBnzY",
+            "formula": "3",
+            "target": "skill.dev",
+            "type": "untyped",
+            "operator": "add"
+          },
+          {
+            "_id": "Hpg5fobO",
+            "formula": "3",
+            "target": "skill.per",
+            "type": "untyped",
+            "operator": "add"
+          }
+        ],
+        "description": {
+          "value": "<p>Bonuses from feats, gear, racial traits and special qualities that are already folded into the printed stat block. Keeping them here lets the PF1 sheet show the same totals as the adventure. Delete a change if you add the matching item with its own mechanics.</p>"
+        }
+      },
+      "_key": "!actors.items!QI3Ph0l0gGyZB733.qRHLxmvzJFYtXbVC",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "7iQKLK0ggwGBKxww",
+      "_key": "!actors.items!QI3Ph0l0gGyZB733.7iQKLK0ggwGBKxww",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.JreaiTHdyWFNj3Tb"
+      },
+      "img": "systems/pf1/icons/feats/dodge.jpg",
+      "name": "Dodge",
+      "system": {
+        "description": {
+          "value": "<i>Your training and reflexes allow you to react swiftly to avoid an opponents' attacks.</i><p><strong>Prerequisites</strong>: Dex 13.</p><p><strong>Benefits</strong>: You gain a +1 dodge bonus to your AC. A condition that makes you lose your Dex bonus to AC also makes you lose the benefits of this feat.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "114, 122"
+          }
+        ],
+        "tags": [
+          "Combat",
+          "Defensive"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "DYXI6NTSkYGmOBSL",
+      "_key": "!actors.items!QI3Ph0l0gGyZB733.DYXI6NTSkYGmOBSL",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.PlCHtwe6e3f7pZYR"
+      },
+      "img": "icons/creatures/abilities/wing-batlike-purple-blue.webp",
+      "name": "Flyby Attack",
+      "system": {
+        "actions": [
+          {
+            "_id": "CVK9o4MhaI5XEA0o",
+            "activation": {
+              "type": "special",
+              "unchained": {
+                "type": "special"
+              }
+            },
+            "duration": {
+              "units": "inst"
+            },
+            "name": "Use",
+            "range": {
+              "units": "seeText"
+            }
+          }
+        ],
+        "description": {
+          "value": "<p><em>This creature can make an attack before and after it moves while flying.</em> </p><p><strong>Prerequisites</strong>: Fly speed.</p><p><strong>Benefit</strong>: When flying, the creature can take a move action and another standard action at any point during the move. The creature cannot take a second move action during a round when it makes a flyby attack.</p><p><strong>Normal</strong>: Without this feat, the creature takes a standard action either before or after its move.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1112",
+            "pages": "315"
+          }
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "HZNFVCGg47GWR5Pw",
+      "_key": "!actors.items!QI3Ph0l0gGyZB733.HZNFVCGg47GWR5Pw",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.Uuiu3p982omhMEPj"
+      },
+      "img": "systems/pf1/icons/feats/improved-initiative.jpg",
+      "name": "Improved Initiative",
+      "system": {
+        "description": {
+          "value": "<p><em>Your quick reflexes allow you to react rapidly to danger.</em></p><p><strong>Benefits</strong>: You get a +4 bonus on initiative checks.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "115, 127"
+          }
+        ],
+        "tags": [
+          "Combat"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "kg0zBkgi4j6RDm8j",
+      "_key": "!actors.items!QI3Ph0l0gGyZB733.kg0zBkgi4j6RDm8j",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.8rsFtye3PwM6CKli"
+      },
+      "img": "systems/pf1/icons/feats/point-blank-shot.jpg",
+      "name": "Point-Blank Shot",
+      "system": {
+        "contextNotes": [
+          {
+            "target": "attack",
+            "text": "+1 bonus on attack and damage rolls with ranged weapons at ranges of up to 30 feet."
+          }
+        ],
+        "description": {
+          "value": "<p><em>You are especially accurate when making ranged attacks against close targets.</em><p><strong>Benefits</strong>: You get a +1 bonus on attack and damage rolls with ranged weapons at ranges of up to 30 feet.<p><b>Combat Trick</b><br>You can spend up to 6 stamina points to increase this feat's range by 5 feet for each stamina point you spent.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "116, 131"
+          }
+        ],
+        "tags": [
+          "Combat"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "itvgdH690D3jDkKl",
+      "_key": "!actors.items!QI3Ph0l0gGyZB733.itvgdH690D3jDkKl",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.53urYIbYYpQuoSLd"
+      },
+      "img": "systems/pf1/icons/feats/precise-shot.jpg",
+      "name": "Precise Shot",
+      "system": {
+        "contextNotes": [
+          {
+            "target": "attack",
+            "text": "Shoot or throw ranged weapons at an opponent engaged in melee w/o taking the standard -4 penalty on your attack roll."
+          }
+        ],
+        "description": {
+          "value": "<p><em>You are adept at firing ranged attacks into melee.</em></p><p><strong>Prerequisites</strong>: @UUID[Compendium.pf1.feats.Item.8rsFtye3PwM6CKli]{Point-Blank Shot}.</p><p><strong>Benefits</strong>: You can shoot or throw ranged weapons at an opponent engaged in melee without taking the standard -4 penalty on your attack roll.</p><h3>Combat Trick</h3><p>As a standard action, you can spend 2 stamina points and make a ranged attack against a foe engaged in melee with an ally. If the attack hits, it deals no damage, but your ally gains your choice of either a +2 bonus on her next attack roll against that opponent or a +2 bonus to AC against that opponent's next attack. This bonus lasts until the start of your next turn.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "116, 131"
+          }
+        ],
+        "tags": [
+          "Combat",
+          "Combat Trick"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "4FMIX4ZzPNUwIqhr",
+      "name": "Tranquilizer Dart",
+      "type": "attack",
+      "img": "icons/commodities/tech/cylinder-blue.webp",
+      "system": {
+        "subType": "weapon",
+        "proficient": true,
+        "actions": [
+          {
+            "_id": "gn6u2P7jgIT3sfCF",
+            "name": "Attack",
+            "activation": {
+              "type": "attack",
+              "unchained": {
+                "type": "attack"
+              }
+            },
+            "actionType": "rwak",
+            "ability": {
+              "attack": "dex",
+              "damage": "",
+              "critRange": 20,
+              "critMult": 2
+            },
+            "attackBonus": "",
+            "damage": {
+              "parts": [
+                {
+                  "formula": "1d4",
+                  "types": [
+                    "piercing"
+                  ]
+                }
+              ]
+            },
+            "range": {
+              "units": "ft",
+              "value": "30",
+              "maxIncrements": 10
+            },
+            "touch": false,
+            "naturalAttack": {
+              "primary": true
+            },
+            "notes": {
+              "effect": [],
+              "footer": [
+                "Tranquilizer: Fort DC 16, 1/round for 4 rounds, 1d2 Dex damage and staggered 1 round; cure 1 save"
+              ]
+            }
+          }
+        ],
+        "description": {
+          "value": ""
+        },
+        "showInQuickbar": true
+      },
+      "_key": "!actors.items!QI3Ph0l0gGyZB733.4FMIX4ZzPNUwIqhr",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "cWoevn2niUAiOSfB",
+      "name": "Force Field",
+      "type": "feat",
+      "img": "icons/magic/control/debuff-energy-hold-levitate-teal-blue.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p>The robot is sheathed in a force field with <strong>40 hit points</strong> and <strong>fast healing 8</strong>. Damage is applied to the force field before the robot's own hit points, and the fast healing applies only to the field. A field reduced to 0 hp goes down and regenerates at its fast healing rate.</p><p><em>Track the force field as this actor's temporary hit points.</em></p>"
+        }
+      },
+      "_key": "!actors.items!QI3Ph0l0gGyZB733.cWoevn2niUAiOSfB",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "eCNVduxbMFYDBaco",
+      "name": "Robot Traits",
+      "type": "feat",
+      "img": "icons/commodities/tech/metal-panel.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p><strong>Robot traits.</strong> Robots are constructs (Bestiary 5). They are vulnerable to critical hits (critical hits deal an extra ×1 multiplier, for example ×3 instead of ×2) and to electricity (+50% damage). Many carry a force field and integrated weapons.</p>"
+        }
+      },
+      "_key": "!actors.items!QI3Ph0l0gGyZB733.eCNVduxbMFYDBaco",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "DA0oHGjPYZcz8u1g",
+      "name": "Repair Beam",
+      "type": "feat",
+      "img": "icons/magic/control/energy-stream-link-spiral-teal.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p>Five times per day as a standard action, the drone can restore 3d6+9 hit points to a construct within 30 feet. This does not restore force field hit points.</p>"
+        },
+        "uses": {
+          "per": "day",
+          "maxFormula": "5",
+          "value": 5
+        },
+        "actions": [
+          {
+            "_id": "vIjloQyRPxIRyMAZ",
+            "name": "Repair",
+            "activation": {
+              "type": "standard",
+              "unchained": {
+                "type": "action",
+                "cost": 2
+              }
+            },
+            "actionType": "heal",
+            "damage": {
+              "parts": [
+                {
+                  "formula": "3d6+9",
+                  "types": [
+                    "untyped"
+                  ]
+                }
+              ]
+            },
+            "ability": {
+              "damage": "",
+              "attack": ""
+            },
+            "range": {
+              "value": "30",
+              "units": "ft"
+            },
+            "uses": {
+              "autoDeductChargesCost": "1"
+            }
+          }
+        ]
+      },
+      "_key": "!actors.items!QI3Ph0l0gGyZB733.DA0oHGjPYZcz8u1g",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "pdrhHCwf1OjNNzKX",
+      "name": "Stage Smoke",
+      "type": "feat",
+      "img": "icons/commodities/tech/smoke-bomb-yellow.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p>Three times per day as a standard action, the drone can fill a 20-foot radius with smoke, as <em>@UUID[Compendium.pf1.spells.Item.tuh5vc2bojaws3ig]{obscuring mist}</em>.</p>"
+        },
+        "uses": {
+          "per": "day",
+          "maxFormula": "3",
+          "value": 3
+        },
+        "actions": [
+          {
+            "_id": "srFVSCdDNFPRRYJ7",
+            "name": "Smoke",
+            "activation": {
+              "type": "standard",
+              "unchained": {
+                "type": "action",
+                "cost": 2
+              }
+            },
+            "actionType": "other",
+            "measureTemplate": {
+              "type": "circle",
+              "size": "20"
+            },
+            "uses": {
+              "autoDeductChargesCost": "1"
+            }
+          }
+        ]
+      },
+      "_key": "!actors.items!QI3Ph0l0gGyZB733.pdrhHCwf1OjNNzKX",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "S9n2AmvVvtYk1Qni",
+      "name": "Tranquilizer",
+      "type": "feat",
+      "img": "icons/consumables/potions/potion-tube-corked-bubbling-green.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p><strong>Dart</strong>—injury; <em>save</em> Fort DC 16; <em>frequency</em> 1/round for 4 rounds; <em>effect</em> 1d2 Dex damage and staggered for 1 round; <em>cure</em> 1 save.</p>"
+        },
+        "actions": [
+          {
+            "_id": "5OfoMtn2f313fHAL",
+            "name": "Tranquilizer save",
+            "activation": {
+              "type": "special",
+              "unchained": {
+                "type": "action",
+                "cost": 2
+              }
+            },
+            "actionType": "other",
+            "save": {
+              "type": "fort",
+              "dc": "16",
+              "description": "Fort negates"
+            }
+          }
+        ]
+      },
+      "_key": "!actors.items!QI3Ph0l0gGyZB733.S9n2AmvVvtYk1Qni",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    }
+  ],
+  "folder": "HIrz0Dh4Fb4MXNNY",
+  "sort": 100,
+  "prototypeToken": {
+    "name": "Stagehand Drone",
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "icons/commodities/tech/sensor-yellow.webp",
+      "scaleX": 0.8,
+      "scaleY": 0.8
+    },
+    "disposition": -1,
+    "actorLink": false,
+    "displayName": 20,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "sight": {
+      "enabled": true,
+      "range": 60
+    }
+  },
+  "flags": {
+    "hollow-garden": {
+      "statblock": true
+    }
+  },
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.9"
+  }
+}

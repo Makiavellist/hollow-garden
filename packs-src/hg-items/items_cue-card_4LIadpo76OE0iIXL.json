@@ -1,0 +1,45 @@
+{
+  "_id": "4LIadpo76OE0iIXL",
+  "_key": "!items!4LIadpo76OE0iIXL",
+  "name": "Cue Card",
+  "type": "consumable",
+  "img": "icons/sundries/documents/document-symbol-triangle-pink.webp",
+  "folder": "2aeIMGZ9wK8d3uo4",
+  "sort": 700,
+  "system": {
+    "description": {
+      "value": "<p><strong>Price</strong> 500 gp; <strong>Usage</strong> single use</p><p>A slip of film showing Celmak's next twist. Once, as an immediate action, gain a +4 insight bonus on one saving throw inside the Garden.</p><p><em>Trinket (d8: 7).</em></p>"
+    },
+    "subType": "misc",
+    "price": 500,
+    "uses": {
+      "per": "single"
+    },
+    "actions": [
+      {
+        "_id": "UAJ7HZ0R8h9PPb2K",
+        "name": "Read the card",
+        "activation": {
+          "type": "immediate",
+          "unchained": {
+            "type": "action",
+            "cost": 2
+          }
+        },
+        "actionType": "other",
+        "notes": {
+          "effect": [
+            "+4 insight on one save"
+          ],
+          "footer": []
+        }
+      }
+    ]
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.9"
+  }
+}

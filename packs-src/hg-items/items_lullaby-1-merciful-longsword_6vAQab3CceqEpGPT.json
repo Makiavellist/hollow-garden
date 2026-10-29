@@ -1,0 +1,98 @@
+{
+  "_id": "6vAQab3CceqEpGPT",
+  "_key": "!items!6vAQab3CceqEpGPT",
+  "name": "“Lullaby” (+1 Merciful Longsword)",
+  "type": "weapon",
+  "img": "systems/pf1/icons/items/weapons/longsword.png",
+  "folder": "D9XHPYDC8UGn7sRq",
+  "sort": 700,
+  "system": {
+    "actions": [
+      {
+        "_id": "jelb63mz9vrxa43c",
+        "ability": {
+          "attack": "_default",
+          "critRange": 19,
+          "damage": "str"
+        },
+        "actionType": "mwak",
+        "activation": {
+          "type": "attack",
+          "unchained": {
+            "type": "attack"
+          }
+        },
+        "damage": {
+          "parts": [
+            {
+              "formula": "sizeRoll(1, 8, @size)",
+              "types": [
+                "slashing"
+              ]
+            },
+            {
+              "formula": "1d6",
+              "types": [
+                "slashing"
+              ]
+            }
+          ]
+        },
+        "duration": {
+          "units": "inst"
+        },
+        "extraAttacks": {
+          "type": "standard"
+        },
+        "name": "Attack",
+        "range": {
+          "units": "melee",
+          "value": "0"
+        },
+        "nonlethal": true
+      }
+    ],
+    "baseTypes": [
+      "Longsword"
+    ],
+    "description": {
+      "value": "<p><strong>Whose it was.</strong> Ser Aldric Venn, a young Mendevian crusader who refused to kill anyone, even here. It hums softly when drawn.</p><p><strong>Merciful.</strong> The blade deals an extra 1d6 damage, and all damage it deals is nonlethal. On command, the merciful ability can be suppressed until reactivated.</p><p><em>From the hoard of the fallen, sorted by owner and labelled in Celmak's neat handwriting.</em></p>"
+    },
+    "hardness": 10,
+    "hp": {
+      "base": 5
+    },
+    "material": {
+      "base": {
+        "value": "steel"
+      }
+    },
+    "price": 8315,
+    "sources": [
+      {
+        "id": "PZO1110",
+        "pages": "142, 147"
+      },
+      {
+        "id": "PZO1123",
+        "pages": "18"
+      }
+    ],
+    "subType": "martial",
+    "weaponGroups": [
+      "bladesHeavy"
+    ],
+    "weaponSubtype": "1h",
+    "weight": {
+      "value": 4
+    },
+    "enh": 1,
+    "masterwork": true
+  },
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.9",
+    "compendiumSource": "Compendium.pf1.weapons-and-ammo.Item.zWRlna42PMJVX6un"
+  }
+}

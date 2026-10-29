@@ -1,0 +1,610 @@
+{
+  "_id": "A2yR1hBsRNS6CYjI",
+  "_key": "!actors!A2yR1hBsRNS6CYjI",
+  "name": "Topiary Hound",
+  "type": "npc",
+  "img": "icons/environment/wilderness/statue-hound-horned.webp",
+  "system": {
+    "abilities": {
+      "str": {
+        "value": 20
+      },
+      "dex": {
+        "value": 14
+      },
+      "con": {
+        "value": null
+      },
+      "int": {
+        "value": 10
+      },
+      "wis": {
+        "value": 12
+      },
+      "cha": {
+        "value": 1
+      }
+    },
+    "attributes": {
+      "naturalAC": 9,
+      "hp": {
+        "temp": 0
+      },
+      "speed": {
+        "land": {
+          "base": 50
+        }
+      },
+      "cmdNotes": "33 vs. trip",
+      "saveNotes": "",
+      "acNotes": "",
+      "quadruped": true,
+      "sr": {
+        "formula": ""
+      }
+    },
+    "details": {
+      "cr": {
+        "base": 8
+      },
+      "alignment": "tn",
+      "biography": {
+        "value": "<p>A steel greyhound frame wrapped in synthetic hedge, its jaws studded with cold-iron thorns. Hounds lie dormant in the hedges until the Gardener whistles.</p>"
+      },
+      "notes": {
+        "value": "<div class=\"hg-journal\"><h3>Printed stat block</h3><section class=\"hg-statblock\"><h4 class=\"hg-sb-title\">TOPIARY HOUND — CR 8</h4><p><strong>XP</strong> 4,800 · N Medium construct (robot)</p><p><strong>Init</strong> +6; <strong>Senses</strong> darkvision 60 ft., low-light vision, scent; Perception +19</p><h5 class=\"hg-sb-section\">DEFENSE</h5><p><strong>AC</strong> 21, touch 12, flat-footed 19 (+2 Dex, +9 natural)</p><p><strong>hp</strong> 86 (12d10+20)</p><p><strong>Fort</strong> +4, <strong>Ref</strong> +6, <strong>Will</strong> +5</p><p><strong>Immune</strong> construct traits; <strong>Weaknesses</strong> vulnerable to critical hits, vulnerable to electricity</p><h5 class=\"hg-sb-section\">OFFENSE</h5><p><strong>Speed</strong> 50 ft.</p><p><strong>Melee</strong> bite +17 (2d8+7 plus cold-iron thorns and trip)</p><p><strong>Special Attacks</strong> pack pounce, pollen burst</p><h5 class=\"hg-sb-section\">STATISTICS</h5><p><strong>Str</strong> 20, <strong>Dex</strong> 14, <strong>Con</strong> —, <strong>Int</strong> 10, <strong>Wis</strong> 12, <strong>Cha</strong> 1</p><p><strong>Base Atk</strong> +12; <strong>CMB</strong> +17; <strong>CMD</strong> 29 (33 vs. trip)</p><p><strong>Feats</strong> Improved Initiative, Lunge, Power Attack, Run, Skill Focus (Perception), Stealthy</p><p><strong>Skills</strong> Perception +19, Stealth +16 (+24 in vegetation); <strong>Racial Modifiers</strong> +8 Stealth in vegetation</p><h5 class=\"hg-sb-section\">SPECIAL ABILITIES</h5><p><strong>Cold-Iron Thorns (Ex)</strong> The hound’s bite counts as cold iron. A fey it bites also takes 1d6 bleed damage.</p><p><strong>Pack Pounce (Ex)</strong> A hound gains a +2 bonus on attack rolls against a creature another hound threatens. This stacks with flanking.</p><p><strong>Pollen Burst (Ex)</strong> When destroyed, a hound bursts into a 10-foot-radius cloud of Mood Gas (Fortitude DC 18, Will DC 18).</p></section></div>"
+      }
+    },
+    "skills": {
+      "per": {
+        "rank": 12
+      },
+      "ste": {
+        "rank": 12
+      }
+    },
+    "traits": {
+      "size": "med",
+      "senses": {
+        "dv": {
+          "value": 60
+        },
+        "ll": {
+          "enabled": true
+        },
+        "sc": {
+          "value": 30
+        }
+      },
+      "ci": [
+        "bleed",
+        "deathEffects",
+        "disease",
+        "energyDrain",
+        "exhausted",
+        "fatigue",
+        "mindAffecting",
+        "paralyze",
+        "poison",
+        "sleep",
+        "stun"
+      ],
+      "di": [],
+      "dv": [
+        "electric"
+      ],
+      "dr": {
+        "value": [],
+        "custom": ""
+      },
+      "eres": {
+        "value": [],
+        "custom": ""
+      },
+      "fastHealing": "",
+      "languages": []
+    }
+  },
+  "items": [
+    {
+      "_id": "m4KxuGVLhXOsNpMp",
+      "name": "Robot",
+      "type": "race",
+      "img": "systems/pf1/icons/races/creature-types/construct.png",
+      "system": {
+        "creatureTypes": [
+          "construct"
+        ],
+        "creatureSubtypes": [
+          "robot"
+        ],
+        "size": "med",
+        "speeds": {
+          "land": 50
+        },
+        "description": {
+          "value": ""
+        }
+      },
+      "_key": "!actors.items!A2yR1hBsRNS6CYjI.m4KxuGVLhXOsNpMp",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "2NcCxnCA6pGFQ6Yu",
+      "name": "Construct (Robot)",
+      "type": "class",
+      "img": "systems/pf1/icons/skills/mech_7.jpg",
+      "system": {
+        "subType": "racial",
+        "level": 12,
+        "hd": 10,
+        "hp": 66,
+        "bab": "high",
+        "skillsPerLevel": 2,
+        "tag": "construct",
+        "savingThrows": {
+          "fort": {
+            "value": "low"
+          },
+          "ref": {
+            "value": "low"
+          },
+          "will": {
+            "value": "low"
+          }
+        },
+        "description": {
+          "value": "<p>Racial Hit Dice: d10, full BAB, poor saves, no Constitution. Constructs gain bonus hit points by size.</p>"
+        },
+        "changes": [
+          {
+            "_id": "BGSEdhaY",
+            "formula": "max(0, @size - 2) * 10 + max(0, @size - 6) * 10",
+            "target": "mhp",
+            "type": "untypedPerm",
+            "operator": "add"
+          }
+        ]
+      },
+      "_key": "!actors.items!A2yR1hBsRNS6CYjI.2NcCxnCA6pGFQ6Yu",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "ZN203Po5g1ZOFQXd",
+      "name": "Stat Block Adjustments",
+      "type": "feat",
+      "img": "icons/commodities/tech/dial-meter-gauge-blue.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "na",
+        "changes": [
+          {
+            "_id": "ZCMQJCsz",
+            "formula": "4",
+            "target": "init",
+            "type": "untyped",
+            "operator": "add"
+          },
+          {
+            "_id": "1WsMHU9p",
+            "formula": "6",
+            "target": "skill.per",
+            "type": "untyped",
+            "operator": "add"
+          },
+          {
+            "_id": "OeqYCiSr",
+            "formula": "2",
+            "target": "skill.ste",
+            "type": "untyped",
+            "operator": "add"
+          }
+        ],
+        "description": {
+          "value": "<p>Bonuses from feats, gear, racial traits and special qualities that are already folded into the printed stat block. Keeping them here lets the PF1 sheet show the same totals as the adventure. Delete a change if you add the matching item with its own mechanics.</p>"
+        }
+      },
+      "_key": "!actors.items!A2yR1hBsRNS6CYjI.ZN203Po5g1ZOFQXd",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "zEOAHmIJWPPLO6YL",
+      "_key": "!actors.items!A2yR1hBsRNS6CYjI.zEOAHmIJWPPLO6YL",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.Uuiu3p982omhMEPj"
+      },
+      "img": "systems/pf1/icons/feats/improved-initiative.jpg",
+      "name": "Improved Initiative",
+      "system": {
+        "description": {
+          "value": "<p><em>Your quick reflexes allow you to react rapidly to danger.</em></p><p><strong>Benefits</strong>: You get a +4 bonus on initiative checks.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "115, 127"
+          }
+        ],
+        "tags": [
+          "Combat"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "ezb3mmPvojiS8W1C",
+      "_key": "!actors.items!A2yR1hBsRNS6CYjI.ezb3mmPvojiS8W1C",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.xq2TFr7bsYBBHOi5"
+      },
+      "img": "systems/pf1/icons/feats/lunge.jpg",
+      "name": "Lunge",
+      "system": {
+        "description": {
+          "value": "<i>You can strike foes that would normally be out of reach.</i><p><strong>Prerequisites</strong>: Base attack bonus +6.</p><p><strong>Benefits</strong>: You can increase the reach of your melee attacks by 5 feet until the end of your turn by taking a -2 penalty to your AC until your next turn. You must decide to use this ability before any attacks are made.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "115, 130"
+          }
+        ],
+        "tags": [
+          "Combat",
+          "Offensive"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "YUcVgLeqzWbmQB7D",
+      "_key": "!actors.items!A2yR1hBsRNS6CYjI.YUcVgLeqzWbmQB7D",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.FUW5mIXHNBBIQ1Sq"
+      },
+      "img": "systems/pf1/icons/feats/power-attack.jpg",
+      "name": "Power Attack",
+      "system": {
+        "description": {
+          "value": "<i>You can make exceptionally deadly melee attacks by sacrificing accuracy for strength.</i><p><strong>Prerequisites</strong>: Str 13, base attack bonus +1.</p><p><strong>Benefits</strong>: You can choose to take a -1 penalty on all melee attack rolls and combat maneuver checks to gain a +2 bonus on all melee damage rolls. This bonus to damage is increased by half (+50%) if you are making an attack with a two-handed weapon, a one handed weapon using two hands, or a primary natural weapon that adds 1-1/2 times your Strength modifier on damage rolls. This bonus to damage is halved (-50%) if you are making an attack with an off-hand weapon or secondary natural weapon. When your base attack bonus reaches +4, and every 4 points thereafter, the penalty increases by -1 and the bonus to damage increases by +2. You must choose to use this feat before making an attack roll, and its effects last until your next turn. The bonus damage does not apply to touch attacks or effects that do not deal hit point damage.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "116, 131"
+          }
+        ],
+        "tags": [
+          "Combat",
+          "Offensive"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "EfPXC39tbYxN14Uu",
+      "_key": "!actors.items!A2yR1hBsRNS6CYjI.EfPXC39tbYxN14Uu",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.bXeW4kLCErPBFpNB"
+      },
+      "img": "systems/pf1/icons/feats/run.jpg",
+      "name": "Run",
+      "system": {
+        "contextNotes": [
+          {
+            "target": "skill.acr",
+            "text": "+[[4]] to jump after a running start"
+          }
+        ],
+        "description": {
+          "value": "<p><em>You are swift of foot.</em><p><strong>Benefits</strong>: When running, you move five times your normal speed (if wearing medium, light, or no armor and carrying no more than a medium load) or four times your speed (if wearing heavy armor or carrying a heavy load). If you make a jump after a running start (see the Acrobatics skill description), you gain a +4 bonus on your Acrobatics check. While running, you retain your Dexterity bonus to your Armor Class.<p><strong>Normal</strong>: You move four times your speed while running (if wearing medium, light, or no armor and carrying no more than a medium load) or three times your speed (if wearing heavy armor or carrying a heavy load), and you lose your Dexterity bonus to AC.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "116, 132"
+          }
+        ],
+        "tags": [
+          "General"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "Bq3yvgjmhpAXMBvD",
+      "_key": "!actors.items!A2yR1hBsRNS6CYjI.Bq3yvgjmhpAXMBvD",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.7zJTztNW7hdaqjKc"
+      },
+      "img": "systems/pf1/icons/feats/skill-focus.jpg",
+      "name": "Skill Focus (Perception)",
+      "system": {
+        "description": {
+          "value": "<i>Choose a skill. You are particularly adept at that skill.</i><p><strong>Benefits</strong>: You get a +3 bonus on all checks involving the chosen skill. If you have 10 or more ranks in that skill, this bonus increases to +6.</p><p><strong>Special</strong>: You can gain this feat multiple times. Its effects do not stack. Each time you take the feat, it applies to a new skill.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "116, 134"
+          }
+        ],
+        "tags": [
+          "General",
+          "Skill"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "6fvwJroNjtnpYWLO",
+      "_key": "!actors.items!A2yR1hBsRNS6CYjI.6fvwJroNjtnpYWLO",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.f5FPqAYWlKj3zCIY"
+      },
+      "img": "systems/pf1/icons/feats/stealthy.jpg",
+      "name": "Stealthy",
+      "system": {
+        "description": {
+          "value": "<i>You are good at avoiding unwanted attention and slipping out of bonds.</i><p><strong>Benefits</strong>: You get a +2 bonus on all Escape Artist and Stealth skill checks. If you have 10 or more ranks in one of these skills, the bonus increases to +4 for that skill.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "116, 135"
+          }
+        ],
+        "tags": [
+          "General",
+          "Skill"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "xtvYlkhfYSspzQY0",
+      "name": "Bite",
+      "type": "attack",
+      "img": "icons/creatures/abilities/fangs-teeth-bite.webp",
+      "system": {
+        "subType": "natural",
+        "proficient": true,
+        "actions": [
+          {
+            "_id": "E1EODnpGZnFBIxCU",
+            "name": "Attack",
+            "activation": {
+              "type": "attack",
+              "unchained": {
+                "type": "attack"
+              }
+            },
+            "actionType": "mwak",
+            "ability": {
+              "attack": "str",
+              "damage": "",
+              "critRange": 20,
+              "critMult": 2
+            },
+            "attackBonus": "",
+            "damage": {
+              "parts": [
+                {
+                  "formula": "2d8+7",
+                  "types": [
+                    "piercing"
+                  ]
+                }
+              ]
+            },
+            "range": {
+              "units": "melee"
+            },
+            "touch": false,
+            "naturalAttack": {
+              "primary": true
+            },
+            "notes": {
+              "effect": [],
+              "footer": [
+                "Cold-iron thorns (counts as cold iron; fey also take 1d6 bleed)",
+                "Trip"
+              ]
+            }
+          }
+        ],
+        "description": {
+          "value": ""
+        },
+        "showInQuickbar": true
+      },
+      "_key": "!actors.items!A2yR1hBsRNS6CYjI.xtvYlkhfYSspzQY0",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "xSKD5eE2jjtyAFLB",
+      "name": "Robot Traits",
+      "type": "feat",
+      "img": "icons/commodities/tech/metal-panel.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p><strong>Robot traits.</strong> Robots are constructs (Bestiary 5). They are vulnerable to critical hits (critical hits deal an extra ×1 multiplier, for example ×3 instead of ×2) and to electricity (+50% damage). Many carry a force field and integrated weapons.</p>"
+        }
+      },
+      "_key": "!actors.items!A2yR1hBsRNS6CYjI.xSKD5eE2jjtyAFLB",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "XjjahTiVlCSp9xQz",
+      "name": "Cold-Iron Thorns",
+      "type": "feat",
+      "img": "icons/consumables/plants/fern-stem-curved-green.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p>The hound's bite counts as cold iron. A fey it bites also takes 1d6 bleed damage.</p>"
+        }
+      },
+      "_key": "!actors.items!A2yR1hBsRNS6CYjI.XjjahTiVlCSp9xQz",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "LdpLUjMgUfNWm83A",
+      "name": "Pack Pounce",
+      "type": "feat",
+      "img": "icons/creatures/mammals/dog-husky-white-blue.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p>A hound gains a +2 bonus on attack rolls against a creature another hound threatens. This stacks with flanking.</p>"
+        }
+      },
+      "_key": "!actors.items!A2yR1hBsRNS6CYjI.LdpLUjMgUfNWm83A",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "dNGaocAdWSG8JJjI",
+      "name": "Pollen Burst",
+      "type": "feat",
+      "img": "icons/magic/air/fog-gas-smoke-dense-green.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p>When destroyed, a hound bursts into a 10-foot-radius cloud of Mood Gas (Fortitude DC 18, Will DC 18).</p>"
+        },
+        "actions": [
+          {
+            "_id": "paqRKYmlpfFkvyGt",
+            "name": "Burst",
+            "activation": {
+              "type": "special",
+              "unchained": {
+                "type": "action",
+                "cost": 2
+              }
+            },
+            "actionType": "other",
+            "save": {
+              "type": "fort",
+              "dc": "18",
+              "description": "Fort avoids the dose, then Will DC 18"
+            },
+            "measureTemplate": {
+              "type": "circle",
+              "size": "10"
+            }
+          }
+        ]
+      },
+      "_key": "!actors.items!A2yR1hBsRNS6CYjI.dNGaocAdWSG8JJjI",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "ezhCZPflFf6jK4RU",
+      "name": "Vegetation Stealth",
+      "type": "feat",
+      "img": "icons/consumables/plants/leaf-broad-blue.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p>+8 racial bonus on Stealth checks in vegetation (Stealth +24).</p>"
+        }
+      },
+      "_key": "!actors.items!A2yR1hBsRNS6CYjI.ezhCZPflFf6jK4RU",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    }
+  ],
+  "folder": "HIrz0Dh4Fb4MXNNY",
+  "sort": 200,
+  "prototypeToken": {
+    "name": "Topiary Hound",
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "icons/environment/wilderness/statue-hound-horned.webp",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": -1,
+    "actorLink": false,
+    "displayName": 20,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "sight": {
+      "enabled": true,
+      "range": 60
+    }
+  },
+  "flags": {
+    "hollow-garden": {
+      "statblock": true
+    }
+  },
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.9"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "_id": "D9XHPYDC8UGn7sRq",
+  "_key": "!folders!D9XHPYDC8UGn7sRq",
+  "name": "The Hoard of the Fallen",
+  "type": "Item",
+  "color": "#5b4636",
+  "sorting": "m",
+  "sort": 400,
+  "folder": null,
+  "description": "",
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351"
+  }
+}

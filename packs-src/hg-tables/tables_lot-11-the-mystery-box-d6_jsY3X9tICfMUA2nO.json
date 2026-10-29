@@ -1,0 +1,136 @@
+{
+  "_id": "jsY3X9tICfMUA2nO",
+  "_key": "!tables!jsY3X9tICfMUA2nO",
+  "name": "Lot 11: The Mystery Box (d6)",
+  "img": "icons/containers/boxes/crate-wooden-brown.webp",
+  "description": "<p>“The Mystery Box. Nobody knows. Not even me.”</p>",
+  "formula": "1d6",
+  "replacement": true,
+  "displayRoll": true,
+  "results": [
+    {
+      "_id": "qsl8dgcHBDOWFRJb",
+      "_key": "!tables.results!jsY3X9tICfMUA2nO.qsl8dgcHBDOWFRJb",
+      "type": "text",
+      "name": "",
+      "description": "A robotic rat that bites the opener (1 damage) and squeaks Celmak's catchphrase forever.",
+      "text": "A robotic rat that bites the opener (1 damage) and squeaks Celmak's catchphrase forever.",
+      "img": "icons/containers/boxes/crate-wooden-brown.webp",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "3UP0SZAUvZbsYYox",
+      "_key": "!tables.results!jsY3X9tICfMUA2nO.3UP0SZAUvZbsYYox",
+      "type": "text",
+      "name": "",
+      "description": "A mannequin hand that waves goodbye at anyone who leaves the room. It never stops.",
+      "text": "A mannequin hand that waves goodbye at anyone who leaves the room. It never stops.",
+      "img": "icons/containers/boxes/crate-wooden-brown.webp",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "B7s25V233iOyRMIT",
+      "_key": "!tables.results!jsY3X9tICfMUA2nO.B7s25V233iOyRMIT",
+      "type": "text",
+      "name": "",
+      "description": "Gems worth 2,000 gp.",
+      "text": "Gems worth 2,000 gp.",
+      "img": "icons/containers/boxes/crate-wooden-brown.webp",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "76QOZQPTahyhF308",
+      "_key": "!tables.results!jsY3X9tICfMUA2nO.76QOZQPTahyhF308",
+      "type": "text",
+      "name": "",
+      "description": "A <em>wand of dispel magic</em> (12 charges).",
+      "text": "A <em>wand of dispel magic</em> (12 charges).",
+      "img": "icons/containers/boxes/crate-wooden-brown.webp",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "kuJpazL7TQHnbebo",
+      "_key": "!tables.results!jsY3X9tICfMUA2nO.kuJpazL7TQHnbebo",
+      "type": "text",
+      "name": "",
+      "description": "A <em>ring of sustenance</em>.",
+      "text": "A <em>ring of sustenance</em>.",
+      "img": "icons/containers/boxes/crate-wooden-brown.webp",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "Mz0AUYq21eqPj1iz",
+      "_key": "!tables.results!jsY3X9tICfMUA2nO.Mz0AUYq21eqPj1iz",
+      "type": "text",
+      "name": "",
+      "description": "A cue card (Trinket) and a note in Celmak's handwriting: “I knew you'd pick this one.”",
+      "text": "A cue card (Trinket) and a note in Celmak's handwriting: “I knew you'd pick this one.”",
+      "img": "icons/containers/boxes/crate-wooden-brown.webp",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    }
+  ],
+  "folder": "ioKH1pEXANkFqbcK",
+  "sort": 500,
+  "flags": {
+    "hollow-garden": {
+      "key": "mystery-box"
+    }
+  },
+  "_stats": {
+    "coreVersion": "13.351"
+  }
+}

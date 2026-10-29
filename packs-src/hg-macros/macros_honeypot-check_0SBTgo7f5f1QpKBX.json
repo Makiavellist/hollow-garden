@@ -1,0 +1,15 @@
+{
+  "_id": "0SBTgo7f5f1QpKBX",
+  "_key": "!macros!0SBTgo7f5f1QpKBX",
+  "name": "Honeypot Check",
+  "type": "script",
+  "img": "modules/hollow-garden/assets/host/thinking.webp",
+  "command": "// The Hollow Garden: Honeypot Check\nconst api = game.modules.get(\"hollow-garden\")?.api;\nif (!api) return ui.notifications.warn(\"The Hollow Garden module is not active.\");\napi.openHoneypot();",
+  "scope": "global",
+  "folder": null,
+  "sort": 500,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351"
+  }
+}

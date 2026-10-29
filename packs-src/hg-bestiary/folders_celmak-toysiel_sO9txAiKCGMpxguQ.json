@@ -1,0 +1,15 @@
+{
+  "_id": "sO9txAiKCGMpxguQ",
+  "_key": "!folders!sO9txAiKCGMpxguQ",
+  "name": "Celmak Toysiel",
+  "type": "Actor",
+  "color": "#b0306a",
+  "sorting": "m",
+  "sort": 100,
+  "folder": null,
+  "description": "",
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351"
+  }
+}

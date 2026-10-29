@@ -1,0 +1,467 @@
+{
+  "_id": "vFUtHrN3NCXbgRsV",
+  "_key": "!actors!vFUtHrN3NCXbgRsV",
+  "name": "Celmak's Stand-In",
+  "type": "npc",
+  "img": "modules/hollow-garden/assets/host/presenting.webp",
+  "system": {
+    "abilities": {
+      "str": {
+        "value": 14
+      },
+      "dex": {
+        "value": 20
+      },
+      "con": {
+        "value": null
+      },
+      "int": {
+        "value": null
+      },
+      "wis": {
+        "value": null
+      },
+      "cha": {
+        "value": null
+      }
+    },
+    "attributes": {
+      "naturalAC": 11,
+      "hp": {
+        "temp": 75
+      },
+      "speed": {
+        "land": {
+          "base": 40
+        }
+      },
+      "cmdNotes": "",
+      "saveNotes": "",
+      "acNotes": "",
+      "quadruped": false,
+      "sr": {
+        "formula": ""
+      }
+    },
+    "details": {
+      "cr": {
+        "base": 15
+      },
+      "alignment": "tn",
+      "biography": {
+        "value": "<p>A slim figure in a perfect suit, porcelain-smooth and seamed at the joints: one of three remote mannequins built to look exactly like Celmak. It never leaves the Booth in the finale; it fights from behind the glass with its spotlight laser, spotlight and mood release.</p>"
+      },
+      "notes": {
+        "value": "<div class=\"hg-journal\"><h3>Printed stat block</h3><section class=\"hg-statblock\"><h4 class=\"hg-sb-title\">CELMAK’S STAND-IN — CR 15</h4><p><strong>XP</strong> 51,200 · N Medium construct (robot)</p><p><strong>Init</strong> +10; <strong>Senses</strong> darkvision 60 ft., Garden sight, low-light vision; Perception +27</p><h5 class=\"hg-sb-section\">DEFENSE</h5><p><strong>AC</strong> 30, touch 19, flat-footed 25 (+5 Dex, +4 deflection, +11 natural)</p><p><strong>hp</strong> 130 (20d10+20); force field (75 hp, fast healing 15)</p><p><strong>Fort</strong> +6, <strong>Ref</strong> +11, <strong>Will</strong> +12</p><p><strong>Immune</strong> construct traits; <strong>Weaknesses</strong> vulnerable to critical hits, vulnerable to electricity</p><h5 class=\"hg-sb-section\">OFFENSE</h5><p><strong>Speed</strong> 40 ft.</p><p><strong>Melee</strong> 2 nanite caresses +26 (2d6+2 plus 3d6 sonic)</p><p><strong>Ranged</strong> spotlight laser +25 touch (8d6 fire)</p><p><strong>Special Attacks</strong> puppet link (Celmak’s director’s cut, holographic direction, mood release, Muse scan, reconfigure, spotlight)</p><h5 class=\"hg-sb-section\">STATISTICS</h5><p><strong>Str</strong> 14, <strong>Dex</strong> 20, <strong>Con</strong> —, <strong>Int</strong> —, <strong>Wis</strong> —, <strong>Cha</strong> —</p><p><strong>Base Atk</strong> +20; <strong>CMB</strong> +22; <strong>CMD</strong> 37</p><p><strong>Skills</strong> uses Celmak’s skills while piloted</p><p><strong>SQ</strong> remote-piloted</p><h5 class=\"hg-sb-section\">SPECIAL ABILITIES</h5><p><strong>Puppet Link (Ex)</strong> While Celmak pilots the stand-in, it uses her mental ability scores, saves and skills, and she can use her own special abilities through it as if she were standing where it is. Uses of director’s cut come out of her daily total.</p><p><strong>Remote-Piloted (Ex)</strong> The stand-in has no mind of its own. When it is destroyed, or the Core is shut down, it collapses, and the link breaks harmlessly. Switching to a spare stand-in in the Core Vault takes Celmak 1d4 rounds. She has two spares.</p></section></div>"
+      }
+    },
+    "skills": {
+      "per": {
+        "rank": 20
+      }
+    },
+    "traits": {
+      "size": "med",
+      "senses": {
+        "dv": {
+          "value": 60
+        },
+        "ll": {
+          "enabled": true
+        },
+        "custom": "Garden sight"
+      },
+      "ci": [
+        "bleed",
+        "deathEffects",
+        "disease",
+        "energyDrain",
+        "exhausted",
+        "fatigue",
+        "mindAffecting",
+        "paralyze",
+        "poison",
+        "sleep",
+        "stun"
+      ],
+      "di": [],
+      "dv": [
+        "electric"
+      ],
+      "dr": {
+        "value": [],
+        "custom": ""
+      },
+      "eres": {
+        "value": [],
+        "custom": ""
+      },
+      "fastHealing": "15 (force field only)",
+      "languages": [
+        "androffan",
+        "common",
+        "hallit"
+      ]
+    }
+  },
+  "items": [
+    {
+      "_id": "rpFqqVCAgEhaFmC5",
+      "name": "Pleasure Mannequin (stand-in)",
+      "type": "race",
+      "img": "systems/pf1/icons/races/creature-types/construct.png",
+      "system": {
+        "creatureTypes": [
+          "construct"
+        ],
+        "creatureSubtypes": [
+          "robot"
+        ],
+        "size": "med",
+        "speeds": {
+          "land": 40
+        },
+        "description": {
+          "value": ""
+        }
+      },
+      "_key": "!actors.items!vFUtHrN3NCXbgRsV.rpFqqVCAgEhaFmC5",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "2PwqG2kKtemxanGu",
+      "name": "Construct (Robot)",
+      "type": "class",
+      "img": "systems/pf1/icons/skills/mech_7.jpg",
+      "system": {
+        "subType": "racial",
+        "level": 20,
+        "hd": 10,
+        "hp": 110,
+        "bab": "high",
+        "skillsPerLevel": 2,
+        "tag": "construct",
+        "savingThrows": {
+          "fort": {
+            "value": "low"
+          },
+          "ref": {
+            "value": "low"
+          },
+          "will": {
+            "value": "low"
+          }
+        },
+        "description": {
+          "value": "<p>Racial Hit Dice: d10, full BAB, poor saves, no Constitution. Constructs gain bonus hit points by size.</p>"
+        },
+        "changes": [
+          {
+            "_id": "sGV7MJJw",
+            "formula": "max(0, @size - 2) * 10 + max(0, @size - 6) * 10",
+            "target": "mhp",
+            "type": "untypedPerm",
+            "operator": "add"
+          }
+        ]
+      },
+      "_key": "!actors.items!vFUtHrN3NCXbgRsV.2PwqG2kKtemxanGu",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "OM8AwV89Ebqeydv3",
+      "name": "Stat Block Adjustments",
+      "type": "feat",
+      "img": "icons/commodities/tech/dial-meter-gauge-blue.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "na",
+        "changes": [
+          {
+            "_id": "fTMHWL8t",
+            "formula": "6",
+            "target": "will",
+            "type": "untyped",
+            "operator": "add"
+          },
+          {
+            "_id": "goQ3hs2q",
+            "formula": "5",
+            "target": "init",
+            "type": "untyped",
+            "operator": "add"
+          },
+          {
+            "_id": "zqPg3vcR",
+            "formula": "4",
+            "target": "ac",
+            "type": "deflection",
+            "operator": "add"
+          },
+          {
+            "_id": "pG29FBj1",
+            "formula": "7",
+            "target": "skill.per",
+            "type": "untyped",
+            "operator": "add"
+          }
+        ],
+        "description": {
+          "value": "<p>Bonuses from feats, gear, racial traits and special qualities that are already folded into the printed stat block. Keeping them here lets the PF1 sheet show the same totals as the adventure. Delete a change if you add the matching item with its own mechanics.</p>"
+        }
+      },
+      "_key": "!actors.items!vFUtHrN3NCXbgRsV.OM8AwV89Ebqeydv3",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "jLTXur4UgnoAA2xt",
+      "name": "Nanite Caress",
+      "type": "attack",
+      "img": "icons/magic/control/energy-stream-link-white.webp",
+      "system": {
+        "subType": "natural",
+        "proficient": true,
+        "actions": [
+          {
+            "_id": "BX89Fbb5APEI0uWk",
+            "name": "Attack",
+            "activation": {
+              "type": "attack",
+              "unchained": {
+                "type": "attack"
+              }
+            },
+            "actionType": "mwak",
+            "ability": {
+              "attack": "str",
+              "damage": "",
+              "critRange": 20,
+              "critMult": 2
+            },
+            "attackBonus": "4",
+            "damage": {
+              "parts": [
+                {
+                  "formula": "2d6+2",
+                  "types": [
+                    "bludgeoning"
+                  ]
+                },
+                {
+                  "formula": "3d6",
+                  "types": [
+                    "sonic"
+                  ]
+                }
+              ]
+            },
+            "range": {
+              "units": "melee"
+            },
+            "touch": false,
+            "naturalAttack": {
+              "primary": true
+            },
+            "extraAttacks": {
+              "type": "custom",
+              "formula": {
+                "count": "1",
+                "label": "Caress #{0}"
+              }
+            }
+          }
+        ],
+        "description": {
+          "value": ""
+        },
+        "showInQuickbar": true
+      },
+      "_key": "!actors.items!vFUtHrN3NCXbgRsV.jLTXur4UgnoAA2xt",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "K1oZCX6pndPI2uXw",
+      "name": "Spotlight Laser",
+      "type": "attack",
+      "img": "icons/commodities/tech/bulb.webp",
+      "system": {
+        "subType": "weapon",
+        "proficient": true,
+        "actions": [
+          {
+            "_id": "FIt408x85LpHPBjv",
+            "name": "Attack",
+            "activation": {
+              "type": "attack",
+              "unchained": {
+                "type": "attack"
+              }
+            },
+            "actionType": "rwak",
+            "ability": {
+              "attack": "dex",
+              "damage": "",
+              "critRange": 20,
+              "critMult": 2
+            },
+            "attackBonus": "",
+            "damage": {
+              "parts": [
+                {
+                  "formula": "8d6",
+                  "types": [
+                    "fire"
+                  ]
+                }
+              ]
+            },
+            "range": {
+              "units": "ft",
+              "value": "60",
+              "maxIncrements": 10
+            },
+            "touch": true,
+            "naturalAttack": {
+              "primary": true
+            }
+          }
+        ],
+        "description": {
+          "value": ""
+        },
+        "showInQuickbar": true
+      },
+      "_key": "!actors.items!vFUtHrN3NCXbgRsV.K1oZCX6pndPI2uXw",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "EgzirgI2dRhzdszA",
+      "name": "Force Field",
+      "type": "feat",
+      "img": "icons/magic/control/debuff-energy-hold-levitate-teal-blue.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p>The robot is sheathed in a force field with <strong>75 hit points</strong> and <strong>fast healing 15</strong>. Damage is applied to the force field before the robot's own hit points, and the fast healing applies only to the field. A field reduced to 0 hp goes down and regenerates at its fast healing rate.</p><p><em>Track the force field as this actor's temporary hit points.</em></p>"
+        }
+      },
+      "_key": "!actors.items!vFUtHrN3NCXbgRsV.EgzirgI2dRhzdszA",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "c3adlpmuFGo9TU8u",
+      "name": "Robot Traits",
+      "type": "feat",
+      "img": "icons/commodities/tech/metal-panel.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p><strong>Robot traits.</strong> Robots are constructs (Bestiary 5). They are vulnerable to critical hits (critical hits deal an extra ×1 multiplier, for example ×3 instead of ×2) and to electricity (+50% damage). Many carry a force field and integrated weapons.</p>"
+        }
+      },
+      "_key": "!actors.items!vFUtHrN3NCXbgRsV.c3adlpmuFGo9TU8u",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "wU52R0820DAGU86Y",
+      "name": "Puppet Link",
+      "type": "feat",
+      "img": "icons/magic/control/control-influence-puppet.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p>While Celmak pilots the stand-in, it uses her mental ability scores, saves and skills, and she can use her own special abilities through it as if she were standing where it is (director's cut, holographic direction, mood release, Muse scan, reconfigure, spotlight). Uses of director's cut come out of her daily total.</p>"
+        }
+      },
+      "_key": "!actors.items!vFUtHrN3NCXbgRsV.wU52R0820DAGU86Y",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "zN4EeAsdWZpRgrmR",
+      "name": "Remote-Piloted",
+      "type": "feat",
+      "img": "icons/magic/control/energy-stream-link-blue.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p>The stand-in has no mind of its own. When it is destroyed, or the Core is shut down, it collapses, and the link breaks harmlessly. Switching to a spare stand-in in the Core Vault takes Celmak 1d4 rounds. She has two spares.</p>"
+        }
+      },
+      "_key": "!actors.items!vFUtHrN3NCXbgRsV.zN4EeAsdWZpRgrmR",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    }
+  ],
+  "folder": "sO9txAiKCGMpxguQ",
+  "sort": 100,
+  "prototypeToken": {
+    "name": "Celmak's Stand-In",
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "modules/hollow-garden/assets/host/presenting.webp",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": 0,
+    "actorLink": false,
+    "displayName": 20,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "sight": {
+      "enabled": true,
+      "range": 60
+    }
+  },
+  "flags": {
+    "hollow-garden": {
+      "statblock": true
+    }
+  },
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.9"
+  }
+}

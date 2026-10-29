@@ -1,0 +1,94 @@
+{
+  "_id": "lWcQgJtsAJW8ZfpH",
+  "_key": "!items!lWcQgJtsAJW8ZfpH",
+  "name": "Hard-Light Emitter Bracer",
+  "type": "equipment",
+  "img": "icons/equipment/wrist/bracer-shadow.webp",
+  "folder": "iZyWbMInuudM5zh6",
+  "sort": 400,
+  "system": {
+    "description": {
+      "value": "<p><strong>Price</strong> 16,000 gp; <strong>Slot</strong> wrist; <strong>Weight</strong> 1 lb.; <strong>Capacity</strong> 10; <strong>Usage</strong> 3 charges per use</p><p>As a move action, the wearer projects either a hard-light shield, granting a +4 shield bonus to AC (a force effect), or a hard-light blade that functions as a +2 short sword dealing force damage. Either lasts 1 minute. Darkness suppresses the effect while the wearer stands in it.</p><p><strong>Construction Requirements</strong> Craft Technological Arms and Armor, military lab; <strong>Cost</strong> 8,000 gp; <strong>Craft</strong> DC 26.</p><p><em>Found in: Episode 1.</em></p>"
+    },
+    "subType": "wondrous",
+    "slot": "wrists",
+    "price": 16000,
+    "equipped": false,
+    "weight": {
+      "value": 1
+    },
+    "uses": {
+      "per": "charges",
+      "maxFormula": "10",
+      "value": 10
+    },
+    "actions": [
+      {
+        "_id": "BEHUVEQGUtiDpXPY",
+        "name": "Hard-light shield",
+        "activation": {
+          "type": "move",
+          "unchained": {
+            "type": "action",
+            "cost": 2
+          }
+        },
+        "actionType": "other",
+        "uses": {
+          "autoDeductChargesCost": "3"
+        },
+        "notes": {
+          "effect": [
+            "+4 shield bonus to AC (force)"
+          ],
+          "footer": []
+        },
+        "duration": {
+          "value": "1",
+          "units": "minute"
+        }
+      },
+      {
+        "_id": "uoDcUnYKKAhntD8N",
+        "name": "Hard-light blade",
+        "activation": {
+          "type": "attack",
+          "unchained": {
+            "type": "action",
+            "cost": 2
+          }
+        },
+        "actionType": "mwak",
+        "damage": {
+          "parts": [
+            {
+              "formula": "sizeRoll(1, 6, @size) + 2",
+              "types": [
+                "force"
+              ]
+            }
+          ]
+        },
+        "uses": {
+          "autoDeductChargesCost": "3"
+        },
+        "attackBonus": "2",
+        "ability": {
+          "attack": "str",
+          "damage": "str",
+          "critRange": 19,
+          "critMult": 2
+        },
+        "range": {
+          "units": "melee"
+        }
+      }
+    ]
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.9"
+  }
+}

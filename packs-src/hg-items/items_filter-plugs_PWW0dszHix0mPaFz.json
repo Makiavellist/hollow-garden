@@ -1,0 +1,49 @@
+{
+  "_id": "PWW0dszHix0mPaFz",
+  "_key": "!items!PWW0dszHix0mPaFz",
+  "name": "Filter Plugs",
+  "type": "consumable",
+  "img": "icons/commodities/tech/bearing-steel-green.webp",
+  "folder": "2aeIMGZ9wK8d3uo4",
+  "sort": 300,
+  "system": {
+    "description": {
+      "value": "<p><strong>Price</strong> 300 gp; <strong>Usage</strong> single use</p><p>Immunity to inhaled effects, including Mood Gas, for 1 hour.</p><p><em>Trinket (d8: 3).</em></p>"
+    },
+    "subType": "misc",
+    "price": 300,
+    "uses": {
+      "per": "single"
+    },
+    "actions": [
+      {
+        "_id": "jSpky9wcMJMbVNEt",
+        "name": "Insert",
+        "activation": {
+          "type": "move",
+          "unchained": {
+            "type": "action",
+            "cost": 2
+          }
+        },
+        "actionType": "other",
+        "notes": {
+          "effect": [
+            "Immune to inhaled effects (Mood Gas)"
+          ],
+          "footer": []
+        },
+        "duration": {
+          "value": "1",
+          "units": "hour"
+        }
+      }
+    ]
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.9"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "_id": "itiW4PwgBYynjALg",
+  "_key": "!folders!itiW4PwgBYynjALg",
+  "name": "The Cast (demons)",
+  "type": "Actor",
+  "color": "#7a1f2b",
+  "sorting": "m",
+  "sort": 200,
+  "folder": null,
+  "description": "",
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351"
+  }
+}

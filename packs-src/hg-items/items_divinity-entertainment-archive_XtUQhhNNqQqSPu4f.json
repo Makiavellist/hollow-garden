@@ -1,0 +1,22 @@
+{
+  "_id": "XtUQhhNNqQqSPu4f",
+  "_key": "!items!XtUQhhNNqQqSPu4f",
+  "name": "Divinity Entertainment Archive",
+  "type": "loot",
+  "img": "icons/commodities/tech/cable-end.webp",
+  "folder": "iZyWbMInuudM5zh6",
+  "sort": 1100,
+  "system": {
+    "description": {
+      "value": "<p><strong>Price</strong> priceless; <strong>Slot</strong> none; <strong>Weight</strong> —</p><p>A data spike holding the entertainment deck's records, partial crew logs and Celmak's footage of every contestant. Its owner gains a +4 bonus on Knowledge checks about the <em>Divinity</em>, Silver Mount and Androffans. It also holds one secret of your choice, such as a maintenance route into Silver Mount, crew lists, or logs from before Unity went mad.</p><p><em>Found in: The 113th Take (Casandalee's episode).</em></p>"
+    },
+    "subType": "misc",
+    "price": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.9"
+  }
+}

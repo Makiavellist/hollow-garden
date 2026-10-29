@@ -1,0 +1,15 @@
+{
+  "_id": "1HSWy5Bpg4jCaHsv",
+  "_key": "!macros!1HSWy5Bpg4jCaHsv",
+  "name": "Toggle Ratings Board",
+  "type": "script",
+  "img": "modules/hollow-garden/assets/host/ratings.webp",
+  "command": "// The Hollow Garden: Toggle Ratings Board\nconst api = game.modules.get(\"hollow-garden\")?.api;\nif (!api) return ui.notifications.warn(\"The Hollow Garden module is not active.\");\napi.toggleBoard();",
+  "scope": "global",
+  "folder": null,
+  "sort": 200,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351"
+  }
+}

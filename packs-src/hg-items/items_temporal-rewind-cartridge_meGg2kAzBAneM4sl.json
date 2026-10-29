@@ -1,0 +1,50 @@
+{
+  "_id": "meGg2kAzBAneM4sl",
+  "_key": "!items!meGg2kAzBAneM4sl",
+  "name": "Temporal Rewind Cartridge",
+  "type": "loot",
+  "img": "icons/magic/time/clock-stopwatch-white-blue.webp",
+  "folder": "iZyWbMInuudM5zh6",
+  "sort": 600,
+  "system": {
+    "description": {
+      "value": "<p><strong>Price</strong> 9,000 gp; <strong>Slot</strong> none; <strong>Weight</strong> —; <strong>Capacity</strong> 3; <strong>Usage</strong> 1 charge per use</p><p>A cartridge from the holographic bridge's captain's chair that should not exist yet. As an immediate action after rolling a d20, but before the result is announced, the holder can reroll and take the better result. A kasatha raised by a time traveller may use it without the charge being spent once per day: it simply remembers how.</p><p><strong>Construction Requirements</strong> none; its origin is unknown.</p><p><em>Found in: Episode 3.</em></p>"
+    },
+    "subType": "gear",
+    "price": 9000,
+    "uses": {
+      "per": "charges",
+      "maxFormula": "3",
+      "value": 3
+    },
+    "actions": [
+      {
+        "_id": "GbR76X22PLNDbhfB",
+        "name": "Rewind",
+        "activation": {
+          "type": "immediate",
+          "unchained": {
+            "type": "action",
+            "cost": 2
+          }
+        },
+        "actionType": "other",
+        "uses": {
+          "autoDeductChargesCost": "1"
+        },
+        "notes": {
+          "effect": [
+            "Reroll a d20, take the better result"
+          ],
+          "footer": []
+        }
+      }
+    ]
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.9"
+  }
+}

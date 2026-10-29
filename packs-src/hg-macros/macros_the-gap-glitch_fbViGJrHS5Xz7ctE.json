@@ -1,0 +1,15 @@
+{
+  "_id": "fbViGJrHS5Xz7ctE",
+  "_key": "!macros!fbViGJrHS5Xz7ctE",
+  "name": "The Gap (Glitch)",
+  "type": "script",
+  "img": "modules/hollow-garden/assets/host/confused.webp",
+  "command": "// The Hollow Garden: The Gap (Glitch)\nconst api = game.modules.get(\"hollow-garden\")?.api;\nif (!api) return ui.notifications.warn(\"The Hollow Garden module is not active.\");\napi.glitch();",
+  "scope": "global",
+  "folder": null,
+  "sort": 1300,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351"
+  }
+}

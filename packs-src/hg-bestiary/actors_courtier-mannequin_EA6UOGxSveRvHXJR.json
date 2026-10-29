@@ -1,0 +1,820 @@
+{
+  "_id": "EA6UOGxSveRvHXJR",
+  "_key": "!actors!EA6UOGxSveRvHXJR",
+  "name": "Courtier Mannequin",
+  "type": "npc",
+  "img": "icons/magic/control/control-influence-puppet.webp",
+  "system": {
+    "abilities": {
+      "str": {
+        "value": 14
+      },
+      "dex": {
+        "value": 20
+      },
+      "con": {
+        "value": null
+      },
+      "int": {
+        "value": 12
+      },
+      "wis": {
+        "value": 12
+      },
+      "cha": {
+        "value": 20
+      }
+    },
+    "attributes": {
+      "naturalAC": 8,
+      "hp": {
+        "temp": 55
+      },
+      "speed": {
+        "land": {
+          "base": 40
+        }
+      },
+      "cmdNotes": "",
+      "saveNotes": "",
+      "acNotes": "",
+      "quadruped": false,
+      "sr": {
+        "formula": ""
+      }
+    },
+    "details": {
+      "cr": {
+        "base": 11
+      },
+      "alignment": "tn",
+      "biography": {
+        "value": "<p>Celmak's siblings: pleasure mannequins she repaired after the crash, beautiful and blank-eyed under holographic skins. They serve as hosts, traders and partners, and they fight like dancers with fans of monofilament.</p>"
+      },
+      "notes": {
+        "value": "<div class=\"hg-journal\"><h3>Printed stat block</h3><section class=\"hg-statblock\"><h4 class=\"hg-sb-title\">COURTIER MANNEQUIN — CR 11</h4><p><strong>XP</strong> 12,800 · N Medium construct (robot)</p><p><strong>Init</strong> +9; <strong>Senses</strong> darkvision 60 ft., low-light vision; Perception +18</p><h5 class=\"hg-sb-section\">DEFENSE</h5><p><strong>AC</strong> 26, touch 18, flat-footed 20 (+2 deflection, +5 Dex, +1 dodge, +8 natural)</p><p><strong>hp</strong> 97 (14d10+20); force field (55 hp, fast healing 11)</p><p><strong>Fort</strong> +4, <strong>Ref</strong> +9, <strong>Will</strong> +5</p><p><strong>Immune</strong> construct traits; <strong>Weaknesses</strong> vulnerable to critical hits, vulnerable to electricity</p><h5 class=\"hg-sb-section\">OFFENSE</h5><p><strong>Speed</strong> 40 ft.</p><p><strong>Melee</strong> 2 monofilament fans +20 (2d6+5/18–20 plus 1d6 bleed)</p><p><strong>Special Attacks</strong> partner dance, pheromone kiss</p><h5 class=\"hg-sb-section\">STATISTICS</h5><p><strong>Str</strong> 14, <strong>Dex</strong> 20, <strong>Con</strong> —, <strong>Int</strong> 12, <strong>Wis</strong> 12, <strong>Cha</strong> 20</p><p><strong>Base Atk</strong> +14; <strong>CMB</strong> +16; <strong>CMD</strong> 34</p><p><strong>Feats</strong> Combat Reflexes, Dodge, Improved Initiative, Mobility, Spring Attack, Weapon Finesse, Weapon Focus (monofilament fan)</p><p><strong>Skills</strong> Bluff +19, Diplomacy +19, Disguise +19 (+27 with holo-skin), Perception +18, Perform (dance) +19, Sense Motive +18; <strong>Racial Modifiers</strong> +14 Bluff, +14 Diplomacy, +14 Perform (dance)</p><p><strong>Languages</strong> Androffan, Common; any three languages spoken by a creature Celmak has scanned</p><p><strong>SQ</strong> holo-skin</p><h5 class=\"hg-sb-section\">SPECIAL ABILITIES</h5><p><strong>Holo-Skin (Ex)</strong> The mannequin can appear as any Medium humanoid, as <em>alter self</em> without changing its statistics, gaining a +8 bonus on Disguise checks. Magical darkness or a fetchling’s shadow ability in its square ends the disguise until it is back in light.</p><p><strong>Monofilament Fans</strong> The mannequin adds its Dexterity modifier to damage with its fans instead of its Strength modifier (included above).</p><p><strong>Partner Dance (Ex)</strong> When the mannequin hits the same creature with both fans in a round, it can move that creature 5 feet as a free action. This does not provoke attacks of opportunity, and the creature must end adjacent to the mannequin.</p><p><strong>Pheromone Kiss (Ex)</strong> Three times per day as a standard action, the mannequin can breathe a 15-foot cone of Mood Gas (Fortitude DC 19, Will DC 19).</p></section></div>"
+      }
+    },
+    "skills": {
+      "blf": {
+        "rank": 14
+      },
+      "dip": {
+        "rank": 14
+      },
+      "dis": {
+        "rank": 14
+      },
+      "per": {
+        "rank": 14
+      },
+      "prf": {
+        "subSkills": {
+          "dance": {
+            "name": "Dance",
+            "ability": "cha",
+            "rank": 14,
+            "rt": false,
+            "acp": false
+          }
+        }
+      },
+      "sen": {
+        "rank": 14
+      }
+    },
+    "traits": {
+      "size": "med",
+      "senses": {
+        "dv": {
+          "value": 60
+        },
+        "ll": {
+          "enabled": true
+        }
+      },
+      "ci": [
+        "bleed",
+        "deathEffects",
+        "disease",
+        "energyDrain",
+        "exhausted",
+        "fatigue",
+        "mindAffecting",
+        "paralyze",
+        "poison",
+        "sleep",
+        "stun"
+      ],
+      "di": [],
+      "dv": [
+        "electric"
+      ],
+      "dr": {
+        "value": [],
+        "custom": ""
+      },
+      "eres": {
+        "value": [],
+        "custom": ""
+      },
+      "fastHealing": "11 (force field only)",
+      "languages": [
+        "androffan",
+        "common",
+        "any three languages spoken by a creature Celmak has scanned"
+      ]
+    }
+  },
+  "items": [
+    {
+      "_id": "KDlQAAU9cHtY0Es4",
+      "name": "Robot",
+      "type": "race",
+      "img": "systems/pf1/icons/races/creature-types/construct.png",
+      "system": {
+        "creatureTypes": [
+          "construct"
+        ],
+        "creatureSubtypes": [
+          "robot"
+        ],
+        "size": "med",
+        "speeds": {
+          "land": 40
+        },
+        "description": {
+          "value": ""
+        }
+      },
+      "_key": "!actors.items!EA6UOGxSveRvHXJR.KDlQAAU9cHtY0Es4",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "rIVoLgKNLxt5XXQ3",
+      "name": "Construct (Robot)",
+      "type": "class",
+      "img": "systems/pf1/icons/skills/mech_7.jpg",
+      "system": {
+        "subType": "racial",
+        "level": 14,
+        "hd": 10,
+        "hp": 77,
+        "bab": "high",
+        "skillsPerLevel": 2,
+        "tag": "construct",
+        "savingThrows": {
+          "fort": {
+            "value": "low"
+          },
+          "ref": {
+            "value": "low"
+          },
+          "will": {
+            "value": "low"
+          }
+        },
+        "description": {
+          "value": "<p>Racial Hit Dice: d10, full BAB, poor saves, no Constitution. Constructs gain bonus hit points by size.</p>"
+        },
+        "changes": [
+          {
+            "_id": "3To4f5Im",
+            "formula": "max(0, @size - 2) * 10 + max(0, @size - 6) * 10",
+            "target": "mhp",
+            "type": "untypedPerm",
+            "operator": "add"
+          }
+        ]
+      },
+      "_key": "!actors.items!EA6UOGxSveRvHXJR.rIVoLgKNLxt5XXQ3",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "XSLB3dJ73Sy8gzPm",
+      "name": "Stat Block Adjustments",
+      "type": "feat",
+      "img": "icons/commodities/tech/dial-meter-gauge-blue.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "na",
+        "changes": [
+          {
+            "_id": "gKxSSCSH",
+            "formula": "4",
+            "target": "init",
+            "type": "untyped",
+            "operator": "add"
+          },
+          {
+            "_id": "iHycHt9P",
+            "formula": "2",
+            "target": "ac",
+            "type": "deflection",
+            "operator": "add"
+          },
+          {
+            "_id": "OlFnhGf2",
+            "formula": "1",
+            "target": "ac",
+            "type": "dodge",
+            "operator": "add"
+          },
+          {
+            "_id": "ARxDAPkM",
+            "formula": "3",
+            "target": "skill.per",
+            "type": "untyped",
+            "operator": "add"
+          },
+          {
+            "_id": "v8Z82TOV",
+            "formula": "3",
+            "target": "skill.sen",
+            "type": "untyped",
+            "operator": "add"
+          }
+        ],
+        "description": {
+          "value": "<p>Bonuses from feats, gear, racial traits and special qualities that are already folded into the printed stat block. Keeping them here lets the PF1 sheet show the same totals as the adventure. Delete a change if you add the matching item with its own mechanics.</p>"
+        }
+      },
+      "_key": "!actors.items!EA6UOGxSveRvHXJR.XSLB3dJ73Sy8gzPm",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "irtydFgFoNmGTzOJ",
+      "_key": "!actors.items!EA6UOGxSveRvHXJR.irtydFgFoNmGTzOJ",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.h9nHYLxXvIXBTmup"
+      },
+      "img": "systems/pf1/icons/feats/combat-reflexes.jpg",
+      "name": "Combat Reflexes",
+      "system": {
+        "actions": [
+          {
+            "_id": "kzof1vn44xdata40",
+            "activation": {
+              "type": "passive",
+              "unchained": {
+                "type": "passive"
+              }
+            },
+            "img": "systems/pf1/icons/feats/combat-reflexes.jpg",
+            "name": "Use"
+          }
+        ],
+        "contextNotes": [
+          {
+            "target": "attack",
+            "text": "[[@resources.feat_combatReflexes.value]] AoO available."
+          }
+        ],
+        "description": {
+          "instructions": "<p>Spend 1 charge after use. Charges tracks total AoOs.</p>",
+          "value": "<p><em>You can make additional attacks of opportunity.</em></p><p><strong>Benefits</strong>: You may make a number of additional attacks of opportunity per round equal to your Dexterity bonus. With this feat, you may also make attacks of opportunity while flat-footed.</p><p><strong>Normal</strong>: A character without this feat can make only one attack of opportunity per round and can't make attacks of opportunity while flat-footed.</p><p><strong>Special</strong>: The Combat Reflexes feat does not allow a rogue to use her opportunist ability more than once per round.</p><h3>Combat Trick</h3><p>When you miss with an attack of opportunity, you can spend 5 stamina points to make a second attack for the same provoking action. That second attack of opportunity takes a -5 penalty on the attack roll and costs one of your attacks of opportunity for the round.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "114, 119-120"
+          }
+        ],
+        "tag": "feat_combatReflexes",
+        "tags": [
+          "Combat",
+          "Combat Trick"
+        ],
+        "uses": {
+          "maxFormula": "1 + max(0, @abilities.dex.mod)",
+          "per": "round",
+          "value": 0
+        }
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "38EzganUgvOlOwUz",
+      "_key": "!actors.items!EA6UOGxSveRvHXJR.38EzganUgvOlOwUz",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.JreaiTHdyWFNj3Tb"
+      },
+      "img": "systems/pf1/icons/feats/dodge.jpg",
+      "name": "Dodge",
+      "system": {
+        "description": {
+          "value": "<i>Your training and reflexes allow you to react swiftly to avoid an opponents' attacks.</i><p><strong>Prerequisites</strong>: Dex 13.</p><p><strong>Benefits</strong>: You gain a +1 dodge bonus to your AC. A condition that makes you lose your Dex bonus to AC also makes you lose the benefits of this feat.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "114, 122"
+          }
+        ],
+        "tags": [
+          "Combat",
+          "Defensive"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "B3xMaWIWlcPp0vZv",
+      "_key": "!actors.items!EA6UOGxSveRvHXJR.B3xMaWIWlcPp0vZv",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.Uuiu3p982omhMEPj"
+      },
+      "img": "systems/pf1/icons/feats/improved-initiative.jpg",
+      "name": "Improved Initiative",
+      "system": {
+        "description": {
+          "value": "<p><em>Your quick reflexes allow you to react rapidly to danger.</em></p><p><strong>Benefits</strong>: You get a +4 bonus on initiative checks.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "115, 127"
+          }
+        ],
+        "tags": [
+          "Combat"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "EDetutMEura1QYtz",
+      "_key": "!actors.items!EA6UOGxSveRvHXJR.EDetutMEura1QYtz",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.R7L4SlGRlnThqFrP"
+      },
+      "img": "systems/pf1/icons/feats/mobility.jpg",
+      "name": "Mobility",
+      "system": {
+        "description": {
+          "value": "<p><em>You can easily move through a dangerous melee.</em></p><p><strong>Prerequisites</strong>: Dex 13, @UUID[Compendium.pf1.feats.Item.JreaiTHdyWFNj3Tb]{Dodge}.</p><p><strong>Benefits</strong>: You get a +4 dodge bonus to Armor Class against attacks of opportunity caused when you move out of or within a threatened area. A condition that makes you lose your Dexterity bonus to Armor Class (if any) also makes you lose dodge bonuses.</p><p>Dodge bonuses stack with each other, unlike most types of bonuses.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "114, 130"
+          }
+        ],
+        "tags": [
+          "Combat",
+          "Movement",
+          "Defensive"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "zZLGJ97HG3YAEES4",
+      "_key": "!actors.items!EA6UOGxSveRvHXJR.zZLGJ97HG3YAEES4",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.ugQyUpqPBDsqLyra"
+      },
+      "img": "systems/pf1/icons/feats/spring-attack.jpg",
+      "name": "Spring Attack",
+      "system": {
+        "actions": [
+          {
+            "_id": "9ilekjpdPWfwe7eo",
+            "activation": {
+              "type": "full",
+              "unchained": {
+                "cost": 3,
+                "type": "action"
+              }
+            },
+            "duration": {
+              "units": "inst"
+            },
+            "name": "Use",
+            "range": {
+              "units": "seeText"
+            },
+            "target": {
+              "value": "One Target"
+            }
+          }
+        ],
+        "description": {
+          "value": "<p><em>You can deftly move up to a foe, strike, and withdraw before he can react.</em></p><p><strong>Prerequisites</strong>: Dex 13, @UUID[Compendium.pf1.feats.Item.JreaiTHdyWFNj3Tb]{Dodge}, @UUID[Compendium.pf1.feats.Item.R7L4SlGRlnThqFrP]{Mobility}, base attack bonus +4.</p><p><strong>Benefits</strong>: As a full-round action, you can move up to your speed and make a single melee attack without provoking any attacks of opportunity from the target of your attack. You can move both before and after the attack, but you must move at least 10 feet before the attack and the total distance that you move cannot be greater than your speed. You cannot use this ability to attack a foe that is adjacent to you at the start of your turn.</p><p><strong>Normal</strong>: You cannot move before and after an attack.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "114, 134"
+          }
+        ],
+        "tags": [
+          "Combat",
+          "Offensive",
+          "Movement"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "UmOgGLQ82i4yyGgz",
+      "_key": "!actors.items!EA6UOGxSveRvHXJR.UmOgGLQ82i4yyGgz",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.vWiTqHC4Y3Xn1Pme"
+      },
+      "img": "systems/pf1/icons/feats/weapon-finesse.jpg",
+      "name": "Weapon Finesse",
+      "system": {
+        "description": {
+          "value": "<i>You are trained in using your agility in melee combat, as opposed to brute strength.</i><p><strong>Benefits</strong>: With a light weapon, rapier, whip, or spiked chain made for a creature of your size category, you may use your Dexterity modifier instead of your Strength modifier on attack rolls. If you carry a shield, its armor check penalty applies to your attack rolls.</p><p><strong>Special</strong>: Natural weapons are considered light weapons.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "117, 136"
+          }
+        ],
+        "tags": [
+          "Combat",
+          "Weapon"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "KqVxdbJjqItIZCpT",
+      "_key": "!actors.items!EA6UOGxSveRvHXJR.KqVxdbJjqItIZCpT",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.n250dFlbykAIAg5Z"
+      },
+      "img": "systems/pf1/icons/feats/weapon-focus.jpg",
+      "name": "Weapon Focus (Monofilament Fan)",
+      "system": {
+        "description": {
+          "value": "<i>Choose one type of weapon. You can also choose unarmed strike or grapple (or ray, if you are a spellcaster) as your weapon for the purposes of this feat.</i><p><strong>Prerequisites</strong>: Proficiency with selected weapon, base attack bonus +1.</p><p><strong>Benefits</strong>: You gain a +1 bonus on all attack rolls you make using the selected weapon.</p><p><strong>Special</strong>: You can gain this feat multiple times. Its effects do not stack. Each time you take the feat, it applies to a new type of weapon.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "117, 136"
+          }
+        ],
+        "tags": [
+          "Combat",
+          "Weapon",
+          "Offensive"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "xtcYE4yuKAprCCld",
+      "name": "Monofilament Fans",
+      "type": "attack",
+      "img": "icons/magic/air/wind-swirl-gray-blue.webp",
+      "system": {
+        "subType": "weapon",
+        "proficient": true,
+        "actions": [
+          {
+            "_id": "8PGLpyJBhTEIWF9j",
+            "name": "Attack",
+            "activation": {
+              "type": "attack",
+              "unchained": {
+                "type": "attack"
+              }
+            },
+            "actionType": "mwak",
+            "ability": {
+              "attack": "dex",
+              "damage": "",
+              "critRange": 18,
+              "critMult": 2
+            },
+            "attackBonus": "1",
+            "damage": {
+              "parts": [
+                {
+                  "formula": "2d6+5",
+                  "types": [
+                    "slashing"
+                  ]
+                }
+              ]
+            },
+            "range": {
+              "units": "melee"
+            },
+            "touch": false,
+            "naturalAttack": {
+              "primary": true
+            },
+            "extraAttacks": {
+              "type": "custom",
+              "formula": {
+                "count": "1",
+                "label": "Fan #{0}"
+              }
+            },
+            "notes": {
+              "effect": [],
+              "footer": [
+                "Plus 1d6 bleed"
+              ]
+            }
+          }
+        ],
+        "description": {
+          "value": ""
+        },
+        "showInQuickbar": true
+      },
+      "_key": "!actors.items!EA6UOGxSveRvHXJR.xtcYE4yuKAprCCld",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "Rwcgxr9jedzRcETm",
+      "name": "Force Field",
+      "type": "feat",
+      "img": "icons/magic/control/debuff-energy-hold-levitate-teal-blue.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p>The robot is sheathed in a force field with <strong>55 hit points</strong> and <strong>fast healing 11</strong>. Damage is applied to the force field before the robot's own hit points, and the fast healing applies only to the field. A field reduced to 0 hp goes down and regenerates at its fast healing rate.</p><p><em>Track the force field as this actor's temporary hit points.</em></p>"
+        }
+      },
+      "_key": "!actors.items!EA6UOGxSveRvHXJR.Rwcgxr9jedzRcETm",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "2jcaNYkfXJEpocCC",
+      "name": "Robot Traits",
+      "type": "feat",
+      "img": "icons/commodities/tech/metal-panel.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p><strong>Robot traits.</strong> Robots are constructs (Bestiary 5). They are vulnerable to critical hits (critical hits deal an extra ×1 multiplier, for example ×3 instead of ×2) and to electricity (+50% damage). Many carry a force field and integrated weapons.</p>"
+        }
+      },
+      "_key": "!actors.items!EA6UOGxSveRvHXJR.2jcaNYkfXJEpocCC",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "xB0AfhoQXW9ljDJt",
+      "name": "Holo-Skin",
+      "type": "feat",
+      "img": "icons/magic/control/silhouette-aura-energy.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p>The mannequin can appear as any Medium humanoid, as <em>@UUID[Compendium.pf1.spells.Item.kouqz0pm1xl8xilm]{alter self}</em> without changing its statistics, gaining a +8 bonus on Disguise checks (Disguise +27). Magical darkness or a fetchling's shadow ability in its square ends the disguise until it is back in light.</p>"
+        }
+      },
+      "_key": "!actors.items!EA6UOGxSveRvHXJR.xB0AfhoQXW9ljDJt",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "hYkjA2KKH75ewxyo",
+      "name": "Partner Dance",
+      "type": "feat",
+      "img": "icons/magic/control/debuff-energy-snare-purple-pink.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p>When the mannequin hits the same creature with both fans in a round, it can move that creature 5 feet as a free action. This does not provoke attacks of opportunity, and the creature must end adjacent to the mannequin.</p>"
+        }
+      },
+      "_key": "!actors.items!EA6UOGxSveRvHXJR.hYkjA2KKH75ewxyo",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "Vh9Uw3xMNSRBNpqg",
+      "name": "Pheromone Kiss",
+      "type": "feat",
+      "img": "icons/magic/air/fog-gas-smoke-swirling-pink.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p>Three times per day as a standard action, the mannequin can breathe a 15-foot cone of Mood Gas (Fortitude DC 19, Will DC 19).</p>"
+        },
+        "uses": {
+          "per": "day",
+          "maxFormula": "3",
+          "value": 3
+        },
+        "actions": [
+          {
+            "_id": "7fF151BWwEl8Wtg0",
+            "name": "Kiss",
+            "activation": {
+              "type": "standard",
+              "unchained": {
+                "type": "action",
+                "cost": 2
+              }
+            },
+            "actionType": "other",
+            "save": {
+              "type": "fort",
+              "dc": "19",
+              "description": "Fort avoids the dose, then Will DC 19"
+            },
+            "measureTemplate": {
+              "type": "cone",
+              "size": "15"
+            },
+            "uses": {
+              "autoDeductChargesCost": "1"
+            }
+          }
+        ]
+      },
+      "_key": "!actors.items!EA6UOGxSveRvHXJR.Vh9Uw3xMNSRBNpqg",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "rOCFKvqDbNNGhVq4",
+      "name": "Monofilament Fans",
+      "type": "feat",
+      "img": "icons/magic/air/wind-swirl-gray-blue.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p>The mannequin adds its Dexterity modifier to damage with its fans instead of its Strength modifier (included).</p>"
+        }
+      },
+      "_key": "!actors.items!EA6UOGxSveRvHXJR.rOCFKvqDbNNGhVq4",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "name": "Monofilament Fan",
+      "type": "weapon",
+      "img": "icons/magic/air/wind-swirl-gray-blue.webp",
+      "system": {
+        "subType": "exotic",
+        "weaponSubtype": "light",
+        "hands": 1,
+        "price": 4000,
+        "weight": {
+          "value": 1
+        },
+        "properties": {
+          "fin": true
+        },
+        "baseTypes": [
+          "Monofilament Fan"
+        ],
+        "proficient": false,
+        "description": {
+          "value": "<p>A folding fan whose ribs carry monofilament edges. It can be used with Weapon Finesse and ignores the first 10 points of an object's hardness. A creature wielding one in each hand counts as wielding a light weapon in its off hand.</p>"
+        },
+        "actions": [
+          {
+            "_id": "w8LzRBGznp8ZZUuU",
+            "name": "Attack",
+            "actionType": "mwak",
+            "activation": {
+              "type": "attack",
+              "unchained": {
+                "type": "attack"
+              }
+            },
+            "ability": {
+              "attack": "str",
+              "damage": "str",
+              "critRange": 18,
+              "critMult": 2
+            },
+            "damage": {
+              "parts": [
+                {
+                  "formula": "sizeRoll(1, 8, @size)",
+                  "types": [
+                    "slashing"
+                  ]
+                }
+              ]
+            },
+            "extraAttacks": {
+              "type": "standard"
+            },
+            "range": {
+              "units": "melee"
+            }
+          }
+        ],
+        "quantity": 2,
+        "equipped": false
+      },
+      "_id": "lcqoApDToVoRG6Ic",
+      "_key": "!actors.items!EA6UOGxSveRvHXJR.lcqoApDToVoRG6Ic",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    }
+  ],
+  "folder": "HIrz0Dh4Fb4MXNNY",
+  "sort": 300,
+  "prototypeToken": {
+    "name": "Courtier Mannequin",
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "icons/magic/control/control-influence-puppet.webp",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": -1,
+    "actorLink": false,
+    "displayName": 20,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "sight": {
+      "enabled": true,
+      "range": 60
+    }
+  },
+  "flags": {
+    "hollow-garden": {
+      "statblock": true
+    }
+  },
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.9"
+  }
+}

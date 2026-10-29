@@ -1,0 +1,22 @@
+{
+  "_id": "24o8cjxm95OoeKAv",
+  "_key": "!items!24o8cjxm95OoeKAv",
+  "name": "Half-Burned Candle of Truth (Father Draske's)",
+  "type": "loot",
+  "img": "icons/sundries/lights/candle-lit-yellow.webp",
+  "folder": "D9XHPYDC8UGn7sRq",
+  "sort": 1100,
+  "system": {
+    "description": {
+      "value": "<p><strong>Whose it was.</strong> Father Ilvan Draske, a priest of Pharasma who tried to make Celmak tell the truth. It worked for nine minutes.</p><p>Use the standard rules for a <em>candle of truth</em> (Core Rulebook); 30 minutes of burn time left.</p><p><em>From the hoard of the fallen, sorted by owner and labelled in Celmak's neat handwriting.</em></p>"
+    },
+    "price": 1250,
+    "subType": "misc"
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.9"
+  }
+}

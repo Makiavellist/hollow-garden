@@ -1,0 +1,22 @@
+{
+  "_id": "QndOLaJGvrUkJ66X",
+  "_key": "!items!QndOLaJGvrUkJ66X",
+  "name": "Lot 7: Last Words of the Bright Lanterns",
+  "type": "loot",
+  "img": "icons/sundries/documents/document-symbol-eye.webp",
+  "folder": "YvibWalgscAk7V3q",
+  "sort": 70,
+  "system": {
+    "description": {
+      "value": "<blockquote class=\"hg-readaloud\"><p><em>“Last words of the Bright Lanterns. Very sad. Very long.” (Open 2, rival max 4)</em></p></blockquote><p>The final recording of the last adventuring party. It runs three hours. Its last ten minutes show four exhausted adventurers crawling through a maintenance duct behind the Showroom's seventh plinth, reaching a hatch into the Core Vault before a drone finds them.</p><ul><li>The crawlway route into the Core Vault, which lets the party skip the vault door in the finale.</li><li>A cache in the duct: 3 applause injectors and a <em>scroll of</em> <em>@UUID[Compendium.pf1.spells.Item.e5kw4dwf9qwty6tl]{greater dispel magic}</em>.</li><li>The Lanterns' leader whispering, “She's not in the Booth. The Booth is a doll. She's <em>down</em>.”</li></ul><p><em>Celmak never watched past hour one. When she realises what she sold, she drops the ratings by 1.</em></p>"
+    },
+    "subType": "gear",
+    "price": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.9"
+  }
+}

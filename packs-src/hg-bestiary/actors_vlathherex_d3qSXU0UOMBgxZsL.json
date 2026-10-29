@@ -1,0 +1,1075 @@
+{
+  "_id": "d3qSXU0UOMBgxZsL",
+  "_key": "!actors!d3qSXU0UOMBgxZsL",
+  "name": "Vlathherex",
+  "type": "npc",
+  "img": "icons/creatures/unholy/demon-horned-winged-laughing.webp",
+  "system": {
+    "abilities": {
+      "str": {
+        "value": 22
+      },
+      "dex": {
+        "value": 15
+      },
+      "con": {
+        "value": 18
+      },
+      "int": {
+        "value": 16
+      },
+      "wis": {
+        "value": 15
+      },
+      "cha": {
+        "value": 21
+      }
+    },
+    "attributes": {
+      "naturalAC": 7,
+      "hp": {
+        "temp": 0
+      },
+      "speed": {
+        "land": {
+          "base": 30
+        },
+        "fly": {
+          "base": 50,
+          "maneuverability": "average"
+        }
+      },
+      "cmdNotes": "",
+      "saveNotes": "+2 vs. fear (bravery)",
+      "acNotes": "",
+      "quadruped": false,
+      "sr": {
+        "formula": "17"
+      }
+    },
+    "details": {
+      "cr": {
+        "base": 12
+      },
+      "alignment": "ce",
+      "biography": {
+        "value": "<p>An incubus who fled the Worldwound through the failed Wardstone border with his little cast of demons, and found what looked like a perfect hiding place. Celmak treats them as \"regular cast.\" He wants out, with as much loot as he can carry.</p>"
+      },
+      "notes": {
+        "value": "<div class=\"hg-journal\"><h3>Printed stat block</h3><section class=\"hg-statblock\"><h4 class=\"hg-sb-title\">VLATHHEREX — CR 12</h4><p><strong>XP</strong> 19,200 · Male incubus fighter 6 · CE Medium outsider (chaotic, demon, evil, extraplanar)</p><p><strong>Init</strong> +6; <strong>Senses</strong> darkvision 60 ft.; Perception +21</p><h5 class=\"hg-sb-section\">DEFENSE</h5><p><strong>AC</strong> 28, touch 14, flat-footed 26 (+7 armor, +2 deflection, +2 Dex, +7 natural)</p><p><strong>hp</strong> 147 (14d10+70)</p><p><strong>Fort</strong> +18, <strong>Ref</strong> +11, <strong>Will</strong> +13 (+2 vs. fear)</p><p><strong>Defensive Abilities</strong> bravery +2; <strong>DR</strong> 10/cold iron or good; <strong>Immune</strong> electricity, poison; <strong>Resist</strong> acid 10, cold 10, fire 10; <strong>SR</strong> 17</p><h5 class=\"hg-sb-section\">OFFENSE</h5><p><strong>Speed</strong> 30 ft., fly 50 ft. (average)</p><p><strong>Melee</strong> <em>+1 unholy scimitar</em> +23/+18/+13 (1d6+10/15–20)</p><p><strong>Special Attacks</strong> pain redoubled (DC 19), weapon training (heavy blades +1)</p><p><strong>Spell-Like Abilities</strong> (CL 8th; concentration +13)<br>Constant — <em>tongues</em><br>At will — <em>charm person</em> (DC 16), <em>detect thoughts</em> (DC 17), <em>greater teleport</em> (self plus 50 lbs. of objects only), <em>suggestion</em> (DC 18)<br>1/day — <em>crushing despair</em> (DC 19), summon (level 3, 2 schirs 40%)</p><h5 class=\"hg-sb-section\">STATISTICS</h5><p><strong>Str</strong> 22, <strong>Dex</strong> 15, <strong>Con</strong> 18, <strong>Int</strong> 16, <strong>Wis</strong> 15, <strong>Cha</strong> 21</p><p><strong>Base Atk</strong> +14; <strong>CMB</strong> +20; <strong>CMD</strong> 34</p><p><strong>Feats</strong> Dazzling Display, Flyby Attack, Improved Critical (scimitar), Improved Initiative, Lightning Reflexes, Power Attack, Shatter Defenses, Toughness, Vital Strike, Weapon Focus (scimitar), Weapon Specialization (scimitar)</p><p><strong>Skills</strong> Bluff +18, Diplomacy +18, Fly +13, Intimidate +26, Knowledge (planes) +14, Perception +21, Sense Motive +15</p><p><strong>Languages</strong> Abyssal, Celestial, Common; telepathy 100 ft., <em>tongues</em></p><p><strong>SQ</strong> armor training 1, change shape (Small or Medium humanoid; <em>alter self</em>)</p><p><strong>Gear</strong> <em>+3 mithral chain shirt</em>, <em>+1 unholy scimitar</em>, <em>amulet of natural armor +1</em>, <em>belt of giant strength +2</em>, <em>cloak of resistance +3</em>, <em>ring of protection +2</em></p><h5 class=\"hg-sb-section\">SPECIAL ABILITIES</h5><p><strong>Pain Redoubled (Su)</strong> When Vlathherex confirms a critical hit with a melee weapon, the attack deals an extra 2d6 nonlethal damage, and the target must succeed at a DC 19 Fortitude save or be sickened for 1d6 rounds. Multiple uses extend the duration. The save DC is Charisma-based.</p></section></div>"
+      }
+    },
+    "skills": {
+      "blf": {
+        "rank": 13
+      },
+      "dip": {
+        "rank": 13
+      },
+      "fly": {
+        "rank": 11
+      },
+      "int": {
+        "rank": 14
+      },
+      "kpl": {
+        "rank": 11
+      },
+      "per": {
+        "rank": 14
+      },
+      "sen": {
+        "rank": 13
+      }
+    },
+    "traits": {
+      "size": "med",
+      "senses": {
+        "dv": {
+          "value": 60
+        }
+      },
+      "ci": [
+        "poison"
+      ],
+      "di": [
+        "electric"
+      ],
+      "dv": [],
+      "dr": {
+        "value": [
+          {
+            "amount": 10,
+            "operator": true,
+            "types": [
+              "coldIron",
+              "good"
+            ]
+          }
+        ],
+        "custom": ""
+      },
+      "eres": {
+        "value": [
+          {
+            "amount": 10,
+            "operator": true,
+            "types": [
+              "acid",
+              ""
+            ]
+          },
+          {
+            "amount": 10,
+            "operator": true,
+            "types": [
+              "cold",
+              ""
+            ]
+          },
+          {
+            "amount": 10,
+            "operator": true,
+            "types": [
+              "fire",
+              ""
+            ]
+          }
+        ],
+        "custom": ""
+      },
+      "fastHealing": "",
+      "languages": [
+        "abyssal",
+        "celestial",
+        "common",
+        "telepathy 100 ft.",
+        "tongues"
+      ]
+    }
+  },
+  "items": [
+    {
+      "_id": "ruwF9r3uIznkO8Wj",
+      "name": "Incubus",
+      "type": "race",
+      "img": "systems/pf1/icons/races/creature-types/outsider.png",
+      "system": {
+        "creatureTypes": [
+          "outsider"
+        ],
+        "creatureSubtypes": [
+          "chaotic",
+          "demon",
+          "evil",
+          "extraplanar"
+        ],
+        "size": "med",
+        "speeds": {
+          "land": 30
+        },
+        "description": {
+          "value": "<p>Built from the incubus (<em>Bestiary 3</em> 73) with six fighter levels.</p>"
+        }
+      },
+      "_key": "!actors.items!d3qSXU0UOMBgxZsL.ruwF9r3uIznkO8Wj",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "DfybRiifc0WCT2Me",
+      "name": "Outsider (Incubus)",
+      "type": "class",
+      "img": "systems/pf1/icons/skills/violet_07.jpg",
+      "system": {
+        "subType": "racial",
+        "level": 8,
+        "hd": 10,
+        "hp": 44,
+        "bab": "high",
+        "skillsPerLevel": 6,
+        "tag": "outsider",
+        "savingThrows": {
+          "fort": {
+            "value": "high"
+          },
+          "ref": {
+            "value": "high"
+          },
+          "will": {
+            "value": "low"
+          }
+        },
+        "description": {
+          "value": ""
+        }
+      },
+      "_key": "!actors.items!d3qSXU0UOMBgxZsL.DfybRiifc0WCT2Me",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "dUdTHZcfDA1VGzzk",
+      "name": "Fighter",
+      "type": "class",
+      "img": "systems/pf1/icons/skills/yellow_36.jpg",
+      "system": {
+        "subType": "base",
+        "level": 6,
+        "hd": 10,
+        "hp": 33,
+        "bab": "high",
+        "skillsPerLevel": 2,
+        "tag": "fighter",
+        "savingThrows": {
+          "fort": {
+            "value": "high"
+          },
+          "ref": {
+            "value": "low"
+          },
+          "will": {
+            "value": "low"
+          }
+        },
+        "description": {
+          "value": ""
+        }
+      },
+      "_key": "!actors.items!d3qSXU0UOMBgxZsL.dUdTHZcfDA1VGzzk",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "XjpQIEC9kEprAVrV",
+      "name": "Stat Block Adjustments",
+      "type": "feat",
+      "img": "icons/commodities/tech/dial-meter-gauge-blue.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "na",
+        "changes": [
+          {
+            "_id": "eJyRKk3K",
+            "formula": "3",
+            "target": "fort",
+            "type": "untyped",
+            "operator": "add"
+          },
+          {
+            "_id": "2OE5VnHh",
+            "formula": "1",
+            "target": "ref",
+            "type": "untyped",
+            "operator": "add"
+          },
+          {
+            "_id": "TXip885l",
+            "formula": "7",
+            "target": "will",
+            "type": "untyped",
+            "operator": "add"
+          },
+          {
+            "_id": "gYJr1bQc",
+            "formula": "4",
+            "target": "init",
+            "type": "untyped",
+            "operator": "add"
+          },
+          {
+            "_id": "j85crlGH",
+            "formula": "14",
+            "target": "mhp",
+            "type": "untyped",
+            "operator": "add"
+          },
+          {
+            "_id": "cvUu9cf9",
+            "formula": "7",
+            "target": "skill.int",
+            "type": "untyped",
+            "operator": "add"
+          },
+          {
+            "_id": "iLaB2bbe",
+            "formula": "5",
+            "target": "skill.per",
+            "type": "untyped",
+            "operator": "add"
+          }
+        ],
+        "description": {
+          "value": "<p>Bonuses from feats, gear, racial traits and special qualities that are already folded into the printed stat block. Keeping them here lets the PF1 sheet show the same totals as the adventure. Delete a change if you add the matching item with its own mechanics.</p>"
+        }
+      },
+      "_key": "!actors.items!d3qSXU0UOMBgxZsL.XjpQIEC9kEprAVrV",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "dlATxfD0kkNEjWqu",
+      "_key": "!actors.items!d3qSXU0UOMBgxZsL.dlATxfD0kkNEjWqu",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.3cq9YbgcMrAXC76j"
+      },
+      "img": "systems/pf1/icons/feats/dazzling-display.jpg",
+      "name": "Dazzling Display",
+      "system": {
+        "actions": [
+          {
+            "_id": "ihr743dvwocso29l",
+            "activation": {
+              "type": "full",
+              "unchained": {
+                "cost": 3,
+                "type": "action"
+              }
+            },
+            "measureTemplate": {
+              "size": "30",
+              "type": "circle"
+            },
+            "name": "Use"
+          }
+        ],
+        "description": {
+          "value": "<p><em>Your skill with your favored weapon can frighten enemies.</em></p><p><strong>Prerequisites</strong>: Weapon Focus, proficiency with the selected weapon.</p><p><strong>Benefits</strong>: While wielding the weapon in which you have Weapon Focus, you can perform a bewildering show of prowess as a full-round action. Make an Intimidate check to demoralize all foes within 30 feet who can see your display.<h3>Combat Trick</h3><p>When wielding a melee weapon with which you have Weapon Focus, you can make a single melee attack as a standard action against a foe. If the attack hits, you can select any number of foes within 30 feet who saw the attack, including that foe. Spend 2 stamina points per foe you have selected, then attempt an Intimidate check to demoralize those foes.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "117, 120"
+          }
+        ],
+        "tags": [
+          "Combat",
+          "Combat Trick"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "YE1xRdAO97eXD76g",
+      "_key": "!actors.items!d3qSXU0UOMBgxZsL.YE1xRdAO97eXD76g",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.PlCHtwe6e3f7pZYR"
+      },
+      "img": "icons/creatures/abilities/wing-batlike-purple-blue.webp",
+      "name": "Flyby Attack",
+      "system": {
+        "actions": [
+          {
+            "_id": "CVK9o4MhaI5XEA0o",
+            "activation": {
+              "type": "special",
+              "unchained": {
+                "type": "special"
+              }
+            },
+            "duration": {
+              "units": "inst"
+            },
+            "name": "Use",
+            "range": {
+              "units": "seeText"
+            }
+          }
+        ],
+        "description": {
+          "value": "<p><em>This creature can make an attack before and after it moves while flying.</em> </p><p><strong>Prerequisites</strong>: Fly speed.</p><p><strong>Benefit</strong>: When flying, the creature can take a move action and another standard action at any point during the move. The creature cannot take a second move action during a round when it makes a flyby attack.</p><p><strong>Normal</strong>: Without this feat, the creature takes a standard action either before or after its move.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1112",
+            "pages": "315"
+          }
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "a2G3zevMXF4qHY0H",
+      "_key": "!actors.items!d3qSXU0UOMBgxZsL.a2G3zevMXF4qHY0H",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.TbOPtIL8Fv8obXtP"
+      },
+      "img": "systems/pf1/icons/feats/improved-critical.jpg",
+      "name": "Improved Critical (Scimitar)",
+      "system": {
+        "description": {
+          "value": "<i>Attacks made with your chosen weapon are quite deadly.</i><p><strong>Prerequisites</strong>: Proficient with weapon, base attack bonus +8.</p><p><strong>Benefits</strong>: When using the weapon you selected, your threat range is doubled.</p><p><strong>Special</strong>: You can gain Improved Critical multiple times. The effects do not stack. Each time you take the feat, it applies to a new type of weapon.</p><p>This effect doesn't stack with any other effect that expands the threat range of a weapon.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "115, 127"
+          }
+        ],
+        "tags": [
+          "Combat",
+          "Critical",
+          "Offensive"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "SZNkeMSRebNW9qHA",
+      "_key": "!actors.items!d3qSXU0UOMBgxZsL.SZNkeMSRebNW9qHA",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.Uuiu3p982omhMEPj"
+      },
+      "img": "systems/pf1/icons/feats/improved-initiative.jpg",
+      "name": "Improved Initiative",
+      "system": {
+        "description": {
+          "value": "<p><em>Your quick reflexes allow you to react rapidly to danger.</em></p><p><strong>Benefits</strong>: You get a +4 bonus on initiative checks.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "115, 127"
+          }
+        ],
+        "tags": [
+          "Combat"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "wvafOdF6BkGEuej0",
+      "_key": "!actors.items!d3qSXU0UOMBgxZsL.wvafOdF6BkGEuej0",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.0bZf3SDkvVOe2ujH"
+      },
+      "img": "systems/pf1/icons/feats/lighting-reflexes.jpg",
+      "name": "Lightning Reflexes",
+      "system": {
+        "description": {
+          "value": "<p><em>You have faster reflexes than normal.</em></p><p><strong>Benefits</strong>: You get a +2 bonus on all Reflex saving throws.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "115, 130"
+          }
+        ],
+        "tags": [
+          "General",
+          "Saving Throw"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "SiuRcpryFloO00x4",
+      "_key": "!actors.items!d3qSXU0UOMBgxZsL.SiuRcpryFloO00x4",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.FUW5mIXHNBBIQ1Sq"
+      },
+      "img": "systems/pf1/icons/feats/power-attack.jpg",
+      "name": "Power Attack",
+      "system": {
+        "description": {
+          "value": "<i>You can make exceptionally deadly melee attacks by sacrificing accuracy for strength.</i><p><strong>Prerequisites</strong>: Str 13, base attack bonus +1.</p><p><strong>Benefits</strong>: You can choose to take a -1 penalty on all melee attack rolls and combat maneuver checks to gain a +2 bonus on all melee damage rolls. This bonus to damage is increased by half (+50%) if you are making an attack with a two-handed weapon, a one handed weapon using two hands, or a primary natural weapon that adds 1-1/2 times your Strength modifier on damage rolls. This bonus to damage is halved (-50%) if you are making an attack with an off-hand weapon or secondary natural weapon. When your base attack bonus reaches +4, and every 4 points thereafter, the penalty increases by -1 and the bonus to damage increases by +2. You must choose to use this feat before making an attack roll, and its effects last until your next turn. The bonus damage does not apply to touch attacks or effects that do not deal hit point damage.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "116, 131"
+          }
+        ],
+        "tags": [
+          "Combat",
+          "Offensive"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "2RhAULf4LV8zm05h",
+      "_key": "!actors.items!d3qSXU0UOMBgxZsL.2RhAULf4LV8zm05h",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.kn854Ovz0BDA2Dgz"
+      },
+      "img": "systems/pf1/icons/feats/shatter-defenses.jpg",
+      "name": "Shatter Defenses",
+      "system": {
+        "description": {
+          "value": "<p><em>Your skill with your chosen weapon leaves opponents unable to defend themselves if you strike them when their defenses are already compromised.</em></p><p><strong>Prerequisites</strong>: @UUID[Compendium.pf1.feats.Item.n250dFlbykAIAg5Z]{Weapon Focus}, @UUID[Compendium.pf1.feats.Item.3cq9YbgcMrAXC76j]{Dazzling Display}, base attack bonus +6, proficiency with weapon.</p><p><strong>Benefits</strong>: Any shaken, frightened, or panicked opponent hit by you this round is flat-footed to your attacks until the end of your next turn. This includes any additional attacks you make this round.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "117, 133"
+          }
+        ],
+        "tags": [
+          "Combat",
+          "Offensive"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "fO1IPJFyOZ2iOTi4",
+      "_key": "!actors.items!d3qSXU0UOMBgxZsL.fO1IPJFyOZ2iOTi4",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.8snLqsJN4LLL00Nq"
+      },
+      "img": "systems/pf1/icons/feats/toughness.jpg",
+      "name": "Toughness",
+      "system": {
+        "description": {
+          "value": "<i>You have enhanced physical stamina.</i><p><strong>Benefits</strong>: You gain +3 hit points. For every Hit Die you possess beyond 3, you gain an additional +1 hit point. If you have more than 3 Hit Dice, you gain +1 hit points whenever you gain a Hit Die (such as when you gain a level).</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "116, 135"
+          }
+        ],
+        "tags": [
+          "General",
+          "Defensive"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "APnxZgrcnPS5fiKz",
+      "_key": "!actors.items!d3qSXU0UOMBgxZsL.APnxZgrcnPS5fiKz",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.26k1Gi7t5BoqxhIj"
+      },
+      "img": "systems/pf1/icons/feats/vital-strike.jpg",
+      "name": "Vital Strike",
+      "system": {
+        "description": {
+          "instructions": "<p>Add conditional modifier with <code>@base.dice</code> as damage formula where desired.</p>",
+          "value": "<i>You make a single attack that deals significantly more damage than normal.</i><p><strong>Prerequisites</strong>: Base attack bonus +6.</p><p><strong>Benefits</strong>: When you use the attack action, you can make one attack at your highest base attack bonus that deals additional damage. Roll the weapon's damage dice for the attack twice and add the results together before adding bonuses from Strength, weapon abilities (such as <i>flaming</i>), precision based damage, and other damage bonuses. These extra weapon damage dice are not multiplied on a critical hit, but are added to the total.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "117, 136"
+          }
+        ],
+        "tags": [
+          "Combat",
+          "Offensive"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "DEpPNupxfDe5cZbG",
+      "_key": "!actors.items!d3qSXU0UOMBgxZsL.DEpPNupxfDe5cZbG",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.n250dFlbykAIAg5Z"
+      },
+      "img": "systems/pf1/icons/feats/weapon-focus.jpg",
+      "name": "Weapon Focus (Scimitar)",
+      "system": {
+        "description": {
+          "value": "<i>Choose one type of weapon. You can also choose unarmed strike or grapple (or ray, if you are a spellcaster) as your weapon for the purposes of this feat.</i><p><strong>Prerequisites</strong>: Proficiency with selected weapon, base attack bonus +1.</p><p><strong>Benefits</strong>: You gain a +1 bonus on all attack rolls you make using the selected weapon.</p><p><strong>Special</strong>: You can gain this feat multiple times. Its effects do not stack. Each time you take the feat, it applies to a new type of weapon.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "117, 136"
+          }
+        ],
+        "tags": [
+          "Combat",
+          "Weapon",
+          "Offensive"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "D0hS2Aq1ril0YPUu",
+      "_key": "!actors.items!d3qSXU0UOMBgxZsL.D0hS2Aq1ril0YPUu",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.YLCvMNeAF9V31m1h"
+      },
+      "img": "systems/pf1/icons/feats/weapon-specialization.jpg",
+      "name": "Weapon Specialization (Scimitar)",
+      "system": {
+        "description": {
+          "value": "<p><em>You are skilled at dealing damage with one weapon. Choose one type of weapon (including unarmed strike or grapple) for which you have already selected the Weapon Focus feat. You deal extra damage when using this weapon.</em></p><p><strong>Prerequisites</strong>: Proficiency with selected weapon, @UUID[Compendium.pf1.feats.Item.n250dFlbykAIAg5Z]{Weapon Focus} with selected weapon, fighter level 4th.</p><p><strong>Benefits</strong>: You gain a +2 bonus on all damage rolls you make using the selected weapon.</p><p><strong>Special</strong>: You can gain this feat multiple times. Its effects do not stack. Each time you take the feat, it applies to a new type of weapon.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "117, 137"
+          }
+        ],
+        "tags": [
+          "Combat",
+          "Weapon",
+          "Offensive"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "MnwGZXhKDxo9XAjt",
+      "name": "+1 Unholy Scimitar",
+      "type": "attack",
+      "img": "systems/pf1/icons/items/weapons/scimitar.PNG",
+      "system": {
+        "subType": "weapon",
+        "proficient": true,
+        "actions": [
+          {
+            "_id": "6hMbQJT0UHB5IwEn",
+            "name": "Attack",
+            "activation": {
+              "type": "attack",
+              "unchained": {
+                "type": "attack"
+              }
+            },
+            "actionType": "mwak",
+            "ability": {
+              "attack": "str",
+              "damage": "",
+              "critRange": 15,
+              "critMult": 2
+            },
+            "attackBonus": "3",
+            "damage": {
+              "parts": [
+                {
+                  "formula": "1d6+10",
+                  "types": [
+                    "slashing"
+                  ]
+                }
+              ]
+            },
+            "range": {
+              "units": "melee"
+            },
+            "touch": false,
+            "naturalAttack": {
+              "primary": true
+            },
+            "extraAttacks": {
+              "type": "standard"
+            },
+            "notes": {
+              "effect": [],
+              "footer": [
+                "Unholy: +2d6 damage against good creatures",
+                "Pain redoubled on a confirmed critical (DC 19)"
+              ]
+            }
+          }
+        ],
+        "description": {
+          "value": ""
+        },
+        "showInQuickbar": true
+      },
+      "_key": "!actors.items!d3qSXU0UOMBgxZsL.MnwGZXhKDxo9XAjt",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "ffz7KODV5Hz4JhXw",
+      "name": "Pain Redoubled",
+      "type": "feat",
+      "img": "icons/creatures/abilities/fang-tooth-blood-red.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "su",
+        "description": {
+          "value": "<p>When Vlathherex confirms a critical hit with a melee weapon, the attack deals an extra 2d6 nonlethal damage, and the target must succeed at a DC 19 Fortitude save or be sickened for 1d6 rounds. Multiple uses extend the duration. The save DC is Charisma-based.</p>"
+        },
+        "actions": [
+          {
+            "_id": "qUuAwpCCIeZIugeG",
+            "name": "Pain redoubled",
+            "activation": {
+              "type": "special",
+              "unchained": {
+                "type": "action",
+                "cost": 2
+              }
+            },
+            "actionType": "other",
+            "save": {
+              "type": "fort",
+              "dc": "19",
+              "description": "Fort negates sickened"
+            },
+            "damage": {
+              "parts": [
+                {
+                  "formula": "2d6",
+                  "types": [
+                    "nonlethal"
+                  ]
+                }
+              ]
+            },
+            "ability": {
+              "damage": "",
+              "attack": ""
+            }
+          }
+        ]
+      },
+      "_key": "!actors.items!d3qSXU0UOMBgxZsL.ffz7KODV5Hz4JhXw",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "mKaLPLVpnkGJBMZA",
+      "name": "Spell-Like Abilities",
+      "type": "feat",
+      "img": "icons/magic/control/hypnosis-mesmerism-swirl.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "sp",
+        "description": {
+          "value": "<p><strong>CL 8th; concentration +13</strong></p><p><strong>Constant</strong> — <em>@UUID[Compendium.pf1.spells.Item.m1rmcpcaixcpz9ib]{tongues}</em></p><p><strong>At will</strong> — <em>@UUID[Compendium.pf1.spells.Item.tjog6bufg5b08lvq]{charm person}</em> (DC 16), <em>@UUID[Compendium.pf1.spells.Item.xllxylvvqr82o2d5]{detect thoughts}</em> (DC 17), <em>@UUID[Compendium.pf1.spells.Item.5cdmojmydhwowzy1]{greater teleport}</em> (self plus 50 lbs. of objects only), <em>@UUID[Compendium.pf1.spells.Item.zqj5qzyl46af27v0]{suggestion}</em> (DC 18)</p><p><strong>1/day</strong> — <em>@UUID[Compendium.pf1.spells.Item.zt7cje76dck9hwp9]{crushing despair}</em> (DC 19), summon (level 3, 2 schirs 40%)</p><p><em>His greater teleport fails while the Dimensional Anchor Array is active.</em></p>"
+        }
+      },
+      "_key": "!actors.items!d3qSXU0UOMBgxZsL.mKaLPLVpnkGJBMZA",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "Cg4e2pilcOyoR76o",
+      "name": "Bravery +2",
+      "type": "feat",
+      "img": "systems/pf1/icons/skills/yellow_36.jpg",
+      "system": {
+        "subType": "classFeat",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p>+2 bonus on Will saves against fear.</p>"
+        }
+      },
+      "_key": "!actors.items!d3qSXU0UOMBgxZsL.Cg4e2pilcOyoR76o",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "Ja1GnBfrbhYhBQzC",
+      "name": "Armor Training 1",
+      "type": "feat",
+      "img": "systems/pf1/icons/skills/yellow_36.jpg",
+      "system": {
+        "subType": "classFeat",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p>Reduces armor check penalty by 1 and increases maximum Dex bonus by 1 (included).</p>"
+        }
+      },
+      "_key": "!actors.items!d3qSXU0UOMBgxZsL.Ja1GnBfrbhYhBQzC",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "u0SedEBnaygig4dz",
+      "name": "Weapon Training (Heavy Blades +1)",
+      "type": "feat",
+      "img": "systems/pf1/icons/skills/yellow_36.jpg",
+      "system": {
+        "subType": "classFeat",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p>+1 on attack and damage rolls with heavy blades (included in his scimitar attack).</p>"
+        }
+      },
+      "_key": "!actors.items!d3qSXU0UOMBgxZsL.u0SedEBnaygig4dz",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "eJKH83DnhStz3lpl",
+      "name": "Change Shape",
+      "type": "feat",
+      "img": "icons/magic/control/silhouette-grow-shrink-blue.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "su",
+        "description": {
+          "value": "<p>Small or Medium humanoid; <em>@UUID[Compendium.pf1.spells.Item.kouqz0pm1xl8xilm]{alter self}</em>. At the auction he wears the form of a broad-shouldered Kellid in wolf furs.</p>"
+        }
+      },
+      "_key": "!actors.items!d3qSXU0UOMBgxZsL.eJKH83DnhStz3lpl",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "StduFdavgE1AiYQh",
+      "name": "Telepathy 100 ft.",
+      "type": "feat",
+      "img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "su",
+        "description": {
+          "value": "<p>He believes telepathy is private. Celmak cannot hear it, but a successful Muse scan on the person he spoke to will reveal the conversation.</p>"
+        }
+      },
+      "_key": "!actors.items!d3qSXU0UOMBgxZsL.StduFdavgE1AiYQh",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "name": "+3 Mithral Chain Shirt",
+      "type": "equipment",
+      "img": "systems/pf1/icons/items/armor/chain-shirt.png",
+      "system": {
+        "armor": {
+          "value": 4,
+          "enh": 3,
+          "dex": 6,
+          "acp": 0,
+          "material": {
+            "normal": {
+              "value": "mithral"
+            }
+          }
+        },
+        "baseTypes": [
+          "Chain Shirt"
+        ],
+        "description": {
+          "unidentified": "<p>Covering the torso, this shirt is made up of thousands of interlocking metal rings.</p>"
+        },
+        "hardness": 10,
+        "hp": {
+          "base": 20
+        },
+        "price": 10100,
+        "slot": "armor",
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "150, 151"
+          }
+        ],
+        "spellFailure": 10,
+        "weight": {
+          "value": 12.5
+        },
+        "equipped": true,
+        "subType": "armor",
+        "equipmentSubtype": "lightArmor"
+      },
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.armors-and-shields.Item.iGu21zy6QtroUZ4O"
+      },
+      "_id": "blihJFPmRGrvBRgB",
+      "_key": "!actors.items!d3qSXU0UOMBgxZsL.blihJFPmRGrvBRgB"
+    },
+    {
+      "name": "Ring of Protection +2",
+      "type": "equipment",
+      "img": "icons/equipment/finger/ring-band-engraved-scrolls-silver.webp",
+      "system": {
+        "subType": "wondrous",
+        "slot": "ring",
+        "price": 8000,
+        "equipped": true,
+        "description": {
+          "value": "<p>+2 deflection bonus to AC.</p>"
+        },
+        "changes": [
+          {
+            "_id": "g8EWNdil",
+            "formula": "2",
+            "target": "ac",
+            "type": "deflection",
+            "operator": "add"
+          }
+        ]
+      },
+      "_id": "CBx1KBlXmQUF1bfB",
+      "_key": "!actors.items!d3qSXU0UOMBgxZsL.CBx1KBlXmQUF1bfB",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "name": "Amulet of Natural Armor +1",
+      "type": "equipment",
+      "img": "icons/equipment/neck/amulet-carved-stone-cross.webp",
+      "system": {
+        "subType": "wondrous",
+        "slot": "neck",
+        "price": 2000,
+        "equipped": true,
+        "description": {
+          "value": "<p>+1 enhancement bonus to natural armor (already included in Vlathherex's natural armor).</p>"
+        }
+      },
+      "_id": "vyaTHgHAldO9qh4d",
+      "_key": "!actors.items!d3qSXU0UOMBgxZsL.vyaTHgHAldO9qh4d",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "name": "Belt of Giant Strength +2",
+      "type": "equipment",
+      "img": "icons/equipment/waist/belt-buckle-gem-red.webp",
+      "system": {
+        "subType": "wondrous",
+        "slot": "belt",
+        "price": 4000,
+        "equipped": true,
+        "description": {
+          "value": "<p>+2 enhancement bonus to Strength (already included in his Strength score).</p>"
+        }
+      },
+      "_id": "GGZG6KCn3gaw5Khz",
+      "_key": "!actors.items!d3qSXU0UOMBgxZsL.GGZG6KCn3gaw5Khz",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "name": "Cloak of Resistance +3",
+      "type": "equipment",
+      "img": "icons/equipment/back/cape-layered-simple-brown.webp",
+      "system": {
+        "subType": "wondrous",
+        "slot": "shoulders",
+        "price": 9000,
+        "equipped": true,
+        "description": {
+          "value": "<p>+3 resistance bonus on saving throws (already included in his saves).</p>"
+        }
+      },
+      "_id": "Pgdo5kzdetb83C6q",
+      "_key": "!actors.items!d3qSXU0UOMBgxZsL.Pgdo5kzdetb83C6q",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    }
+  ],
+  "folder": "itiW4PwgBYynjALg",
+  "sort": 100,
+  "prototypeToken": {
+    "name": "Vlathherex",
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "icons/creatures/unholy/demon-horned-winged-laughing.webp",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": -1,
+    "actorLink": false,
+    "displayName": 20,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "sight": {
+      "enabled": true,
+      "range": 60
+    }
+  },
+  "flags": {
+    "hollow-garden": {
+      "statblock": true
+    }
+  },
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.9"
+  }
+}

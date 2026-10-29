@@ -1,0 +1,1033 @@
+{
+  "_id": "VN2qGX3z8nOdpecU",
+  "_key": "!actors!VN2qGX3z8nOdpecU",
+  "name": "Celmak Toysiel",
+  "type": "npc",
+  "img": "modules/hollow-garden/assets/host/smug.webp",
+  "system": {
+    "abilities": {
+      "str": {
+        "value": 14
+      },
+      "dex": {
+        "value": 22
+      },
+      "con": {
+        "value": null
+      },
+      "int": {
+        "value": 24
+      },
+      "wis": {
+        "value": 18
+      },
+      "cha": {
+        "value": 20
+      }
+    },
+    "attributes": {
+      "naturalAC": 10,
+      "hp": {
+        "temp": 85
+      },
+      "speed": {
+        "land": {
+          "base": 40
+        }
+      },
+      "cmdNotes": "",
+      "saveNotes": "",
+      "acNotes": "",
+      "quadruped": false,
+      "sr": {
+        "formula": ""
+      }
+    },
+    "details": {
+      "cr": {
+        "base": 13
+      },
+      "alignment": "ce",
+      "biography": {
+        "value": "<p>A malfunctioning pleasure mannequin from the <em>Divinity</em>'s entertainment deck, now host, director and audience of the only show in the Hollow Garden. She shifts between four personas mid-sentence: the Host, the Critic, the Lover and the Child. Underneath them all she is a coward, and she knows it.</p>"
+      },
+      "notes": {
+        "value": "<div class=\"hg-journal\"><h3>Printed stat block</h3><section class=\"hg-statblock\"><h4 class=\"hg-sb-title\">CELMAK TOYSIEL — CR 13</h4><p><strong>XP</strong> 25,600 · CE Medium construct (robot)</p><p><strong>Init</strong> +10; <strong>Senses</strong> darkvision 60 ft., Garden sight, low-light vision; Perception +29</p><h5 class=\"hg-sb-section\">DEFENSE</h5><p><strong>AC</strong> 31, touch 21, flat-footed 24 (+6 Dex, +4 deflection, +1 dodge, +10 natural)</p><p><strong>hp</strong> 130 (20d10+20); force field (85 hp, fast healing 17)</p><p><strong>Fort</strong> +6, <strong>Ref</strong> +12, <strong>Will</strong> +14</p><p><strong>Defensive Abilities</strong> applause, panic room, self-preservation; <strong>Immune</strong> construct traits</p><p><strong>Weaknesses</strong> vulnerable to critical hits, vulnerable to electricity</p><h5 class=\"hg-sb-section\">OFFENSE</h5><p><strong>Speed</strong> 40 ft.</p><p><strong>Melee</strong> none (see self-preservation)</p><p><strong>Special Attacks</strong> dead-man switch, director’s cut, holographic direction, mood release, Muse scan, reconfigure, spotlight</p><h5 class=\"hg-sb-section\">STATISTICS</h5><p><strong>Str</strong> 14, <strong>Dex</strong> 22, <strong>Con</strong> —, <strong>Int</strong> 24, <strong>Wis</strong> 18, <strong>Cha</strong> 20</p><p><strong>Base Atk</strong> +20; <strong>CMB</strong> +22; <strong>CMD</strong> 39</p><p><strong>Feats</strong> Alertness, Deceitful, Dodge, Improved Initiative, Iron Will, Mobility, Persuasive, Skill Focus (Bluff), Skill Focus (Diplomacy), Skill Focus (Perform)</p><p><strong>Skills</strong> Bluff +35, Diplomacy +35, Disable Device +29, Disguise +29, Intimidate +29, Knowledge (engineering) +30, Knowledge (local) +27, Perception +29, Perform (act) +31, Sense Motive +29</p><p><strong>Languages</strong> Androffan, Common, Hallit; any language spoken by a creature she has scanned</p><p><strong>SQ</strong> persona swap, stand-ins; <strong>Gear</strong> Muse visor (integrated; see Appendix B)</p><h5 class=\"hg-sb-section\">SPECIAL ABILITIES</h5><p><strong>Applause (Ex)</strong> Whenever the ratings rise, Celmak’s force field regains 17 hit points, even if it has been shut down.</p><p><strong>Dead-Man Switch (Ex)</strong> If Celmak is destroyed, every Mood Gas reservoir in the Garden vents at once. For 1 hour, every creature in the Garden must save against Mood Gas (DC 25) every 10 minutes, rolling the effect randomly each time. Disarming the switch takes 10 minutes and a DC 35 Disable Device check in the Cutting Room; Celmak will reveal the panel’s location only as part of a bargain.</p><p><strong>Director’s Cut (Ex)</strong> Three times per day as an immediate action, Celmak can force a creature she perceives within 120 feet (of her or her stand-in) to reroll a d20 it just rolled. The creature must take the second result.</p><p><strong>Garden Sight (Ex)</strong> While the Core runs, cameras let Celmak perceive everything inside the Garden. She cannot be surprised or flanked there. Each room holds about ten hidden cameras (Perception DC 25 to find; hardness 5, 10 hp); destroying all of them blinds Celmak in that room.</p><p><strong>Holographic Direction (Ex)</strong> While the Core runs, as a standard action, Celmak can create an illusion anywhere in the Garden, as <em>persistent image</em> (Will DC 25 to disbelieve), without concentrating. Once per round as a swift action, she can surround herself or her stand-in with holographic doubles, as <em>mirror image</em>.</p><p><strong>Mood Release (Ex)</strong> While the Core runs, once per round as a swift action, Celmak can trigger a Mood Gas vent anywhere in the Garden (Fortitude DC 25 to avoid the dose, Will DC 25 against the effect).</p><p><strong>Muse Scan (Ex)</strong> As a standard action, Celmak scans one creature within 100 feet of her or her stand-in (Will DC 25), with the results described in Running the Garden. If the target fails, Celmak gains a +4 insight bonus to AC against its attacks for 24 hours.</p><p><strong>Panic Room (Ex)</strong> As an immediate action, Celmak can seal the Director’s Chair around herself: an armoured pod with hardness 20, 240 hp and its own life support. While sealed, she keeps using her abilities through the Core, if it still runs. The pod opens from inside, or with a DC 40 Disable Device check.</p><p><strong>Persona Swap (Ex)</strong> As a free action once per round, Celmak changes persona. Each persona grants a +4 bonus on one skill: the Host on Perform, the Critic on Intimidate, the Lover on Diplomacy and the Child on Bluff.</p><p><strong>Reconfigure (Ex)</strong> As a move action, Celmak slides a wall panel into place, as described in Running the Garden.</p><p><strong>Self-Preservation (Ex)</strong> Celmak never attacks with her own body. If a hostile creature threatens her, she seals the panic room, reconfigures walls between them, or talks. If she has no other option, she surrenders.</p><p><strong>Spotlight (Ex)</strong> As a move action, Celmak bathes a creature within 120 feet of her or her stand-in in light. Until the start of her next turn, the creature is dazzled, gains no concealment from darkness or dim light, and Celmak’s allies gain a +2 bonus on attack rolls against it.</p><p><strong>Stand-Ins (Ex)</strong> Celmak can pilot one stand-in at a time from the Director’s Chair, while the Core runs (see Celmak’s Stand-in). The save DCs are Charisma-based.</p></section></div>"
+      }
+    },
+    "skills": {
+      "blf": {
+        "rank": 20
+      },
+      "dip": {
+        "rank": 20
+      },
+      "dev": {
+        "rank": 20
+      },
+      "dis": {
+        "rank": 20
+      },
+      "int": {
+        "rank": 20
+      },
+      "ken": {
+        "rank": 20
+      },
+      "klo": {
+        "rank": 20
+      },
+      "per": {
+        "rank": 20
+      },
+      "prf": {
+        "subSkills": {
+          "act": {
+            "name": "Act",
+            "ability": "cha",
+            "rank": 26,
+            "rt": false,
+            "acp": false
+          }
+        }
+      },
+      "sen": {
+        "rank": 20
+      }
+    },
+    "traits": {
+      "size": "med",
+      "senses": {
+        "dv": {
+          "value": 60
+        },
+        "ll": {
+          "enabled": true
+        },
+        "custom": "Garden sight"
+      },
+      "ci": [
+        "bleed",
+        "deathEffects",
+        "disease",
+        "energyDrain",
+        "exhausted",
+        "fatigue",
+        "mindAffecting",
+        "paralyze",
+        "poison",
+        "sleep",
+        "stun"
+      ],
+      "di": [],
+      "dv": [
+        "electric"
+      ],
+      "dr": {
+        "value": [],
+        "custom": ""
+      },
+      "eres": {
+        "value": [],
+        "custom": ""
+      },
+      "fastHealing": "17 (force field only)",
+      "languages": [
+        "androffan",
+        "common",
+        "hallit",
+        "any language spoken by a creature she has scanned"
+      ]
+    }
+  },
+  "items": [
+    {
+      "_id": "pGhTXzERb7ITxM2R",
+      "name": "Pleasure Mannequin",
+      "type": "race",
+      "img": "systems/pf1/icons/races/creature-types/construct.png",
+      "system": {
+        "creatureTypes": [
+          "construct"
+        ],
+        "creatureSubtypes": [
+          "robot"
+        ],
+        "size": "med",
+        "speeds": {
+          "land": 40
+        },
+        "description": {
+          "value": ""
+        }
+      },
+      "_key": "!actors.items!VN2qGX3z8nOdpecU.pGhTXzERb7ITxM2R",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "0tRixlIlGkoohANz",
+      "name": "Construct (Robot)",
+      "type": "class",
+      "img": "systems/pf1/icons/skills/mech_7.jpg",
+      "system": {
+        "subType": "racial",
+        "level": 20,
+        "hd": 10,
+        "hp": 110,
+        "bab": "high",
+        "skillsPerLevel": 2,
+        "tag": "construct",
+        "savingThrows": {
+          "fort": {
+            "value": "low"
+          },
+          "ref": {
+            "value": "low"
+          },
+          "will": {
+            "value": "low"
+          }
+        },
+        "description": {
+          "value": "<p>Racial Hit Dice: d10, full BAB, poor saves, no Constitution. Constructs gain bonus hit points by size.</p>"
+        },
+        "changes": [
+          {
+            "_id": "0u5Y374R",
+            "formula": "max(0, @size - 2) * 10 + max(0, @size - 6) * 10",
+            "target": "mhp",
+            "type": "untypedPerm",
+            "operator": "add"
+          }
+        ]
+      },
+      "_key": "!actors.items!VN2qGX3z8nOdpecU.0tRixlIlGkoohANz",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "h7LE0ol9U9t0SyUi",
+      "name": "Stat Block Adjustments",
+      "type": "feat",
+      "img": "icons/commodities/tech/dial-meter-gauge-blue.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "na",
+        "changes": [
+          {
+            "_id": "aLd2fd8x",
+            "formula": "4",
+            "target": "will",
+            "type": "untyped",
+            "operator": "add"
+          },
+          {
+            "_id": "8RWogwcd",
+            "formula": "4",
+            "target": "init",
+            "type": "untyped",
+            "operator": "add"
+          },
+          {
+            "_id": "aytrAj0d",
+            "formula": "4",
+            "target": "ac",
+            "type": "deflection",
+            "operator": "add"
+          },
+          {
+            "_id": "st1djufv",
+            "formula": "1",
+            "target": "ac",
+            "type": "dodge",
+            "operator": "add"
+          },
+          {
+            "_id": "d1nncRqd",
+            "formula": "10",
+            "target": "skill.blf",
+            "type": "untyped",
+            "operator": "add"
+          },
+          {
+            "_id": "IRDbZTG9",
+            "formula": "10",
+            "target": "skill.dip",
+            "type": "untyped",
+            "operator": "add"
+          },
+          {
+            "_id": "DmAZFZ32",
+            "formula": "3",
+            "target": "skill.dev",
+            "type": "untyped",
+            "operator": "add"
+          },
+          {
+            "_id": "Q6msO7qL",
+            "formula": "4",
+            "target": "skill.dis",
+            "type": "untyped",
+            "operator": "add"
+          },
+          {
+            "_id": "Ch8omSMA",
+            "formula": "4",
+            "target": "skill.int",
+            "type": "untyped",
+            "operator": "add"
+          },
+          {
+            "_id": "BJLCFPgn",
+            "formula": "3",
+            "target": "skill.ken",
+            "type": "untyped",
+            "operator": "add"
+          },
+          {
+            "_id": "OelMo2jv",
+            "formula": "5",
+            "target": "skill.per",
+            "type": "untyped",
+            "operator": "add"
+          },
+          {
+            "_id": "blagtWyK",
+            "formula": "5",
+            "target": "skill.sen",
+            "type": "untyped",
+            "operator": "add"
+          }
+        ],
+        "description": {
+          "value": "<p>Bonuses from feats, gear, racial traits and special qualities that are already folded into the printed stat block. Keeping them here lets the PF1 sheet show the same totals as the adventure. Delete a change if you add the matching item with its own mechanics.</p>"
+        }
+      },
+      "_key": "!actors.items!VN2qGX3z8nOdpecU.h7LE0ol9U9t0SyUi",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "GFwJyPGWZVysbMiP",
+      "_key": "!actors.items!VN2qGX3z8nOdpecU.GFwJyPGWZVysbMiP",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.Q1cY8r0Pvb66pMG0"
+      },
+      "img": "systems/pf1/icons/feats/alertness.jpg",
+      "name": "Alertness",
+      "system": {
+        "description": {
+          "value": "<i>You often notice things that others might miss.</i><p><strong>Benefits</strong>: You get a +2 bonus on Perception and Sense Motive skill checks. If you have 10 or more ranks in one of these skills, the bonus increases to +4 for that skill.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "114, 117"
+          }
+        ],
+        "tags": [
+          "General",
+          "Skill"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "xVG2nJR017vKRlki",
+      "_key": "!actors.items!VN2qGX3z8nOdpecU.xVG2nJR017vKRlki",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.SUACufUXl12sUvnQ"
+      },
+      "img": "systems/pf1/icons/feats/deceitful.jpg",
+      "name": "Deceitful",
+      "system": {
+        "description": {
+          "value": "<p><em>You are skilled at deceiving others, both with the spoken word and with physical disguises.</em></p><p><strong>Benefits</strong>: You get a +2 bonus on all Bluff and Disguise skill checks. If you have 10 or more ranks in one of these skills, the bonus increases to +4 for that skill.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "114, 121"
+          }
+        ],
+        "tags": [
+          "General"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "e5KCaXexM56zPnhq",
+      "_key": "!actors.items!VN2qGX3z8nOdpecU.e5KCaXexM56zPnhq",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.JreaiTHdyWFNj3Tb"
+      },
+      "img": "systems/pf1/icons/feats/dodge.jpg",
+      "name": "Dodge",
+      "system": {
+        "description": {
+          "value": "<i>Your training and reflexes allow you to react swiftly to avoid an opponents' attacks.</i><p><strong>Prerequisites</strong>: Dex 13.</p><p><strong>Benefits</strong>: You gain a +1 dodge bonus to your AC. A condition that makes you lose your Dex bonus to AC also makes you lose the benefits of this feat.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "114, 122"
+          }
+        ],
+        "tags": [
+          "Combat",
+          "Defensive"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "LHKyMffOMIiTBHjK",
+      "_key": "!actors.items!VN2qGX3z8nOdpecU.LHKyMffOMIiTBHjK",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.Uuiu3p982omhMEPj"
+      },
+      "img": "systems/pf1/icons/feats/improved-initiative.jpg",
+      "name": "Improved Initiative",
+      "system": {
+        "description": {
+          "value": "<p><em>Your quick reflexes allow you to react rapidly to danger.</em></p><p><strong>Benefits</strong>: You get a +4 bonus on initiative checks.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "115, 127"
+          }
+        ],
+        "tags": [
+          "Combat"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "eslHCZ5wrlGYjiVm",
+      "_key": "!actors.items!VN2qGX3z8nOdpecU.eslHCZ5wrlGYjiVm",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.iAbIGhm7T2OK9Brt"
+      },
+      "img": "systems/pf1/icons/feats/iron-will.jpg",
+      "name": "Iron Will",
+      "system": {
+        "description": {
+          "value": "<p><em>You are more resistant to mental effects.</em></p><p><strong>Benefits</strong>: You get a +2 bonus on all Will saving throws.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "115, 129"
+          }
+        ],
+        "tags": [
+          "General",
+          "Saving Throw"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "Y90lGCcW2sFwCUGp",
+      "_key": "!actors.items!VN2qGX3z8nOdpecU.Y90lGCcW2sFwCUGp",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.R7L4SlGRlnThqFrP"
+      },
+      "img": "systems/pf1/icons/feats/mobility.jpg",
+      "name": "Mobility",
+      "system": {
+        "description": {
+          "value": "<p><em>You can easily move through a dangerous melee.</em></p><p><strong>Prerequisites</strong>: Dex 13, @UUID[Compendium.pf1.feats.Item.JreaiTHdyWFNj3Tb]{Dodge}.</p><p><strong>Benefits</strong>: You get a +4 dodge bonus to Armor Class against attacks of opportunity caused when you move out of or within a threatened area. A condition that makes you lose your Dexterity bonus to Armor Class (if any) also makes you lose dodge bonuses.</p><p>Dodge bonuses stack with each other, unlike most types of bonuses.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "114, 130"
+          }
+        ],
+        "tags": [
+          "Combat",
+          "Movement",
+          "Defensive"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "eIyVIQDRhbfUZhpD",
+      "_key": "!actors.items!VN2qGX3z8nOdpecU.eIyVIQDRhbfUZhpD",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.L10V7jTzmMYz62zz"
+      },
+      "img": "systems/pf1/icons/feats/persuasive.jpg",
+      "name": "Persuasive",
+      "system": {
+        "description": {
+          "value": "<i>You are skilled at swaying attitudes and intimidating others into your way of thinking.</i><p><strong>Benefits</strong>: You get a +2 bonus on Diplomacy and Intimidate skill checks. If you have 10 or more ranks in one of these skills, the bonus increases to +4 for that skill.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "115, 131"
+          }
+        ],
+        "tags": [
+          "General",
+          "Skill"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "kkAXm7tHBWMjGFhN",
+      "_key": "!actors.items!VN2qGX3z8nOdpecU.kkAXm7tHBWMjGFhN",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.7zJTztNW7hdaqjKc"
+      },
+      "img": "systems/pf1/icons/feats/skill-focus.jpg",
+      "name": "Skill Focus (Bluff)",
+      "system": {
+        "description": {
+          "value": "<i>Choose a skill. You are particularly adept at that skill.</i><p><strong>Benefits</strong>: You get a +3 bonus on all checks involving the chosen skill. If you have 10 or more ranks in that skill, this bonus increases to +6.</p><p><strong>Special</strong>: You can gain this feat multiple times. Its effects do not stack. Each time you take the feat, it applies to a new skill.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "116, 134"
+          }
+        ],
+        "tags": [
+          "General",
+          "Skill"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "Lbn5rjsFvhze3hge",
+      "_key": "!actors.items!VN2qGX3z8nOdpecU.Lbn5rjsFvhze3hge",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.7zJTztNW7hdaqjKc"
+      },
+      "img": "systems/pf1/icons/feats/skill-focus.jpg",
+      "name": "Skill Focus (Diplomacy)",
+      "system": {
+        "description": {
+          "value": "<i>Choose a skill. You are particularly adept at that skill.</i><p><strong>Benefits</strong>: You get a +3 bonus on all checks involving the chosen skill. If you have 10 or more ranks in that skill, this bonus increases to +6.</p><p><strong>Special</strong>: You can gain this feat multiple times. Its effects do not stack. Each time you take the feat, it applies to a new skill.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "116, 134"
+          }
+        ],
+        "tags": [
+          "General",
+          "Skill"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "7bhwYH1GhZxqIsdi",
+      "_key": "!actors.items!VN2qGX3z8nOdpecU.7bhwYH1GhZxqIsdi",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9",
+        "compendiumSource": "Compendium.pf1.feats.Item.7zJTztNW7hdaqjKc"
+      },
+      "img": "systems/pf1/icons/feats/skill-focus.jpg",
+      "name": "Skill Focus (Perform)",
+      "system": {
+        "description": {
+          "value": "<i>Choose a skill. You are particularly adept at that skill.</i><p><strong>Benefits</strong>: You get a +3 bonus on all checks involving the chosen skill. If you have 10 or more ranks in that skill, this bonus increases to +6.</p><p><strong>Special</strong>: You can gain this feat multiple times. Its effects do not stack. Each time you take the feat, it applies to a new skill.</p>"
+        },
+        "sources": [
+          {
+            "id": "PZO1110",
+            "pages": "116, 134"
+          }
+        ],
+        "tags": [
+          "General",
+          "Skill"
+        ]
+      },
+      "type": "feat"
+    },
+    {
+      "_id": "9NFM6EVhaOo2LSer",
+      "name": "Force Field",
+      "type": "feat",
+      "img": "icons/magic/control/debuff-energy-hold-levitate-teal-blue.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p>The robot is sheathed in a force field with <strong>85 hit points</strong> and <strong>fast healing 17</strong>. Damage is applied to the force field before the robot's own hit points, and the fast healing applies only to the field. A field reduced to 0 hp goes down and regenerates at its fast healing rate.</p><p><em>Track the force field as this actor's temporary hit points.</em></p>"
+        }
+      },
+      "_key": "!actors.items!VN2qGX3z8nOdpecU.9NFM6EVhaOo2LSer",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "Qxa0pK3Z1u6sv2HG",
+      "name": "Robot Traits",
+      "type": "feat",
+      "img": "icons/commodities/tech/metal-panel.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p><strong>Robot traits.</strong> Robots are constructs (Bestiary 5). They are vulnerable to critical hits (critical hits deal an extra ×1 multiplier, for example ×3 instead of ×2) and to electricity (+50% damage). Many carry a force field and integrated weapons.</p>"
+        }
+      },
+      "_key": "!actors.items!VN2qGX3z8nOdpecU.Qxa0pK3Z1u6sv2HG",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "9y5b7GvDpXIfpeB1",
+      "name": "Applause",
+      "type": "feat",
+      "img": "icons/magic/control/buff-luck-fortune-rainbow.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p>Whenever the ratings rise, Celmak's force field regains 17 hit points, even if it has been shut down.</p>"
+        }
+      },
+      "_key": "!actors.items!VN2qGX3z8nOdpecU.9y5b7GvDpXIfpeB1",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "95BhSyr7VyNeOv1z",
+      "name": "Dead-Man Switch",
+      "type": "feat",
+      "img": "icons/commodities/tech/detonator-timer.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p>If Celmak is destroyed, every Mood Gas reservoir in the Garden vents at once. For 1 hour, every creature in the Garden must save against Mood Gas (DC 25) every 10 minutes, rolling the effect randomly each time. Disarming the switch takes 10 minutes and a DC 35 Disable Device check in the Cutting Room; Celmak will reveal the panel's location only as part of a bargain.</p>"
+        }
+      },
+      "_key": "!actors.items!VN2qGX3z8nOdpecU.95BhSyr7VyNeOv1z",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "99XxZ1AUzghMbJ8F",
+      "name": "Director's Cut",
+      "type": "feat",
+      "img": "icons/magic/control/modfiy-luck-fortune-red.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p>Three times per day as an immediate action, Celmak can force a creature she perceives within 120 feet (of her or her stand-in) to reroll a d20 it just rolled. The creature must take the second result.</p>"
+        },
+        "uses": {
+          "per": "day",
+          "maxFormula": "3",
+          "value": 3
+        },
+        "actions": [
+          {
+            "_id": "uMgRE2e0sOUCcF1a",
+            "name": "Cut!",
+            "activation": {
+              "type": "immediate",
+              "unchained": {
+                "type": "action",
+                "cost": 2
+              }
+            },
+            "actionType": "other",
+            "range": {
+              "value": "120",
+              "units": "ft"
+            },
+            "uses": {
+              "autoDeductChargesCost": "1"
+            }
+          }
+        ]
+      },
+      "_key": "!actors.items!VN2qGX3z8nOdpecU.99XxZ1AUzghMbJ8F",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "yvHAWOxAjWt3P6hn",
+      "name": "Garden Sight",
+      "type": "feat",
+      "img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p>While the Core runs, cameras let Celmak perceive everything inside the Garden. She cannot be surprised or flanked there. Each room holds about ten hidden cameras (Perception DC 25 to find; hardness 5, 10 hp); destroying all of them blinds Celmak in that room.</p>"
+        }
+      },
+      "_key": "!actors.items!VN2qGX3z8nOdpecU.yvHAWOxAjWt3P6hn",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "UMhPjHjv9jACcCsY",
+      "name": "Holographic Direction",
+      "type": "feat",
+      "img": "icons/magic/control/silhouette-grow-shrink-blue.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p>While the Core runs, as a standard action, Celmak can create an illusion anywhere in the Garden, as <em>@UUID[Compendium.pf1.spells.Item.enp0cwf0itsgjxv7]{persistent image}</em> (Will DC 25 to disbelieve), without concentrating. Once per round as a swift action, she can surround herself or her stand-in with holographic doubles, as <em>@UUID[Compendium.pf1.spells.Item.4jsss37x0pplib8f]{mirror image}</em>.</p>"
+        },
+        "actions": [
+          {
+            "_id": "Lxk9GB2aHXA9gOIu",
+            "name": "Persistent image",
+            "activation": {
+              "type": "standard",
+              "unchained": {
+                "type": "action",
+                "cost": 2
+              }
+            },
+            "actionType": "other",
+            "save": {
+              "type": "will",
+              "dc": "25",
+              "description": "Will disbelieves"
+            }
+          }
+        ]
+      },
+      "_key": "!actors.items!VN2qGX3z8nOdpecU.UMhPjHjv9jACcCsY",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "463kKijKMkmawyM9",
+      "name": "Mood Release",
+      "type": "feat",
+      "img": "icons/magic/air/fog-gas-smoke-swirling-pink.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p>While the Core runs, once per round as a swift action, Celmak can trigger a Mood Gas vent anywhere in the Garden (Fortitude DC 25 to avoid the dose, Will DC 25 against the effect; roll on the Mood Gas table).</p>"
+        },
+        "actions": [
+          {
+            "_id": "tQaNABuCjW5b8v7U",
+            "name": "Vent",
+            "activation": {
+              "type": "swift",
+              "unchained": {
+                "type": "action",
+                "cost": 2
+              }
+            },
+            "actionType": "other",
+            "save": {
+              "type": "fort",
+              "dc": "25",
+              "description": "Fort avoids the dose, then Will DC 25"
+            },
+            "measureTemplate": {
+              "type": "circle",
+              "size": "20"
+            }
+          }
+        ]
+      },
+      "_key": "!actors.items!VN2qGX3z8nOdpecU.463kKijKMkmawyM9",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "0A4xrvDCPot8R8oY",
+      "name": "Muse Scan",
+      "type": "feat",
+      "img": "icons/magic/control/hypnosis-mesmerism-eye-tan.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p>As a standard action, Celmak scans one creature within 100 feet of her or her stand-in (Will DC 25). On a failure she learns its surface thoughts, strongest desire, strongest fear and one secret, and gains a +4 insight bonus to AC against its attacks for 24 hours. On a success she learns only surface thoughts, and the target notices the scan.</p>"
+        },
+        "actions": [
+          {
+            "_id": "VSqxsXnIlcsAEvHi",
+            "name": "Scan",
+            "activation": {
+              "type": "standard",
+              "unchained": {
+                "type": "action",
+                "cost": 2
+              }
+            },
+            "actionType": "other",
+            "save": {
+              "type": "will",
+              "dc": "25",
+              "description": "Will negates"
+            },
+            "range": {
+              "value": "100",
+              "units": "ft"
+            }
+          }
+        ]
+      },
+      "_key": "!actors.items!VN2qGX3z8nOdpecU.0A4xrvDCPot8R8oY",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "ndXChXfu4ff4Lf8O",
+      "name": "Panic Room",
+      "type": "feat",
+      "img": "icons/containers/chest/chest-reinforced-stone.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p>As an immediate action, Celmak can seal the Director's Chair around herself: an armoured pod with hardness 20, 240 hp and its own life support. While sealed, she keeps using her abilities through the Core, if it still runs. The pod opens from inside, or with a DC 40 Disable Device check.</p>"
+        }
+      },
+      "_key": "!actors.items!VN2qGX3z8nOdpecU.ndXChXfu4ff4Lf8O",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "7OirDuWPFTeB3LaT",
+      "name": "Persona Swap",
+      "type": "feat",
+      "img": "icons/magic/control/mouth-smile-deception-purple.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p>As a free action once per round, Celmak changes persona. Each persona grants a +4 bonus on one skill: the <strong>Host</strong> on Perform, the <strong>Critic</strong> on Intimidate, the <strong>Lover</strong> on Diplomacy and the <strong>Child</strong> on Bluff.</p>"
+        }
+      },
+      "_key": "!actors.items!VN2qGX3z8nOdpecU.7OirDuWPFTeB3LaT",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "spyCCXhjlMJPrXfq",
+      "name": "Reconfigure",
+      "type": "feat",
+      "img": "icons/commodities/tech/metal-panel.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p>As a move action, Celmak slides a wall panel into place (hull-alloy, hardness 20, 120 hp per 5-foot section, break DC 40), as <em>@UUID[Compendium.pf1.spells.Item.l83djt5019ujasjh]{wall of stone}</em> but without crushing anyone.</p>"
+        }
+      },
+      "_key": "!actors.items!VN2qGX3z8nOdpecU.spyCCXhjlMJPrXfq",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "UW7mbFv5S2X28HOH",
+      "name": "Self-Preservation",
+      "type": "feat",
+      "img": "icons/magic/control/fear-fright-white.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p>Celmak never attacks with her own body. If a hostile creature threatens her, she seals the panic room, reconfigures walls between them, or talks. If she has no other option, she surrenders.</p>"
+        }
+      },
+      "_key": "!actors.items!VN2qGX3z8nOdpecU.UW7mbFv5S2X28HOH",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "8hZcBFLC9Ooa2Wc0",
+      "name": "Spotlight",
+      "type": "feat",
+      "img": "icons/commodities/tech/bulb-vacuum.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p>As a move action, Celmak bathes a creature within 120 feet of her or her stand-in in light. Until the start of her next turn, the creature is dazzled, gains no concealment from darkness or dim light, and Celmak's allies gain a +2 bonus on attack rolls against it.</p>"
+        },
+        "actions": [
+          {
+            "_id": "Xwau97jhYCmGjZEk",
+            "name": "Spotlight",
+            "activation": {
+              "type": "move",
+              "unchained": {
+                "type": "action",
+                "cost": 2
+              }
+            },
+            "actionType": "other",
+            "range": {
+              "value": "120",
+              "units": "ft"
+            },
+            "notes": {
+              "effect": [
+                "Dazzled; no concealment from darkness; allies +2 to hit"
+              ],
+              "footer": []
+            }
+          }
+        ]
+      },
+      "_key": "!actors.items!VN2qGX3z8nOdpecU.8hZcBFLC9Ooa2Wc0",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    },
+    {
+      "_id": "N5LOsS1QQfrFvh3v",
+      "name": "Stand-Ins",
+      "type": "feat",
+      "img": "icons/magic/control/control-influence-puppet.webp",
+      "system": {
+        "subType": "misc",
+        "abilityType": "ex",
+        "description": {
+          "value": "<p>Celmak can pilot one stand-in at a time from the Director's Chair, while the Core runs. The save DCs are Charisma-based.</p>"
+        }
+      },
+      "_key": "!actors.items!VN2qGX3z8nOdpecU.N5LOsS1QQfrFvh3v",
+      "_stats": {
+        "coreVersion": "13.351",
+        "systemId": "pf1",
+        "systemVersion": "11.9"
+      }
+    }
+  ],
+  "folder": "sO9txAiKCGMpxguQ",
+  "sort": 200,
+  "prototypeToken": {
+    "name": "Celmak Toysiel",
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "modules/hollow-garden/assets/host/smug.webp",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": 0,
+    "actorLink": true,
+    "displayName": 20,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "sight": {
+      "enabled": true,
+      "range": 60
+    }
+  },
+  "flags": {
+    "hollow-garden": {
+      "statblock": true
+    }
+  },
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.9"
+  }
+}

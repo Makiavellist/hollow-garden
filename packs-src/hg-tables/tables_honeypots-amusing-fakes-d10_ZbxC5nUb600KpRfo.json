@@ -1,0 +1,212 @@
+{
+  "_id": "ZbxC5nUb600KpRfo",
+  "_key": "!tables!ZbxC5nUb600KpRfo",
+  "name": "Honeypots: Amusing Fakes (d10)",
+  "img": "icons/magic/control/mouth-smile-deception-purple.webp",
+  "description": "<p>Knowledge (engineering) result of 60 or lower with a natural 1–10. Celmak laughs, and the ratings rise by 1.</p>",
+  "formula": "1d10",
+  "replacement": true,
+  "displayRoll": true,
+  "results": [
+    {
+      "_id": "ur0D7ZxivX9W7c4g",
+      "_key": "!tables.results!ZbxC5nUb600KpRfo.ur0D7ZxivX9W7c4g",
+      "type": "text",
+      "name": "",
+      "description": "The schematic is a beautifully drafted diagram of a duck, labelled “PRIMARY POWER SOURCE.”",
+      "text": "The schematic is a beautifully drafted diagram of a duck, labelled “PRIMARY POWER SOURCE.”",
+      "img": "icons/magic/control/mouth-smile-deception-purple.webp",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "M8HuthC7FECwaT0M",
+      "_key": "!tables.results!ZbxC5nUb600KpRfo.M8HuthC7FECwaT0M",
+      "type": "text",
+      "name": "",
+      "description": "The exit is through the door marked EXIT. There is no door marked EXIT. A moment later, there is; it opens onto a wall painted with a door.",
+      "text": "The exit is through the door marked EXIT. There is no door marked EXIT. A moment later, there is; it opens onto a wall painted with a door.",
+      "img": "icons/magic/control/mouth-smile-deception-purple.webp",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "kcw7X7nptu3E2GQW",
+      "_key": "!tables.results!ZbxC5nUb600KpRfo.kcw7X7nptu3E2GQW",
+      "type": "text",
+      "name": "",
+      "description": "Celmak's one weakness is sincere compliments. Every compliment paid to the speakers raises ratings and achieves nothing else.",
+      "text": "Celmak's one weakness is sincere compliments. Every compliment paid to the speakers raises ratings and achieves nothing else.",
+      "img": "icons/magic/control/mouth-smile-deception-purple.webp",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "4xw3bHTHRpx6vXMZ",
+      "_key": "!tables.results!ZbxC5nUb600KpRfo.4xw3bHTHRpx6vXMZ",
+      "type": "text",
+      "name": "",
+      "description": "The system log is a 400-page romance novel in which the Technologist and the Prize Sentinel fall in love. It is chapter 12.",
+      "text": "The system log is a 400-page romance novel in which the Technologist and the Prize Sentinel fall in love. It is chapter 12.",
+      "img": "icons/magic/control/mouth-smile-deception-purple.webp",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "8GI60PSIYuEtiEt1",
+      "_key": "!tables.results!ZbxC5nUb600KpRfo.8GI60PSIYuEtiEt1",
+      "type": "text",
+      "name": "",
+      "description": "The self-destruct sequence is “up, up, down, down.” Entering it plays a laugh track and drops confetti.",
+      "text": "The self-destruct sequence is “up, up, down, down.” Entering it plays a laugh track and drops confetti.",
+      "img": "icons/magic/control/mouth-smile-deception-purple.webp",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "OXjPYBPPBUoCtgA7",
+      "_key": "!tables.results!ZbxC5nUb600KpRfo.OXjPYBPPBUoCtgA7",
+      "type": "text",
+      "name": "",
+      "description": "The device is a “Mk. IV Thinking Cap,” which grants +10 Intelligence. It is a colander with a light bulb.",
+      "text": "The device is a “Mk. IV Thinking Cap,” which grants +10 Intelligence. It is a colander with a light bulb.",
+      "img": "icons/magic/control/mouth-smile-deception-purple.webp",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "UXFIR9IoxZjLLoKI",
+      "_key": "!tables.results!ZbxC5nUb600KpRfo.UXFIR9IoxZjLLoKI",
+      "type": "text",
+      "name": "",
+      "description": "The anchor array is located “directly behind you.” Celmak repeats this in a spooky voice whenever the Technologist turns around.",
+      "text": "The anchor array is located “directly behind you.” Celmak repeats this in a spooky voice whenever the Technologist turns around.",
+      "img": "icons/magic/control/mouth-smile-deception-purple.webp",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "uJT0p2R1NDJefEle",
+      "_key": "!tables.results!ZbxC5nUb600KpRfo.uJT0p2R1NDJefEle",
+      "type": "text",
+      "name": "",
+      "description": "Every line of code is a hand-written note to the Technologist: “Still reading? Good.”",
+      "text": "Every line of code is a hand-written note to the Technologist: “Still reading? Good.”",
+      "img": "icons/magic/control/mouth-smile-deception-purple.webp",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "pOozn4cfjTJG7Izy",
+      "_key": "!tables.results!ZbxC5nUb600KpRfo.pOozn4cfjTJG7Izy",
+      "type": "text",
+      "name": "",
+      "description": "The diagnostics confirm the Garden is powered by a hamster on a wheel. A holographic hamster appears and waves.",
+      "text": "The diagnostics confirm the Garden is powered by a hamster on a wheel. A holographic hamster appears and waves.",
+      "img": "icons/magic/control/mouth-smile-deception-purple.webp",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
+      "_id": "2iCQg1EVELOTFLBA",
+      "_key": "!tables.results!ZbxC5nUb600KpRfo.2iCQg1EVELOTFLBA",
+      "type": "text",
+      "name": "",
+      "description": "The answer is correct, perfectly detailed, and about a completely different building on a planet that does not exist.",
+      "text": "The answer is correct, perfectly detailed, and about a completely different building on a planet that does not exist.",
+      "img": "icons/magic/control/mouth-smile-deception-purple.webp",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    }
+  ],
+  "folder": "ioKH1pEXANkFqbcK",
+  "sort": 200,
+  "flags": {
+    "hollow-garden": {
+      "key": "amusing-fakes"
+    }
+  },
+  "_stats": {
+    "coreVersion": "13.351"
+  }
+}

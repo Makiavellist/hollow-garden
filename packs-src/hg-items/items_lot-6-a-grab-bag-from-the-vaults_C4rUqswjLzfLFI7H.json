@@ -1,0 +1,22 @@
+{
+  "_id": "C4rUqswjLzfLFI7H",
+  "_key": "!items!C4rUqswjLzfLFI7H",
+  "name": "Lot 6: A Grab Bag from the Vaults",
+  "type": "loot",
+  "img": "icons/containers/bags/sack-leather-pink.webp",
+  "folder": "YvibWalgscAk7V3q",
+  "sort": 60,
+  "system": {
+    "description": {
+      "value": "<blockquote class=\"hg-readaloud\"><p><em>“A grab bag from the vaults.” (Open 3, rival max 7)</em></p></blockquote><p>2 applause injectors and a <em>ring of freedom of movement</em>.</p>"
+    },
+    "subType": "gear",
+    "price": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.9"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "_id": "Ft2Dy5cnHGlcU00q",
+  "_key": "!items!Ft2Dy5cnHGlcU00q",
+  "name": "Ledger of the Fallen",
+  "type": "loot",
+  "img": "icons/sundries/books/book-tooled-eye-gold-red.webp",
+  "folder": "iZyWbMInuudM5zh6",
+  "sort": 1000,
+  "system": {
+    "description": {
+      "value": "<p><strong>Price</strong> 2,000 gp; <strong>Slot</strong> none; <strong>Weight</strong> 1 lb.</p><p>A datapad listing every adventurer who died in the Garden, with their gear, their home towns and their heirs. Its holder gains a +4 bonus on Diplomacy checks with anyone named in it or related to someone who is. Once, it identifies the original owner of one item in the hoard of the fallen.</p><p><em>Found in: Episode 2 (Lot 1).</em></p>"
+    },
+    "subType": "misc",
+    "price": 2000,
+    "weight": {
+      "value": 1
+    }
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "13.351",
+    "systemId": "pf1",
+    "systemVersion": "11.9"
+  }
+}
