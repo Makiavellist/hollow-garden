@@ -10,18 +10,21 @@ export const sticker = (k) => `${PATH}/assets/host/${k}.webp`;
 export const contestantArt = (id, mood) => `${PATH}/assets/contestants/${id}-${mood}.webp`;
 
 /* Audience-facing names (Russian). */
-export const SHOW_TITLE = "Полый Сад";
+export const SHOW_TITLE = "Пустой сад";
 export const SEASON_TITLE = "Звёздные Искатели";
 export const HOST_NAME = "Сельмак";
 
-export const RATING_MAX = 10;
+/** Fan meters run 1–7 and start at 4. */
+export const RATING_MIN = 1;
+export const RATING_MAX = 7;
+export const RATING_START = 4;
 export const SHOW_MIN = 1;
 export const SHOW_MAX = 5;
 
-/** Mood thresholds for contestant portraits. */
+/** Mood thresholds for contestant portraits: 1–2 crying, 3–5 calm, 6–7 happy. */
 export function moodFor(rating) {
-  if (rating <= 3) return "sad";
-  if (rating >= 7) return "happy";
+  if (rating <= 2) return "sad";
+  if (rating >= 6) return "happy";
   return "neutral";
 }
 
@@ -62,7 +65,7 @@ export const CUES = [
   { id: "ooh", label: "Ooh!", sound: "crowd-ooh", sticker: "heart-eyes" },
   { id: "aww", label: "Aww…", sound: "crowd-aww", sticker: "shy" },
   { id: "denied", label: "Access Denied", sound: "buzzer", sticker: "access-denied" },
-  { id: "leave", label: "Really Leave?", sound: "crowd-aww", sticker: "dont-leave" },
+  { id: "leave", label: "Really Leave?", sound: "dont-leave", sticker: "dont-leave" },
   { id: "snacks", label: "Snacks Revoked!", sound: "rating-down", sticker: "snacks-revoked" },
   { id: "fine", label: "This Is Fine", sound: "alarm", sticker: "this-is-fine" },
   { id: "kiss", label: "Blow a Kiss", sound: "kiss", sticker: "blow-kiss" },
@@ -90,7 +93,7 @@ export const PERSONAS = {
 export const QUIPS = {
   Host: [
     "Участники, двери открыты, а ставки — личные!",
-    "С возвращением в «Полый Сад», где каждый выход — это вход!",
+    "С возвращением в «Пустой сад», где каждый выход — это вход!",
     "Поприветствуем наших храбрых, храбрых, слегка кровоточащих участников!",
     "Не переключайтесь, мои дорогие. Самое интересное всегда после рекламы.",
     "Рейтинги растут! Кто-нибудь, сообщите юристам. Ой. Я съела юристов.",
@@ -147,11 +150,12 @@ const EPISODE_RU = {
   reruns: "Повторы завтрашнего дня",
   ambassadors: "Послы",
   mint: "Как новенькая",
-  garden: "Полый Сад",
+  garden: "Пустой сад",
   finale: "Финал сезона"
 };
 export const EPISODES = GENERATED.episodes.map((e) => ({ ...e, ru: EPISODE_RU[e.id] ?? e.title }));
 export const TABLES = GENERATED.tables;
+export const ACTORS = GENERATED.actors ?? {};
 export const JOURNAL = GENERATED.journal;
 
 /** Default cast: the names from the supplied art. */
@@ -160,7 +164,7 @@ export function defaultContestants() {
     id: c.id,
     name: c.name,
     actorUuid: null,
-    rating: 5,
+    rating: RATING_START,
     visible: true,
     art: { sad: contestantArt(c.id, "sad"), neutral: contestantArt(c.id, "neutral"), happy: contestantArt(c.id, "happy") }
   }));
@@ -168,11 +172,12 @@ export function defaultContestants() {
 
 export function defaultState() {
   return {
-    version: 2,
+    version: 3,
     visible: false,
     show: 3,
     contestants: defaultContestants(),
     episodes: EPISODES.map((e) => ({ id: e.id, done: false })),
+    order: EPISODES.map((e) => e.id),
     current: null,
     lastEvent: null
   };

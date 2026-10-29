@@ -61,16 +61,18 @@ export function playCue(id) {
 let captionNode = null;
 let captionTimer = null;
 
+/** Celmak's broadcast caption. Players never see which persona is speaking: one look for all of them. */
 export function caption({ persona = "Host", text = "", sticker = null, sound = "on-air" } = {}) {
   const p = PERSONAS[persona] ?? PERSONAS.Host;
   const img = sticker ?? p.stickers[0];
+  const color = "#ff3cac";
   if (sound) playSfx(sound, { volume: 0.5 });
   captionNode?.remove();
   clearTimeout(captionTimer);
-  const node = el(`<div class="hg-caption" style="--persona:${esc(p.color)}">
+  const node = el(`<div class="hg-caption" style="--persona:${color}">
       ${setting("stickers") === false ? "" : `<img class="hg-caption-host" src="${esc(stickerPath(img))}" alt="">`}
       <div class="hg-caption-box">
-        <div class="hg-caption-tag"><span class="hg-rec"></span>${esc(HOST_NAME.toUpperCase())} · ${esc(p.tag)}</div>
+        <div class="hg-caption-tag"><span class="hg-rec"></span>${esc(HOST_NAME.toUpperCase())} · В ЭФИРЕ</div>
         <div class="hg-caption-text"></div>
       </div>
     </div>`);

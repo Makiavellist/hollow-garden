@@ -105,7 +105,11 @@ export class AnnounceDesk extends HGApplication {
     if (d.shake) broadcast("shake", {});
     if (d.chat) await chatCard({ title: esc(d.title || d.kicker), sticker: d.sticker ? sticker(d.sticker) : null, body: d.subtitle ? `<p>${esc(d.subtitle)}</p>` : "" });
     if (this.kind === "peak" && d.trinket) await awardTrinket(d.who, { announce: false });
-    if (this.kind === "escalation" && d.response && d.response !== "none") await runEscalation(d.response);
+    // Let the title card finish before Celmak's response takes over the screen.
+    if (this.kind === "escalation" && d.response && d.response !== "none") {
+      const response = d.response;
+      setTimeout(() => runEscalation(response), 5600);
+    }
     if (d.reset) await setShow(d.reset, "Announcement", { quiet: true });
     this.draft = null;
     this.close();

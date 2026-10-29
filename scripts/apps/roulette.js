@@ -2,7 +2,7 @@ import { EPISODES, starring, sticker } from "../constants.js";
 import { playSfx } from "../audio.js";
 import { broadcast, registerHandler } from "../socket.js";
 import { confetti, fxLayer, popSticker } from "../fx.js";
-import { getState, setCurrentEpisode, setEpisodesDone } from "../state.js";
+import { getState, schedule, setCurrentEpisode, setEpisodesDone } from "../state.js";
 import { chatCard, esc, isGM, reduceMotion } from "../util.js";
 import { HGApplication } from "./base.js";
 
@@ -23,12 +23,12 @@ export class RouletteDesk extends HGApplication {
 
   async _prepareContext() {
     const state = getState();
-    const pending = EPISODES.filter((e) => !state.episodes.find((x) => x.id === e.id)?.done);
+    const pending = schedule(state).filter((e) => !state.episodes.find((x) => x.id === e.id)?.done);
     return { state, pending };
   }
 
   _body({ state, pending }) {
-    const list = EPISODES.map((e) => {
+    const list = schedule(state).map((e) => {
       const done = state.episodes.find((x) => x.id === e.id)?.done;
       return `<li><label class="hg-check"><input type="checkbox" data-action="toggle" data-id="${e.id}" ${done ? "" : "checked"}> ${esc(e.title)}</label><small>${esc(e.ru)} · ${esc(starring(e, state.contestants))}</small></li>`;
     }).join("");
@@ -53,7 +53,7 @@ export class RouletteDesk extends HGApplication {
   static async #onSpin() {
     const root = this.element;
     const state = getState();
-    const segments = EPISODES.filter((e) => !state.episodes.find((x) => x.id === e.id)?.done).map((e) => {
+    const segments = schedule(state).filter((e) => !state.episodes.find((x) => x.id === e.id)?.done).map((e) => {
       return { id: e.id, title: e.ru, spotlight: starring(e, state.contestants) };
     });
     if (!segments.length) return;

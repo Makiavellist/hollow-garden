@@ -113,7 +113,7 @@ export class RatingsBoard {
             ${gm && c.actorUuid ? `<span class="hg-linked" title="Linked actor (click the portrait to open it)"><i class="fa-solid fa-link"></i></span>` : ""}
             <div class="hg-portrait" ${gm ? `data-hg="actor"` : ""}><img src="${esc(img)}" alt="${esc(c.name)}" draggable="false"></div>
             <div class="hg-nameplate"><span class="hg-name">${esc(c.name)}</span></div>
-            <div class="hg-meter" role="meter" aria-valuemin="0" aria-valuemax="${RATING_MAX}" aria-valuenow="${c.rating}" aria-label="${esc(c.name)}">
+            <div class="hg-meter" role="meter" aria-valuemin="1" aria-valuemax="${RATING_MAX}" aria-valuenow="${c.rating}" aria-label="${esc(c.name)}">
               <div class="hg-meter-fill" style="width:${pct}%"></div>
               <div class="hg-meter-ticks"></div>
               <span class="hg-meter-value">${c.rating}</span>

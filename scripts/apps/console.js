@@ -1,7 +1,7 @@
-import { CUES, EPISODES, HOST_NAME, HOST_STICKERS, PERSONAS, QUIPS, RATING_REASONS, SHOW_RESPONSES, moodFor, starring, sticker } from "../constants.js";
+import { CUES, EPISODES, HOST_NAME, HOST_STICKERS, PERSONAS, QUIPS, RATING_MAX, RATING_REASONS, SHOW_RESPONSES, moodFor, starring, sticker } from "../constants.js";
 import { broadcast } from "../socket.js";
 import { FX } from "../fx.js";
-import { adjustContestant, adjustShow, getState, resetSeason, setCurrentEpisode, setEpisodesDone, toggleVisible } from "../state.js";
+import { adjustContestant, adjustShow, getState, moveEpisode, resetSeason, schedule, setEpisodeOrder, setCurrentEpisode, setEpisodesDone, toggleVisible } from "../state.js";
 import { awardTrinket, moodGas } from "../rules.js";
 import { FX_EXTRA } from "../fx-extra.js";
 import { COMMERCIALS, adConfig, adLength, adPool, commercialBreak, previewAds, setAdConfig } from "../commercials.js";
@@ -102,7 +102,8 @@ export class ProducerConsole extends HGApplication {
       epDone: ProducerConsole.#onEpDone,
       epCurrent: ProducerConsole.#onEpCurrent,
       epOpen: ProducerConsole.#onEpOpen,
-      epTitle: (_e, t) => game.modules.get("hollow-garden").api.episodeTitle(t.dataset.id)
+      epTitle: (_e, t) => game.modules.get("hollow-garden").api.episodeTitle(t.dataset.id),
+      epMove: (_e, t) => moveEpisode(t.dataset.id, Number(t.dataset.dir))
     }
   };
 
@@ -135,7 +136,7 @@ export class ProducerConsole extends HGApplication {
       return `<li class="hg-crow ${c.visible ? "" : "hg-dim"}">
           <img src="${esc(c.art?.[mood] ?? "")}" alt="">
           <div class="hg-cname"><strong>${esc(c.name)}</strong><small>${c.actorUuid ? `<i class="fa-solid fa-link"></i> linked` : "not linked"}${c.visible ? "" : " · off stage"}</small></div>
-          <div class="hg-cmeter"><div style="width:${c.rating * 10}%"></div></div>
+          <div class="hg-cmeter"><div style="width:${Math.round((c.rating / RATING_MAX) * 100)}%"></div></div>
           <button type="button" data-action="fans" data-cid="${esc(c.id)}" data-delta="-1" title="−1 fans">−</button>
           <span class="hg-cval">${c.rating}</span>
           <button type="button" data-action="fans" data-cid="${esc(c.id)}" data-delta="1" title="+1 fans">+</button>
@@ -189,7 +190,7 @@ export class ProducerConsole extends HGApplication {
       `<button type="button" class="hg-persona ${k === this.draft.persona ? "active" : ""}" style="--persona:${v.color}" data-action="persona" data-persona="${k}">
         <img src="${sticker(v.stickers[0])}" alt=""><span>${v.label}</span></button>`).join("");
     const pstick = p.stickers.map((s) => `<button type="button" class="hg-stk small ${s === sel ? "active" : ""}" data-action="pickSticker" data-sticker="${s}"><img src="${sticker(s)}" alt="${s}"></button>`).join("");
-    const eps = EPISODES.map((e) => `<option value="${e.id}" ${state.current === e.id ? "selected" : ""}>${esc(e.title)} · ${esc(e.ru)}</option>`).join("");
+    const eps = schedule(state).map((e, i) => `<option value="${e.id}" ${state.current === e.id ? "selected" : ""}>${i + 1}. ${esc(e.title)} · ${esc(e.ru)}</option>`).join("");
     return `
       <section class="hg-card-panel">
         <h4>Celmak says…</h4>
@@ -285,11 +286,16 @@ export class ProducerConsole extends HGApplication {
 
   /* ---------------- Games ---------------- */
   _games(state) {
-    const rows = EPISODES.map((e, i) => {
+    const order = schedule(state);
+    const rows = order.map((e, i) => {
       const st = state.episodes.find((x) => x.id === e.id);
-      return `<li class="${st?.done ? "hg-done" : ""} ${state.current === e.id ? "hg-current" : ""}">
+      return `<li class="${st?.done ? "hg-done" : ""} ${state.current === e.id ? "hg-current" : ""}" draggable="true" data-ep="${e.id}" title="Drag to move it in the schedule">
           <span class="hg-epnum">${i + 1}</span>
-          <div><strong>${esc(e.title)}</strong><small>${esc(e.ru)} · ${esc(starring(e, state.contestants))}</small></div>
+          <div><strong>${esc(e.title)}</strong><small>Announced as «Эпизод ${i + 1}: ${esc(e.ru)}» · ${esc(starring(e, state.contestants))}</small></div>
+          <span class="hg-epmove">
+            <button type="button" class="hg-icon" data-action="epMove" data-id="${e.id}" data-dir="-1" title="Earlier" ${i === 0 ? "disabled" : ""}><i class="fa-solid fa-chevron-up"></i></button>
+            <button type="button" class="hg-icon" data-action="epMove" data-id="${e.id}" data-dir="1" title="Later" ${i === order.length - 1 ? "disabled" : ""}><i class="fa-solid fa-chevron-down"></i></button>
+          </span>
           <label class="hg-check" title="Already aired"><input type="checkbox" data-action="epDone" data-id="${e.id}" ${st?.done ? "checked" : ""}> aired</label>
           <button type="button" class="hg-icon" data-action="epCurrent" data-id="${e.id}" title="Mark as now showing"><i class="fa-solid fa-tv"></i></button>
           <button type="button" class="hg-icon" data-action="epTitle" data-id="${e.id}" title="Roll the title card"><i class="fa-solid fa-clapperboard"></i></button>
@@ -302,7 +308,7 @@ export class ProducerConsole extends HGApplication {
         <button type="button" class="hg-game" data-action="vote"><img src="${sticker("countdown")}" alt=""><strong>Audience Vote</strong><small>Audience votes are final.</small></button>
         <button type="button" class="hg-game" data-action="honeypot"><img src="${sticker("thinking")}" alt=""><strong>Honeypot Check</strong><small>Knowledge (engineering) bands.</small></button>
       </div>
-      <h4>Celmak's schedule</h4>
+      <h4>Celmak's schedule <small>drag rows or use the arrows; the title cards and the wheel follow this order</small></h4>
       <ol class="hg-eplist">${rows}</ol>`;
   }
 
@@ -315,8 +321,42 @@ export class ProducerConsole extends HGApplication {
       input.addEventListener("change", () => (this.fxDraft[key] = input.type === "checkbox" ? input.checked : input.value));
       if (input.type !== "checkbox") input.addEventListener("input", () => (this.fxDraft[key] = input.value));
     }
+    this.#bindScheduleDrag();
     this.element.querySelector("select[name='ad-perBreak']")?.addEventListener("change", (ev) => setAdConfig({ perBreak: Number(ev.target.value) }));
     this.element.querySelector("select[name='ad-order']")?.addEventListener("change", (ev) => setAdConfig({ order: ev.target.value }));
+  }
+
+  /** Drag-and-drop reordering of the schedule (Firefox needs setData to start a drag). */
+  #bindScheduleDrag() {
+    const list = this.element.querySelector(".hg-eplist");
+    if (!list) return;
+    let dragId = null;
+    for (const li of list.querySelectorAll("li[data-ep]")) {
+      li.addEventListener("dragstart", (ev) => {
+        dragId = li.dataset.ep;
+        ev.dataTransfer.effectAllowed = "move";
+        ev.dataTransfer.setData("text/plain", dragId);
+        li.classList.add("hg-dragging");
+      });
+      li.addEventListener("dragend", () => li.classList.remove("hg-dragging"));
+      li.addEventListener("dragover", (ev) => {
+        if (!dragId) return;
+        ev.preventDefault();
+        ev.dataTransfer.dropEffect = "move";
+        list.querySelectorAll(".hg-dropline").forEach((x) => x.classList.remove("hg-dropline"));
+        li.classList.add("hg-dropline");
+      });
+      li.addEventListener("drop", async (ev) => {
+        ev.preventDefault();
+        ev.stopPropagation();
+        const target = li.dataset.ep;
+        if (!dragId || dragId === target) return;
+        const ids = getState().order.filter((id) => id !== dragId);
+        ids.splice(ids.indexOf(target), 0, dragId);
+        dragId = null;
+        await setEpisodeOrder(ids);
+      });
+    }
   }
 
   /* ---------------- Handlers ---------------- */
@@ -328,7 +368,7 @@ export class ProducerConsole extends HGApplication {
   static async #onResetSeason() {
     const ok = await foundry.applications.api.DialogV2.confirm({
       window: { title: "Reset the season?" },
-      content: "<p>All fan meters go back to 5, the Show Rating to 3, and every episode is marked as not yet aired. The cast and linked actors are kept.</p>"
+      content: "<p>All fan meters go back to 4, the Show Rating to 3, and every episode is marked as not yet aired. The cast and linked actors are kept.</p>"
     });
     if (ok) await resetSeason();
   }
@@ -378,9 +418,10 @@ export class ProducerConsole extends HGApplication {
   static contestantAnnouncement(cid) {
     const c = getState().contestants.find((x) => x.id === cid);
     if (!c) return {};
-    const art = c.art?.[moodFor(c.rating)];
-    return { kicker: "РЕЙТИНГИ", title: c.name.toUpperCase(), subtitle: c.rating >= 7 ? "Зрители в восторге!" : c.rating <= 3 ? "Зрители недовольны…" : "Зрители следят за каждым шагом.",
-      theme: c.rating <= 3 ? "alarm" : "episode", sticker: c.rating >= 7 ? "heart-eyes" : c.rating <= 3 ? "bored" : "ratings", sound: "on-air", art };
+    const mood = moodFor(c.rating);
+    const art = c.art?.[mood];
+    return { kicker: "РЕЙТИНГИ", title: c.name.toUpperCase(), subtitle: mood === "happy" ? "Зрители в восторге!" : mood === "sad" ? "Зрители недовольны…" : "Зрители следят за каждым шагом.",
+      theme: mood === "sad" ? "alarm" : "episode", sticker: mood === "happy" ? "heart-eyes" : mood === "sad" ? "bored" : "ratings", sound: "on-air", art };
   }
 
   static #onSay() {
@@ -388,8 +429,9 @@ export class ProducerConsole extends HGApplication {
     if (!text) return ui.notifications.info("Type something for Celmak to say, or draw a random line.");
     const p = PERSONAS[this.draft.persona] ?? PERSONAS.Host;
     const st = this.draft.sticker && p.stickers.includes(this.draft.sticker) ? this.draft.sticker : p.stickers[0];
-    broadcast("caption", { persona: this.draft.persona, text, sticker: st });
-    ChatMessage.create({ speaker: { alias: `${HOST_NAME} (${p.tag.toLowerCase()})` }, content: `<div class="hg-chat-quote" style="--persona:${p.color}">${esc(text)}</div>` });
+    // The persona is the GM's secret: players get the words and the sticker, never the persona's name or colour.
+    broadcast("caption", { text, sticker: st });
+    ChatMessage.create({ speaker: { alias: HOST_NAME }, content: `<div class="hg-chat-quote">${esc(text)}</div>` });
   }
 
   static async #onTitle(_e, t) {

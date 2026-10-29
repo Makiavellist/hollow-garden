@@ -96,7 +96,14 @@ window.Hooks = {
   on: (n, f) => (hooks[n] ??= []).push(f),
   callAll: (n, ...a) => (hooks[n] ?? []).forEach((f) => f(...a))
 };
-const users = [{ id: "u1", isGM: IS_GM, name: "Tester" }];
+const users = [{ id: "u1", isGM: IS_GM, name: "Tester" }, { id: "u2", isGM: false, name: "Player Two", character: { uuid: "Actor.a1" } }];
+users.get = (id) => users.find((u) => u.id === id);
+window.CONST = { DOCUMENT_OWNERSHIP_LEVELS: { INHERIT: -1, NONE: 0, LIMITED: 1, OBSERVER: 2, OWNER: 3 } };
+window.fromUuidSync = (uuid) => window.__actors?.find((a) => a.uuid === uuid) ?? null;
+const fakePacks = new Map(["hg-adventure", "hg-bestiary", "hg-items", "hg-tables", "hg-macros", "hg-sounds", "hg-handouts"].map((n) => [`hollow-garden.${n}`, {
+  collection: `hollow-garden.${n}`, ownership: { PLAYER: "OBSERVER", ASSISTANT: "OWNER" },
+  async configure(cfg) { Object.assign(this, cfg); window.__log.push(["packConfigure", this.collection, JSON.stringify(cfg)]); }
+}]));
 window.ui = { notifications: { info: (m) => window.__log.push(["info", m]), warn: (m) => window.__log.push(["warn", m]) } };
 const chatLog = document.createElement("div");
 chatLog.id = "fake-chat";
@@ -150,7 +157,9 @@ window.game = {
   },
   keybindings: { register() {} },
   modules: new Map([["hollow-garden", { id: "hollow-garden" }]]),
-  socket: { on() {}, emit: (...a) => window.__log.push(["socket", ...a]) },
+  socket: { on(ev, fn) { window.__socketHandler = fn; }, emit: (...a) => window.__log.push(["socket", ...a]) },
+  packs: fakePacks,
+  journal: [],
   actors: { contents: window.__actors = [
     { uuid: "Actor.a1", id: "a1", documentName: "Actor", name: "Bodnar (PC)", type: "character", hasPlayerOwner: true, img: "icons/svg/mystery-man.svg", sheet: { render: () => window.__log.push(["sheet", "a1"]) }, createEmbeddedDocuments: async (t, d) => window.__log.push(["created", t, d[0].name]) },
     { uuid: "Actor.a2", id: "a2", documentName: "Actor", name: "Ryuz (PC)", type: "character", hasPlayerOwner: true, img: "icons/svg/mystery-man.svg", sheet: { render: () => {} }, createEmbeddedDocuments: async () => {} }

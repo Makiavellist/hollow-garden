@@ -3,13 +3,13 @@
  * The GM picks which adverts run (Producer Console → Ads); everyone sees the same break.
  * Advert copy is audience-facing and therefore in Russian; `label`/`about` are for the GM.
  */
-import { HOST_NAME, MODULE_ID, SEASON_TITLE, SHOW_TITLE, sticker as stickerPath } from "./constants.js";
+import { HOST_NAME, MODULE_ID, SEASON_TITLE, SHOW_TITLE, moodFor, sticker as stickerPath } from "./constants.js";
 import { playSfx } from "./audio.js";
 import { fxLayer, titleCard } from "./fx.js";
 import { onStopAll } from "./fx-extra.js";
 import { broadcast } from "./socket.js";
-import { getState } from "./state.js";
-import { esc, isGM, reduceMotion, setting } from "./util.js";
+import { adjustContestant, getState } from "./state.js";
+import { chatCard, esc, isActiveGM, isGM, reduceMotion, setting } from "./util.js";
 
 const BEAT_MS = 3800;
 
@@ -389,6 +389,7 @@ class AdBreak {
     this.timers = new Set();
     this.index = -1;
     this.root = null;
+    this.skipped = new Set();
   }
 
   later(fn, ms) {
@@ -429,7 +430,7 @@ class AdBreak {
           ${this.preview ? `<span>Preview: only you see this</span>` : ""}
           <button type="button" data-ad="skip" title="${this.preview ? "Next advert" : "Skip to the next advert for everyone"}"><i class="fa-solid fa-forward"></i> Skip</button>
           <button type="button" data-ad="end" title="${this.preview ? "Close the preview" : "End the break for everyone"}"><i class="fa-solid fa-stop"></i> End break</button>
-        </div>` : ""}
+        </div>` : `<button type="button" class="hg-ad-skip" disabled></button>`}
       </div>`;
     this.root = t.content.firstElementChild;
     this.root.querySelector(".hg-ad-gm")?.addEventListener("click", (ev) => {
@@ -441,8 +442,44 @@ class AdBreak {
       } else if (this.preview) this.stop();
       else broadcast("ad-stop", {});
     });
+    this.root.querySelector(".hg-ad-skip")?.addEventListener("click", (ev) => {
+      const btn = ev.currentTarget;
+      if (btn.disabled || this.skipped.has(this.index)) return;
+      this.skipped.add(this.index);
+      btn.disabled = true;
+      btn.classList.add("hg-denied");
+      btn.innerHTML = `<i class="fa-solid fa-ban"></i> Рекламу не пропускают!`;
+      // The GM's client applies the penalty; the advert keeps playing regardless.
+      broadcast("ad-skip-request", { ad: this.ads[this.index]?.id ?? "" }, { local: false });
+    });
     fxLayer().appendChild(this.root);
     return this.root;
+  }
+
+  /** Players get a fake "skip" button: it unlocks after 5 seconds and costs them a fan. */
+  armSkip() {
+    const btn = this.root?.querySelector(".hg-ad-skip");
+    if (!btn) return;
+    btn.classList.remove("hg-denied");
+    if (this.skipped.has(this.index)) {
+      btn.disabled = true;
+      btn.classList.add("hg-denied");
+      btn.innerHTML = `<i class="fa-solid fa-ban"></i> Рекламу не пропускают!`;
+      return;
+    }
+    let left = 5;
+    const tick = () => {
+      if (left > 0) {
+        btn.disabled = true;
+        btn.innerHTML = `Пропустить через ${left}`;
+        left -= 1;
+        this.later(tick, 1000);
+      } else {
+        btn.disabled = false;
+        btn.innerHTML = `Пропустить рекламу <i class="fa-solid fa-forward-step"></i>`;
+      }
+    };
+    tick();
   }
 
   show(i) {
@@ -468,6 +505,7 @@ class AdBreak {
       void bar.offsetWidth;
       bar.style.animation = `hg-ad-progress ${adLength(ad)}ms linear forwards`;
       if (ad.jingle) playSfx(ad.jingle, { volume: 0.8 });
+      this.armSkip();
       let t = 0;
       ad.beats.forEach((b, bi) => {
         this.later(() => this.beat(ad, b, bi), t);
@@ -523,8 +561,75 @@ export function playBreak(data = {}) {
 
 onStopAll(() => current?.stop());
 
+/* ------------------------------------------------------------------ */
+/*  Skipping an advert costs a fan                                     */
+/* ------------------------------------------------------------------ */
+
+/** Which contestant does this user play? Linked actor = their character, or an actor they own. */
+function contestantForUser(user) {
+  const state = getState();
+  const linked = state.contestants.filter((c) => c.actorUuid);
+  const byChar = user?.character ? linked.find((c) => c.actorUuid === user.character.uuid) : null;
+  if (byChar) return byChar;
+  return linked.find((c) => {
+    try {
+      const actor = fromUuidSync(c.actorUuid);
+      return actor?.testUserPermission?.(user, "OWNER");
+    } catch {
+      return false;
+    }
+  }) ?? null;
+}
+
+/** Active GM: a player pressed "skip". Lower their fan meter and show everyone Celmak's reaction. */
+async function onSkipRequest(_data, msg) {
+  if (!isActiveGM()) return;
+  const user = game.users.get(msg?.from);
+  if (!user || user.isGM) return;
+  const c = contestantForUser(user);
+  if (!c) {
+    broadcast("ad-penalty", { name: user.name, img: "", from: null, to: null });
+    return chatCard({ title: "Ad skip: no contestant", whisper: true,
+      body: `<p>${esc(user.name)} tried to skip an advert, but no contestant is linked to their character, so no fan meter changed. Link actors in <em>Contestants…</em>.</p>` });
+  }
+  const from = c.rating;
+  await adjustContestant(c.id, -1, "Tried to skip an advert", { link: false });
+  const to = getState().contestants.find((x) => x.id === c.id)?.rating ?? from;
+  broadcast("ad-penalty", { name: c.name, img: c.art?.[moodFor(to)] ?? "", from, to });
+}
+
+/** Everyone: angry Celmak slaps a −1 on the contestant, over the still-running advert. */
+export function adPenalty({ name = "", img = "", from = null, to = null } = {}) {
+  playSfx("buzzer", { volume: 0.8 });
+  setTimeout(() => playSfx("rating-down", { volume: 0.8 }), 350);
+  fxLayer().querySelectorAll(".hg-ad-penalty").forEach((n) => n.remove());
+  const t = document.createElement("template");
+  const showHost = setting("stickers") !== false;
+  t.innerHTML = `<div class="hg-ad-penalty">
+      ${showHost ? `<img class="hg-penalty-host" src="${esc(stickerPath("angry"))}" alt="">` : ""}
+      <div class="hg-penalty-card">
+        <div class="hg-penalty-title">РЕКЛАМУ НЕ ПРОПУСКАЮТ!</div>
+        <div class="hg-penalty-row">
+          ${img ? `<div class="hg-penalty-portrait"><img src="${esc(img)}" alt=""></div>` : ""}
+          <div class="hg-penalty-text"><strong>${esc(name)}</strong>
+            ${from != null && to != null && from !== to ? `<span class="hg-penalty-score"><s>${from}</s> → <b>${to}</b></span>` : ""}
+            <span class="hg-penalty-minus">${from != null && from === to ? "НИЖЕ УЖЕ НЕКУДА!" : "−1 К РЕЙТИНГУ"}</span></div>
+        </div>
+        <div class="hg-penalty-sub">${esc(HOST_NAME)} не любит, когда спонсоров обижают. Смотрите дальше.</div>
+      </div>
+    </div>`;
+  const node = t.content.firstElementChild;
+  fxLayer().appendChild(node);
+  setTimeout(() => {
+    node.classList.add("hg-out");
+    setTimeout(() => node.remove(), 500);
+  }, 4200);
+}
+
 /** Socket handlers registered in main.js. */
 export const AD_FX = {
+  "ad-skip-request": onSkipRequest,
+  "ad-penalty": adPenalty,
   adbreak: playBreak,
   "ad-skip": (d) => current && !current.preview && current.show(Number(d.to ?? current.index + 1)),
   "ad-stop": () => current && !current.preview && current.stop()

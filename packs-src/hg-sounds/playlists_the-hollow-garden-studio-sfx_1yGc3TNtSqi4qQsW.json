@@ -371,6 +371,20 @@
       }
     },
     {
+      "_id": "s9e8HrI8j7Cq87Fz",
+      "_key": "!playlists.sounds!1yGc3TNtSqi4qQsW.s9e8HrI8j7Cq87Fz",
+      "name": "Don't Leave!",
+      "path": "modules/hollow-garden/sounds/dont-leave.ogg",
+      "repeat": false,
+      "volume": 0.8,
+      "fade": null,
+      "sort": 2700,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "13.351"
+      }
+    },
+    {
       "_id": "7jdA9gdmWVhyXojo",
       "_key": "!playlists.sounds!1yGc3TNtSqi4qQsW.7jdA9gdmWVhyXojo",
       "name": "Power Down",
@@ -378,7 +392,7 @@
       "repeat": false,
       "volume": 0.8,
       "fade": null,
-      "sort": 2700,
+      "sort": 2800,
       "flags": {},
       "_stats": {
         "coreVersion": "13.351"
@@ -392,7 +406,7 @@
       "repeat": false,
       "volume": 0.8,
       "fade": null,
-      "sort": 2800,
+      "sort": 2900,
       "flags": {},
       "_stats": {
         "coreVersion": "13.351"
@@ -406,7 +420,7 @@
       "repeat": true,
       "volume": 0.8,
       "fade": null,
-      "sort": 2900,
+      "sort": 3000,
       "flags": {},
       "_stats": {
         "coreVersion": "13.351"
@@ -420,7 +434,7 @@
       "repeat": false,
       "volume": 0.8,
       "fade": null,
-      "sort": 3000,
+      "sort": 3100,
       "flags": {},
       "_stats": {
         "coreVersion": "13.351"
@@ -434,7 +448,7 @@
       "repeat": false,
       "volume": 0.8,
       "fade": null,
-      "sort": 3100,
+      "sort": 3200,
       "flags": {},
       "_stats": {
         "coreVersion": "13.351"
@@ -448,7 +462,7 @@
       "repeat": false,
       "volume": 0.8,
       "fade": null,
-      "sort": 3200,
+      "sort": 3300,
       "flags": {},
       "_stats": {
         "coreVersion": "13.351"
@@ -462,7 +476,7 @@
       "repeat": true,
       "volume": 0.8,
       "fade": null,
-      "sort": 3300,
+      "sort": 3400,
       "flags": {},
       "_stats": {
         "coreVersion": "13.351"
@@ -476,7 +490,7 @@
       "repeat": true,
       "volume": 0.8,
       "fade": null,
-      "sort": 3400,
+      "sort": 3500,
       "flags": {},
       "_stats": {
         "coreVersion": "13.351"
@@ -490,7 +504,7 @@
       "repeat": false,
       "volume": 0.8,
       "fade": null,
-      "sort": 3500,
+      "sort": 3600,
       "flags": {},
       "_stats": {
         "coreVersion": "13.351"
@@ -504,7 +518,7 @@
       "repeat": false,
       "volume": 0.8,
       "fade": null,
-      "sort": 3600,
+      "sort": 3700,
       "flags": {},
       "_stats": {
         "coreVersion": "13.351"
@@ -518,7 +532,7 @@
       "repeat": false,
       "volume": 0.8,
       "fade": null,
-      "sort": 3700,
+      "sort": 3800,
       "flags": {},
       "_stats": {
         "coreVersion": "13.351"
@@ -532,7 +546,7 @@
       "repeat": false,
       "volume": 0.8,
       "fade": null,
-      "sort": 3800,
+      "sort": 3900,
       "flags": {},
       "_stats": {
         "coreVersion": "13.351"
@@ -546,7 +560,7 @@
       "repeat": true,
       "volume": 0.8,
       "fade": null,
-      "sort": 3900,
+      "sort": 4000,
       "flags": {},
       "_stats": {
         "coreVersion": "13.351"
@@ -560,7 +574,7 @@
       "repeat": true,
       "volume": 0.8,
       "fade": null,
-      "sort": 4000,
+      "sort": 4100,
       "flags": {},
       "_stats": {
         "coreVersion": "13.351"
@@ -574,7 +588,7 @@
       "repeat": false,
       "volume": 0.8,
       "fade": null,
-      "sort": 4100,
+      "sort": 4200,
       "flags": {},
       "_stats": {
         "coreVersion": "13.351"
@@ -588,7 +602,7 @@
       "repeat": false,
       "volume": 0.8,
       "fade": null,
-      "sort": 4200,
+      "sort": 4300,
       "flags": {},
       "_stats": {
         "coreVersion": "13.351"
@@ -602,7 +616,7 @@
       "repeat": false,
       "volume": 0.8,
       "fade": null,
-      "sort": 4300,
+      "sort": 4400,
       "flags": {},
       "_stats": {
         "coreVersion": "13.351"
@@ -616,7 +630,7 @@
       "repeat": false,
       "volume": 0.8,
       "fade": null,
-      "sort": 4400,
+      "sort": 4500,
       "flags": {},
       "_stats": {
         "coreVersion": "13.351"
@@ -630,7 +644,7 @@
       "repeat": false,
       "volume": 0.8,
       "fade": null,
-      "sort": 4500,
+      "sort": 4600,
       "flags": {},
       "_stats": {
         "coreVersion": "13.351"
@@ -644,7 +658,7 @@
       "repeat": false,
       "volume": 0.8,
       "fade": null,
-      "sort": 4600,
+      "sort": 4700,
       "flags": {},
       "_stats": {
         "coreVersion": "13.351"
@@ -658,7 +672,7 @@
       "repeat": false,
       "volume": 0.8,
       "fade": null,
-      "sort": 4700,
+      "sort": 4800,
       "flags": {},
       "_stats": {
         "coreVersion": "13.351"
@@ -672,7 +686,7 @@
       "repeat": false,
       "volume": 0.8,
       "fade": null,
-      "sort": 4800,
+      "sort": 4900,
       "flags": {},
       "_stats": {
         "coreVersion": "13.351"

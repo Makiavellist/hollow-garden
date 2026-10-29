@@ -1,4 +1,4 @@
-import { RATING_MAX, defaultContestants, moodFor } from "../constants.js";
+import { RATING_MAX, RATING_MIN, RATING_START, defaultContestants, moodFor } from "../constants.js";
 import { getState, updateContestants } from "../state.js";
 import { actorFromDrop } from "../board.js";
 import { clamp, esc, randomId } from "../util.js";
@@ -28,7 +28,10 @@ export class ContestantsConfig extends HGApplication {
   rows = null;
 
   async _prepareContext() {
-    if (!this.rows) this.rows = foundry.utils.deepClone(getState().contestants);
+    if (!this.rows) {
+      this.rows = foundry.utils.deepClone(getState().contestants);
+      this.openedRatings = Object.fromEntries(this.rows.map((c) => [c.id, c.rating]));
+    }
     const actors = game.actors.contents
       .filter((a) => a.type === "character" || a.hasPlayerOwner)
       .concat(game.actors.contents.filter((a) => !(a.type === "character" || a.hasPlayerOwner)))
@@ -46,7 +49,7 @@ export class ContestantsConfig extends HGApplication {
         <button type="button" class="hg-icon" data-action="browse" data-index="${i}" data-mood="${mood}" title="Browse"><i class="fa-solid fa-folder-open"></i></button>
       </div>`;
     const list = rows.map((c, i) => `
-      <li class="hg-cast-row ${c.visible ? "" : "hg-dim"}" data-index="${i}">
+      <li class="hg-cast-row ${c.visible ? "" : "hg-dim"}" data-index="${i}" data-drop-row="${i}">
         <div class="hg-cast-head">
           <img class="hg-cast-thumb" src="${esc(c.art?.[moodFor(c.rating)] ?? "")}" alt="">
           <label>Name<input type="text" name="name-${i}" value="${esc(c.name)}"></label>
@@ -54,7 +57,7 @@ export class ContestantsConfig extends HGApplication {
           <span class="hg-link-state">${c.actorUuid
             ? `<button type="button" class="hg-icon" data-action="openActor" data-index="${i}" title="Open the linked actor"><i class="fa-solid fa-link"></i></button><button type="button" class="hg-icon" data-action="unlink" data-index="${i}" title="Unlink"><i class="fa-solid fa-link-slash"></i></button>`
             : `<span class="hg-muted" title="Pick an actor or drop one on this row">not linked</span>`}</span>
-          <label class="hg-num">Fans<input type="number" name="rating-${i}" min="0" max="${RATING_MAX}" value="${c.rating}"></label>
+          <label class="hg-num">Fans<input type="number" name="rating-${i}" min="${RATING_MIN}" max="${RATING_MAX}" value="${c.rating}"></label>
           <label class="hg-check"><input type="checkbox" name="visible-${i}" ${c.visible ? "checked" : ""}> on stage</label>
           <span class="hg-cast-ctl">
             <button type="button" class="hg-icon" data-action="up" data-index="${i}" title="Move up"><i class="fa-solid fa-arrow-up"></i></button>
@@ -66,7 +69,7 @@ export class ContestantsConfig extends HGApplication {
           <button type="button" data-action="useActorArt" data-index="${i}" title="Use the linked actor's portrait for all three moods"><i class="fa-solid fa-user"></i> Actor portrait</button>
         </div>
       </li>`).join("");
-    return `<p class="hg-hint">Link each contestant to a character (pick it, or drag an actor from the Actors sidebar onto the row, or onto their card on the board) so Trinkets and honeypot rolls use their sheet. Names are what the players see. Portraits swap with the fans' mood: <strong>sad</strong> at 0–3, <strong>neutral</strong> at 4–6, <strong>happy</strong> at 7–10. Untick <em>on stage</em> for anyone sitting in the Box.</p>
+    return `<p class="hg-hint">Link each contestant to a character (pick it, or drag an actor from the Actors sidebar onto the row, or onto their card on the board) so Trinkets and honeypot rolls use their sheet. Names are what the players see. Fans run 1–7; portraits swap with the fans' mood: <strong>sad</strong> at 1–2, <strong>neutral</strong> at 3–5, <strong>happy</strong> at 6–7. Untick <em>on stage</em> for anyone sitting in the Box.</p>
       <ol class="hg-cast-list">${list}</ol>
       <footer class="hg-row hg-footer">
         <button type="button" data-action="add"><i class="fa-solid fa-user-plus"></i> Add contestant</button>
@@ -107,7 +110,7 @@ export class ContestantsConfig extends HGApplication {
       ...c,
       name: val(`name-${i}`)?.value?.trim() || c.name,
       actorUuid: val(`actor-${i}`)?.value || null,
-      rating: clamp(Number(val(`rating-${i}`)?.value ?? c.rating), 0, RATING_MAX),
+      rating: clamp(Number(val(`rating-${i}`)?.value ?? c.rating), RATING_MIN, RATING_MAX),
       visible: !!val(`visible-${i}`)?.checked,
       art: {
         sad: val(`art-${i}-sad`)?.value?.trim() || c.art?.sad,
@@ -119,6 +122,11 @@ export class ContestantsConfig extends HGApplication {
 
   static async #onSave() {
     this.#collect();
+    // Ratings that changed on the board while this window was open win over the untouched form values.
+    const live = Object.fromEntries(getState().contestants.map((c) => [c.id, c.rating]));
+    for (const c of this.rows) {
+      if (c.id in live && this.openedRatings?.[c.id] === c.rating) c.rating = live[c.id];
+    }
     await updateContestants(this.rows);
     ui.notifications.info("The Hollow Garden: cast saved.");
     this.rows = null;
@@ -128,7 +136,7 @@ export class ContestantsConfig extends HGApplication {
   static #onAdd() {
     this.#collect();
     const fallback = "icons/svg/mystery-man.svg";
-    this.rows.push({ id: randomId(), name: "Новый участник", actorUuid: null, rating: 5, visible: true,
+    this.rows.push({ id: randomId(), name: "Новый участник", actorUuid: null, rating: RATING_START, visible: true,
       art: { sad: fallback, neutral: fallback, happy: fallback } });
     this.render();
   }

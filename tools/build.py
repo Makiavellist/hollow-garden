@@ -49,7 +49,7 @@ SOUNDS = [
     ("rimshot", "Rimshot"), ("airhorn", "Airhorn"), ("suspense", "Suspense Sting"), ("jingle", "Commercial Break Jingle"),
     ("rating-up", "Ratings Up"), ("rating-down", "Ratings Down"), ("alarm", "Escalation Alarm"), ("countdown", "Countdown"),
     ("glitch", "Glitch (The Gap)"), ("gas", "Mood Gas Hiss"), ("confetti", "Confetti Pop"), ("spin-start", "Wheel Wind-Up"),
-    ("tick", "Wheel Tick"), ("whoosh", "Whoosh"), ("on-air", "On Air Sting"), ("kiss", "Blown Kiss"),
+    ("tick", "Wheel Tick"), ("whoosh", "Whoosh"), ("on-air", "On Air Sting"), ("kiss", "Blown Kiss"), ("dont-leave", "Don't Leave!"),
     ("power-down", "Power Down"), ("power-up", "Power Up"), ("static", "TV Static (loop)"), ("tv-tone", "Test Tone"),
     ("sparks", "Sparks"), ("zap", "Electric Zap"), ("buzz", "Electric Hum (loop)"), ("klaxon", "Klaxon (loop)"),
     ("error", "System Error"), ("doors", "Blast Doors"), ("warp", "Drift Jump"), ("shockwave", "Shockwave"),

@@ -10,7 +10,7 @@ All compendiums live in one folder in the Compendium sidebar: **The Hollow Garde
 
 | Compendium | Contents |
 |---|---|
-| Adventure & Producer's Guide | The full adventure as a 14-page journal (Introduction → Sources), with stat blocks, read-aloud boxes, tables, the Garden flow diagram, and links to every actor, item and roll table. Plus a *Producer's Guide* to the module's controls. GM-only. |
+| Adventure & Producer's Guide | GM-only. The full adventure as a 14-page journal (Introduction → Sources), with stat blocks, read-aloud boxes, tables, the Garden flow diagram, and links to every actor, item and roll table. Plus a *Producer's Guide* to the module's controls. GM-only. |
 | Contestant Handouts | *The Rules of the Show* and *Tonight's Contestants*, styled for players. |
 | Robots, Holograms & Cast | PF1 NPCs: Celmak Toysiel, Celmak's Stand-In, Vlathherex, Stagehand Drone, Topiary Hound, Courtier Mannequin, Hard-Light Actor, Prize Sentinel, Gardener Colossus. Sheets match the printed stat blocks (see *Stat Block Adjustments* on each), force fields are tracked as temporary HP, and the printed stat block is in each actor's notes. |
 | Prizes, Trinkets & Hoard | Celmak's 8 Trinkets, all prize and story items (lattice, Muse visor, seed, bracer, cradle, cartridge, fans, crystal, schematic, ledger, archive, Garden Credits), the auction lots and the hoard of the fallen. |
@@ -24,16 +24,18 @@ Everything the players see (board, title cards, captions, wheel, votes, public c
 
 Open the **Producer Console** from the broadcast-tower button in the Token controls, the button on the ratings board, or the macro.
 
-- **Ratings board.** A small panel docked to a corner (top right by default). Each player can move it to another corner (grid button), drag it, collapse it, and set **their own studio volume** with the speaker button. The same slider is in the Playlists sidebar and in module settings. The GM shows or hides the board for everyone. It shows the Show Rating (1–5) and a fan meter (0–10) per contestant, by name. Portraits change with mood, and nothing on it blinks.
+- **Ratings board.** A small panel docked to a corner (top right by default). Each player can move it to another corner (grid button), drag it, collapse it, and set **their own studio volume** with the speaker button. The same slider is in the Playlists sidebar and in module settings. The GM shows or hides the board for everyone. It shows the Show Rating (1–5) and a fan meter (1–7, starting at 4) per contestant, by name. Portraits cry at 1–2, stay calm at 3–5 and cheer at 6–7, and nothing on it blinks.
 - **Silent rating changes.** Raising or lowering ratings only updates the board. No sounds, no pop-ups, no chat messages.
 - **Announcements with GM approval.** When the Show Rating reaches 5 or 1, a GM-only desk opens with a suggested Russian message. Edit the headline and text, then pick the sticker, sound, confetti or shake, Trinket award, escalation response and rating reset. Players see it only when you press *Broadcast*. The same desk is on the console's Ratings tab (*Escalation…*, *Ratings peak…*, *Custom announcement…*) and behind each contestant's megaphone button.
 - **Episode Wheel.** A rigged wheel of the episodes that haven't aired, in Russian, *starring* the contestant's name.
 - **Audience Vote.** A live poll with your rigged numbers. The presets are in Russian and use the cast's names.
 - **Soundboard and stickers.** 28 cues and 28 host stickers; Shift-click previews one only for yourself.
-- **Celmak says…** A broadcast caption in one of her four personas. *Random line* draws from Russian catchphrases.
+- **Celmak says…** A broadcast caption in one of her four personas; players only ever see «Сельмак», never which persona. *Random line* draws from Russian catchphrases.
+- **Schedule.** Reorder Celmak's episodes on the Games tab (drag or arrows); title cards announce them by their new number and the wheel follows the order.
+- **Escalation responses.** Twelve choices for Celmak's response on the escalation desk, from Mood Gas and blast doors to a spotlight on the least popular contestant or a tantrum crash.
 - **Title cards.** Episode openers, commercial break, *Previously on…*, *The lock falls*, season finale.
 - **Effects tab.** Thirty full-screen effects in three groups. *Malfunctions*: blackout with emergency beacon, TV static, no signal (colour bars), the Gap glitch, hologram desync, short circuit sparks, electric arcs, buffering, gravity failure, system crash with reboot, red alert, lockdown blast doors. *Studio*: neon signs (applause, silence, or your own text and colour), countdown, a spotlight on selected tokens, Celmak's camera feed, a breaking-news crawl, confetti and shake. *Garden & scenes*: the four seasons, stage smoke, Drift jump, dimensional lock pulse and Mood Gas. Optional duration; *Stop all effects* ends everything for everyone.
-- **Commercial breaks.** Eleven in-world adverts in Russian (Аплодин, Чистый нос, Газ настроения «Домашний набор», Стенд-ин™, Гарден-Кредит, «Колосс», «Зелёная комната», «Идеал», «Спойлер!», «Ничто», «ДРИФТ») play after the *Commercial break* card when switched on. Choose how many per break, random or in turn, and which are in rotation; preview one privately or air it now. The GM gets *Skip* and *End break* buttons during the break.
+- **Commercial breaks.** Eleven in-world adverts in Russian (Аплодин, Чистый нос, Газ настроения «Домашний набор», Стенд-ин™, Гарден-Кредит, «Колосс», «Зелёная комната», «Идеал», «Спойлер!», «Ничто», «ДРИФТ») play after the *Commercial break* card when switched on. Choose how many per break, random or in turn, and which are in rotation; preview one privately or air it now. The GM gets *Skip* and *End break* buttons during the break. Players get a «Пропустить рекламу» button that costs their contestant a fan, pops up angry Celmak and skips nothing.
 - **Honeypot check.** Results are whispered to you; the "Celmak laughs, +1 rating" moment is a button you choose to press.
 
 ## Casting
@@ -91,5 +93,8 @@ Releases are published by GitHub Actions (`.github/workflows/release.yml`): bump
 - Module code: MIT (see `LICENSE.md`).
 - Feat and gear data reused from the Pathfinder 1e system for Foundry VTT, under the Open Game License (see `OGL.txt`).
 - Fonts: Exo 2 and Nunito (with Cyrillic), SIL Open Font License (see `fonts/`).
-- Applause and cheer: "Applause" by the Blender Foundation (apricot.blender.org), CC-BY 3.0, via [OpenGameArt](https://opengameart.org/content/applause). The other sound effects were synthesised for this module.
+- Applause and cheer: "Applause" by the Blender Foundation (apricot.blender.org), CC-BY 3.0, via [OpenGameArt](https://opengameart.org/content/applause).
+- Crowd "Ooh!", "Aww…" and "Don't leave!": built from the [Universal Spurts](https://opengameart.org/content/voice-pack%E2%94%82universal-spurts) voice pack by Alba MacKenna (CC-BY 4.0) and clips by AuraVoice ([1](https://opengameart.org/content/oooooooooooooo), [2](https://opengameart.org/content/female-distressed-no-no-no), CC0).
+- Ba-dum-tss: ["rimshot"](https://archive.org/details/rimshot) by crabbydad, public domain.
+- The other sound effects were synthesised for this module.
 - This module uses trademarks and/or copyrights owned by Paizo Inc., used under Paizo's Community Use Policy. We are expressly prohibited from charging you to use or access this content. This module is not published, endorsed, or specifically approved by Paizo. For more information about Paizo Inc. and Paizo products, visit paizo.com.

@@ -1,5 +1,17 @@
 # Changelog
 
+## 1.3.0
+
+- The show is now called **«Пустой сад»** everywhere players see it.
+- Players never learn which persona Celmak is using: captions say «Сельмак · В ЭФИРЕ» in one colour, and chat messages come from «Сельмак».
+- Fan meters now run **1–7** (start at 4): crying at 1–2, calm at 3–5, cheering at 6–7. Existing worlds are converted automatically (5 → 4).
+- Players get a «Пропустить рекламу» button during adverts. It costs their contestant one fan, angry Celmak pops up for everyone, and the advert keeps playing.
+- Celmak's schedule can be reordered on the Games tab (drag or arrows); title cards announce the new episode numbers and the wheel follows the order.
+- Twelve escalation responses for «Celmak's response», played after the title card.
+- New crowd «Ooh!», «Aww…», «Don't leave!» and Ba-dum-tss sounds from free recordings (credits in LICENSE.md).
+- The adventure journal, Producer's Guide, actors, items, tables, macros and sounds are locked to the GM: the compendiums are relocked on load, imported copies of the GM journals are made GM-only again, and they can't be shown to players. Trinket chat cards link to the item on the sheet instead of the compendium.
+- Fixes: dropping an actor onto a row in *Contestants…* now links it; saving the cast no longer overwrites fan changes made while the window was open; the ticked winner of an audience vote always wins; the vote's sticker respects the stickers setting.
+
 ## 1.2.0
 
 - New **Effects** tab in the Producer Console with thirty effects in three groups, each with a Shift-click private preview, an optional duration and a *Stop all effects* button.

@@ -1,4 +1,4 @@
-import { MODULE_ID, RATING_MAX, SHOW_MAX, SHOW_MIN, defaultState, EPISODES } from "./constants.js";
+import { MODULE_ID, RATING_MAX, RATING_MIN, RATING_START, SHOW_MAX, SHOW_MIN, defaultState, EPISODES } from "./constants.js";
 import { clamp, isGM, randomId, setting } from "./util.js";
 
 const listeners = new Set();
@@ -19,11 +19,19 @@ export function normalize(raw) {
   s.contestants = s.contestants.map(({ role, ...c }) => {
     // v1 worlds stored the English default names; switch them to the Russian ones the audience sees.
     if ((raw?.version ?? 1) < 2 && OLD_NAMES[c.id] === c.name && defaults[c.id]) c.name = defaults[c.id];
-    return { ...c, rating: clamp(Number(c.rating ?? 5), 0, RATING_MAX), art: { ...(c.art ?? {}) } };
+    let r = Number(c.rating ?? RATING_START);
+    // Before v3 fan meters ran 0–10; map them onto 1–7 (5 → 4).
+    if ((raw?.version ?? 1) < 3 && Array.isArray(raw?.contestants)) r = Math.round(1 + (r * 6) / 10);
+    return { ...c, rating: clamp(Number.isFinite(r) ? r : RATING_START, RATING_MIN, RATING_MAX), art: { ...(c.art ?? {}) } };
   });
-  s.version = 2;
+  s.version = 3;
   const eps = Array.isArray(raw?.episodes) ? raw.episodes : base.episodes;
   s.episodes = EPISODES.map((e) => ({ id: e.id, done: !!eps.find((x) => x.id === e.id)?.done }));
+  // Celmak's schedule: the GM can reorder the episodes; unknown ids are dropped, missing ones appended.
+  const known = new Set(EPISODES.map((e) => e.id));
+  const order = (Array.isArray(raw?.order) ? raw.order : []).filter((id, i, a) => known.has(id) && a.indexOf(id) === i);
+  for (const e of EPISODES) if (!order.includes(e.id)) order.push(e.id);
+  s.order = order;
   s.show = clamp(Number(s.show ?? 3), SHOW_MIN, SHOW_MAX);
   return s;
 }
@@ -85,12 +93,39 @@ export async function adjustContestant(cid, delta, reason = "", { link = undefin
   const c = s.contestants.find((x) => x.id === cid);
   if (!c) return;
   const from = c.rating;
-  c.rating = clamp(from + delta, 0, RATING_MAX);
+  c.rating = clamp(from + delta, RATING_MIN, RATING_MAX);
   const useLink = link ?? setting("linkRatings") !== false;
   const showFrom = s.show;
   if (useLink && c.rating !== from) s.show = clamp(s.show + Math.sign(delta), SHOW_MIN, SHOW_MAX);
   s.lastEvent = event("contestant", { cid, from, to: c.rating, delta: c.rating - from, reason, show: { from: showFrom, to: s.show } });
   await setState(s);
+}
+
+/** Episodes in Celmak's (GM-arranged) schedule order. */
+export function schedule(state = getState()) {
+  return state.order.map((id) => EPISODES.find((e) => e.id === id)).filter(Boolean);
+}
+
+/** 1-based position of an episode in the schedule: what the title card announces. */
+export function episodeNumber(id, state = getState()) {
+  return state.order.indexOf(id) + 1;
+}
+
+export async function moveEpisode(id, dir) {
+  const s = getState();
+  const i = s.order.indexOf(id);
+  const j = i + Math.sign(dir);
+  if (i < 0 || j < 0 || j >= s.order.length) return;
+  [s.order[i], s.order[j]] = [s.order[j], s.order[i]];
+  s.lastEvent = event("schedule", {});
+  await setState(s);
+}
+
+export async function setEpisodeOrder(ids) {
+  const s = getState();
+  s.order = ids;
+  s.lastEvent = event("schedule", {});
+  await setState(normalize(s));
 }
 
 export async function setVisible(visible) {
@@ -132,8 +167,9 @@ export async function updateContestants(list) {
 export async function resetSeason({ keepCast = true } = {}) {
   const s = getState();
   const fresh = defaultState();
-  if (keepCast) fresh.contestants = s.contestants.map((c) => ({ ...c, rating: 5 }));
+  if (keepCast) fresh.contestants = s.contestants.map((c) => ({ ...c, rating: RATING_START }));
   fresh.visible = s.visible;
+  fresh.order = s.order;
   fresh.lastEvent = event("reset", { season: true });
   await setState(fresh);
 }

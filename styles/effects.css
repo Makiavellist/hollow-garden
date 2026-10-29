@@ -204,7 +204,7 @@
 #board.hg-gravity, #hg-board.hg-gravity { animation: hg-gravity 2.6s ease-in-out infinite; transform-origin: 50% 50%; }
 @keyframes hg-gravity { 0%, 100% { rotate: 0deg; translate: 0 0; } 25% { rotate: 6deg; translate: 0 18px; } 60% { rotate: -5deg; translate: 0 -12px; } 80% { rotate: 2deg; translate: 0 6px; } }
 .hg-gravity-label {
-  position: absolute; left: 50%; top: max(24vh, 200px); translate: -50% 0; padding: 8px 18px;
+  position: absolute; left: 50%; top: max(28vh, 240px); translate: -50% 0; padding: 8px 18px;
   font-family: var(--hg-display); font-weight: 900; letter-spacing: 0.25em; font-size: clamp(16px, 1.8vw, 26px);
   color: #fff; background: rgba(123, 92, 255, 0.85); border-radius: 8px; box-shadow: 0 0 24px rgba(123, 92, 255, 0.8);
   animation: hg-float-label 1.6s ease-in-out infinite alternate;
@@ -225,7 +225,7 @@
 
 /* ---------------- Neon sign ---------------- */
 .hg-neon {
-  position: absolute; left: 50%; top: max(24vh, 200px); translate: -50% 0; padding: 0.25em 0.8em; border-radius: 0.5em;
+  position: absolute; left: 50%; top: max(28vh, 240px); translate: -50% 0; padding: 0.25em 0.8em; border-radius: 0.5em;
   border: 4px solid var(--neon); color: #fff; background: rgba(5, 0, 15, 0.55);
   font-family: var(--hg-display); font-weight: 900; font-size: clamp(30px, 5vw, 76px); letter-spacing: 0.12em; white-space: nowrap;
   box-shadow: 0 0 12px var(--neon), 0 0 36px var(--neon), inset 0 0 18px var(--neon);
@@ -238,7 +238,7 @@
 @keyframes hg-neon-off { 0% { opacity: 1; } 30% { opacity: 0.2; } 50% { opacity: 0.8; } 70% { opacity: 0; } 100% { opacity: 0; } }
 
 /* ---------------- Countdown ---------------- */
-.hg-countdown { position: absolute; left: 50%; top: max(24vh, 200px); translate: -50% 0; text-align: center; font-family: var(--hg-display); animation: hg-zoom 0.4s cubic-bezier(0.2, 1.5, 0.4, 1) both; }
+.hg-countdown { position: absolute; left: 50%; top: max(28vh, 240px); translate: -50% 0; text-align: center; font-family: var(--hg-display); animation: hg-zoom 0.4s cubic-bezier(0.2, 1.5, 0.4, 1) both; }
 .hg-countdown.hg-out { animation: hg-fade 0.5s forwards; }
 .hg-countdown-label { font-weight: 800; letter-spacing: 0.3em; font-size: clamp(13px, 1.3vw, 18px); color: var(--hg-cyan); text-shadow: 0 0 10px var(--hg-cyan); margin-bottom: 8px; }
 .hg-countdown-num {
@@ -268,7 +268,7 @@
 .hg-season { position: absolute; inset: 0; background: var(--tint); animation: hg-gas-in 1s both; }
 .hg-season.hg-out { animation: hg-fade 1.2s forwards; }
 .hg-season-label {
-  position: absolute; left: 50%; top: max(22vh, 190px); translate: -50% 0; text-align: center; padding: 10px 26px 12px; border-radius: 14px;
+  position: absolute; left: 50%; top: max(26vh, 230px); translate: -50% 0; text-align: center; padding: 10px 26px 12px; border-radius: 14px;
   background: rgba(10, 6, 30, 0.72); font-family: var(--hg-display); color: #fff; animation: hg-rise 0.6s 0.2s both;
   max-width: 86vw;
 }

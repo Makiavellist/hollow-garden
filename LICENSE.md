@@ -26,4 +26,13 @@ Exo 2 and Nunito are licensed under the SIL Open Font License 1.1 (`fonts/OFL-*.
 
 ## Sounds
 
-`sounds/applause.ogg` and `sounds/cheer.ogg` are edited from "Applause" by the Blender Foundation (apricot.blender.org), licensed CC-BY 3.0 (https://creativecommons.org/licenses/by/3.0/), from https://opengameart.org/content/applause. The other sounds were synthesised for this module.
+`sounds/applause.ogg` and `sounds/cheer.ogg` are edited from "Applause" by the Blender Foundation (apricot.blender.org), licensed CC-BY 3.0 (https://creativecommons.org/licenses/by/3.0/), from https://opengameart.org/content/applause.
+
+`sounds/crowd-ooh.ogg`, `sounds/crowd-aww.ogg` and `sounds/dont-leave.ogg` are layered, pitch-shifted edits (see `tools/make_crowd.py`) of:
+
+- "Universal Spurts" voice pack by Alba MacKenna, licensed CC-BY 4.0 (https://creativecommons.org/licenses/by/4.0/), from https://opengameart.org/content/voice-pack%E2%94%82universal-spurts
+- "Oooooooooooooo" and "Female distressed no no no" by AuraVoice, CC0, from https://opengameart.org/content/oooooooooooooo and https://opengameart.org/content/female-distressed-no-no-no
+
+`sounds/rimshot.ogg` is "rimshot" by crabbydad, public domain, from https://archive.org/details/rimshot.
+
+The other sounds were synthesised for this module.

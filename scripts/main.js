@@ -2,7 +2,7 @@
  * The Hollow Garden: Звёздные Искатели — Foundry VTT v13 module for Pathfinder 1e.
  * Ratings board, Producer Console, rigged episode wheel, audience votes, soundboard and host stickers.
  */
-import { EPISODES, MODULE_ID, defaultState, starring } from "./constants.js";
+import { EPISODES, MODULE_ID, PERSONAS, defaultState, starring } from "./constants.js";
 import { playSfx, preloadSounds } from "./audio.js";
 import { RatingsBoard } from "./board.js";
 import { FX } from "./fx.js";
@@ -10,7 +10,7 @@ import { FX_EXTRA } from "./fx-extra.js";
 import { AD_DEFAULTS, AD_FX, COMMERCIAL_IDS, commercialBreak, previewAds } from "./commercials.js";
 import { broadcast, initSocket, registerHandler } from "./socket.js";
 import {
-  adjustContestant, adjustShow, getState, handleStateChange, markSeen, onStateChange, setCurrentEpisode, setVisible, toggleVisible
+  adjustContestant, adjustShow, episodeNumber, getState, handleStateChange, markSeen, onStateChange, setCurrentEpisode, setVisible, toggleVisible
 } from "./state.js";
 import { awardTrinket, bindChatButtons, moodGas, promptGM, reactToEvent, runEscalation } from "./rules.js";
 import { AnnounceDesk } from "./apps/announce.js";
@@ -20,6 +20,7 @@ import { RouletteDesk } from "./apps/roulette.js";
 import { VoteDesk } from "./apps/vote.js";
 import { HoneypotDesk } from "./apps/honeypot.js";
 import { isGM } from "./util.js";
+import { enforceSecrecy, registerSecrecyHooks } from "./secrecy.js";
 
 for (const [type, fn] of Object.entries({ ...FX, ...FX_EXTRA, ...AD_FX })) registerHandler(type, fn);
 
@@ -64,10 +65,10 @@ const api = {
   titleCard: (kind, data = {}) => requireGM() && broadcast("title", { kind, ...data }),
   async episodeTitle(id) {
     if (!requireGM()) return;
-    const idx = EPISODES.findIndex((e) => e.id === id);
-    const ep = EPISODES[idx];
+    const ep = EPISODES.find((e) => e.id === id);
     if (!ep) return;
     const state = getState();
+    const idx = episodeNumber(id, state) - 1;
     const fin = ep.id === "finale";
     broadcast("title", { kind: fin ? "finale" : "episode", kicker: fin ? undefined : `ЭПИЗОД ${idx + 1}`,
       title: ep.ru.toUpperCase(), starring: starring(ep, state.contestants) });
@@ -88,7 +89,7 @@ const api = {
   glitch: () => requireGM() && broadcast("glitch", {}),
   cue: (id) => requireGM() && broadcast("cue", { id }),
   sticker: (name, caption = "") => requireGM() && broadcast("sticker", { sticker: name, caption }),
-  say: (text, persona = "Host") => requireGM() && broadcast("caption", { text, persona }),
+  say: (text, persona = "Host") => requireGM() && broadcast("caption", { text, sticker: (PERSONAS[persona] ?? PERSONAS.Host).stickers[0] }),
   /** Run any broadcast effect for everyone, e.g. effect("blackout", { duration: 8 }) or effect("sign", { text: "ТИШИНА" }). */
   effect: (type, data = {}) => requireGM() && broadcast(type, data),
   /** Every effect name accepted by effect(). */
@@ -112,6 +113,7 @@ const api = {
 };
 
 Hooks.once("init", () => {
+  registerSecrecyHooks();
   game.settings.register(MODULE_ID, "state", {
     scope: "world",
     config: false,
@@ -177,6 +179,7 @@ Hooks.once("ready", () => {
   initSocket();
   preloadSounds();
   markSeen(getState());
+  enforceSecrecy().catch((err) => console.error("Hollow Garden | could not lock the GM material", err));
   const board = RatingsBoard.instance;
   board.mount();
   const safe = (label, fn) => {
@@ -235,7 +238,7 @@ function injectPlaylistVolume(app, html) {
     const v = Math.round(Number(game.settings.get(MODULE_ID, "sfxVolume") ?? 0.8) * 100);
     const box = document.createElement("div");
     box.className = "hg-playlist-volume";
-    box.innerHTML = `<label title="Звуки шоу «Полый Сад» — только у вас"><i class="fa-solid fa-tower-broadcast"></i> Студия
+    box.innerHTML = `<label title="Звуки шоу «Пустой сад» — только у вас"><i class="fa-solid fa-tower-broadcast"></i> Студия
         <input type="range" min="0" max="100" step="5" value="${v}" data-hg-volume></label><span class="hg-vol-val">${v}%</span>`;
     box.querySelector("input").addEventListener("change", async (ev) => {
       await game.settings.set(MODULE_ID, "sfxVolume", Number(ev.target.value) / 100);

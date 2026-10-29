@@ -192,3 +192,35 @@
 .hg-adthumb { width: 46px; height: 46px; border-radius: 10px; display: grid; place-items: center; background: var(--ad-bg); color: var(--ad-accent); font-size: 20px; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25); text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); }
 .hg-adinfo { display: grid; line-height: 1.2; }
 .hg-adinfo small { color: var(--hg-dim); }
+
+/* ---------------------------------------------------------------------
+   Players' (fake) skip button and the penalty pop-up
+   --------------------------------------------------------------------- */
+.hg-ad-skip {
+  position: absolute; right: 18px; bottom: 54px; z-index: 2; pointer-events: auto; width: auto;
+  display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; border-radius: 6px; cursor: pointer;
+  font-family: var(--hg-cute); font-weight: 800; font-size: 15px; line-height: 1; color: #fff;
+  background: rgba(0, 0, 0, 0.72); border: 1px solid rgba(255, 255, 255, 0.55);
+}
+.hg-ad-skip:hover:not(:disabled) { background: rgba(0, 0, 0, 0.88); border-color: #fff; }
+.hg-ad-skip:disabled { cursor: default; opacity: 0.85; }
+.hg-ad-skip.hg-denied { background: rgba(196, 0, 26, 0.85); border-color: #ff8a95; animation: hg-shake 0.5s linear; }
+.hg-ad-penalty { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; gap: 0; z-index: 5; pointer-events: none; background: rgba(10, 0, 4, 0.45); }
+.hg-ad-penalty.hg-out { animation: hg-fade 0.5s forwards; }
+.hg-penalty-card {
+  position: relative; padding: 18px 26px 16px; border-radius: 18px; text-align: center; color: #fff; max-width: min(620px, 86vw);
+  background: linear-gradient(160deg, #3c000c, #14041e); border: 3px solid var(--hg-red);
+  box-shadow: 0 0 40px rgba(255, 40, 60, 0.6), 0 18px 40px rgba(0, 0, 0, 0.6);
+  animation: hg-zoom 0.5s cubic-bezier(0.2, 1.6, 0.4, 1) both, hg-shake2 0.6s 0.5s linear;
+}
+.hg-penalty-title { font-family: var(--hg-display); font-weight: 900; letter-spacing: 0.08em; font-size: clamp(22px, 3vw, 40px); color: #fff; text-shadow: 0 0 14px var(--hg-red); }
+.hg-penalty-row { display: flex; align-items: center; justify-content: center; gap: 16px; margin: 12px 0 8px; }
+.hg-penalty-portrait { width: 96px; height: 96px; border-radius: 50%; overflow: hidden; border: 4px solid var(--hg-red); background: rgba(255, 255, 255, 0.15); flex: none; }
+.hg-penalty-portrait img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 15%; border: 0; }
+.hg-penalty-text { display: grid; gap: 4px; text-align: left; font-family: var(--hg-display); }
+.hg-penalty-text strong { font-size: 24px; font-weight: 900; }
+.hg-penalty-score { font-size: 20px; font-weight: 800; } .hg-penalty-score s { opacity: 0.6; } .hg-penalty-score b { color: var(--hg-red); }
+.hg-penalty-minus { font-weight: 900; font-size: 30px; color: var(--hg-red); text-shadow: 0 0 12px rgba(255, 77, 94, 0.8); animation: hg-pulse-dim 0.6s steps(2) 3; }
+.hg-penalty-sub { font-family: var(--hg-cute); font-size: 14px; color: #ffd0d6; }
+.hg-penalty-host { position: relative; z-index: 1; margin-right: -30px; width: clamp(150px, 16vw, 240px); border: 0; filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.6)); animation: hg-in-left 0.6s cubic-bezier(0.2, 1.5, 0.4, 1) both, hg-wobble 1.2s 0.6s ease-in-out infinite; }
+@media (max-width: 760px) { .hg-penalty-host { width: 120px; margin-right: -20px; } }

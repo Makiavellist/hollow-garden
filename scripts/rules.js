@@ -1,4 +1,4 @@
-import { EPISODES, HOST_NAME, MODULE_ID, MOOD_GAS, SHOW_RESPONSES, TABLES, sticker } from "./constants.js";
+import { ACTORS, EPISODES, HOST_NAME, MODULE_ID, MOOD_GAS, SHOW_RESPONSES, TABLES, sticker } from "./constants.js";
 import { broadcast } from "./socket.js";
 import { adjustContestant, adjustShow, getState, topContestants } from "./state.js";
 import { chatCard, drawTable, esc, isActiveGM, resultText, resultUuid, setting } from "./util.js";
@@ -41,8 +41,8 @@ export async function awardTrinket(cid = null, { announce = true } = {}) {
       const data = doc.toObject();
       delete data._id;
       data._stats = { ...(data._stats ?? {}), compendiumSource: doc.uuid };
-      await actor.createEmbeddedDocuments("Item", [data]);
-      given = true;
+      const res = await actor.createEmbeddedDocuments("Item", [data]);
+      given = (Array.isArray(res) ? res[0] : null) ?? true;
     }
   }
   const name = doc?.name ?? result?.name ?? "приз";
@@ -53,7 +53,8 @@ export async function awardTrinket(cid = null, { announce = true } = {}) {
   await chatCard({
     title: "И приз получает…",
     sticker: sticker("trophy"),
-    body: `<p><strong>${esc(c?.name ?? "любимец публики")}</strong> получает ${doc ? `@UUID[${doc.uuid}]{${esc(name)}}` : esc(name)}!</p>`
+    // Link the copy on the sheet: players can't open the GM-only compendium.
+    body: `<p><strong>${esc(c?.name ?? "любимец публики")}</strong> получает ${given?.uuid ? `@UUID[${given.uuid}]{${esc(name)}}` : `<strong>${esc(name)}</strong>`}!</p>`
   });
   if (!given) {
     await chatCard({
@@ -115,21 +116,91 @@ export async function resolveHoneypot({ total, natural, cid = null, actorName = 
   return "detrimental";
 }
 
-/** Escalation responses offered in the announcement dialog and on chat cards. */
+/** Escalation responses ("Celmak's response") offered in the announcement desk and on chat cards. */
 export const ESCALATIONS = {
   none: { label: "Announcement only" },
   gas: { label: "Mood Gas vent (DC 22)" },
   cast: { label: "Send in a demon cast member" },
-  walls: { label: "Reconfigure the room (screen shake)" },
-  vote: { label: "Audience vote (opens the vote desk)" }
+  walls: { label: "Reconfigure the room (blast doors + shake)" },
+  vote: { label: "Audience vote that splits the party (opens the vote desk)" },
+  drones: { label: "Stagehand Drones join the next encounter" },
+  blackout: { label: "Lights out (blackout)" },
+  spotlight: { label: "Spotlight on the least popular contestant" },
+  shame: { label: "Public shaming: least popular contestant −1 fan" },
+  season: { label: "The season turns (random Garden season)" },
+  countdown: { label: "Ticking clock: 60 seconds to act" },
+  snacks: { label: "Snacks revoked in the Green Room" },
+  tantrum: { label: "Celmak's tantrum (system crash)" }
 };
+
+/** The visible contestant with the fewest fans (ties broken at random). */
+function leastPopular() {
+  const vis = getState().contestants.filter((c) => c.visible);
+  if (!vis.length) return null;
+  const min = Math.min(...vis.map((c) => c.rating));
+  const low = vis.filter((c) => c.rating === min);
+  return low[Math.floor(Math.random() * low.length)];
+}
+
+/** Canvas positions of the tokens belonging to a contestant's linked actor. */
+function tokenPoints(c) {
+  if (!c?.actorUuid || !globalThis.canvas?.tokens) return [];
+  const actorId = c.actorUuid.split(".").pop();
+  return (canvas.tokens.placeables ?? [])
+    .filter((t) => t.actor?.id === actorId || t.document?.actorId === actorId)
+    .map((t) => ({ x: t.center.x, y: t.center.y, r: Math.max(t.w, t.h) * 0.75 }));
+}
+
+const gmNote = (title, body) => chatCard({ title, whisper: true, body });
 
 export async function runEscalation(kind) {
   const api = game.modules.get(MODULE_ID).api;
-  if (kind === "gas") return moodGas({ dc: 22 });
-  if (kind === "cast") return broadcast("sticker", { sticker: "smug", sound: "suspense", caption: "Особая приглашённая звезда!" });
-  if (kind === "walls") return broadcast("shake", { sound: "rimshot" });
-  if (kind === "vote") return api.openVote();
+  switch (kind) {
+    case "gas":
+      return moodGas({ dc: 22 });
+    case "cast":
+      return broadcast("sticker", { sticker: "smug", sound: "suspense", caption: "Особая приглашённая звезда!" });
+    case "walls":
+      broadcast("lockdown", { duration: 4, text: "ПЕРЕСТРОЙКА СТУДИИ" });
+      return setTimeout(() => broadcast("shake", { sound: "rimshot", strength: 2 }), 600);
+    case "vote":
+      return api.openVote();
+    case "drones": {
+      broadcast("smoke", { duration: 6 });
+      broadcast("sticker", { sticker: "presenting", sound: "on-air", caption: "Рабочие сцены — на выход!" });
+      const drone = ACTORS["Stagehand Drone"];
+      return gmNote("Escalation: Stagehand Drones", `<p>The next encounter gains one ${drone ? `@UUID[${drone}]{Stagehand Drone}` : "Stagehand Drone"}.</p>`);
+    }
+    case "blackout":
+      broadcast("blackout", { duration: 8 });
+      return gmNote("Escalation: lights out", "<p>Optional: the area is dark until the end of the round, when Celmak restores power for the cameras.</p>");
+    case "spotlight": {
+      const c = leastPopular();
+      broadcast("spotlight", { points: tokenPoints(c), duration: 7 });
+      if (c) broadcast("sticker", { sticker: "smug", sound: "boo", caption: `А вот и наш аутсайдер: ${c.name}!` });
+      return;
+    }
+    case "shame": {
+      const c = leastPopular();
+      if (!c) return;
+      await adjustContestant(c.id, -1, "Public shaming", { link: false });
+      return broadcast("sticker", { sticker: "bored", sound: "boo", caption: `${c.name}, зрители разочарованы. −1 к рейтингу!` });
+    }
+    case "season": {
+      const kinds = ["spring", "summer", "autumn", "winter"];
+      return broadcast("season", { kind: kinds[Math.floor(Math.random() * kinds.length)], duration: 8, showRules: false });
+    }
+    case "countdown":
+      broadcast("countdown", { seconds: 60, label: "РЕШАЙТЕСЬ!" });
+      return gmNote("Escalation: ticking clock", "<p>The players have 60 real seconds to agree on what they do next; if they don't, Celmak decides for them.</p>");
+    case "snacks":
+      return broadcast("sticker", { sticker: "snacks-revoked", sound: "rating-down", caption: "Никаких вкусняшек в Зелёной комнате!" });
+    case "tantrum":
+      broadcast("crash", { duration: 7 });
+      return setTimeout(() => broadcast("sticker", { sticker: "angry", sound: "buzzer", caption: "Это жульничество! Переснимаем!" }), 7600);
+    default:
+      return null;
+  }
 }
 
 /* ------------------------------------------------------------------ */

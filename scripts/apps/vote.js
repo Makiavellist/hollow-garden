@@ -2,7 +2,7 @@ import { sticker } from "../constants.js";
 import { playSfx } from "../audio.js";
 import { broadcast, registerHandler } from "../socket.js";
 import { confetti, fxLayer, popSticker } from "../fx.js";
-import { chatCard, esc, isGM } from "../util.js";
+import { chatCard, esc, isGM, setting } from "../util.js";
 import { getState } from "../state.js";
 import { HGApplication } from "./base.js";
 
@@ -92,9 +92,15 @@ export class VoteDesk extends HGApplication {
   static async #onGo() {
     this.#collect();
     const d = this.draft;
-    const options = d.o.map((label, i) => ({ label, pct: d.pct[i] })).filter((o) => o.label);
+    const options = d.o.map((label, i) => ({ label, pct: d.pct[i], picked: i === d.winner })).filter((o) => o.label);
     if (options.length < 2) return ui.notifications.warn("A vote needs at least two options.");
-    const winner = options.reduce((best, o, i) => (o.pct > options[best].pct ? i : best), 0);
+    // The ticked winner always wins: if the typed numbers disagree, rig them.
+    let winner = Math.max(0, options.findIndex((o) => o.picked));
+    if (options.some((o, i) => i !== winner && o.pct >= options[winner].pct)) {
+      const pct = rigPercentages(options.length, winner);
+      options.forEach((o, i) => (o.pct = pct[i]));
+    }
+    for (const o of options) delete o.picked;
     broadcast("vote", { question: d.q || "Голосование зрителей", options, winner });
     this.close();
     setTimeout(() => chatCard({
@@ -117,7 +123,7 @@ export function runVote({ question, options, winner }) {
       <ul>${options.map((o, i) => `<li data-i="${i}"><span class="hg-vote-label">${esc(o.label)}</span><div class="hg-vote-bar"><div></div></div><span class="hg-vote-pct">0%</span></li>`).join("")}</ul>
       ${isGM() ? `<div class="hg-rigged"><i class="fa-solid fa-user-secret"></i> Rigged → ${esc(options[winner].label)}</div>` : ""}
     </div>
-    <img class="hg-vote-host" src="${sticker("countdown")}" alt="">`;
+    ${setting("stickers") === false ? "" : `<img class="hg-vote-host" src="${sticker("countdown")}" alt="">`}`;
   layer.appendChild(node);
   const bars = [...node.querySelectorAll("li")];
   const timer = node.querySelector(".hg-vote-timer");

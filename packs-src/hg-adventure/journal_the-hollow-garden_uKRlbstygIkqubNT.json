@@ -314,9 +314,13 @@
   ],
   "folder": null,
   "sort": 0,
+  "ownership": {
+    "default": 0
+  },
   "flags": {
     "hollow-garden": {
-      "adventure": true
+      "adventure": true,
+      "gmOnly": true
     }
   },
   "_stats": {
