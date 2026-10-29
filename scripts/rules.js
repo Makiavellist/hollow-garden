@@ -1,102 +1,34 @@
-import { EPISODES, MODULE_ID, MOOD_GAS, SHOW_RESPONSES, TABLES, sticker } from "./constants.js";
-import { playSfx } from "./audio.js";
+import { EPISODES, HOST_NAME, MODULE_ID, MOOD_GAS, SHOW_RESPONSES, TABLES, sticker } from "./constants.js";
 import { broadcast } from "./socket.js";
-import { confetti, popSticker, shake, titleCard } from "./fx.js";
-import { adjustShow, getState, setShow, topContestants } from "./state.js";
-import { chatCard, drawTable, esc, isActiveGM, resultText, resultUuid, setting, sleep } from "./util.js";
+import { adjustContestant, adjustShow, getState, topContestants } from "./state.js";
+import { chatCard, drawTable, esc, isActiveGM, resultText, resultUuid, setting } from "./util.js";
 
 /* ------------------------------------------------------------------ */
-/*  Local reactions to state events (every client)                     */
+/*  Rating changes are silent for players. The GM is only *offered*    */
+/*  an announcement when the Show Rating reaches 5 or 1.               */
 /* ------------------------------------------------------------------ */
 
-export function reactToEvent(state, ev) {
-  if (!ev) return;
-  switch (ev.type) {
-    case "contestant": {
-      if (!ev.delta) return;
-      playSfx(ev.delta > 0 ? "rating-up" : "rating-down", { volume: 0.7 });
-      showReaction(state, ev.show);
-      break;
-    }
-    case "show": {
-      if (!ev.delta) return;
-      playSfx(ev.delta > 0 ? "rating-up" : "rating-down", { volume: 0.7 });
-      showReaction(state, ev.show);
-      break;
-    }
-    case "visibility":
-      if (ev.visible) playSfx("on-air", { volume: 0.6 });
-      break;
-  }
+export function reactToEvent(_state, _ev) {
+  // Intentionally quiet: the board updates in place, nothing pops up for players.
 }
 
-function showReaction(state, show) {
-  if (!show || show.from === show.to) return;
-  if (show.to === 5) {
-    const top = topContestants(state);
-    titleCard({ kind: "peak", subtitle: top.length === 1 ? `A Trinket for ${top[0].name}!` : "A Trinket for the fan favourite!" });
-    confetti();
-  } else if (show.to === 1) {
-    titleCard({ kind: "escalation" });
-    shake({ strength: 2 });
-  }
-}
-
-/* ------------------------------------------------------------------ */
-/*  Automation (active GM only)                                        */
-/* ------------------------------------------------------------------ */
-
-export async function automate(state, ev) {
-  if (!ev || !isActiveGM() || setting("automation") === false) return;
+export async function promptGM(state, ev) {
+  if (!ev || !isActiveGM() || setting("promptAtThresholds") === false) return;
   const show = ev.show;
   if (!show || show.from === show.to || ev.type === "reset") return;
-  if (show.to === 5) {
-    const top = topContestants(state);
-    const who = top.length === 1 ? top[0] : null;
-    await chatCard({
-      title: "Ratings peak!",
-      sticker: sticker("trophy"),
-      whisper: true,
-      body: `<p>${esc(SHOW_RESPONSES[5].text)}</p>
-        <p>${who ? `Fan favourite: <strong>${esc(who.name)}</strong>${who.actorUuid ? "" : " <em>(no actor linked)</em>"}`
-          : `It's a tie between ${top.map((t) => `<strong>${esc(t.name)}</strong>`).join(", ")}. Pick one.`}</p>`,
-      buttons: (who ? [who] : top).map((c) => ({ action: "award", label: `Trinket for ${c.name}`, icon: "fa-solid fa-gift", data: { cid: c.id } }))
-    });
-    await sleep(4200);
-    await setShow(3, "Reset after peak", { quiet: true });
-  } else if (show.to === 1) {
-    await chatCard({
-      title: "Escalation!",
-      sticker: sticker("angry"),
-      whisper: true,
-      body: `<p>${esc(SHOW_RESPONSES[1].text)}</p><p>Pick Celmak's response:</p>`,
-      buttons: [
-        { action: "gas", label: "Mood Gas vent", icon: "fa-solid fa-smog" },
-        { action: "cast", label: "Send in a demon", icon: "fa-solid fa-masks-theater" },
-        { action: "walls", label: "Reconfigure the room", icon: "fa-solid fa-border-all" },
-        { action: "vote", label: "Audience vote", icon: "fa-solid fa-square-poll-horizontal" }
-      ]
-    });
-    await sleep(4200);
-    await setShow(2, "Reset after escalation", { quiet: true });
-  } else if (show.to === 2 && show.from > 2) {
-    await chatCard({ title: "Ratings: 2", sticker: sticker("bored"), whisper: true, body: `<p>${esc(SHOW_RESPONSES[2].text)}</p>` });
-  } else if (show.to === 4 && show.from < 4) {
-    await chatCard({ title: "Ratings: 4", sticker: sticker("heart-eyes"), whisper: true, body: `<p>${esc(SHOW_RESPONSES[4].text)}</p>` });
-  }
+  const api = game.modules.get(MODULE_ID).api;
+  if (show.to === 5 && show.from < 5) api.openAnnounce("peak");
+  else if (show.to === 1 && show.from > 1) api.openAnnounce("escalation");
 }
 
 /* ------------------------------------------------------------------ */
 /*  Trinkets                                                           */
 /* ------------------------------------------------------------------ */
 
-export async function awardTrinket(cid = null) {
+export async function awardTrinket(cid = null, { announce = true } = {}) {
   const state = getState();
   let c = cid ? state.contestants.find((x) => x.id === cid) : null;
-  if (!c) {
-    const top = topContestants(state);
-    c = top[0] ?? null;
-  }
+  if (!c) c = topContestants(state)[0] ?? null;
   const drawn = await drawTable(TABLES.trinkets);
   if (!drawn) return;
   const result = drawn.results[0];
@@ -113,15 +45,23 @@ export async function awardTrinket(cid = null) {
       given = true;
     }
   }
-  const name = doc?.name ?? result?.name ?? "a Trinket";
-  broadcast("sticker", { sticker: "trophy", sound: "fanfare", caption: `${c?.name ?? "Someone"} wins: ${name}!` });
-  broadcast("confetti", {});
+  const name = doc?.name ?? result?.name ?? "приз";
+  if (announce) {
+    broadcast("sticker", { sticker: "trophy", sound: "fanfare", caption: `${c?.name ?? "Участник"} получает: ${name}!` });
+    broadcast("confetti", {});
+  }
   await chatCard({
-    title: "And the prize goes to…",
+    title: "И приз получает…",
     sticker: sticker("trophy"),
-    body: `<p><strong>${esc(c?.name ?? "the fan favourite")}</strong> receives ${doc ? `@UUID[${doc.uuid}]{${esc(name)}}` : esc(name)}!</p>
-      ${given ? `<p class="hg-muted">Added to their character sheet.</p>` : c?.actorUuid ? "" : `<p class="hg-muted">No actor linked; hand it over manually.</p>`}`
+    body: `<p><strong>${esc(c?.name ?? "любимец публики")}</strong> получает ${doc ? `@UUID[${doc.uuid}]{${esc(name)}}` : esc(name)}!</p>`
   });
+  if (!given) {
+    await chatCard({
+      title: "Trinket not added to a sheet",
+      whisper: true,
+      body: `<p>${c?.actorUuid ? "The linked actor could not be found." : `No actor is linked to ${esc(c?.name ?? "this contestant")}.`} Hand the item over manually, or link an actor in <em>Contestants…</em>.</p>`
+    });
+  }
 }
 
 /* ------------------------------------------------------------------ */
@@ -130,25 +70,24 @@ export async function awardTrinket(cid = null) {
 
 export async function moodGas({ dc = 22, roll = null } = {}) {
   let r = roll;
-  let text = "";
   if (!r) {
     const drawn = await drawTable(TABLES["mood-gas"]);
     r = drawn?.roll?.total ?? Math.ceil(Math.random() * 6);
-    text = resultText(drawn?.results?.[0]);
   }
   const g = MOOD_GAS[r] ?? MOOD_GAS[1];
   broadcast("gas", { roll: r, dc });
   await chatCard({
-    title: `Mood Gas: ${g.name}`,
+    title: `Газ настроения: ${g.ru.toLowerCase()}`,
     sticker: sticker("smug"),
-    body: `<p class="hg-gas-chip" style="--gas:${g.color}">d6 = ${r}</p><p>${text || esc(g.text)}</p>
-      <p>Creatures in the 20-ft burst: <strong>Fortitude DC ${dc}</strong> to avoid inhaling a dose (holding one's breath works if they acted first),
-      then <strong>Will DC ${dc}</strong> against the effect for 1d4+1 rounds. Androids add their racial bonus; creatures that do not breathe are immune.</p>`
+    body: `<p class="hg-gas-chip" style="--gas:${g.color}">d6 = ${r}</p>
+      <p>Существа в радиусе 20 футов: <strong>Стойкость СЛ ${dc}</strong>, чтобы не вдохнуть дозу (задержать дыхание можно, если вы действовали раньше),
+      затем <strong>Воля СЛ ${dc}</strong> против эффекта на 1d4+1 раундов. Андроиды добавляют свой расовый бонус; не дышащие существа невосприимчивы.</p>`
   });
+  await chatCard({ title: `Mood Gas: ${g.name}`, whisper: true, body: `<p>${esc(g.text)}</p>` });
 }
 
 /* ------------------------------------------------------------------ */
-/*  Honeypots                                                          */
+/*  Honeypots (GM-only results; the laugh is the GM's call)            */
 /* ------------------------------------------------------------------ */
 
 export async function resolveHoneypot({ total, natural, cid = null, actorName = "" }) {
@@ -163,11 +102,9 @@ export async function resolveHoneypot({ total, natural, cid = null, actorName = 
   if (natural <= 10) {
     const drawn = await drawTable(TABLES.amusing);
     await chatCard({ title: "Honeypot: an obvious fake", sticker: sticker("joy"), whisper: true,
-      body: `<p>${esc(who)} rolled <strong>${total}</strong> (natural ${natural}). Celmak laughs, and the ratings rise by 1.</p>
-        <blockquote>${resultText(drawn?.results?.[0])}</blockquote>` });
-    broadcast("sticker", { sticker: "joy", sound: "rimshot", caption: "Ha! Ha ha ha!" });
-    if (cid) await (await import("./state.js")).adjustContestant(cid, 1, "Honeypot swallowed");
-    else await adjustShow(1, "Honeypot swallowed");
+      body: `<p>${esc(who)} rolled <strong>${total}</strong> (natural ${natural}). By the book, Celmak laughs and the ratings rise by 1.</p>
+        <blockquote>${resultText(drawn?.results?.[0])}</blockquote>`,
+      buttons: [{ action: "laugh", label: "Celmak laughs (+1 rating)", icon: "fa-solid fa-face-laugh-squint", data: { cid: cid ?? "" } }] });
     return "amusing";
   }
   const drawn = await drawTable(TABLES.detrimental);
@@ -176,6 +113,23 @@ export async function resolveHoneypot({ total, natural, cid = null, actorName = 
       <blockquote>${resultText(drawn?.results?.[0])}</blockquote>
       <p class="hg-muted">Sense Motive vs. Celmak's Bluff (+35) reveals only that it might be a fake.</p>` });
   return "detrimental";
+}
+
+/** Escalation responses offered in the announcement dialog and on chat cards. */
+export const ESCALATIONS = {
+  none: { label: "Announcement only" },
+  gas: { label: "Mood Gas vent (DC 22)" },
+  cast: { label: "Send in a demon cast member" },
+  walls: { label: "Reconfigure the room (screen shake)" },
+  vote: { label: "Audience vote (opens the vote desk)" }
+};
+
+export async function runEscalation(kind) {
+  const api = game.modules.get(MODULE_ID).api;
+  if (kind === "gas") return moodGas({ dc: 22 });
+  if (kind === "cast") return broadcast("sticker", { sticker: "smug", sound: "suspense", caption: "Особая приглашённая звезда!" });
+  if (kind === "walls") return broadcast("shake", { sound: "rimshot" });
+  if (kind === "vote") return api.openVote();
 }
 
 /* ------------------------------------------------------------------ */
@@ -197,12 +151,13 @@ export function bindChatButtons(message, html) {
       btn.disabled = true;
       try {
         if (a === "award") await awardTrinket(btn.dataset.cid);
-        else if (a === "gas") await moodGas({ dc: 22 });
-        else if (a === "cast") broadcast("sticker", { sticker: "smug", sound: "suspense", caption: "Special guest star!" });
-        else if (a === "walls") broadcast("shake", { sound: "rimshot" });
-        else if (a === "vote") api.openVote();
-        else if (a === "titlecard") api.episodeTitle(btn.dataset.episode);
-        else if (a === "opencast") api.openConsole("games");
+        else if (a === "laugh") {
+          broadcast("sticker", { sticker: "joy", sound: "rimshot", caption: "Ха! Ха-ха-ха!" });
+          if (btn.dataset.cid) await adjustContestant(btn.dataset.cid, 1, "Honeypot swallowed");
+          else await adjustShow(1, "Honeypot swallowed");
+        } else if (a === "titlecard") api.episodeTitle(btn.dataset.episode);
+        else if (a === "announce") api.openAnnounce(btn.dataset.kind);
+        else await runEscalation(a);
       } finally {
         btn.disabled = false;
       }
@@ -213,3 +168,5 @@ export function bindChatButtons(message, html) {
 export function episodeById(id) {
   return EPISODES.find((e) => e.id === id) ?? null;
 }
+
+export { HOST_NAME, SHOW_RESPONSES };

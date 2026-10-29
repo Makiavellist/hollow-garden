@@ -49,7 +49,40 @@ def p(*paras):
     return "".join(f"<p>{x}</p>" for x in paras)
 
 
+SEASON = "Звёздные Искатели"
+# The adventure refers to the PCs by role ("Swap in their names"); this table uses their names.
+TEXT_SUBS = [
+    ("This module refers to the PCs by role. Swap in their names.", "This module refers to the PCs by name."),
+    ("Season of Horrors", SEASON),
+]
+ROLES = [("Technologist", "Bodnar"), ("Merchant", "Ryuz"), ("Chronicler", "Altronus"), ("Ghaltan", "Yoshea")]
+_ROLE_RES = []
+for role, name in ROLES:
+    _ROLE_RES.append((re.compile(r"\b[Tt]he " + role + r"\b"), name))
+    _ROLE_RES.append((re.compile(r"\b" + role + r"\b"), name))
+SKIP_KEYS = {"_id", "_key", "img", "path", "src", "documentUuid", "documentId", "documentCollection", "folder", "type"}
+
+
+def rename_text(text):
+    for a, b in TEXT_SUBS:
+        text = text.replace(a, b)
+    for rx, name in _ROLE_RES:
+        text = rx.sub(name, text)
+    return text
+
+
+def _rename(obj):
+    if isinstance(obj, dict):
+        return {k: (v if k in SKIP_KEYS else _rename(v)) for k, v in obj.items()}
+    if isinstance(obj, list):
+        return [_rename(v) for v in obj]
+    if isinstance(obj, str):
+        return rename_text(obj)
+    return obj
+
+
 def write_doc(pack, doc):
+    doc = _rename(doc)
     d = os.path.join(SRC_OUT, pack)
     os.makedirs(d, exist_ok=True)
     slug = re.sub(r"[^a-z0-9]+", "-", doc.get("name", doc["_id"]).lower()).strip("-")[:48]

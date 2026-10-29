@@ -1,9 +1,10 @@
 import { RATING_MAX, defaultContestants, moodFor } from "../constants.js";
 import { getState, updateContestants } from "../state.js";
+import { actorFromDrop } from "../board.js";
 import { clamp, esc, randomId } from "../util.js";
 import { HGApplication } from "./base.js";
 
-/** GM form for casting the show: names, roles, linked actors, portraits and starting fans. */
+/** GM form for casting the show: names, linked actors, portraits and starting fans. */
 export class ContestantsConfig extends HGApplication {
   static DEFAULT_OPTIONS = {
     id: "hg-contestants",
@@ -18,7 +19,9 @@ export class ContestantsConfig extends HGApplication {
       down: ContestantsConfig.#onMove,
       browse: ContestantsConfig.#onBrowse,
       defaults: ContestantsConfig.#onDefaults,
-      useActorArt: ContestantsConfig.#onActorArt
+      useActorArt: ContestantsConfig.#onActorArt,
+      openActor: ContestantsConfig.#onOpenActor,
+      unlink: ContestantsConfig.#onUnlink
     }
   };
 
@@ -34,8 +37,9 @@ export class ContestantsConfig extends HGApplication {
   }
 
   _body({ rows, actors }) {
-    const opts = (sel) => `<option value="">— none —</option>` + actors.map((a) =>
-      `<option value="${esc(a.uuid)}" ${a.uuid === sel ? "selected" : ""}>${a.pc ? "★ " : ""}${esc(a.name)}</option>`).join("");
+    const opts = (sel) => `<option value="">— none —</option>`
+      + (sel && !actors.some((a) => a.uuid === sel) ? `<option value="${esc(sel)}" selected>(linked) ${esc(sel)}</option>` : "")
+      + actors.map((a) => `<option value="${esc(a.uuid)}" ${a.uuid === sel ? "selected" : ""}>${a.pc ? "★ " : ""}${esc(a.name)}</option>`).join("");
     const art = (i, mood, val) => `<div class="hg-artpick">
         <img src="${esc(val)}" alt="${mood}" title="${mood}">
         <input type="text" name="art-${i}-${mood}" value="${esc(val)}" placeholder="${mood} image">
@@ -46,8 +50,10 @@ export class ContestantsConfig extends HGApplication {
         <div class="hg-cast-head">
           <img class="hg-cast-thumb" src="${esc(c.art?.[moodFor(c.rating)] ?? "")}" alt="">
           <label>Name<input type="text" name="name-${i}" value="${esc(c.name)}"></label>
-          <label>Role<input type="text" name="role-${i}" value="${esc(c.role ?? "")}"></label>
-          <label>Actor<select name="actor-${i}">${opts(c.actorUuid)}</select></label>
+          <label>Linked actor<select name="actor-${i}">${opts(c.actorUuid)}</select></label>
+          <span class="hg-link-state">${c.actorUuid
+            ? `<button type="button" class="hg-icon" data-action="openActor" data-index="${i}" title="Open the linked actor"><i class="fa-solid fa-link"></i></button><button type="button" class="hg-icon" data-action="unlink" data-index="${i}" title="Unlink"><i class="fa-solid fa-link-slash"></i></button>`
+            : `<span class="hg-muted" title="Pick an actor or drop one on this row">not linked</span>`}</span>
           <label class="hg-num">Fans<input type="number" name="rating-${i}" min="0" max="${RATING_MAX}" value="${c.rating}"></label>
           <label class="hg-check"><input type="checkbox" name="visible-${i}" ${c.visible ? "checked" : ""}> on stage</label>
           <span class="hg-cast-ctl">
@@ -60,13 +66,37 @@ export class ContestantsConfig extends HGApplication {
           <button type="button" data-action="useActorArt" data-index="${i}" title="Use the linked actor's portrait for all three moods"><i class="fa-solid fa-user"></i> Actor portrait</button>
         </div>
       </li>`).join("");
-    return `<p class="hg-hint">Link each contestant to a character so Trinkets land on their sheet. Portraits swap with the fans' mood: <strong>sad</strong> at 0–3, <strong>neutral</strong> at 4–6, <strong>happy</strong> at 7–10. Untick <em>on stage</em> for anyone sitting in the Box.</p>
+    return `<p class="hg-hint">Link each contestant to a character (pick it, or drag an actor from the Actors sidebar onto the row, or onto their card on the board) so Trinkets and honeypot rolls use their sheet. Names are what the players see. Portraits swap with the fans' mood: <strong>sad</strong> at 0–3, <strong>neutral</strong> at 4–6, <strong>happy</strong> at 7–10. Untick <em>on stage</em> for anyone sitting in the Box.</p>
       <ol class="hg-cast-list">${list}</ol>
       <footer class="hg-row hg-footer">
         <button type="button" data-action="add"><i class="fa-solid fa-user-plus"></i> Add contestant</button>
         <button type="button" data-action="defaults"><i class="fa-solid fa-rotate-left"></i> Restore default cast</button>
         <button type="button" class="hg-big" data-action="save"><i class="fa-solid fa-floppy-disk"></i> Save cast</button>
       </footer>`;
+  }
+
+  _onRender(context, options) {
+    super._onRender?.(context, options);
+    for (const row of this.element.querySelectorAll("[data-drop-row]")) {
+      row.addEventListener("dragover", (ev) => { ev.preventDefault(); row.classList.add("hg-drop"); });
+      row.addEventListener("dragleave", () => row.classList.remove("hg-drop"));
+      row.addEventListener("drop", async (ev) => {
+        ev.preventDefault();
+        row.classList.remove("hg-drop");
+        const actor = await actorFromDrop(ev);
+        if (!actor) return ui.notifications.warn("Drop an Actor from the Actors sidebar.");
+        this.#collect();
+        this.rows[Number(row.dataset.dropRow)].actorUuid = actor.uuid;
+        this.render();
+      });
+    }
+    // Picking from the list updates the link indicator straight away.
+    for (const sel of this.element.querySelectorAll("select[name^='actor-']")) {
+      sel.addEventListener("change", () => {
+        this.#collect();
+        this.render();
+      });
+    }
   }
 
   /** Read the current form values back into this.rows. */
@@ -76,7 +106,6 @@ export class ContestantsConfig extends HGApplication {
     this.rows = this.rows.map((c, i) => ({
       ...c,
       name: val(`name-${i}`)?.value?.trim() || c.name,
-      role: val(`role-${i}`)?.value?.trim() ?? c.role,
       actorUuid: val(`actor-${i}`)?.value || null,
       rating: clamp(Number(val(`rating-${i}`)?.value ?? c.rating), 0, RATING_MAX),
       visible: !!val(`visible-${i}`)?.checked,
@@ -99,7 +128,7 @@ export class ContestantsConfig extends HGApplication {
   static #onAdd() {
     this.#collect();
     const fallback = "icons/svg/mystery-man.svg";
-    this.rows.push({ id: randomId(), name: "New Contestant", role: "", actorUuid: null, rating: 5, visible: true,
+    this.rows.push({ id: randomId(), name: "Новый участник", actorUuid: null, rating: 5, visible: true,
       art: { sad: fallback, neutral: fallback, happy: fallback } });
     this.render();
   }
@@ -116,6 +145,18 @@ export class ContestantsConfig extends HGApplication {
     const j = t.dataset.action === "up" ? i - 1 : i + 1;
     if (j < 0 || j >= this.rows.length) return;
     [this.rows[i], this.rows[j]] = [this.rows[j], this.rows[i]];
+    this.render();
+  }
+
+  static async #onOpenActor(_e, t) {
+    const actor = await fromUuid(this.rows[Number(t.dataset.index)]?.actorUuid ?? "");
+    if (actor) actor.sheet.render(true);
+    else ui.notifications.warn("The linked actor no longer exists.");
+  }
+
+  static #onUnlink(_e, t) {
+    this.#collect();
+    this.rows[Number(t.dataset.index)].actorUuid = null;
     this.render();
   }
 

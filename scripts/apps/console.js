@@ -1,9 +1,9 @@
-import { CUES, EPISODES, HOST_STICKERS, PERSONAS, RATING_REASONS, SHOW_RESPONSES, TABLES, moodFor, sticker } from "../constants.js";
+import { CUES, EPISODES, HOST_NAME, HOST_STICKERS, PERSONAS, QUIPS, RATING_REASONS, SHOW_RESPONSES, moodFor, starring, sticker } from "../constants.js";
 import { broadcast } from "../socket.js";
 import { FX } from "../fx.js";
 import { adjustContestant, adjustShow, getState, resetSeason, setCurrentEpisode, setEpisodesDone, toggleVisible } from "../state.js";
 import { awardTrinket, moodGas } from "../rules.js";
-import { drawTable, esc, resultText } from "../util.js";
+import { esc } from "../util.js";
 import { HGApplication } from "./base.js";
 
 const TABS = [
@@ -36,6 +36,8 @@ export class ProducerConsole extends HGApplication {
       reason: ProducerConsole.#onReason,
       fans: ProducerConsole.#onFans,
       trinket: (_e, t) => awardTrinket(t.dataset.cid),
+      announce: (_e, t) => game.modules.get("hollow-garden").api.openAnnounce(t.dataset.kind ?? "custom",
+        t.dataset.cid ? ProducerConsole.contestantAnnouncement(t.dataset.cid) : {}),
       cue: ProducerConsole.#onCue,
       sticker: ProducerConsole.#onSticker,
       persona: ProducerConsole.#onPersona,
@@ -81,12 +83,13 @@ export class ProducerConsole extends HGApplication {
       const mood = moodFor(c.rating);
       return `<li class="hg-crow ${c.visible ? "" : "hg-dim"}">
           <img src="${esc(c.art?.[mood] ?? "")}" alt="">
-          <div class="hg-cname"><strong>${esc(c.name)}</strong><small>${esc(c.role ?? "")}${c.visible ? "" : " · off stage"}</small></div>
+          <div class="hg-cname"><strong>${esc(c.name)}</strong><small>${c.actorUuid ? `<i class="fa-solid fa-link"></i> linked` : "not linked"}${c.visible ? "" : " · off stage"}</small></div>
           <div class="hg-cmeter"><div style="width:${c.rating * 10}%"></div></div>
           <button type="button" data-action="fans" data-cid="${esc(c.id)}" data-delta="-1" title="−1 fans">−</button>
           <span class="hg-cval">${c.rating}</span>
           <button type="button" data-action="fans" data-cid="${esc(c.id)}" data-delta="1" title="+1 fans">+</button>
           <button type="button" class="hg-icon" data-action="trinket" data-cid="${esc(c.id)}" title="Award a Trinket"><i class="fa-solid fa-gift"></i></button>
+          <button type="button" class="hg-icon" data-action="announce" data-cid="${esc(c.id)}" title="Announce something about ${esc(c.name)}"><i class="fa-solid fa-bullhorn"></i></button>
         </li>`;
     }).join("");
     return `
@@ -94,7 +97,7 @@ export class ProducerConsole extends HGApplication {
         <button type="button" class="hg-big ${state.visible ? "hg-live-btn" : ""}" data-action="toggleBoard">
           <i class="fa-solid ${state.visible ? "fa-eye-slash" : "fa-satellite-dish"}"></i> ${state.visible ? "Take board off air" : "Show board to players"}</button>
         <button type="button" data-action="contestants"><i class="fa-solid fa-users"></i> Contestants…</button>
-        <button type="button" data-action="resetPos"><i class="fa-solid fa-arrows-to-dot"></i> Re-centre board</button>
+        <button type="button" data-action="resetPos"><i class="fa-solid fa-arrows-to-dot"></i> Reset board position</button>
         <button type="button" data-action="resetSeason"><i class="fa-solid fa-rotate-left"></i> Reset season</button>
       </div>
       <section class="hg-showctl hg-show-${state.show}">
@@ -102,7 +105,13 @@ export class ProducerConsole extends HGApplication {
         <div class="hg-showctl-pips">${pips}</div>
         <div class="hg-showctl-resp"><strong>${esc(resp.label)}</strong> ${esc(resp.text)}</div>
       </section>
-      <h4>Raise the ratings</h4><div class="hg-chips">${up}</div>
+      <h4>Announcements <small>(players see nothing until you broadcast)</small></h4>
+      <div class="hg-row hg-wrap">
+        <button type="button" class="hg-big" data-action="announce" data-kind="escalation"><i class="fa-solid fa-triangle-exclamation"></i> Escalation…</button>
+        <button type="button" data-action="announce" data-kind="peak"><i class="fa-solid fa-trophy"></i> Ratings peak…</button>
+        <button type="button" data-action="announce" data-kind="custom"><i class="fa-solid fa-bullhorn"></i> Custom announcement…</button>
+      </div>
+      <h4>Raise the ratings <small>(silent: only the board changes)</small></h4><div class="hg-chips">${up}</div>
       <h4>Lower the ratings</h4><div class="hg-chips">${down}</div>
       <h4>Fan meters <small>(linked fans also move the Show Rating; change this in module settings)</small></h4>
       <ul class="hg-clist">${rows}</ul>`;
@@ -129,7 +138,7 @@ export class ProducerConsole extends HGApplication {
       `<button type="button" class="hg-persona ${k === this.draft.persona ? "active" : ""}" style="--persona:${v.color}" data-action="persona" data-persona="${k}">
         <img src="${sticker(v.stickers[0])}" alt=""><span>${v.label}</span></button>`).join("");
     const pstick = p.stickers.map((s) => `<button type="button" class="hg-stk small ${s === sel ? "active" : ""}" data-action="pickSticker" data-sticker="${s}"><img src="${sticker(s)}" alt="${s}"></button>`).join("");
-    const eps = EPISODES.map((e) => `<option value="${e.id}" ${state.current === e.id ? "selected" : ""}>${esc(e.title)} · ${esc(e.spotlight)}</option>`).join("");
+    const eps = EPISODES.map((e) => `<option value="${e.id}" ${state.current === e.id ? "selected" : ""}>${esc(e.title)} · ${esc(e.ru)}</option>`).join("");
     return `
       <section class="hg-card-panel">
         <h4>Celmak says…</h4>
@@ -173,7 +182,7 @@ export class ProducerConsole extends HGApplication {
       const st = state.episodes.find((x) => x.id === e.id);
       return `<li class="${st?.done ? "hg-done" : ""} ${state.current === e.id ? "hg-current" : ""}">
           <span class="hg-epnum">${i + 1}</span>
-          <div><strong>${esc(e.title)}</strong><small>${esc(e.spotlight)}</small></div>
+          <div><strong>${esc(e.title)}</strong><small>${esc(e.ru)} · ${esc(starring(e, state.contestants))}</small></div>
           <label class="hg-check" title="Already aired"><input type="checkbox" data-action="epDone" data-id="${e.id}" ${st?.done ? "checked" : ""}> aired</label>
           <button type="button" class="hg-icon" data-action="epCurrent" data-id="${e.id}" title="Mark as now showing"><i class="fa-solid fa-tv"></i></button>
           <button type="button" class="hg-icon" data-action="epTitle" data-id="${e.id}" title="Roll the title card"><i class="fa-solid fa-clapperboard"></i></button>
@@ -244,14 +253,20 @@ export class ProducerConsole extends HGApplication {
     this.render();
   }
 
-  static async #onRandomLine() {
-    const uuid = TABLES[`quips-${this.draft.persona.toLowerCase()}`];
-    const drawn = uuid ? await drawTable(uuid) : null;
-    const text = resultText(drawn?.results?.[0]).replace(/<[^>]+>/g, "");
-    if (text) {
-      this.draft.text = text;
-      this.render();
-    }
+  static #onRandomLine() {
+    const lines = QUIPS[this.draft.persona] ?? QUIPS.Host;
+    const pool = lines.filter((l) => l !== this.draft.text);
+    this.draft.text = pool[Math.floor(Math.random() * pool.length)] ?? lines[0];
+    this.render();
+  }
+
+  /** Pre-filled custom announcement about one contestant. */
+  static contestantAnnouncement(cid) {
+    const c = getState().contestants.find((x) => x.id === cid);
+    if (!c) return {};
+    const art = c.art?.[moodFor(c.rating)];
+    return { kicker: "РЕЙТИНГИ", title: c.name.toUpperCase(), subtitle: c.rating >= 7 ? "Зрители в восторге!" : c.rating <= 3 ? "Зрители недовольны…" : "Зрители следят за каждым шагом.",
+      theme: c.rating <= 3 ? "alarm" : "episode", sticker: c.rating >= 7 ? "heart-eyes" : c.rating <= 3 ? "bored" : "ratings", sound: "on-air", art };
   }
 
   static #onSay() {
@@ -260,7 +275,7 @@ export class ProducerConsole extends HGApplication {
     const p = PERSONAS[this.draft.persona] ?? PERSONAS.Host;
     const st = this.draft.sticker && p.stickers.includes(this.draft.sticker) ? this.draft.sticker : p.stickers[0];
     broadcast("caption", { persona: this.draft.persona, text, sticker: st });
-    ChatMessage.create({ speaker: { alias: `Celmak (${p.label})` }, content: `<div class="hg-chat-quote" style="--persona:${p.color}">${esc(text)}</div>` });
+    ChatMessage.create({ speaker: { alias: `${HOST_NAME} (${p.tag.toLowerCase()})` }, content: `<div class="hg-chat-quote" style="--persona:${p.color}">${esc(text)}</div>` });
   }
 
   static async #onTitle(_e, t) {

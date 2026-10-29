@@ -109,7 +109,7 @@ def main():
 
     gen = {
         "episodes": J["episodes"],
-        "contestants": [{"id": c, "name": n, "role": r} for c, n, r in journal.CONTESTANTS],
+        "contestants": [{"id": c, "name": ru} for c, _en, ru in journal.CONTESTANTS],
         "tables": {k: uuid("hg-tables", "RollTable", v["_id"]) for k, v in T.items()},
         "items": {"credit": uuid("hg-items", "Item", I["Garden Credit"]["_id"])},
         "journal": f"Compendium.{MODULE_ID}.hg-adventure.JournalEntry.{J['journal']}",

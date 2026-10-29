@@ -2,6 +2,7 @@ import { MODULE_ID, RATING_MAX, SHOW_MAX, SHOW_MIN, defaultState, EPISODES } fro
 import { clamp, isGM, randomId, setting } from "./util.js";
 
 const listeners = new Set();
+const OLD_NAMES = { bodnar: "Bodnar", ryuz: "Ryuz", altronus: "Altronus", yoshea: "Yoshea", casandalee: "Casandalee", meyanda: "Meyanda", isuma: "Isuma" };
 let lastSeenEvent = null;
 
 export function onStateChange(fn) {
@@ -14,7 +15,13 @@ export function normalize(raw) {
   const base = defaultState();
   const s = foundry.utils.mergeObject(base, raw ?? {}, { inplace: false, insertKeys: true, insertValues: true });
   if (!Array.isArray(raw?.contestants)) s.contestants = base.contestants;
-  s.contestants = s.contestants.map((c) => ({ ...c, rating: clamp(Number(c.rating ?? 5), 0, RATING_MAX), art: { ...(c.art ?? {}) } }));
+  const defaults = Object.fromEntries(base.contestants.map((c) => [c.id, c.name]));
+  s.contestants = s.contestants.map(({ role, ...c }) => {
+    // v1 worlds stored the English default names; switch them to the Russian ones the audience sees.
+    if ((raw?.version ?? 1) < 2 && OLD_NAMES[c.id] === c.name && defaults[c.id]) c.name = defaults[c.id];
+    return { ...c, rating: clamp(Number(c.rating ?? 5), 0, RATING_MAX), art: { ...(c.art ?? {}) } };
+  });
+  s.version = 2;
   const eps = Array.isArray(raw?.episodes) ? raw.episodes : base.episodes;
   s.episodes = EPISODES.map((e) => ({ id: e.id, done: !!eps.find((x) => x.id === e.id)?.done }));
   s.show = clamp(Number(s.show ?? 3), SHOW_MIN, SHOW_MAX);

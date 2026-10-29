@@ -1,16 +1,17 @@
 /**
- * The Hollow Garden: Season of Horrors — Foundry VTT v13 module for Pathfinder 1e.
+ * The Hollow Garden: Звёздные Искатели — Foundry VTT v13 module for Pathfinder 1e.
  * Ratings board, Producer Console, rigged episode wheel, audience votes, soundboard and host stickers.
  */
-import { EPISODES, MODULE_ID, defaultState } from "./constants.js";
-import { preloadSounds } from "./audio.js";
+import { EPISODES, MODULE_ID, defaultState, starring } from "./constants.js";
+import { playSfx, preloadSounds } from "./audio.js";
 import { RatingsBoard } from "./board.js";
 import { FX } from "./fx.js";
 import { broadcast, initSocket, registerHandler } from "./socket.js";
 import {
   adjustContestant, adjustShow, getState, handleStateChange, markSeen, onStateChange, setCurrentEpisode, setVisible, toggleVisible
 } from "./state.js";
-import { automate, awardTrinket, bindChatButtons, moodGas, reactToEvent } from "./rules.js";
+import { awardTrinket, bindChatButtons, moodGas, promptGM, reactToEvent, runEscalation } from "./rules.js";
+import { AnnounceDesk } from "./apps/announce.js";
 import { ProducerConsole } from "./apps/console.js";
 import { ContestantsConfig } from "./apps/contestants.js";
 import { RouletteDesk } from "./apps/roulette.js";
@@ -65,12 +66,22 @@ const api = {
     const ep = EPISODES[idx];
     if (!ep) return;
     const state = getState();
-    const c = state.contestants.find((x) => x.id === ep.contestant);
-    const starring = c ? `${c.name} · ${ep.spotlight}` : ep.spotlight;
-    broadcast("title", { kind: ep.id === "finale" ? "finale" : "episode", kicker: ep.id === "finale" ? "THE HOLLOW GARDEN" : `EPISODE ${idx + 1}`,
-      title: ep.title.toUpperCase(), starring, subtitle: ep.id === "finale" ? "Every season needs a finale, and every finale needs a twist." : "" });
+    const fin = ep.id === "finale";
+    broadcast("title", { kind: fin ? "finale" : "episode", kicker: fin ? undefined : `ЭПИЗОД ${idx + 1}`,
+      title: ep.ru.toUpperCase(), starring: starring(ep, state.contestants) });
     if (state.current !== id) await setCurrentEpisode(id);
   },
+  /** GM approval desk for ratings announcements ("peak", "escalation" or "custom"). */
+  openAnnounce(kind = "custom", extra = {}) {
+    if (!requireGM()) return;
+    const existing = open.get(AnnounceDesk);
+    const app = existing?.rendered ? existing : new AnnounceDesk();
+    open.set(AnnounceDesk, app);
+    app.setKind(kind, extra);
+    app.render({ force: true });
+    return app;
+  },
+  escalate: (kind) => requireGM() && runEscalation(kind),
   confetti: () => requireGM() && broadcast("confetti", { sound: "confetti" }),
   glitch: () => requireGM() && broadcast("glitch", {}),
   cue: (id) => requireGM() && broadcast("cue", { id }),
@@ -88,9 +99,9 @@ Hooks.once("init", () => {
     default: defaultState(),
     onChange: (value) => handleStateChange(value)
   });
-  game.settings.register(MODULE_ID, "automation", {
-    name: "Automate Celmak's ratings rules",
-    hint: "At 5 the studio celebrates, the GM gets an Award Trinket card, and the rating resets to 3. At 1 the GM gets an escalation card and it resets to 2.",
+  game.settings.register(MODULE_ID, "promptAtThresholds", {
+    name: "Offer an announcement at Show Rating 5 and 1",
+    hint: "When the rating reaches 5 or 1, open the (GM-only) announcement desk with a suggested message. Nothing is shown to players unless you press Broadcast.",
     scope: "world", config: true, type: Boolean, default: true
   });
   game.settings.register(MODULE_ID, "linkRatings", {
@@ -99,22 +110,24 @@ Hooks.once("init", () => {
     scope: "world", config: true, type: Boolean, default: true
   });
   game.settings.register(MODULE_ID, "sfxVolume", {
-    name: "Studio sound volume",
-    hint: "Volume of the gameshow sound effects on this computer.",
-    scope: "client", config: true, type: Number, range: { min: 0, max: 1, step: 0.05 }, default: 0.8
+    name: "Громкость студии / Studio volume",
+    hint: "Громкость звуков шоу только на этом компьютере. Также регулируется ползунком на табло и в панели плейлистов. / Gameshow sound volume on this computer only.",
+    scope: "client", config: true, type: Number, range: { min: 0, max: 1, step: 0.05 }, default: 0.8,
+    onChange: () => syncVolumeSliders()
   });
   game.settings.register(MODULE_ID, "stickers", {
-    name: "Show host stickers",
-    hint: "Pop-up stickers of the host on this computer.",
+    name: "Стикеры ведущей / Host stickers",
+    hint: "Показывать всплывающие стикеры ведущей на этом компьютере.",
     scope: "client", config: true, type: Boolean, default: true
   });
   game.settings.register(MODULE_ID, "reduceMotion", {
-    name: "Reduce motion",
-    hint: "Fewer animations: no screen shake, less confetti, a quick wheel.",
+    name: "Меньше анимации / Reduce motion",
+    hint: "Без тряски экрана, меньше конфетти, быстрое колесо.",
     scope: "client", config: true, type: Boolean, default: false
   });
   game.settings.register(MODULE_ID, "boardPos", { scope: "client", config: false, type: Object, default: {} });
-  game.settings.register(MODULE_ID, "boardCompact", { scope: "client", config: false, type: Boolean, default: false });
+  game.settings.register(MODULE_ID, "boardCompact", { scope: "client", config: false, type: Boolean, default: true });
+  game.settings.register(MODULE_ID, "boardDock", { scope: "client", config: false, type: String, default: "top-right" });
   game.settings.registerMenu(MODULE_ID, "contestantsMenu", {
     name: "Contestants",
     label: "Cast the show",
@@ -154,9 +167,12 @@ Hooks.once("ready", () => {
     safe("board", () => board.render(state));
     safe("console", () => ProducerConsole.instance.rendered && ProducerConsole.instance.render());
     safe("effects", () => reactToEvent(state, ev));
-    safe("automation", () => automate(state, ev));
+    safe("prompt", () => promptGM(state, ev));
   });
-  window.addEventListener("resize", foundry.utils.debounce(() => board.render(getState(), { initial: true }), 200));
+  window.addEventListener("resize", foundry.utils.debounce(() => {
+    board.applyPosition();
+    board.render(getState(), { initial: true });
+  }, 200));
   console.log("Hollow Garden | The doors are open and the stakes are personal.");
 });
 
@@ -180,3 +196,33 @@ Hooks.on("getSceneControlButtons", (controls) => {
 });
 
 Hooks.on("renderChatMessageHTML", (message, html) => bindChatButtons(message, html));
+
+/* Everyone gets a studio volume slider in the Playlists sidebar as well as on the board. */
+function syncVolumeSliders() {
+  const v = Math.round(Number(game.settings.get(MODULE_ID, "sfxVolume") ?? 0.8) * 100);
+  for (const r of document.querySelectorAll("[data-hg-volume]")) r.value = String(v);
+  for (const l of document.querySelectorAll(".hg-vol-val")) l.textContent = `${v}%`;
+}
+
+function injectPlaylistVolume(app, html) {
+  try {
+    const root = html instanceof HTMLElement ? html : html?.[0] ?? app?.element;
+    if (!root || root.querySelector(".hg-playlist-volume")) return;
+    const v = Math.round(Number(game.settings.get(MODULE_ID, "sfxVolume") ?? 0.8) * 100);
+    const box = document.createElement("div");
+    box.className = "hg-playlist-volume";
+    box.innerHTML = `<label title="Звуки шоу «Полый Сад» — только у вас"><i class="fa-solid fa-tower-broadcast"></i> Студия
+        <input type="range" min="0" max="100" step="5" value="${v}" data-hg-volume></label><span class="hg-vol-val">${v}%</span>`;
+    box.querySelector("input").addEventListener("change", async (ev) => {
+      await game.settings.set(MODULE_ID, "sfxVolume", Number(ev.target.value) / 100);
+      playSfx("correct", { volume: 0.8 });
+    });
+    box.querySelector("input").addEventListener("input", (ev) => (box.querySelector(".hg-vol-val").textContent = `${ev.target.value}%`));
+    const anchor = root.querySelector(".global-volume, #global-volume, .playlists-volume, header.directory-header");
+    if (anchor) anchor.after(box);
+    else root.prepend(box);
+  } catch (err) {
+    console.warn("Hollow Garden | could not add the volume slider to the Playlists sidebar", err);
+  }
+}
+Hooks.on("renderPlaylistDirectory", injectPlaylistVolume);

@@ -81,7 +81,7 @@ export async function chatCard({ title, body, sticker, whisper = false, flags = 
   </div>`;
   const data = {
     content,
-    speaker: { alias: "Celmak Toysiel" },
+    speaker: { alias: "Сельмак" },
     flags: { [MODULE_ID]: { card: true, ...flags } }
   };
   if (whisper) data.whisper = gmWhisper();

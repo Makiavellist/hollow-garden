@@ -125,6 +125,7 @@ function tableDoc(t) {
 window.fromUuid = async (uuid) => {
   const id = uuid.split(".").pop();
   if (uuid.includes("RollTable")) return docs.tables[id] ? tableDoc(docs.tables[id]) : null;
+  if (uuid.startsWith("Actor.")) return window.__actors.find((a) => a.uuid === uuid) ?? null;
   if (uuid.includes(".Item.")) {
     const d = docs.items[id];
     return d ? { ...d, uuid, toObject: () => deepClone(d) } : null;
@@ -144,6 +145,9 @@ window.game = {
   keybindings: { register() {} },
   modules: new Map([["hollow-garden", { id: "hollow-garden" }]]),
   socket: { on() {}, emit: (...a) => window.__log.push(["socket", ...a]) },
-  actors: { contents: [{ uuid: "Actor.a1", name: "Bodnar the Technologist", type: "character", hasPlayerOwner: true, img: "icons/svg/mystery-man.svg" }] },
+  actors: { contents: window.__actors = [
+    { uuid: "Actor.a1", id: "a1", documentName: "Actor", name: "Bodnar (PC)", type: "character", hasPlayerOwner: true, img: "icons/svg/mystery-man.svg", sheet: { render: () => window.__log.push(["sheet", "a1"]) }, createEmbeddedDocuments: async (t, d) => window.__log.push(["created", t, d[0].name]) },
+    { uuid: "Actor.a2", id: "a2", documentName: "Actor", name: "Ryuz (PC)", type: "character", hasPlayerOwner: true, img: "icons/svg/mystery-man.svg", sheet: { render: () => {} }, createEmbeddedDocuments: async () => {} }
+  ] },
   i18n: { localize: (s) => s, format: (s) => s }
 };

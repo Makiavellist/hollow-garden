@@ -1,4 +1,4 @@
-# The Hollow Garden: Season of Horrors
+# The Hollow Garden: Звёздные Искатели
 
 A Pathfinder 1e adventure for seven 13th-level characters, packaged as a **Foundry VTT v13** module (verified on 13.351, PF1 system 11.x), with a futuristic gameshow studio built around it.
 
@@ -6,7 +6,7 @@ A Pathfinder 1e adventure for seven 13th-level characters, packaged as a **Found
 
 ## What's inside
 
-All compendiums live in one folder in the Compendium sidebar: **The Hollow Garden: Season of Horrors**.
+All compendiums live in one folder in the Compendium sidebar: **The Hollow Garden: Звёздные Искатели**.
 
 | Compendium | Contents |
 |---|---|
@@ -20,31 +20,25 @@ All compendiums live in one folder in the Compendium sidebar: **The Hollow Garde
 
 ## The studio (GM tools)
 
+Everything the players see (board, title cards, captions, wheel, votes, public chat cards) is in Russian. The Producer Console and the compendium content stay in English.
+
 Open the **Producer Console** from the broadcast-tower button in the Token controls, the button on the ratings board, or the macro.
 
-- **Ratings board.** A gameshow scoreboard pinned to the top of the screen. You toggle it on and off for everyone. It shows the adventure's Show Rating (1–5) with Celmak's response, plus a fan meter (0–10) for every contestant. Portraits change with mood: they cry at 0–3, stay cool at 4–6 and cheer at 7+. The leader wears a *Fan Favourite* crown, and anyone at 2 or less is in the *Danger Zone*. Hover a card for +/–. Each player can drag the board anywhere or collapse it.
-- **Automatic rules** (optional). When the rating hits 5, the studio celebrates, you get an *Award Trinket* card that draws a Trinket onto the fan favourite's sheet, and the rating resets to 3. When it hits 1, you get Celmak's escalation options and it resets to 2.
-- **Episode Wheel.** A spinning wheel of the episodes that haven't aired yet. It looks random, but it lands where you rigged it to. It has ticks, a drumroll, confetti and a near-miss tease, and you get a chat card linking to the episode's journal page.
-- **Audience Vote.** A live poll with a countdown and jittering bars. It shows the percentages you set, or ones the console invents so your pick wins.
-- **Soundboard.** 28 cues (applause, boo, buzzer, drumroll, sad trombone, airhorn…). Each plays for everyone and pops up one of the host's stickers. Shift-click a cue to preview it only for yourself.
-- **Stickers.** Pop any of the host's 28 stickers on everyone's screen.
-- **Celmak says…** A broadcast caption in the voice of one of her four personas, with a typewriter effect and the matching sticker. You can also draw a random catchphrase.
-- **Title cards and effects.** Episode openers (*starring* the linked contestant), *Commercial Break* (optionally costs 1 rating), *Previously On…*, *The Lock Falls*, *Season Finale*, confetti, the Gap glitch, screen shake, and **Mood Gas**, which rolls the d6, tints everyone's screen and posts the DCs.
-- **Honeypot check.** Roll Knowledge (engineering) from the linked sheet, or type in the total and natural d20. The console sorts the result into the honeypot bands, whispers you the table result, and laughs (+1 rating) on an obvious fake.
-
-Each player can set their own studio volume, turn stickers off or reduce motion in their module settings.
+- **Ratings board.** A small panel docked to a corner (top right by default). Each player can move it to another corner (grid button), drag it, collapse it, and set **their own studio volume** with the speaker button. The same slider is in the Playlists sidebar and in module settings. The GM shows or hides the board for everyone. It shows the Show Rating (1–5) and a fan meter (0–10) per contestant, by name. Portraits change with mood, and nothing on it blinks.
+- **Silent rating changes.** Raising or lowering ratings only updates the board. No sounds, no pop-ups, no chat messages.
+- **Announcements with GM approval.** When the Show Rating reaches 5 or 1, a GM-only desk opens with a suggested Russian message. Edit the headline and text, then pick the sticker, sound, confetti or shake, Trinket award, escalation response and rating reset. Players see it only when you press *Broadcast*. The same desk is on the console's Ratings tab (*Escalation…*, *Ratings peak…*, *Custom announcement…*) and behind each contestant's megaphone button.
+- **Episode Wheel.** A rigged wheel of the episodes that haven't aired, in Russian, *starring* the contestant's name.
+- **Audience Vote.** A live poll with your rigged numbers. The presets are in Russian and use the cast's names.
+- **Soundboard and stickers.** 28 cues and 28 host stickers; Shift-click previews one only for yourself.
+- **Celmak says…** A broadcast caption in one of her four personas. *Random line* draws from Russian catchphrases.
+- **Title cards and effects.** Episode openers, commercial break, *Previously on…*, *The lock falls*, season finale, confetti, the Gap glitch, screen shake and Mood Gas.
+- **Honeypot check.** Results are whispered to you; the "Celmak laughs, +1 rating" moment is a button you choose to press.
 
 ## Casting
 
-The default cast uses the supplied chibi art, matched to the adventure's roles. **Check these and fix any that are wrong**: *Console → Ratings → Contestants…*, where you can also link each contestant to their actor.
+The board uses the names from the supplied art: Боднар, Рюз, Альтронус, Йошеа, Кассандали, Меянда, Изума. In the compendium adventure text the PCs' roles are replaced with their names (Technologist → Bodnar, Merchant → Ryuz, Chronicler → Altronus, Ghaltan → Yoshea).
 
-| Art | Role |
-|---|---|
-| Bodnar | The Technologist |
-| Ryuz | The Merchant (fetchling) |
-| Altronus | The Chronicler (kasatha) |
-| Yoshea | The Ghaltan (fae) |
-| Casandalee, Meyanda, Isuma | Companions |
+**Linking actors:** drag an actor from the Actors sidebar onto a contestant's card on the board, or onto their row in *Console → Ratings → Contestants…*, or pick it from the list there. A chain icon marks a linked card; click the portrait to open the sheet. Trinkets are added to the linked sheet, and the honeypot desk rolls from it.
 
 ## Install
 
@@ -88,6 +82,6 @@ Releases are published by GitHub Actions (`.github/workflows/release.yml`): bump
 - Adventure text, contestant art and host art: © their author. All rights reserved.
 - Module code: MIT (see `LICENSE.md`).
 - Feat and gear data reused from the Pathfinder 1e system for Foundry VTT, under the Open Game License (see `OGL.txt`).
-- Fonts: Orbitron and Fredoka, SIL Open Font License (see `fonts/`).
-- Sound effects: synthesised for this module.
+- Fonts: Exo 2 and Nunito (with Cyrillic), SIL Open Font License (see `fonts/`).
+- Applause and cheer: "Applause" by the Blender Foundation (apricot.blender.org), CC-BY 3.0, via [OpenGameArt](https://opengameart.org/content/applause). The other sound effects were synthesised for this module.
 - This module uses trademarks and/or copyrights owned by Paizo Inc., used under Paizo's Community Use Policy. We are expressly prohibited from charging you to use or access this content. This module is not published, endorsed, or specifically approved by Paizo. For more information about Paizo Inc. and Paizo products, visit paizo.com.

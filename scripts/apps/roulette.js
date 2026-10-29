@@ -1,4 +1,4 @@
-import { EPISODES, sticker } from "../constants.js";
+import { EPISODES, starring, sticker } from "../constants.js";
 import { playSfx } from "../audio.js";
 import { broadcast, registerHandler } from "../socket.js";
 import { confetti, fxLayer, popSticker } from "../fx.js";
@@ -30,7 +30,7 @@ export class RouletteDesk extends HGApplication {
   _body({ state, pending }) {
     const list = EPISODES.map((e) => {
       const done = state.episodes.find((x) => x.id === e.id)?.done;
-      return `<li><label class="hg-check"><input type="checkbox" data-action="toggle" data-id="${e.id}" ${done ? "" : "checked"}> ${esc(e.title)}</label><small>${esc(e.spotlight)}</small></li>`;
+      return `<li><label class="hg-check"><input type="checkbox" data-action="toggle" data-id="${e.id}" ${done ? "" : "checked"}> ${esc(e.title)}</label><small>${esc(e.ru)} · ${esc(starring(e, state.contestants))}</small></li>`;
     }).join("");
     const target = pending[0]?.id;
     const opts = pending.map((e) => `<option value="${e.id}" ${e.id === target ? "selected" : ""}>${esc(e.title)}</option>`).join("");
@@ -54,8 +54,7 @@ export class RouletteDesk extends HGApplication {
     const root = this.element;
     const state = getState();
     const segments = EPISODES.filter((e) => !state.episodes.find((x) => x.id === e.id)?.done).map((e) => {
-      const c = state.contestants.find((x) => x.id === e.contestant);
-      return { id: e.id, title: e.title, spotlight: c ? `${c.name} · ${e.spotlight}` : e.spotlight };
+      return { id: e.id, title: e.ru, spotlight: starring(e, state.contestants) };
     });
     if (!segments.length) return;
     const targetId = root.querySelector("[name='target']")?.value ?? segments[0].id;
@@ -74,7 +73,7 @@ export class RouletteDesk extends HGApplication {
         title: `The wheel has spoken: ${esc(ep.title)}`,
         sticker: sticker("presenting"),
         whisper: true,
-        body: `<p>Next up: <strong>${esc(ep.title)}</strong>, starring ${esc(ep.spotlight)}.</p><p>@UUID[${ep.page}]{Open the episode}</p>`,
+        body: `<p>Next up: <strong>${esc(ep.title)}</strong> (${esc(ep.ru)}).</p><p>@UUID[${ep.page}]{Open the episode}</p>`,
         buttons: [{ action: "titlecard", label: "Roll the title card", icon: "fa-solid fa-clapperboard", data: { episode: ep.id } }]
       });
     }, (duration + 1.5) * 1000);
@@ -102,7 +101,7 @@ function wheelSVG(segments) {
       : `<path d="M0 0 L${x1.toFixed(2)} ${y1.toFixed(2)} A${R} ${R} 0 ${large} 1 ${x2.toFixed(2)} ${y2.toFixed(2)} Z" fill="${color}" data-seg="${i}"/>`;
     const mid = (i + 0.5) * a;
     const deg = (mid * 180) / Math.PI;
-    const title = s.title.length > 22 ? `${s.title.slice(0, 21)}…` : s.title;
+    const title = s.title.length > 26 ? `${s.title.slice(0, 25)}…` : s.title;
     const fit = title.length > 11 ? ` textLength="${Math.min(136, title.length * 9.5)}" lengthAdjust="spacingAndGlyphs"` : "";
     labels += `<g transform="rotate(${deg.toFixed(2)})"><text x="0" y="${-R + 18}" class="hg-wl" transform="rotate(90 0 ${-R + 18})" text-anchor="start" dominant-baseline="middle"${fit}>${esc(title)}</text></g>`;
   });
@@ -134,7 +133,7 @@ export function runRoulette({ segments, index, jitter = 0, duration = 9, spins =
   node.innerHTML = `
     <div class="hg-roulette-backdrop"></div>
     <div class="hg-roulette-stage">
-      <div class="hg-roulette-title">WHO'S NEXT?<small>The audience decides! (The audience is holograms.)</small></div>
+      <div class="hg-roulette-title">КТО СЛЕДУЮЩИЙ?<small>Решают зрители! (Зрители — голограммы.)</small></div>
       <div class="hg-wheel">
         <div class="hg-pointer"></div>
         ${wheelSVG(segments)}
@@ -173,7 +172,7 @@ export function runRoulette({ segments, index, jitter = 0, duration = 9, spins =
     node.querySelector(`[data-seg="${index}"]`)?.classList.add("hg-winner");
     const res = node.querySelector(".hg-roulette-result");
     res.classList.remove("hg-pending");
-    res.innerHTML = `<small>NEXT EPISODE</small><strong>${esc(target.title)}</strong><span>starring ${esc(target.spotlight)}</span>`;
+    res.innerHTML = `<small>СЛЕДУЮЩИЙ ЭПИЗОД</small><strong>${esc(target.title)}</strong>${target.spotlight ? `<span>в главной роли: ${esc(target.spotlight)}</span>` : ""}`;
     playSfx("fanfare");
     confetti();
     popSticker({ sticker: "mic-welcome", caption: `${target.title}!`, side: "right" });

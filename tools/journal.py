@@ -20,11 +20,11 @@ DIAGRAM = """
     <div class="hg-node hg-cast">Cast Quarters<small>Vlathherex and his demons</small></div>
   </div>
   <div class="hg-flow-row hg-episodes">
-    <div class="hg-node">The Showroom<small>Technologist</small></div>
-    <div class="hg-node">The Auction<small>Merchant</small></div>
+    <div class="hg-node">The Showroom<small>Bodnar</small></div>
+    <div class="hg-node">The Auction<small>Ryuz</small></div>
     <div class="hg-node">Companions<small>3 short scenes</small></div>
-    <div class="hg-node">Reruns<small>Chronicler</small></div>
-    <div class="hg-node hg-garden">Hollow Garden<small>Ghaltan, Lock Tree</small></div>
+    <div class="hg-node">Reruns<small>Altronus</small></div>
+    <div class="hg-node hg-garden">Hollow Garden<small>Yoshea, Lock Tree</small></div>
   </div>
   <div class="hg-flow-row">
     <div class="hg-node hg-vault">Core Vault<small>spare stand-ins, the Core</small></div>
@@ -41,15 +41,15 @@ DIAGRAM = """
 </div>"""
 
 EPISODES = [
-    # key, title, spotlight label, contestant id, journal chapter file prefix, anchor heading
-    ("showroom", "The Showroom", "The Technologist", "bodnar", "03", None),
-    ("auction", "The Auction", "The Merchant", "ryuz", "04", None),
-    ("take113", "The 113th Take", "Casandalee", "casandalee", "07", "The 113th Take (Casandalee, CR 14)"),
-    ("reruns", "Reruns of Tomorrow", "The Chronicler", "altronus", "05", None),
-    ("ambassadors", "The Ambassadors", "Isuma", "isuma", "07", "The Ambassadors (Isuma)"),
-    ("mint", "Mint Condition", "Meyanda", "meyanda", "07", "Mint Condition (Meyanda)"),
-    ("garden", "The Hollow Garden", "The Ghaltan", "yoshea", "06", None),
-    ("finale", "Season Finale", "Everyone", None, "09", None),
+    # key, title, contestant id (None = everyone), journal chapter file prefix, anchor heading
+    ("showroom", "The Showroom", "bodnar", "03", None),
+    ("auction", "The Auction", "ryuz", "04", None),
+    ("take113", "The 113th Take", "casandalee", "07", "The 113th Take (Casandalee, CR 14)"),
+    ("reruns", "Reruns of Tomorrow", "altronus", "05", None),
+    ("ambassadors", "The Ambassadors", "isuma", "07", "The Ambassadors (Isuma)"),
+    ("mint", "Mint Condition", "meyanda", "07", "Mint Condition (Meyanda)"),
+    ("garden", "The Hollow Garden", "yoshea", "06", None),
+    ("finale", "Season Finale", None, "09", None),
 ]
 
 
@@ -177,7 +177,7 @@ def build(actors, items, tables, host):
         pages.append({"_id": pid, "_key": f"!journal.pages!{jid}.{pid}", "name": entry["title"], "type": "text",
                       "title": {"show": True, "level": 1}, "text": {"format": 1, "content": f'<div class="hg-journal">{body}</div>'},
                       "sort": (n + 1) * 100000, "ownership": {"default": -1}, "flags": {}, "_stats": stats(False)})
-    adv = {"_id": jid, "_key": f"!journal!{jid}", "name": "The Hollow Garden: Season of Horrors", "pages": pages,
+    adv = {"_id": jid, "_key": f"!journal!{jid}", "name": "The Hollow Garden: Звёздные Искатели", "pages": pages,
            "folder": None, "sort": 0, "flags": {MODULE_ID: {"adventure": True}}, "_stats": stats(False)}
     write_doc(ADV_PACK, adv)
 
@@ -195,13 +195,13 @@ def build(actors, items, tables, host):
     # ----- Player handouts -----
     hidj = hid("journal", "handouts")
     rules = ('<div class="hg-handout hg-rules"><div class="hg-handout-head"><img src="' + host("mic-welcome") + '" alt="">'
-             '<h2>THE HOLLOW GARDEN</h2><p class="hg-sub">Season of Horrors · Official Rules of the Show</p></div>'
+             '<h2>THE HOLLOW GARDEN</h2><p class="hg-sub">Звёздные Искатели · Official Rules of the Show</p></div>'
              "<ol><li>Every contestant gets an episode of their own.</li><li>Rest only in the Green Room. Intermissions cost ratings.</li>"
              "<li>Nobody leaves early.</li><li>Heroic, brave, vile or debased acts earn prizes.</li><li>Audience votes are final.</li></ol>"
              '<p class="hg-fine">Contestants, the doors are open and the stakes are personal!</p></div>')
     cast = ['<div class="hg-handout"><div class="hg-handout-head"><h2>TONIGHT’S CONTESTANTS</h2><p class="hg-sub">Who will be the fan favourite?</p></div><div class="hg-cast-grid">']
-    for cid_, name, role in CONTESTANTS:
-        cast.append(f'<figure><img src="{asset(f"assets/contestants/{cid_}-happy.webp")}" alt="{name}"><figcaption><strong>{name}</strong><span>{role}</span></figcaption></figure>')
+    for cid_, name, _ru in CONTESTANTS:
+        cast.append(f'<figure><img src="{asset(f"assets/contestants/{cid_}-happy.webp")}" alt="{name}"><figcaption><strong>{name}</strong></figcaption></figure>')
     cast.append("</div></div>")
     hp = []
     for i, (title, content) in enumerate((("The Rules of the Show", rules), ("Tonight's Contestants", "".join(cast)))):
@@ -213,21 +213,21 @@ def build(actors, items, tables, host):
 
     # episodes -> page uuids for the JS side
     eps = []
-    for key, title, spotlight, contestant, prefix, anchor in EPISODES:
+    for key, title, contestant, prefix, anchor in EPISODES:
         page_uuid = f"Compendium.{MODULE_ID}.{ADV_PACK}.JournalEntry.{jid}.JournalEntryPage.{page_ids[prefix]}"
-        eps.append({"id": key, "title": title, "spotlight": spotlight, "contestant": contestant, "page": page_uuid,
+        eps.append({"id": key, "title": title, "contestant": contestant, "page": page_uuid,
                     "anchor": slugify(anchor) if anchor else None})
     return {"journal": jid, "episodes": eps, "pages": page_ids}
 
 
-CONTESTANTS = [
-    ("bodnar", "Bodnar", "The Technologist"),
-    ("ryuz", "Ryuz", "The Merchant"),
-    ("altronus", "Altronus", "The Chronicler"),
-    ("yoshea", "Yoshea", "The Ghaltan"),
-    ("casandalee", "Casandalee", "Companion · android oracle"),
-    ("meyanda", "Meyanda", "Companion · android"),
-    ("isuma", "Isuma", "Companion · kasatha"),
+CONTESTANTS = [  # id, name in the compendium (English), name on the board (Russian)
+    ("bodnar", "Bodnar", "Боднар"),
+    ("ryuz", "Ryuz", "Рюз"),
+    ("altronus", "Altronus", "Альтронус"),
+    ("yoshea", "Yoshea", "Йошеа"),
+    ("casandalee", "Casandalee", "Кассандали"),
+    ("meyanda", "Meyanda", "Меянда"),
+    ("isuma", "Isuma", "Изума"),
 ]
 
 GUIDE = [
@@ -235,24 +235,21 @@ GUIDE = [
 <p>Welcome to the Booth, producer. This module turns your table into Celmak's studio. Everything below is <strong>GM-only</strong> unless it says otherwise.</p>
 <ol>
 <li><strong>Open the Producer Console</strong>: the <em>broadcast tower</em> button in the Token controls (left toolbar), the button on the ratings board, or the <em>Producer Console</em> macro in the <em>Producer Macros</em> compendium.</li>
-<li><strong>Cast the contestants</strong>: Console → <em>Ratings</em> → <em>Contestants…</em>. Link each card to a player's actor, rename it, or hide companions who are sitting in the Box. Portraits default to the supplied chibi art.</li>
+<li><strong>Cast the contestants</strong>: Console → <em>Ratings</em> → <em>Contestants…</em>. Link each card to a player's actor (or drag the actor onto their card on the board), rename it, or hide companions who are sitting in the Box. The names shown to players are the Russian ones from the art.</li>
 <li><strong>Go live</strong>: press <em>Show board</em> (or the ON AIR tab at the top of the screen). Every connected player now sees the ratings board.</li>
 </ol>
-<p>Import the actors, items and tables you need from the <em>The Hollow Garden: Season of Horrors</em> compendium folder; the journal links open them directly.</p>"""),
+<p>Import the actors, items and tables you need from the <em>The Hollow Garden: Звёздные Искатели</em> compendium folder; the journal links open them directly.</p>"""),
     ("The Ratings Board", """
-<p>The board shows two things:</p>
+<p>The board is a small panel that docks to a corner of the screen (each player can move it to another corner with the grid button, drag it, collapse it, or set their own studio volume with the speaker button). It shows two things:</p>
 <ul>
-<li><strong>Show Rating (1–5)</strong>, the adventure's own ratings track. It starts at 3. Use the console's quick reasons (heroic sacrifice, betrayal, honeypot swallowed, off-script…) or the +/– buttons.</li>
-<li><strong>Fan meters (0–10)</strong> for every contestant. Portraits change with the fans' mood: crying at 3 or less, cool at 4–6, cheering at 7+. The leader wears the <em>Fan Favourite</em> crown; anyone at 2 or less is in the <em>Danger Zone</em>.</li>
+<li><strong>Show Rating (1–5)</strong>, the adventure's own ratings track. It starts at 3. Use the console's quick reasons or the +/– buttons.</li>
+<li><strong>Fan meters (0–10)</strong> for every contestant, shown by name. Portraits change with the fans' mood: crying at 3 or less, cool at 4–6, cheering at 7+. The leader wears the crown; anyone at 2 or less is in the danger zone.</li>
 </ul>
-<p>With <em>Link fan meters to the Show Rating</em> enabled (module settings), raising a contestant also nudges the Show Rating the same way.</p>
-<h3>Automatic rules</h3>
-<ul>
-<li><strong>Rating hits 5</strong>: the studio erupts, a GM-only chat card offers <em>Award Trinket</em> to the highest-rated contestant (drawn from <em>Celmak's Trinkets</em> and added to the linked actor), and the rating resets to 3.</li>
-<li><strong>Rating hits 1</strong>: alarms, and a GM card lists Celmak's escalation options (Mood Gas vent, demon cast member, room reconfiguration, audience vote). The rating resets to 2.</li>
-<li>At 2 and 4 you get a whispered reminder of Celmak's response.</li>
-</ul>
-<p>Turn the automation off in module settings if you prefer to run the track by hand.</p>"""),
+<p>Changing a rating is <strong>silent</strong>: the board updates and nothing pops up for the players. With <em>Link fan meters to the Show Rating</em> enabled, raising a contestant also nudges the Show Rating the same way (right-click +/– to skip that once).</p>
+<h3>Announcements need your approval</h3>
+<p>When the Show Rating reaches 5 or 1, the GM-only <em>Ratings Announcement</em> desk opens with a suggested message in Russian. Edit the headline and text, choose the sticker, sound and effects, optionally award a Trinket (peak) or pick Celmak's response (escalation), and set the rating to reset to. Players see nothing unless you press <strong>Broadcast</strong>. The same desk is on the console's Ratings tab (<em>Escalation…</em>, <em>Ratings peak…</em>, <em>Custom announcement…</em>) and on each contestant's megaphone button. Turn the automatic offer off in module settings if you prefer.</p>
+<h3>Linking actors</h3>
+<p>Drag an actor from the Actors sidebar onto a contestant's card on the board, or onto their row in <em>Contestants…</em>, or pick it from the list there. A chain icon marks linked cards; click the portrait to open the sheet. Trinkets go to the linked actor's sheet and the honeypot desk rolls from it.</p>"""),
     ("Episode Roulette", """
 <p>Celmak's schedule is fixed, but the audience doesn't need to know that. <em>Games → Spin the Episode Wheel</em> opens the rigging desk:</p>
 <ul>
@@ -272,5 +269,5 @@ GUIDE = [
 <p>Each player can lower the module's sound volume, turn off stickers, or reduce motion in their own module settings.</p>"""),
     ("Audience Votes & Honeypots", """
 <p><strong>Audience vote</strong>: enter a question and up to four options, then set the rigged percentages (or pick a winner and let the console invent believable numbers). Players watch a live vote with a countdown before the result is revealed.</p>
-<p><strong>Honeypot check</strong>: when someone reads one of the Garden's machines with Knowledge (engineering), open <em>Games → Honeypot check</em>. Roll from the linked actor's sheet or type in the total and the natural d20. The console sorts the result into the bands (61+ real answer; 60 or less with a natural 1–10 is an amusing fake, with a laugh and +1 rating; 11–20 is a detrimental fake) and whispers you the table result. Players only see what you tell them.</p>"""),
+<p>Everything the players see (board, title cards, captions, wheel, votes, public chat cards) is in Russian; this guide and the console stay in English.</p><p><strong>Honeypot check</strong>: when someone reads one of the Garden's machines with Knowledge (engineering), open <em>Games → Honeypot check</em>. Roll from the linked actor's sheet or type in the total and the natural d20. The console sorts the result into the bands (61+ real answer; 60 or less with a natural 1–10 is an amusing fake (the whisper has a <em>Celmak laughs, +1</em> button if you want it public); 11–20 is a detrimental fake) and whispers you the table result. Players only see what you tell them.</p>"""),
 ]

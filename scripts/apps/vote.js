@@ -3,14 +3,19 @@ import { playSfx } from "../audio.js";
 import { broadcast, registerHandler } from "../socket.js";
 import { confetti, fxLayer, popSticker } from "../fx.js";
 import { chatCard, esc, isGM } from "../util.js";
+import { getState } from "../state.js";
 import { HGApplication } from "./base.js";
 
-const PRESETS = [
-  { q: "Who should Celmak scan next?", o: ["The Technologist", "The Merchant", "The Chronicler", "The Ghaltan"] },
-  { q: "Split the party?", o: ["Yes! Drama!", "No, keep them together"] },
-  { q: "Which companion gets the next episode?", o: ["Casandalee", "Meyanda", "Isuma"] },
-  { q: "What should the audience throw in?", o: ["Mood Gas", "A demon cast member", "A room reconfiguration", "Snacks"] }
-];
+/** Presets in Russian (shown to the audience). Names come from the current cast. */
+function presets() {
+  const names = getState().contestants.filter((c) => c.visible).map((c) => c.name);
+  return [
+    { q: "Кого Сельмак просканирует следующим?", o: names.slice(0, 4) },
+    { q: "Разделить команду?", o: ["Да! Драма!", "Нет, пусть держатся вместе"] },
+    { q: "Чей эпизод следующий?", o: names.slice(4, 7).length >= 2 ? names.slice(4, 7) : names.slice(0, 3) },
+    { q: "Чем порадовать зрителей?", o: ["Газом настроения", "Демоном из труппы", "Перестройкой комнаты", "Закусками"] }
+  ];
+}
 
 /** Make up believable percentages that put `winner` on top. */
 function rigPercentages(n, winner) {
@@ -31,18 +36,26 @@ export class VoteDesk extends HGApplication {
     actions: { preset: VoteDesk.#onPreset, rig: VoteDesk.#onRig, go: VoteDesk.#onGo }
   };
 
-  draft = { q: PRESETS[0].q, o: [...PRESETS[0].o], pct: rigPercentages(4, 0), winner: 0 };
+  draft = null;
+
+  async _prepareContext() {
+    if (!this.draft) {
+      const p = presets()[0];
+      this.draft = { q: p.q, o: [...p.o], pct: rigPercentages(p.o.length, 0), winner: 0 };
+    }
+    return {};
+  }
 
   _body() {
     const d = this.draft;
-    const presets = PRESETS.map((p, i) => `<button type="button" class="hg-chip" data-action="preset" data-i="${i}">${esc(p.q)}</button>`).join("");
+    const list = presets().map((p, i) => `<button type="button" class="hg-chip" data-action="preset" data-i="${i}">${esc(p.q)}</button>`).join("");
     const rows = [0, 1, 2, 3].map((i) => `<li>
         <label class="hg-radio" title="Winner"><input type="radio" name="winner" value="${i}" ${d.winner === i ? "checked" : ""}></label>
         <input type="text" name="o${i}" value="${esc(d.o[i] ?? "")}" placeholder="Option ${i + 1}${i > 1 ? " (optional)" : ""}">
         <input type="number" name="p${i}" min="0" max="100" value="${d.pct[i] ?? 0}"><span>%</span>
       </li>`).join("");
-    return `<p class="hg-hint">The audience votes live. You decide the result. Pick a winner and press <em>Rig it</em> to invent believable numbers, or type your own.</p>
-      <div class="hg-chips">${presets}</div>
+    return `<p class="hg-hint">The audience votes live (write the question and options in Russian, players see them as typed). You decide the result. Pick a winner and press <em>Rig it</em> to invent believable numbers, or type your own.</p>
+      <div class="hg-chips">${list}</div>
       <label class="hg-block">Question<input type="text" name="q" value="${esc(d.q)}"></label>
       <ul class="hg-vote-opts">${rows}</ul>
       <footer class="hg-row hg-footer">
@@ -61,7 +74,7 @@ export class VoteDesk extends HGApplication {
   }
 
   static #onPreset(_e, t) {
-    const p = PRESETS[Number(t.dataset.i)];
+    const p = presets()[Number(t.dataset.i)];
     this.draft = { q: p.q, o: [...p.o], pct: rigPercentages(p.o.length, 0), winner: 0 };
     this.render();
   }
@@ -82,10 +95,10 @@ export class VoteDesk extends HGApplication {
     const options = d.o.map((label, i) => ({ label, pct: d.pct[i] })).filter((o) => o.label);
     if (options.length < 2) return ui.notifications.warn("A vote needs at least two options.");
     const winner = options.reduce((best, o, i) => (o.pct > options[best].pct ? i : best), 0);
-    broadcast("vote", { question: d.q || "Audience vote", options, winner });
+    broadcast("vote", { question: d.q || "Голосование зрителей", options, winner });
     this.close();
     setTimeout(() => chatCard({
-      title: "Audience votes are final",
+      title: "Решение зрителей окончательно",
       sticker: sticker("ratings"),
       body: `<p><strong>${esc(d.q)}</strong></p><ul>${options.map((o, i) => `<li>${i === winner ? "<strong>" : ""}${esc(o.label)}: ${o.pct}%${i === winner ? "</strong>" : ""}</li>`).join("")}</ul>`
     }), 10500);
@@ -99,7 +112,7 @@ export function runVote({ question, options, winner }) {
   node.className = "hg-vote";
   node.innerHTML = `
     <div class="hg-vote-panel">
-      <div class="hg-vote-head"><span class="hg-live"><span class="hg-dot"></span>LIVE AUDIENCE VOTE</span><span class="hg-vote-timer">5</span></div>
+      <div class="hg-vote-head"><span class="hg-live"><span class="hg-dot"></span>ГОЛОСОВАНИЕ ЗРИТЕЛЕЙ</span><span class="hg-vote-timer">5</span></div>
       <div class="hg-vote-q">${esc(question)}</div>
       <ul>${options.map((o, i) => `<li data-i="${i}"><span class="hg-vote-label">${esc(o.label)}</span><div class="hg-vote-bar"><div></div></div><span class="hg-vote-pct">0%</span></li>`).join("")}</ul>
       ${isGM() ? `<div class="hg-rigged"><i class="fa-solid fa-user-secret"></i> Rigged → ${esc(options[winner].label)}</div>` : ""}
@@ -127,7 +140,7 @@ export function runVote({ question, options, winner }) {
     }
   }, 1000);
   const reveal = () => {
-    timer.textContent = "CLOSED";
+    timer.textContent = "ИТОГИ";
     node.classList.add("hg-revealed");
     playSfx("drumroll", { volume: 0.5 });
     bars.forEach((li, i) => {

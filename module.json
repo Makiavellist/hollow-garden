@@ -1,8 +1,8 @@
 {
   "id": "hollow-garden",
-  "title": "The Hollow Garden: Season of Horrors",
+  "title": "The Hollow Garden: Звёздные Искатели",
   "description": "<p>A Pathfinder 1e adventure for seven 13th-level characters, packaged for Foundry VTT v13: the full adventure journal, Celmak's robots and cast as PF1 actors, prizes and trinkets, roll tables, and a futuristic gameshow studio: a GM-toggled ratings board for every contestant, a rigged episode wheel, live audience votes, a soundboard with pop-up host stickers, title cards, Mood Gas and more.</p>",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "authors": [
     {
       "name": "Makiavellist"
@@ -120,7 +120,7 @@
   ],
   "packFolders": [
     {
-      "name": "The Hollow Garden: Season of Horrors",
+      "name": "The Hollow Garden: Звёздные Искатели",
       "sorting": "m",
       "color": "#3b0d4f",
       "packs": [
@@ -136,7 +136,7 @@
   ],
   "url": "https://github.com/Makiavellist/hollow-garden",
   "manifest": "https://github.com/Makiavellist/hollow-garden/releases/latest/download/module.json",
-  "download": "https://github.com/Makiavellist/hollow-garden/releases/download/v1.0.0/module.zip",
+  "download": "https://github.com/Makiavellist/hollow-garden/releases/download/v1.1.0/module.zip",
   "readme": "https://github.com/Makiavellist/hollow-garden/blob/main/README.md",
   "license": "LICENSE.md"
 }

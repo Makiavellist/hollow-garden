@@ -1,4 +1,4 @@
-import { CUES, MOOD_GAS, PERSONAS, sticker as stickerPath } from "./constants.js";
+import { CUES, HOST_NAME, MOOD_GAS, PERSONAS, SEASON_TITLE, SHOW_TITLE, sticker as stickerPath } from "./constants.js";
 import { playSfx } from "./audio.js";
 import { esc, reduceMotion, setting } from "./util.js";
 
@@ -70,7 +70,7 @@ export function caption({ persona = "Host", text = "", sticker = null, sound = "
   const node = el(`<div class="hg-caption" style="--persona:${esc(p.color)}">
       ${setting("stickers") === false ? "" : `<img class="hg-caption-host" src="${esc(stickerPath(img))}" alt="">`}
       <div class="hg-caption-box">
-        <div class="hg-caption-tag"><span class="hg-rec"></span>CELMAK · ${esc(p.label.toUpperCase())}</div>
+        <div class="hg-caption-tag"><span class="hg-rec"></span>${esc(HOST_NAME.toUpperCase())} · ${esc(p.tag)}</div>
         <div class="hg-caption-text"></div>
       </div>
     </div>`);
@@ -100,14 +100,16 @@ export function caption({ persona = "Host", text = "", sticker = null, sound = "
 /*  Full-screen title cards                                            */
 /* ------------------------------------------------------------------ */
 
+const SHOW_UP = SHOW_TITLE.toUpperCase();
 const TITLE_DEFAULTS = {
-  episode: { kicker: "TONIGHT ON THE HOLLOW GARDEN", sound: "on-air", sticker: "mic-welcome", theme: "episode" },
-  intermission: { kicker: "THE HOLLOW GARDEN", title: "COMMERCIAL BREAK", subtitle: "We'll be right back. Don't touch that dial. (You can't.)", sound: "jingle", sticker: "this-is-fine", theme: "break" },
-  previously: { kicker: "PREVIOUSLY ON…", title: "THE HOLLOW GARDEN", subtitle: "Season of Horrors", sound: "whoosh", sticker: "shocked", theme: "vhs" },
-  finale: { kicker: "THE HOLLOW GARDEN", title: "SEASON FINALE", subtitle: "Every season needs a finale, and every finale needs a twist.", sound: "fanfare", sticker: "champion", theme: "finale" },
-  peak: { kicker: "RATINGS REPORT", title: "RATINGS PEAK!", subtitle: "", sound: "cheer", sticker: "ratings", theme: "peak" },
-  escalation: { kicker: "RATINGS REPORT", title: "ESCALATION!", subtitle: "The audience is getting bored. Celmak is not.", sound: "alarm", sticker: "angry", theme: "alarm" },
-  lockfalls: { kicker: "BREAKING NEWS", title: "THE LOCK HAS FALLEN", subtitle: "“You can't go before the finale!”", sound: "suspense", sticker: "nervous", theme: "alarm" }
+  episode: { kicker: `СЕГОДНЯ В ШОУ «${SHOW_UP}»`, sound: "on-air", sticker: "mic-welcome", theme: "episode" },
+  intermission: { kicker: SHOW_UP, title: "РЕКЛАМНАЯ ПАУЗА", subtitle: "Не переключайтесь. (Вы всё равно не сможете.)", sound: "jingle", sticker: "this-is-fine", theme: "break" },
+  previously: { kicker: "РАНЕЕ В ШОУ…", title: SHOW_UP, subtitle: SEASON_TITLE, sound: "whoosh", sticker: "shocked", theme: "vhs" },
+  finale: { kicker: SHOW_UP, title: "ФИНАЛ СЕЗОНА", subtitle: "В каждом сезоне есть финал, а в каждом финале — неожиданный поворот.", sound: "fanfare", sticker: "champion", theme: "finale" },
+  peak: { kicker: "РЕЙТИНГИ", title: "ПИК РЕЙТИНГА!", subtitle: "", sound: "cheer", sticker: "ratings", theme: "peak" },
+  escalation: { kicker: "РЕЙТИНГИ", title: "ЭСКАЛАЦИЯ!", subtitle: `Зрителям скучно. ${HOST_NAME} — нет.`, sound: "alarm", sticker: "angry", theme: "alarm" },
+  announce: { kicker: "РЕЙТИНГИ", title: "ВНИМАНИЕ!", subtitle: "", sound: "on-air", sticker: "ratings", theme: "episode" },
+  lockfalls: { kicker: "СРОЧНЫЕ НОВОСТИ", title: "ЗАМОК ПАЛ", subtitle: "«Вы не можете уйти до финала!»", sound: "suspense", sticker: "nervous", theme: "alarm" }
 };
 
 export function titleCard(data = {}) {
@@ -120,10 +122,10 @@ export function titleCard(data = {}) {
         <div class="hg-title-kicker">${esc(d.kicker ?? "")}</div>
         <div class="hg-title-main" data-text="${esc(d.title ?? "")}">${esc(d.title ?? "")}</div>
         ${d.subtitle ? `<div class="hg-title-sub">${esc(d.subtitle)}</div>` : ""}
-        ${d.starring ? `<div class="hg-title-starring">starring <strong>${esc(d.starring)}</strong></div>` : ""}
+        ${d.starring ? `<div class="hg-title-starring">в главной роли: <strong>${esc(d.starring)}</strong></div>` : ""}
       </div>
       ${setting("stickers") === false || !d.sticker ? "" : `<img class="hg-title-host" src="${esc(stickerPath(d.sticker))}" alt="">`}
-      <div class="hg-title-ticker"><span>LIVE FROM SOVEREIGN'S REACH · THE ONLY EXIT IS THE FINALE · VOTE NOW · RATINGS ARE EVERYTHING · NOBODY LEAVES EARLY · </span></div>
+      <div class="hg-title-ticker"><span>ПРЯМОЙ ЭФИР ИЗ СУВЕРЕННОГО ПРЕДЕЛА · ЕДИНСТВЕННЫЙ ВЫХОД — ФИНАЛ · ГОЛОСУЙТЕ СЕЙЧАС · РЕЙТИНГ РЕШАЕТ ВСЁ · НИКТО НЕ УХОДИТ РАНЬШЕ ВРЕМЕНИ · </span></div>
     </div>`);
   fxLayer().appendChild(node);
   removeLater(node, d.duration ?? 5600);
@@ -155,7 +157,7 @@ export function confetti({ amount = 140, sound = null } = {}) {
 
 export function glitch({ sound = "glitch", duration = 1500 } = {}) {
   if (sound) playSfx(sound);
-  const node = el(`<div class="hg-glitch"><div></div><div></div><div></div><span class="hg-glitch-text">SIGNAL LOST</span></div>`);
+  const node = el(`<div class="hg-glitch"><div></div><div></div><div></div><span class="hg-glitch-text">СИГНАЛ ПОТЕРЯН</span></div>`);
   fxLayer().appendChild(node);
   if (!reduceMotion()) shake({ sound: null, strength: 2 });
   setTimeout(() => node.remove(), duration);
@@ -179,7 +181,7 @@ export function gas({ roll = 1, dc = 22 } = {}) {
   const blobs = Array.from({ length: 7 }, (_, i) =>
     `<i style="--x:${10 + Math.random() * 80}%;--y:${20 + Math.random() * 70}%;--s:${30 + Math.random() * 40}vmax;--t:${(4 + Math.random() * 3).toFixed(1)}s;--delay:${(i * 0.15).toFixed(2)}s"></i>`).join("");
   const node = el(`<div class="hg-gas" style="--gas:${g.color}">${blobs}
-      <div class="hg-gas-label"><small>MOOD GAS · FORT DC ${dc} · WILL DC ${dc}</small><strong>${esc(g.name.toUpperCase())}</strong></div>
+      <div class="hg-gas-label"><small>ГАЗ НАСТРОЕНИЯ · СТОЙКОСТЬ СЛ ${dc} · ВОЛЯ СЛ ${dc}</small><strong>${esc(g.ru)}</strong></div>
     </div>`);
   fxLayer().appendChild(node);
   removeLater(node, 6500);

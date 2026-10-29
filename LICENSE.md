@@ -22,4 +22,8 @@ Feat, armour, weapon and spell references reused from the Pathfinder 1e system f
 
 ## Fonts
 
-Orbitron and Fredoka are licensed under the SIL Open Font License 1.1 (`fonts/OFL-*.txt`).
+Exo 2 and Nunito are licensed under the SIL Open Font License 1.1 (`fonts/OFL-*.txt`).
+
+## Sounds
+
+`sounds/applause.ogg` and `sounds/cheer.ogg` are edited from "Applause" by the Blender Foundation (apricot.blender.org), licensed CC-BY 3.0 (https://creativecommons.org/licenses/by/3.0/), from https://opengameart.org/content/applause. The other sounds were synthesised for this module.

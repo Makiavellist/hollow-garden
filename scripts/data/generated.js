@@ -4,7 +4,6 @@ export const GENERATED = {
     {
       "id": "showroom",
       "title": "The Showroom",
-      "spotlight": "The Technologist",
       "contestant": "bodnar",
       "page": "Compendium.hollow-garden.hg-adventure.JournalEntry.uKRlbstygIkqubNT.JournalEntryPage.GFJ2zN2WCXTaIgfD",
       "anchor": null
@@ -12,7 +11,6 @@ export const GENERATED = {
     {
       "id": "auction",
       "title": "The Auction",
-      "spotlight": "The Merchant",
       "contestant": "ryuz",
       "page": "Compendium.hollow-garden.hg-adventure.JournalEntry.uKRlbstygIkqubNT.JournalEntryPage.XI0E1CsM2XQtbR4p",
       "anchor": null
@@ -20,7 +18,6 @@ export const GENERATED = {
     {
       "id": "take113",
       "title": "The 113th Take",
-      "spotlight": "Casandalee",
       "contestant": "casandalee",
       "page": "Compendium.hollow-garden.hg-adventure.JournalEntry.uKRlbstygIkqubNT.JournalEntryPage.LGokSnDPlnxa8oPa",
       "anchor": "the-113th-take-casandalee-cr-14"
@@ -28,7 +25,6 @@ export const GENERATED = {
     {
       "id": "reruns",
       "title": "Reruns of Tomorrow",
-      "spotlight": "The Chronicler",
       "contestant": "altronus",
       "page": "Compendium.hollow-garden.hg-adventure.JournalEntry.uKRlbstygIkqubNT.JournalEntryPage.DX9ssJd1tXXLll7c",
       "anchor": null
@@ -36,7 +32,6 @@ export const GENERATED = {
     {
       "id": "ambassadors",
       "title": "The Ambassadors",
-      "spotlight": "Isuma",
       "contestant": "isuma",
       "page": "Compendium.hollow-garden.hg-adventure.JournalEntry.uKRlbstygIkqubNT.JournalEntryPage.LGokSnDPlnxa8oPa",
       "anchor": "the-ambassadors-isuma"
@@ -44,7 +39,6 @@ export const GENERATED = {
     {
       "id": "mint",
       "title": "Mint Condition",
-      "spotlight": "Meyanda",
       "contestant": "meyanda",
       "page": "Compendium.hollow-garden.hg-adventure.JournalEntry.uKRlbstygIkqubNT.JournalEntryPage.LGokSnDPlnxa8oPa",
       "anchor": "mint-condition-meyanda"
@@ -52,7 +46,6 @@ export const GENERATED = {
     {
       "id": "garden",
       "title": "The Hollow Garden",
-      "spotlight": "The Ghaltan",
       "contestant": "yoshea",
       "page": "Compendium.hollow-garden.hg-adventure.JournalEntry.uKRlbstygIkqubNT.JournalEntryPage.lRioS86C9aGAGH6Z",
       "anchor": null
@@ -60,7 +53,6 @@ export const GENERATED = {
     {
       "id": "finale",
       "title": "Season Finale",
-      "spotlight": "Everyone",
       "contestant": null,
       "page": "Compendium.hollow-garden.hg-adventure.JournalEntry.uKRlbstygIkqubNT.JournalEntryPage.D0ecmku0BZQYrgSU",
       "anchor": null
@@ -69,38 +61,31 @@ export const GENERATED = {
   "contestants": [
     {
       "id": "bodnar",
-      "name": "Bodnar",
-      "role": "The Technologist"
+      "name": "Боднар"
     },
     {
       "id": "ryuz",
-      "name": "Ryuz",
-      "role": "The Merchant"
+      "name": "Рюз"
     },
     {
       "id": "altronus",
-      "name": "Altronus",
-      "role": "The Chronicler"
+      "name": "Альтронус"
     },
     {
       "id": "yoshea",
-      "name": "Yoshea",
-      "role": "The Ghaltan"
+      "name": "Йошеа"
     },
     {
       "id": "casandalee",
-      "name": "Casandalee",
-      "role": "Companion · android oracle"
+      "name": "Кассандали"
     },
     {
       "id": "meyanda",
-      "name": "Meyanda",
-      "role": "Companion · android"
+      "name": "Меянда"
     },
     {
       "id": "isuma",
-      "name": "Isuma",
-      "role": "Companion · kasatha"
+      "name": "Изума"
     }
   ],
   "tables": {
