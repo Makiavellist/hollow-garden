@@ -1,0 +1,89 @@
+# Builds the Foundry package and publishes a GitHub Release.
+# Runs when you publish a release by hand, or automatically when module.json's
+# "version" changes on main (a release vX.Y.Z is then created if it doesn't exist yet).
+# It writes the version, manifest and download URLs into module.json,
+# zips the module and attaches module.json + module.zip to the release.
+name: Release module
+
+on:
+  release:
+    types: [published]
+  push:
+    branches: [main]
+    paths: ['module.json', '.github/workflows/release.yml']
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Work out the version tag
+        id: tag
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ "${{ github.event_name }}" = "release" ]; then T="${{ github.event.release.tag_name }}"; else T="v$(jq -r .version module.json)"; fi
+          echo "tag=$T" >> "$GITHUB_OUTPUT"
+          if [ "${{ github.event_name }}" = "push" ] && gh release view "$T" -R "${{ github.repository }}" >/dev/null 2>&1; then
+            echo "Release $T already exists; nothing to do."; echo "skip=1" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Stamp version and URLs into module.json
+        if: steps.tag.outputs.skip != '1'
+        env:
+          TAG: ${{ steps.tag.outputs.tag }}
+          REPO: ${{ github.repository }}
+        run: |
+          VERSION="${TAG#v}"
+          jq --arg v "$VERSION" \
+             --arg url "https://github.com/$REPO" \
+             --arg manifest "https://github.com/$REPO/releases/latest/download/module.json" \
+             --arg download "https://github.com/$REPO/releases/download/$TAG/module.zip" \
+             '.version=$v | .url=$url | .manifest=$manifest | .download=$download' \
+             module.json > module.tmp && mv module.tmp module.json
+          cat module.json
+
+      - name: Release notes for this version only
+        if: steps.tag.outputs.skip != '1'
+        env:
+          TAG: ${{ steps.tag.outputs.tag }}
+        run: |
+          # the section of CHANGELOG.md under "## <version>", without the heading
+          awk -v v="${TAG#v}" '/^## /{p = ($2 == v); next} p' CHANGELOG.md > "$RUNNER_TEMP/notes.md"
+          [ -s "$RUNNER_TEMP/notes.md" ] || echo "See CHANGELOG.md." > "$RUNNER_TEMP/notes.md"
+          cat "$RUNNER_TEMP/notes.md"
+
+      - name: Zip the module
+        if: steps.tag.outputs.skip != '1'
+        run: zip -r module.zip module.json README.md CHANGELOG.md LICENSE.md OGL.txt scripts styles assets sounds fonts lang packs -x 'packs/*/LOG*' 'packs/*/LOCK'
+
+      - name: Publish the release
+        if: steps.tag.outputs.skip != '1'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.tag.outputs.tag }}
+          name: ${{ steps.tag.outputs.tag }}
+          target_commitish: ${{ github.sha }}
+          body_path: ${{ runner.temp }}/notes.md
+          files: |
+            module.json
+            module.zip
+
+      # Older releases carried the whole changelog: trim each one to its own version's section (once; idempotent).
+      - name: Keep every release's notes to its own version
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: |
+          gh api "repos/$REPO/releases" --paginate -q '.[] | [.id, .tag_name] | @tsv' | while IFS=$'\t' read -r id tag; do
+            body="$(gh api "repos/$REPO/releases/$id" -q .body)"
+            n=$(printf '%s\n' "$body" | grep -c '^## ' || true)
+            [ "$n" -gt 1 ] || continue
+            notes="$(printf '%s\n' "$body" | awk -v v="${tag#v}" '/^## /{p = ($2 == v); next} p')"
+            [ -n "$notes" ] || continue
+            gh api -X PATCH "repos/$REPO/releases/$id" -f body="$notes" > /dev/null && echo "Trimmed the notes of $tag"
+          done

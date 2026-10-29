@@ -48,8 +48,8 @@ The default cast uses the supplied chibi art, matched to the adventure's roles. 
 
 ## Install
 
-- **Manifest URL** (Foundry → *Add-on Modules* → *Install Module*): `https://raw.githubusercontent.com/Makiavellist/hollow-garden/main/module.json`
-- **Manual install:** download [`release/hollow-garden.zip`](release/hollow-garden.zip), unzip it into `Data/modules/hollow-garden`, and restart Foundry.
+- **Manifest URL** (Foundry → *Add-on Modules* → *Install Module*): `https://github.com/Makiavellist/hollow-garden/releases/latest/download/module.json`
+- **Manual install:** download `module.zip` from the [latest release](https://github.com/Makiavellist/hollow-garden/releases/latest), unzip it into `Data/modules/hollow-garden`, and restart Foundry.
 
 Enable it in a PF1 world, then open the compendium folder.
 
@@ -77,7 +77,7 @@ python3 build.py      # writes packs-src/ and scripts/data/generated.js
 node compile.mjs      # compiles packs-src/ into LevelDB packs/
 ```
 
-To refresh the installable zip, run `zip -r release/hollow-garden.zip module.json README.md LICENSE.md OGL.txt scripts styles assets sounds fonts lang packs` from the repository root.
+Releases are published by GitHub Actions (`.github/workflows/release.yml`): bump `version` in `module.json`, add a matching `## x.y.z` section to `CHANGELOG.md`, and push to `main`.
 
 - `src/journal/*.html` is the adventure text, converted from the PDF. Edit it here, then rebuild.
 - `tools/actors.py`, `tools/items.py` and `tools/tables.py` define the PF1 documents.

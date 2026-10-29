@@ -135,8 +135,8 @@
     }
   ],
   "url": "https://github.com/Makiavellist/hollow-garden",
-  "manifest": "https://raw.githubusercontent.com/Makiavellist/hollow-garden/main/module.json",
-  "download": "https://raw.githubusercontent.com/Makiavellist/hollow-garden/main/release/hollow-garden.zip",
+  "manifest": "https://github.com/Makiavellist/hollow-garden/releases/latest/download/module.json",
+  "download": "https://github.com/Makiavellist/hollow-garden/releases/download/v1.0.0/module.zip",
   "readme": "https://github.com/Makiavellist/hollow-garden/blob/main/README.md",
   "license": "LICENSE.md"
 }
